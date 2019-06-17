@@ -16,6 +16,7 @@ import './assets/styles/style.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT COMPONENTS ZONE
+import Navbar from './assets/components/navbar/navbar';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT PAGES ZONE
@@ -48,6 +49,7 @@ interface Props {
 interface State {
     language: TLanguages,
     pageToShow: TPages,
+    mySwiper: Swiper,
 }
 
 // TODO : Change setState calling
@@ -61,45 +63,48 @@ class App extends React.Component<Props, State> {
         this.state = {
             language: 'en',
             pageToShow: 'introductionPage',
+            mySwiper: null,
         };
     }
 
     componentDidMount = () => {
-        setTimeout(() => this.init(), 0);
+        this.init();
     }
 
 
     protected init() {
         this.initUI();
 
-        const mySwiper = new Swiper('.swiper-container', {
-            //initialSlide: 0,
-            preloadImages: true,
-            keyboard: {
-                enabled: true,
-                onlyInViewport: false,
-            },
+        this.setState({
+            mySwiper: new Swiper('.swiper-container', {
+                initialSlide: 0,
+                preloadImages: true,
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: false,
+                },
 
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true,
-            },
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
 
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
 
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                hide: true,
-                draggable: true,
-            },
-        });
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    hide: true,
+                    draggable: true,
+                },
+            })
+        })
     }
 
     protected initUI() {
@@ -107,9 +112,11 @@ class App extends React.Component<Props, State> {
     }
 
     protected goToPage = (pageName: TPages): void => {
-        this.setState({
-            pageToShow: pageName,
-        })
+        switch (pageName) {
+            case 'introductionPage':
+                this.state.mySwiper.slideTo(0, 1000);
+                break;
+        }
     };
 
     protected setLanguage = (language: TLanguages) => {
@@ -117,6 +124,14 @@ class App extends React.Component<Props, State> {
             language: language,
         });
     };
+
+    protected navbarRender() {
+        return (
+            <Navbar
+                goToPage={this.goToPage}
+            />
+        )
+    }
 
     protected introductionPageRender = () => {
         return (
@@ -127,18 +142,21 @@ class App extends React.Component<Props, State> {
 
     render() {
         return (
-            <div className="swiper-container">
-                <div className="swiper-wrapper">
-                    {this.introductionPageRender()}
+            <div>
+                {this.navbarRender()}
 
+                <div className="swiper-container">
+                    <div className="swiper-wrapper">
+                        {this.introductionPageRender()}
+                    </div>
+
+                    <div className="swiper-pagination"></div>
+
+                    <div className="swiper-button-prev" id="swiper-button-prev"></div>
+                    <div className="swiper-button-next" id="swiper-button-next"></div>
+
+                    <div className="swiper-scrollbar"></div>
                 </div>
-
-                <div className="swiper-pagination"></div>
-
-                <div className="swiper-button-prev" id="swiper-button-prev"></div>
-                <div className="swiper-button-next" id="swiper-button-next"></div>
-
-                <div className="swiper-scrollbar"></div>
             </div>
         )
     }
