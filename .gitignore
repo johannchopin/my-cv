@@ -1,0 +1,6 @@
+node_modules/
+dist/*
+prod/*
+distLocal/*
+.cache/*
+package-lock.json

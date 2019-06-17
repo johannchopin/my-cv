@@ -1,0 +1,306 @@
+@import "./scssVariables.scss";
+@import "./myBoostrap.scss";
+
+@font-face {
+    font-family: "ubuntu";
+    src: url("../font/Ubuntu-Bold.ttf");
+}
+
+@font-face {
+    font-family: "another";
+    src: url("../font/Another_day_in_Paradise.ttf");
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: hidden;
+
+    main {
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        height: calc(100vh - 56px); // 56px -> height from navbar
+
+        &::-webkit-scrollbar {
+            width: 1em;
+        }
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            outline: 1px solid slategrey;
+        }
+
+    }
+
+    button:focus {
+        outline: 0;
+    }
+
+    .clickable,
+    .clickable-effect {
+        transition-duration: 0.2s;
+        cursor: pointer;
+    }
+
+    .clickable-effect:hover {
+        transform: scale(1.03);
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    .circle {
+        border-radius: 50%;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .radius-s {
+        border-radius: 10px;
+    }
+
+    .radius-l {
+        border-radius: 20px;
+    }
+
+    .bg-blue {
+        background-color: $blue;
+    }
+
+    .bg-green {
+        background-color: $green;
+    }
+
+    .bg-lightBlue {
+        background-color: $blue;
+    }
+
+    .bg-orange {
+        background-color: $orange;
+    }
+
+    .bg-lightRed {
+        background-color: $lightRed;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .flex-column {
+        flex-direction: column;
+    }
+
+    .flex-space-between {
+        justify-content: space-between;
+    }
+
+    .align-center {
+        justify-content: center;
+    }
+
+    .center-items {
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    .margin-top {
+        margin-top: 20px;
+    }
+
+    .margin-top-xl {
+        margin-top: 30px;
+    }
+
+    .margin-top-xxl {
+        margin-top: 60px;
+    }
+
+    .half-width {
+        width: 50%;
+    }
+
+    .margin-bottom-xs {
+        margin-bottom: 5px !important;
+    }
+
+    .margin-bottom {
+        margin-bottom: 20px;
+    }
+
+    .margin-bottom-xl {
+        margin-bottom: 30px;
+    }
+
+    .margin-bottom-xxl {
+        margin-bottom: 60px;
+    }
+
+    .margin-side {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .margin-side-xxl {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .padding-side {
+        padding: 0 10px;
+    }
+
+    .textAlert {
+        color: red !important;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    .cross-text {
+        text-decoration: line-through;
+    }
+
+    .half-width {
+        width: 50%;
+    }
+
+    .third-width {
+        width: 30%;
+    }
+
+    .quarter-width {
+        width: 20%;
+    }
+
+    .flag-icon {
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        position: relative;
+        display: inline-block;
+        width: 1.33333333em;
+        line-height: 1em;
+    }
+
+    .flag-icon:before {
+        content: "\00a0";
+    }
+
+    .flag-icon-de {
+        background-image: url(../img/de.svg);
+    }
+
+    .flag-icon-fr {
+        background-image: url(../img/fr.svg);
+    }
+
+    .flag-icon-us {
+        background-image: url(../img/us.svg);
+    }
+
+    .page {}
+
+    .page-transition {
+        animation: apparitionPageAnimation 0.5s;
+    }
+
+    .invalid-input,
+    .invalid-input:focus {
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+
+    .invalid-input:focus {
+        box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.3);
+        border-color: rgba(255, 0, 0, 0.1);
+    }
+
+}
+
+
+// ANIMATION ZONE
+@keyframes apparitionPageAnimation {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+// END ANIMATION ZONE
+
+
+
+/* Small devices (landscape phones, 544px and up) */
+
+html {
+    font-size: 40px;
+}
+
+@media (min-width: 544px) and (orientation:landscape) {
+    html {
+        font-size: 25px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) and (orientation:landscape) {
+    html {
+        font-size: 19px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+// INIT SWIPER
+.swiper-wrapper {
+    height: 100vh;
+    width: 100vw;
+
+    .swiper-slide {
+        height: 100%;
+        width: 100%;
+        font-size: 3rem;
+        background-color: initial;
+        font-family: 'ubuntu';
+    }
+}
+
+.swiper-pagination {
+    padding: 5px;
+    background-color: rgba(200, 200, 200, 0.8);
+    border-radius: 20px;
+}
+
+// END INIT SWIPER
