@@ -284,23 +284,44 @@ html {
 
 
 // INIT SWIPER
-.swiper-wrapper {
-    height: 100vh;
-    width: 100vw;
+.swiper-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 
-    .swiper-slide {
-        height: 100%;
-        width: 100%;
-        font-size: 3rem;
-        background-color: initial;
-        font-family: 'ubuntu';
+    &::-webkit-scrollbar {
+        width: 1em;
     }
-}
 
-.swiper-pagination {
-    padding: 5px;
-    background-color: rgba(200, 200, 200, 0.8);
-    border-radius: 20px;
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #000;
+        outline: 1px solid #000;
+    }
+
+    .swiper-wrapper {
+        height: 100vh;
+        width: 100vw;
+
+        .swiper-slide {
+            height: 100%;
+            width: 100%;
+            font-size: 3rem;
+            background-color: initial;
+            font-family: 'ubuntu';
+        }
+    }
+
+    .swiper-pagination {
+        padding: 5px;
+        background-color: rgba(200, 200, 200, 0.8);
+        border-radius: 20px;
+    }
 }
 
 // END INIT SWIPER
