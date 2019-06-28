@@ -4,6 +4,10 @@ export default class _pageBase {
         this.animateAll(pageId);
     }
 
+    public clearPage(pageId: string) {
+        this.initAllDefaultAnimation(pageId);
+    }
+
     protected animateAll(pageId: string): void {
         let animationDelay = 0;
         const elmtsToAnimate = $(`#${pageId} .animate-me`);
@@ -15,6 +19,16 @@ export default class _pageBase {
             });
 
             animationDelay += 0.2;
+        })
+    };
+
+    protected initAllDefaultAnimation(pageId: string): void {
+        const elmtsToAnimate = $(`#${pageId} .animate-me`);
+
+        elmtsToAnimate.each(function () {
+            $(this).css({
+                animation: 'none',
+            });
         })
     };
 
