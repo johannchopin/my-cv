@@ -285,24 +285,6 @@ html {
 
 // INIT SWIPER
 .swiper-container {
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 100%;
-    height: 100%;
-
-    &::-webkit-scrollbar {
-        width: 1em;
-    }
-
-    &::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: #000;
-        outline: 1px solid #000;
-    }
 
     .swiper-wrapper {
         height: 100vh;
@@ -314,6 +296,23 @@ html {
             font-size: 3rem;
             background-color: initial;
             font-family: 'ubuntu';
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            &::-webkit-scrollbar {
+                width: 20px;
+            }
+
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #000;
+                outline: 1px solid #000;
+            }
+
         }
     }
 
