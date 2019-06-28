@@ -11,6 +11,6 @@ export interface ICreateUserAccountResponse extends IRequestResponse {
 // END API INTERFACES
 
 // TYPES ZONE
-export type TPages = 'introductionPage';
+export type TPages = 'introductionPage' | 'backgroundPage';
 export type TLanguages = 'en' | 'fr' | 'de';
 // END TYPES ZONE
