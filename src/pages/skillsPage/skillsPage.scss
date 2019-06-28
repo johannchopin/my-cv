@@ -121,3 +121,46 @@
         width: 100%;
     }
 }
+
+
+@media (max-width: 991px) {
+    #skillsPage {
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+            line-height: normal;
+            padding: 10px;
+            margin: 70px 20px 0 20px;
+        }
+
+        .skills-ctn {
+            flex-wrap: wrap;
+        }
+
+        .langues,
+        #softwareSkills {
+            margin: 0 40px;
+        }
+
+        .langues {
+            min-width: 300px;
+
+            img {
+                width: 60px;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+        }
+
+        #softwareSkills {
+            max-width: 82%;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
