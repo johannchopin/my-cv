@@ -21,6 +21,7 @@ import Navbar from './assets/components/navbar/navbar';
 
 // IMPORT PAGES ZONE
 import IntroductionPage from './pages/introductionPage/introductionPage';
+import SkillsPage from './pages/skillsPage/skillsPage';
 // END IMPORT PAGES ZONE
 
 // IMPORT IMAGES ZONE   
@@ -50,6 +51,7 @@ interface State {
     language: TLanguages,
     pageToShow: TPages,
     mySwiper: Swiper,
+    currentPageIndex: number,
 }
 
 // TODO : Change setState calling
@@ -64,6 +66,7 @@ class App extends React.Component<Props, State> {
             language: 'en',
             pageToShow: 'introductionPage',
             mySwiper: null,
+            currentPageIndex: 0,
         };
     }
 
@@ -104,11 +107,20 @@ class App extends React.Component<Props, State> {
                     draggable: true,
                 },
             })
-        })
+        }, () => { this.initSwiper() })
+
     }
 
     protected initUI() {
         Helper.setFavicon(Favicon);
+    }
+
+    protected initSwiper = () => {
+        this.state.mySwiper.on('slideChangeTransitionEnd', () => {
+            this.setState(prevState => ({
+                currentPageIndex: this.state.mySwiper.activeIndex,
+            }));
+        });
     }
 
     protected goToPage = (pageName: TPages): void => {
@@ -135,7 +147,17 @@ class App extends React.Component<Props, State> {
 
     protected introductionPageRender = () => {
         return (
-            <IntroductionPage />
+            <IntroductionPage
+                currentPageIndex={this.state.currentPageIndex}
+            />
+        )
+    }
+
+    protected skillsPageRender = () => {
+        return (
+            <SkillsPage
+                currentPageIndex={this.state.currentPageIndex}
+            />
         )
     }
 
@@ -148,6 +170,7 @@ class App extends React.Component<Props, State> {
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
                         {this.introductionPageRender()}
+                        {this.skillsPageRender()}
                     </div>
 
                     <div className="swiper-pagination"></div>

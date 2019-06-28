@@ -1,0 +1,123 @@
+#skillsPage {
+    h1 {
+        opacity: 0;
+        display: inline-block;
+        color: initial;
+        margin: 10px 0 0 20px;
+        font-size: 3rem;
+        line-height: 80px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: rgb(251, 188, 5);
+    }
+
+    .competence_container {
+        display: flex;
+        justify-content: space-evenly;
+        color: initial;
+
+        h2 {
+            color: rgb(251, 188, 5);
+            font-size: 2.5rem;
+            text-align: center;
+            text-shadow: 3px 3px 4px black;
+            margin: 20px 0;
+        }
+    }
+
+    .langues,
+    .software {
+        opacity: 0;
+        min-width: 25%;
+        display: flex;
+        margin: 40px 0;
+        flex-direction: column;
+        border-radius: 40px;
+    }
+
+    .langues {
+        background-color: rgb(231, 231, 231);
+        padding: 0 20px;
+        box-shadow: 2px 2px 4px rgb(231, 231, 231);
+
+        div {
+            display: flex;
+            margin: 30px 0 20px 30px;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+            font-size: 2.5rem;
+        }
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .software {
+        background-color: rgb(53, 53, 53);
+        padding: 0 20px;
+        box-shadow: 2px 2px 4px rgb(53, 53, 53);
+
+        h3 {
+            color: white;
+            font-size: 1.8rem;
+        }
+    }
+
+    .animated-gauge {
+        width: 0%; // INITIALIZE WIDTH ON 0 FOR THE ANIMATION
+        position: relative;
+        height: 9px;
+        background-color: white;
+        border-radius: 20px;
+        margin: 20px 0;
+    }
+
+    .jauge0,
+    .jauge1,
+    .jauge2,
+    .jauge3,
+    .jauge4,
+    .jauge5 {
+        position: relative;
+        height: 100%;
+        background-color: rgb(251, 188, 5);
+        border-radius: 20px 0 0 20px;
+    }
+
+    .jauge0 {
+        width: 80%;
+    }
+
+    .jauge1,
+    .jauge2 {
+        width: 75%;
+    }
+
+    .jauge3 {
+        width: 40%;
+    }
+
+    .jauge4 {
+        width: 60%;
+    }
+
+    .jauge5 {
+        width: 55%;
+    }
+}
+
+@keyframes gaugeAnimation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}

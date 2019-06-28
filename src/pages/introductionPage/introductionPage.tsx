@@ -29,10 +29,13 @@ import {
 // END IMPORT INTERFACE ZONE
 
 
-interface Props { }
+interface Props {
+    currentPageIndex: number,
+}
 
 interface State {
     pageId: string,
+    pageIndex: number,
 }
 
 // TODO : Change setState calling
@@ -47,6 +50,7 @@ export default class IntroductionPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'introductionPage',
+            pageIndex: 0,
         };
     }
 
@@ -54,8 +58,33 @@ export default class IntroductionPage extends React.Component<Props, State> {
         this.init();
     }
 
+    componentDidUpdate(oldProps: Props) {
+        const newProps = this.props;
+
+        if (oldProps.currentPageIndex !== newProps.currentPageIndex) {
+            this.onPageChange();
+        }
+    }
+
     protected init = (): void => {
+        this.initUI();
+    }
+
+    protected initUI(): void {
         PageBase.initPage(this.state.pageId);
+    }
+
+    protected clearUI(): void {
+        PageBase.clearPage(this.state.pageId);
+    }
+
+    protected onPageChange(): void {
+        if (this.props.currentPageIndex === this.state.pageIndex) {
+            this.init();
+        } else {
+            this.clearUI();
+            PageBase.clearPage(this.state.pageId);
+        }
     }
 
     render() {
