@@ -116,8 +116,8 @@ export default class IntroductionPage extends React.Component<Props, State> {
     render() {
         return (
             <div id={this.state.pageId} className="swiper-slide">
-                <h1 id="competence_title" className="animate-me">COMPÉTENCES:</h1>
-                <div className="competence_container">
+                <h1 className="animate-me">COMPÉTENCES:</h1>
+                <div className="skills-ctn">
                     <div className="langues animate-me" id="langues">
                         <h2>LANGUES</h2>
                         <div>
@@ -133,7 +133,7 @@ export default class IntroductionPage extends React.Component<Props, State> {
                             <p>Latin</p>
                         </div>
                     </div>
-                    <div className="software animate-me" id="software">
+                    <div className="animate-me" id="softwareSkills">
                         <h2>SOFTWARE</h2>
                         <h3>Word, Excel, Powerpoint :</h3>
                         <div className="animated-gauge">
