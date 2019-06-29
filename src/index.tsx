@@ -22,6 +22,7 @@ import Navbar from './assets/components/navbar/navbar';
 // IMPORT PAGES ZONE
 import IntroductionPage from './pages/introductionPage/introductionPage';
 import SkillsPage from './pages/skillsPage/skillsPage';
+import ContactPage from './pages/contactPage/contactPage';
 // END IMPORT PAGES ZONE
 
 // IMPORT IMAGES ZONE   
@@ -161,6 +162,14 @@ class App extends React.Component<Props, State> {
         )
     }
 
+    protected contactPageRender = () => {
+        return (
+            <ContactPage
+                currentPageIndex={this.state.currentPageIndex}
+            />
+        )
+    }
+
 
     render() {
         return (
@@ -171,6 +180,7 @@ class App extends React.Component<Props, State> {
                     <div className="swiper-wrapper">
                         {this.introductionPageRender()}
                         {this.skillsPageRender()}
+                        {this.contactPageRender()}
                     </div>
 
                     <div className="swiper-pagination"></div>

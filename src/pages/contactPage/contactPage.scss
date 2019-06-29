@@ -1,0 +1,100 @@
+#contactPage {
+    color: initial;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 50px;
+    }
+
+    img {
+        width: 100px;
+    }
+
+    #contactCtn {
+        margin: 50px 0;
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+
+            p {
+                font-size: 2rem;
+                margin-left: 20px;
+            }
+        }
+
+        #cv {
+            display: flex;
+            justify-content: center;
+
+            p {
+                font-size: 1rem;
+                margin-top: 40px;
+                color: black;
+                transition-duration: 0.4s;
+                text-align: center;
+                background: rgb(251, 188, 5);
+                border-radius: 40px;
+                padding: 3px 10px;
+
+                &:hover {
+                    color: rgb(251, 188, 5);
+                    transform: scale(1.15);
+                    background: black;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    #contactPage {
+        h1 {
+            font-size: 2.5rem;
+            text-align: left;
+            margin-left: 10px;
+        }
+
+        img {
+            width: 40px;
+        }
+
+        #contacts_2 {
+            flex-direction: column;
+        }
+
+        #contactCtn {
+
+            div {
+                flex-direction: column;
+                margin-left: 10px;
+
+                p {
+                    font-size: 1.4rem;
+                    margin-left: 0;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            }
+
+            #contacts_2 p {
+                font-size: 1.2rem;
+                margin-left: 0;
+            }
+
+            #cv {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
