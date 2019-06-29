@@ -67,21 +67,6 @@
     }
 }
 
-@keyframes rotation {
-    0% {
-        transform: rotateY(-90deg);
-    }
-
-    75% {
-        transform: rotateY(20deg);
-    }
-
-    100% {
-        transform: rotateY(0deg);
-        opacity: 1;
-    }
-}
-
 
 @media (max-width: 991px) {
     #introductionPage {

@@ -20,6 +20,10 @@ a {
     color: initial;
 }
 
+.animate-me {
+    opacity: 0;
+}
+
 
 body {
 
@@ -229,6 +233,20 @@ body {
     }
 }
 
+@keyframes rotation {
+    0% {
+        transform: rotateY(-90deg);
+    }
+
+    75% {
+        transform: rotateY(20deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
 
 @keyframes fadeApparition {
     from {
