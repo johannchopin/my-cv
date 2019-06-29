@@ -9,8 +9,11 @@ import _pageBase from '../pageBase';
 const PageBase = new _pageBase();
 // END IMPORT PAGEBASE ZONE
 
-// IMPORT IMAGES ZONE
+// IMPORT LOCALIZE ZONE
+import LOCALIZE from './localize'
+// END IMPORT LOCALIZE ZONE
 
+// IMPORT IMAGES ZONE
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -24,17 +27,25 @@ const Helper = new _Helper();
 
 // IMPORT INTERFACE ZONE
 import {
+    ISimpleModalParams,
+    ISendEmailToAdminData,
+    ISendEmailToAdminResponse,
+    TLanguages
 } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
 interface Props {
+    lang: TLanguages,
     currentPageIndex: number,
+    showSimpleModal: (params: ISimpleModalParams) => void,
 }
 
 interface State {
     pageId: string,
     pageIndex: number,
+    textInSubjectInput: string,
+    textInMsgInput: string,
 }
 
 // TODO : Change setState calling
@@ -49,9 +60,14 @@ export default class ContactPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'contactPage',
-            pageIndex: 2, // TODO: don't forget to update this !!
+            pageIndex: 2, // TODO: don't forget to update this !! 
+            textInSubjectInput: '',
+            textInMsgInput: '',
         };
     }
+
+    protected maxCharactersInMsg = 1024;
+    protected maxCharactersInSubject = 30;
 
     componentDidMount() {
         // TODO: Do something
@@ -85,8 +101,82 @@ export default class ContactPage extends React.Component<Props, State> {
         }
     }
 
+    protected onSubjectInputChange = (event): void => {
+        this.setState({
+            textInSubjectInput: event.target.value,
+        });
+    }
+
+    protected onMsgInputChange = (event): void => {
+        const msg = event.target.value;
+
+        if (msg.length <= this.maxCharactersInMsg) {
+            this.setState({
+                textInMsgInput: msg,
+            });
+        }
+    }
+
+    protected areInputsValid = (): boolean => {
+        const textInMsgInputLength = this.state.textInMsgInput.length;
+        const textInSubjectInputLength = this.state.textInSubjectInput.length;
+
+        if (textInMsgInputLength > this.maxCharactersInMsg || textInMsgInputLength === 0) {
+            return false;
+        }
+
+        if (textInSubjectInputLength > this.maxCharactersInSubject || textInSubjectInputLength === 0) {
+            return false;
+        }
+
+        return true;
+    }
+
+    protected getSendEmailToAdminData = (): ISendEmailToAdminData => {
+        return {
+            subject: this.state.textInSubjectInput,
+            msg: this.state.textInMsgInput,
+        }
+    }
+
+    protected onSubmitBtnClick = (): void => {
+        if (this.areInputsValid()) {
+            //ApiCmds.sendEmailToAdmin(this.getSendEmailToAdminData(), this.onSendEmailToAdminCallback)
+        } else {
+            this.props.showSimpleModal({
+                type: 'danger',
+                message: 'Please enter a valid subject and message !'
+            })
+        }
+    }
+
+    protected onSendEmailToAdminCallback = (result: ISendEmailToAdminResponse): void => {
+        if (result.response.hasEmailBeSend) {
+            this.props.showSimpleModal({
+                type: 'success',
+                'message': LOCALIZE[this.props.lang]['email_has_been_sent']
+            })
+
+            this.resetInputs();
+        } else {
+            this.props.showSimpleModal({
+                type: 'danger',
+                'message': 'Please wait a little bit before sending a new message !', // TODO: Handle error with different way maybe error number
+            })
+        }
+    }
+
+    protected resetInputs = (): void => {
+        this.setState({
+            textInSubjectInput: '',
+            textInMsgInput: '',
+        });
+    };
+
 
     render() {
+        const localize = LOCALIZE[this.props.lang];
+
         return (
             <div id={this.state.pageId} className="swiper-slide">
                 <h1>CONTACT</h1>
@@ -107,6 +197,27 @@ export default class ContactPage extends React.Component<Props, State> {
                         <p>-télécharger la version papier-</p>
                     </a>
                 </div>
+
+                <input
+                    type="text"
+                    className="form-control"
+                    value={this.state.textInSubjectInput}
+                    onChange={this.onSubjectInputChange}
+                    placeholder="Subject..."
+                />
+
+                <textarea
+                    className="form-control"
+                    value={this.state.textInMsgInput}
+                    onChange={this.onMsgInputChange}
+                    placeholder="Message..."
+                    rows={10}
+                ></textarea>
+                <p id="charactersCounter">{this.maxCharactersInMsg - this.state.textInMsgInput.length}</p>
+
+                <button type="button" className="btn btn-primary" onClick={() => this.onSubmitBtnClick()}>
+                    <i className="fas fa-paper-plane fa-fw"></i> {localize['send']}
+                </button>
             </div>
         )
     }

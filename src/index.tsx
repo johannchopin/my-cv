@@ -18,6 +18,7 @@ import './assets/styles/style.scss';
 
 // IMPORT COMPONENTS ZONE
 import Navbar from './assets/components/navbar/navbar';
+import SimpleModal from './assets/components/simpleModal/simpleModal';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT PAGES ZONE
@@ -41,7 +42,8 @@ const Helper = new _Helper();
 // IMPORT INTERFACE ZONE
 import {
     TPages,
-    TLanguages
+    TLanguages,
+    ISimpleModalParams
 } from './commonInterface';
 // END IMPORT INTERFACE ZONE
 
@@ -52,6 +54,7 @@ interface Props {
 interface State {
     language: TLanguages,
     pageToShow: TPages,
+    simpleModalParams: ISimpleModalParams,
     mySwiper: Swiper,
     currentPageIndex: number,
 }
@@ -67,6 +70,7 @@ class App extends React.Component<Props, State> {
         this.state = {
             language: 'en',
             pageToShow: 'introductionPage',
+            simpleModalParams: {},
             mySwiper: null,
             currentPageIndex: 0,
         };
@@ -133,6 +137,19 @@ class App extends React.Component<Props, State> {
         }
     };
 
+    protected showSimpleModal = (params: ISimpleModalParams): void => {
+        this.setState({
+            simpleModalParams: params,
+        }, () => {
+            $('#simpleModal').modal();
+        });
+
+        // Hide simple modal after 2.3s
+        setTimeout(() => {
+            $('#simpleModal').modal('hide');
+        }, 2300);
+    };
+
     protected setLanguage = (language: TLanguages) => {
         this.setState({
             language: language,
@@ -166,7 +183,9 @@ class App extends React.Component<Props, State> {
     protected contactPageRender = () => {
         return (
             <ContactPage
+                lang={this.state.language}
                 currentPageIndex={this.state.currentPageIndex}
+                showSimpleModal={this.showSimpleModal}
             />
         )
     }
