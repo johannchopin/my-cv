@@ -1,10 +1,10 @@
 export default class _pageBase {
 
-    public initPage(pageId: string) {
+    public initPage(pageId: string): void {
         this.animateAll(pageId);
     }
 
-    public clearPage(pageId: string) {
+    public clearPage(pageId: string): void {
         this.initAllDefaultAnimation(pageId);
     }
 
@@ -31,5 +31,4 @@ export default class _pageBase {
             });
         })
     };
-
 }
