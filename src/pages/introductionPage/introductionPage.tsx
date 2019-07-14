@@ -4,6 +4,10 @@ import * as React from 'react';
 import './introductionPage.scss';
 // END IMPORT STYLES ZONE
 
+// IMPORT LOCALIZE ZONE
+import LOCALIZE from './localize'
+// END IMPORT LOCALIZE ZONE
+
 // IMPORT PAGEBASE ZONE
 import _pageBase from '../pageBase';
 const PageBase = new _pageBase();
@@ -24,12 +28,12 @@ const Helper = new _Helper();
 // END INIT HELPERS METHODS ZONE
 
 // IMPORT INTERFACE ZONE
-import {
-} from '../../commonInterface';
+import { TLanguages } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
 interface Props {
+    lang: TLanguages
     currentPageIndex: number,
 }
 
@@ -88,6 +92,8 @@ export default class IntroductionPage extends React.Component<Props, State> {
     }
 
     render() {
+        const localize = LOCALIZE[this.props.lang];
+
         return (
             <div id={this.state.pageId} className="swiper-slide">
                 <div className="header_slide_0">
@@ -98,10 +104,8 @@ export default class IntroductionPage extends React.Component<Props, State> {
                     <img id="slide_0_img" className="animate-me" src={myNiceFace} />
                 </div>
                 <p className="presentation_slide_0 animate-me" id="presentation_slide_0">
-                    "Étudiant de 19 ans à l'Institut Supérieur Franco-Allemand de Techniques, d’Économies et de Sciences
-					(<i>ISFATES</i>), je me passionne depuis plusieurs annéees déjà à l'informatique et au web plus
-                            précisement. Ambitieux et volontaire, j'espère correspondre au profil que vous recherchez."
-				</p>
+                    {localize["introduction_sentence"]}
+                </p>
                 <div id="indication" className="animate-me">
                     <p>Swiper vers la droite pour parcourir mon CV</p>
                     <img src="img/fleche.png" />
