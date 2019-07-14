@@ -52,7 +52,7 @@ interface Props {
 }
 
 interface State {
-    language: TLanguages,
+    lang: TLanguages,
     pageToShow: TPages,
     simpleModalParams: ISimpleModalParams,
     mySwiper: Swiper,
@@ -68,7 +68,7 @@ class App extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            language: 'en',
+            lang: 'en',
             pageToShow: 'introductionPage',
             simpleModalParams: {},
             mySwiper: null,
@@ -152,7 +152,7 @@ class App extends React.Component<Props, State> {
 
     protected setLanguage = (language: TLanguages) => {
         this.setState({
-            language: language,
+            lang: language,
         });
     };
 
@@ -167,6 +167,7 @@ class App extends React.Component<Props, State> {
     protected introductionPageRender = () => {
         return (
             <IntroductionPage
+                lang={this.state.lang}
                 currentPageIndex={this.state.currentPageIndex}
             />
         )
@@ -183,7 +184,7 @@ class App extends React.Component<Props, State> {
     protected contactPageRender = () => {
         return (
             <ContactPage
-                lang={this.state.language}
+                lang={this.state.lang}
                 currentPageIndex={this.state.currentPageIndex}
                 showSimpleModal={this.showSimpleModal}
             />
