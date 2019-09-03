@@ -221,6 +221,47 @@ body {
 
 }
 
+// INIT SWIPER
+.swiper-container {
+
+    .swiper-wrapper {
+        height: 100vh;
+        width: 100vw;
+
+        .swiper-slide {
+            height: 100%;
+            width: 100%;
+            font-size: 3rem;
+            background-color: initial;
+            font-family: 'ubuntu';
+            overflow-y: auto;
+            overflow-x: hidden;
+
+
+            &::-webkit-scrollbar {
+                width: 2vw;
+            }
+
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: darkgrey;
+                outline: 1px solid slategrey;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        padding: 5px;
+        background-color: rgba(200, 200, 200, 0.8);
+        border-radius: 20px;
+    }
+}
+
+// END INIT SWIPER
 
 // ANIMATION ZONE
 @keyframes apparitionPageAnimation {
@@ -270,59 +311,15 @@ body {
         font-size: 2.2vh;
     }
 
-    .with-scrollbar {
-        .swiper-container {
-            .swiper-wrapper {
+    .swiper-container {
+        .swiper-wrapper {
 
-                .swiper-slide {
-                    &::-webkit-scrollbar {
-                        width: 1vw !important;
-                    }
+            .swiper-slide {
+                &::-webkit-scrollbar {
+                    width: 1vw !important;
                 }
             }
         }
     }
+
 }
-
-
-// INIT SWIPER
-.swiper-container {
-
-    .swiper-wrapper {
-        height: 100vh;
-        width: 100vw;
-
-        .swiper-slide {
-            height: 100%;
-            width: 100%;
-            font-size: 3rem;
-            background-color: initial;
-            font-family: 'ubuntu';
-            overflow-y: auto;
-            overflow-x: hidden;
-
-
-            &::-webkit-scrollbar {
-                width: 2vw;
-            }
-
-            &::-webkit-scrollbar-track {
-                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            }
-
-            &::-webkit-scrollbar-thumb {
-                background-color: darkgrey;
-                outline: 1px solid slategrey;
-            }
-        }
-    }
-
-    .swiper-pagination {
-        padding: 5px;
-        background-color: rgba(200, 200, 200, 0.8);
-        border-radius: 20px;
-    }
-}
-
-// END INIT SWIPER
