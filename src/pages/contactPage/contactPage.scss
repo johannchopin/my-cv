@@ -1,3 +1,6 @@
+@import "../../assets/styles/variables.scss";
+
+
 #contactPage {
     color: initial;
     background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), white);
@@ -10,6 +13,20 @@
         text-align: center;
         text-decoration: underline;
         margin-top: 50px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        margin-top: .5em;
+
+        #charactersCounter {
+            font-size: .4em;
+            text-align: right;
+            color: green; // TODO: Find nice green color 
+        }
     }
 
     img {
@@ -95,6 +112,15 @@
             #cv {
                 font-size: 1.1rem;
             }
+        }
+    }
+}
+
+
+@media (min-width: $BIG_SCREEN_MIN_SIZE) {
+    #contactPage {
+        .form {
+            width: 60%;
         }
     }
 }

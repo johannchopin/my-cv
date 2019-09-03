@@ -180,6 +180,28 @@ export default class ContactPage extends React.Component<Props, State> {
         return (
             <div id={this.state.pageId} className="swiper-slide">
                 <h1>CONTACT</h1>
+                <div className="form">
+                    <input
+                        type="text"
+                        className="form-control m-2"
+                        value={this.state.textInSubjectInput}
+                        onChange={this.onSubjectInputChange}
+                        placeholder="Subject..."
+                    />
+
+                    <textarea
+                        className="form-control m-2"
+                        value={this.state.textInMsgInput}
+                        onChange={this.onMsgInputChange}
+                        placeholder="Message..."
+                        rows={10}
+                    ></textarea>
+                    <p id="charactersCounter">{this.maxCharactersInMsg - this.state.textInMsgInput.length}</p>
+
+                    <button type="button" className="btn btn-primary" onClick={() => this.onSubmitBtnClick()}>
+                        <i className="fas fa-paper-plane fa-fw"></i> {localize['send']}
+                    </button>
+                </div>
                 <div id="contactCtn">
                     <a href="tel:+33767873773">
                         <div id="contacts_1" className="animate-me">
@@ -197,27 +219,6 @@ export default class ContactPage extends React.Component<Props, State> {
                         <p>-télécharger la version papier-</p>
                     </a>
                 </div>
-
-                <input
-                    type="text"
-                    className="form-control"
-                    value={this.state.textInSubjectInput}
-                    onChange={this.onSubjectInputChange}
-                    placeholder="Subject..."
-                />
-
-                <textarea
-                    className="form-control"
-                    value={this.state.textInMsgInput}
-                    onChange={this.onMsgInputChange}
-                    placeholder="Message..."
-                    rows={10}
-                ></textarea>
-                <p id="charactersCounter">{this.maxCharactersInMsg - this.state.textInMsgInput.length}</p>
-
-                <button type="button" className="btn btn-primary" onClick={() => this.onSubmitBtnClick()}>
-                    <i className="fas fa-paper-plane fa-fw"></i> {localize['send']}
-                </button>
             </div>
         )
     }
