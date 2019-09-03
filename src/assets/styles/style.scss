@@ -1,4 +1,4 @@
-@import "./scssVariables.scss";
+@import "./variables.scss";
 @import "./myBoostrap.scss";
 
 @font-face {
@@ -13,6 +13,7 @@
 
 html {
     min-height: 100vh;
+    font-size: 3.8vw;
 }
 
 a {
@@ -26,7 +27,6 @@ a {
 
 
 body {
-
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -264,34 +264,23 @@ body {
 
 /* Small devices (landscape phones, 544px and up) */
 
-html {
-    font-size: 40px;
-}
+@media (min-width: $BIG_SCREEN_MIN_SIZE) {
 
-@media (min-width: 544px) and (orientation:landscape) {
     html {
-        font-size: 25px;
+        font-size: 2.2vh;
     }
-}
 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) and (orientation:landscape) {
-    html {
-        font-size: 19px;
-    }
-}
+    .with-scrollbar {
+        .swiper-container {
+            .swiper-wrapper {
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    html {
-        font-size: 16px;
+                .swiper-slide {
+                    &::-webkit-scrollbar {
+                        width: 1vw !important;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -312,8 +301,9 @@ html {
             overflow-y: auto;
             overflow-x: hidden;
 
+
             &::-webkit-scrollbar {
-                width: 20px;
+                width: 2vw;
             }
 
             &::-webkit-scrollbar-track {
@@ -322,10 +312,9 @@ html {
             }
 
             &::-webkit-scrollbar-thumb {
-                background-color: #000;
-                outline: 1px solid #000;
+                background-color: darkgrey;
+                outline: 1px solid slategrey;
             }
-
         }
     }
 
