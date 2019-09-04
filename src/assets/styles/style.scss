@@ -21,6 +21,11 @@ a {
     color: initial;
 }
 
+a:hover {
+    text-decoration: initial;
+    color: inherit;
+}
+
 .animate-me {
     opacity: 0;
 }
@@ -231,7 +236,6 @@ body {
         .swiper-slide {
             height: 100%;
             width: 100%;
-            font-size: 3rem;
             background-color: initial;
             font-family: 'ubuntu';
             overflow-y: auto;
