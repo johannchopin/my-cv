@@ -108,7 +108,7 @@ export default class IntroductionPage extends React.Component<Props, State> {
                 </p>
                 <div id="indication" className="animate-me">
                     <p>Swiper vers la droite pour parcourir mon CV</p>
-                    <img src="img/fleche.png" />
+                    <i className="fas fa-arrow-right"></i>
                 </div>
             </div>
         )

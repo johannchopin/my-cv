@@ -1,6 +1,8 @@
+@import "../../assets/styles/variables.scss";
+
 #introductionPage {
     .header_slide_0 {
-        height: 300px;
+        height: 25vh;
         background-color: rgb(251, 188, 5);
         display: flex;
         flex-direction: column;
@@ -10,8 +12,8 @@
 
     .header_slide_0 h1 {
         opacity: 0;
-        margin-top: 50px;
-        font-size: 1.5em;
+        margin-top: 5vh;
+        font-size: 2em;
         margin-block-end: 0;
     }
 
@@ -30,7 +32,7 @@
 
     .img_container img {
         opacity: 0;
-        width: 170px;
+        height: 20vh;
         border-radius: 50%;
         border: solid white 8px;
     }
@@ -42,7 +44,7 @@
         margin-bottom: 40px;
         padding: 0 10%;
         color: rgb(117, 117, 117);
-        font-size: 1.1em;
+        font-size: 1.9em;
         text-align: center;
         margin-bottom: 150px;
     }
@@ -57,29 +59,34 @@
         font-size: 1rem;
         color: initial;
         display: flex;
-        align-items: center;
         justify-content: right;
+        align-content: center;
         margin: 0 20px 40px 0;
+
+        p {
+            margin: 0;
+        }
+
+        img {
+            width: 20px;
+        }
     }
 
-    #indication img {
-        width: 20px;
-    }
 }
 
 
-@media (max-width: 991px) {
+@media (min-width: $BIG_SCREEN_MIN_SIZE) {
     #introductionPage {
         .header_slide_0 {
-            height: 25vh;
+            height: 300px;
         }
 
         .header_slide_0 h1 {
-            font-size: 1em;
+            font-size: 3em;
         }
 
         .img_container img {
-            width: 300px;
+            height: 30vh;
         }
 
         .presentation_slide_0 {}
