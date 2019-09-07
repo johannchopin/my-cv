@@ -28,10 +28,10 @@
         display: none;
         font-family: 'ubuntu';
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
+        padding-top: 3em;
         opacity: 0;
 
         h1 {
@@ -48,7 +48,7 @@
             li {
                 list-style-type: none;
                 margin: 10px 0;
-                font-size: 2rem;
+                font-size: 1.2em;
                 transition-duration: 0.5s;
 
                 &:hover {
@@ -103,4 +103,14 @@
     }
 }
 
-@media (min-width: $BIG_SCREEN_MIN_SIZE) {}
+@media (min-width: $BIG_SCREEN_MIN_SIZE) {
+    #navbar {
+        .container {
+            ul {
+                li {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
