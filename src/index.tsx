@@ -68,7 +68,7 @@ class App extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            lang: 'en',
+            lang: 'fr',
             pageToShow: 'introductionPage',
             simpleModalParams: {},
             mySwiper: null,
