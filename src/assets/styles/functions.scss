@@ -1,0 +1,32 @@
+/* each react object renden() an element of the virtual DOM.
+ * This element must have an id to differentiate it from the others.
+ * To use the functions concerning the ids, you must assign the id of this element to the following variable $CONTAINER_ID
+*/
+$CONTAINER_ID: "";
+
+// function mainly used to test if the variable $CONTAINER_ID has been successfully initialized
+@function getContainerId() {
+    @if $CONTAINER_ID=="" {
+        @error "$CONTAINER_ID need to be initialized !";
+    }
+
+    @if str-slice(#{$CONTAINER_ID}, 1, 1) !="#" {
+        @error "Id selector: '#' is missing in $CONTAINER_ID -> #{$CONTAINER_ID} !";
+    }
+
+    @return $CONTAINER_ID;
+}
+
+@function getChildrenId($elmtId) {
+    @return getContainerId()+"_"+$elmtId;
+}
+
+
+// 'parcel-plugin-svgr' add prefix to each svg components id
+// So if an svg 'icon.svg' has a '<g id="test">'
+// it will be compiled has '<g id="icon_svg__test">'
+@function getSvgComponentId($svgFileName, $id) {
+    $svgName: str-slice(#{$svgFileName}, 1, str-index(#{$svgFileName}, ".")-1);
+
+    @return "#"+#{$svgName}+"_svg__"+#{$id};
+}

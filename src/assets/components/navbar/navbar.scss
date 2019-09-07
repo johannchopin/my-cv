@@ -1,3 +1,5 @@
+@import "../../styles/toolsBundler.scss";
+
 #navbar {
     position: absolute;
     display: flex;
@@ -100,3 +102,5 @@
         opacity: 1;
     }
 }
+
+@media (min-width: $BIG_SCREEN_MIN_SIZE) {}
