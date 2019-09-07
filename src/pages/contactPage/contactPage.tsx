@@ -186,14 +186,14 @@ export default class ContactPage extends React.Component<Props, State> {
                         className="form-control m-2"
                         value={this.state.textInSubjectInput}
                         onChange={this.onSubjectInputChange}
-                        placeholder="Subject..."
+                        placeholder={LOCALIZE[this.props.lang].subject}
                     />
 
                     <textarea
                         className="form-control m-2"
                         value={this.state.textInMsgInput}
                         onChange={this.onMsgInputChange}
-                        placeholder="Message..."
+                        placeholder={LOCALIZE[this.props.lang].message}
                         rows={10}
                     ></textarea>
                     <p id="charactersCounter">{this.maxCharactersInMsg - this.state.textInMsgInput.length}</p>
