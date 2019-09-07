@@ -191,6 +191,14 @@ class App extends React.Component<Props, State> {
         )
     }
 
+    protected modalsRender() {
+        return (
+            <div id="modals">
+                <SimpleModal params={this.state.simpleModalParams} />
+            </div>
+        );
+    }
+
 
     render() {
         return (
@@ -211,6 +219,8 @@ class App extends React.Component<Props, State> {
 
                     <div className="swiper-scrollbar"></div>
                 </div>
+
+                {this.modalsRender()}
             </div>
         )
     }
