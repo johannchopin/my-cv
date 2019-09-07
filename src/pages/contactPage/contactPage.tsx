@@ -215,6 +215,7 @@ export default class ContactPage extends React.Component<Props, State> {
                             <p>johannchopin@protonmail.com</p>
                         </div>
                     </a>
+                    {/* TODO: Debug pdf opening */}
                     <a href="img/cv.pdf" target="blanck" id="cv">
                         <p>-télécharger la version papier-</p>
                     </a>
