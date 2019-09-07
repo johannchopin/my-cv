@@ -20,6 +20,15 @@ const Helper = new _Helper();
 import { TPages } from '../../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
+// IMPORT IMAGES ZONE
+// @ts-ignore
+import FrFlagSvg from './imgs/fr.svg';
+// @ts-ignore
+import DeFlagSvg from './imgs/de.svg';
+// @ts-ignore
+import UsFlagSvg from './imgs/us.svg';
+// END IMPORT IMAGES ZONE
+
 
 interface Props {
     goToPage: (pageName: TPages) => void,
@@ -84,6 +93,19 @@ export default class Navbar extends React.Component<Props, State> {
         this.showOrHideNavbar();
     }
 
+    protected languageSelectionRender = () => {
+        return (
+            <div id="languageSelection">
+                {/* 
+                <FrFlagSvg />
+                <DeFlagSvg />
+                <UsFlagSvg />
+                */}
+            </div>
+        )
+    }
+
+
     render() {
         return (
             <nav id="navbar" onClick={() => { this.showOrHideNavbar() }}>
@@ -98,6 +120,8 @@ export default class Navbar extends React.Component<Props, State> {
                         <li>Hobbies</li>
                         <li>Contacts</li>
                     </ul>
+
+                    {this.languageSelectionRender()}
                 </div>
             </nav>
         )
