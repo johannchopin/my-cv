@@ -46,7 +46,7 @@ interface State {
 // use -> this.setState(prevState => ({ test: "test" }))
 // instead of -> this.setState({ test: "test" })
 
-export default class IntroductionPage extends React.Component<Props, State> {
+export default class SkillsPage extends React.Component<Props, State> {
 
 
     constructor(props: Props) {
@@ -54,7 +54,7 @@ export default class IntroductionPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'skillsPage',
-            pageIndex: 1, // TODO: don't forget to update this !!
+            pageIndex: 2, // TODO: don't forget to update this !!
         };
     }
 
