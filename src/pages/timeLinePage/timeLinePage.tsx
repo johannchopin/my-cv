@@ -100,20 +100,20 @@ export default class TimeLinePage extends React.Component<Props, State> {
                     <h1>Timeline</h1>
 
                     <ul className="timeline">
-                        <li className="event" data-date="65Million B.C.">
+                        <li className="event animate-me" data-date="65Million B.C.">
                             <h3>Dinosaurs Roamed the Earth</h3>
                             <p>RAWWWWWWRRR 🐢🦂</p>
                         </li>
-                        <li className="event" data-date="2005">
+                        <li className="event animate-me" data-date="2005">
                             <h3>Creative Component Launched</h3>
                             <p>"We can be all things to all people!" 📣</p>
                         </li>
-                        <li className="event" id="date" data-date="2009">
+                        <li className="event animate-me" id="date" data-date="2009">
                             <h3>Squareflair was Born</h3>
                             <p>"We can be all things to Squarespace users!" 📣</p>
                         </li>
 
-                        <li className="event" data-date="November 15, 2018">
+                        <li className="event animate-me" data-date="November 15, 2018">
 
                             <h3>Squareflair Today</h3>
 
