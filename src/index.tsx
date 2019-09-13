@@ -23,6 +23,7 @@ import SimpleModal from './assets/components/simpleModal/simpleModal';
 
 // IMPORT PAGES ZONE
 import IntroductionPage from './pages/introductionPage/introductionPage';
+import TimeLinePage from './pages/timeLinePage/timeLinePage';
 import SkillsPage from './pages/skillsPage/skillsPage';
 import ContactPage from './pages/contactPage/contactPage';
 // END IMPORT PAGES ZONE
@@ -175,6 +176,15 @@ class App extends React.Component<Props, State> {
         )
     }
 
+    protected timeLinePageRender = () => {
+        return (
+            <TimeLinePage
+                language={this.state.language}
+                currentPageIndex={this.state.currentPageIndex}
+            />
+        )
+    }
+
     protected skillsPageRender = () => {
         return (
             <SkillsPage
@@ -210,6 +220,7 @@ class App extends React.Component<Props, State> {
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
                         {this.introductionPageRender()}
+                        {this.timeLinePageRender()}
                         {this.skillsPageRender()}
                         {this.contactPageRender()}
                     </div>
