@@ -17,7 +17,7 @@ const Helper = new _Helper();
 // END INIT HELPERS METHODS ZONE
 
 // IMPORT INTERFACE ZONE
-import { TPages } from '../../../commonInterface';
+import { TPages, TLanguages } from '../../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 // IMPORT IMAGES ZONE
@@ -32,6 +32,8 @@ import UsFlagSvg from './imgs/us.svg';
 
 interface Props {
     goToPage: (pageName: TPages) => void,
+    setLanguage: (language: TLanguages) => void,
+    language: TLanguages;
 }
 
 interface State {
@@ -96,11 +98,20 @@ export default class Navbar extends React.Component<Props, State> {
     protected languageSelectionRender = () => {
         return (
             <div id="languageSelection">
-                {/* 
-                <FrFlagSvg />
-                <DeFlagSvg />
-                <UsFlagSvg />
-                */}
+
+                <FrFlagSvg
+                    className={this.props.language === 'fr' ? 'selected-language' : ''}
+                    onClick={() => this.props.setLanguage('fr')}
+                />
+                <DeFlagSvg
+                    className={this.props.language === 'de' ? 'selected-language' : ''}
+                    onClick={() => this.props.setLanguage('de')}
+                />
+                <UsFlagSvg
+                    className={this.props.language === 'en' ? 'selected-language' : ''}
+                    onClick={() => this.props.setLanguage('en')}
+                />
+
             </div>
         )
     }
