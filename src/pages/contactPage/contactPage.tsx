@@ -13,6 +13,10 @@ const PageBase = new _pageBase();
 import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
+// IMPORT APICMDS ZONE
+import ApiCmds from '../../api/apiCmds';
+// END IMPORT APICMDS ZONE
+
 // IMPORT IMAGES ZONE
 // END IMPORT IMAGES ZONE
 
@@ -28,9 +32,9 @@ const Helper = new _Helper();
 // IMPORT INTERFACE ZONE
 import {
     ISimpleModalParams,
-    ISendEmailToAdminData,
-    ISendEmailToAdminResponse,
-    TLanguages
+    TLanguages,
+    ISendMeEmailData,
+    ISendMeEmailResponse
 } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
@@ -44,6 +48,7 @@ interface Props {
 interface State {
     pageId: string,
     pageIndex: number,
+    textInFromInput: string,
     textInSubjectInput: string,
     textInMsgInput: string,
 }
@@ -61,6 +66,7 @@ export default class ContactPage extends React.Component<Props, State> {
         this.state = {
             pageId: 'contactPage',
             pageIndex: 2, // TODO: don't forget to update this !! 
+            textInFromInput: '',
             textInSubjectInput: '',
             textInMsgInput: '',
         };
@@ -107,6 +113,12 @@ export default class ContactPage extends React.Component<Props, State> {
         });
     }
 
+    protected onFromInputChange = (event): void => {
+        this.setState({
+            textInFromInput: event.target.value,
+        });
+    }
+
     protected onMsgInputChange = (event): void => {
         const msg = event.target.value;
 
@@ -121,6 +133,10 @@ export default class ContactPage extends React.Component<Props, State> {
         const textInMsgInputLength = this.state.textInMsgInput.length;
         const textInSubjectInputLength = this.state.textInSubjectInput.length;
 
+        if (!Helper.isEmail(this.state.textInFromInput)) {
+            return false;
+        }
+
         if (textInMsgInputLength > this.maxCharactersInMsg || textInMsgInputLength === 0) {
             return false;
         }
@@ -132,25 +148,24 @@ export default class ContactPage extends React.Component<Props, State> {
         return true;
     }
 
-    protected getSendEmailToAdminData = (): ISendEmailToAdminData => {
-        return {
-            subject: this.state.textInSubjectInput,
-            msg: this.state.textInMsgInput,
-        }
-    }
-
     protected onSubmitBtnClick = (): void => {
         if (this.areInputsValid()) {
-            //ApiCmds.sendEmailToAdmin(this.getSendEmailToAdminData(), this.onSendEmailToAdminCallback)
+            const mailData: ISendMeEmailData = {
+                from: this.state.textInFromInput,
+                subject: this.state.textInSubjectInput,
+                message: this.state.textInMsgInput,
+            }
+
+            ApiCmds.sendMeEmail(mailData, this.onSendMeEmailCallback);
         } else {
             this.props.showSimpleModal({
                 type: 'danger',
-                message: 'Please enter a valid subject and message !'
+                message: 'Please enter a valid email, subject and message !'
             })
         }
     }
 
-    protected onSendEmailToAdminCallback = (result: ISendEmailToAdminResponse): void => {
+    protected onSendMeEmailCallback = (result: ISendMeEmailResponse): void => {
         if (result.response.hasEmailBeSend) {
             this.props.showSimpleModal({
                 type: 'success',
@@ -181,6 +196,14 @@ export default class ContactPage extends React.Component<Props, State> {
             <div id={this.state.pageId} className="swiper-slide">
                 <h1>CONTACT</h1>
                 <div className="form">
+                    <input
+                        type="text"
+                        className="form-control m-2"
+                        value={this.state.textInFromInput}
+                        onChange={this.onFromInputChange}
+                        placeholder={LOCALIZE[this.props.lang].from}
+                    />
+
                     <input
                         type="text"
                         className="form-control m-2"

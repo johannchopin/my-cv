@@ -19,7 +19,20 @@ export interface ISendEmailToAdminData {
     msg: string,
 }
 
+export interface ISendMeEmailData {
+    from: string,
+    subject: string,
+    message: string,
+}
+
+
 export interface ISendEmailToAdminResponse extends IRequestResponse {
+    response: {
+        hasEmailBeSend: boolean,
+    }
+}
+
+export interface ISendMeEmailResponse extends IRequestResponse {
     response: {
         hasEmailBeSend: boolean,
     }
