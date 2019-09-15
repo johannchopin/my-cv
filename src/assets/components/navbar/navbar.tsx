@@ -16,6 +16,10 @@ import _Helper from '../../../helper';
 const Helper = new _Helper();
 // END INIT HELPERS METHODS ZONE
 
+// IMPORT LOCALIZE ZONE
+import LOCALIZE from './localize'
+// END IMPORT LOCALIZE ZONE
+
 // IMPORT INTERFACE ZONE
 import { TPages, TLanguages } from '../../../commonInterface';
 // END IMPORT INTERFACE ZONE
@@ -118,18 +122,32 @@ export default class Navbar extends React.Component<Props, State> {
 
 
     render() {
+        const localize = LOCALIZE[this.props.language];
+
         return (
             <nav id="navbar" onClick={() => { this.showOrHideNavbar() }}>
                 <i id="icon" className={this.state.showNavbar ? "fas fa-bars selected" : "fas fa-bars"}></i>
                 <div className="container">
                     <h1>MENU</h1>
                     <ul>
-                        <li onClick={() => { this.goToPage('introductionPage') }}>Présentation</li>
-                        <li onClick={() => { this.goToPage('backgroundPage') }}>Formation</li>
-                        <li>Compétences</li>
-                        <li>Expériences personnelles</li>
-                        <li>Hobbies</li>
-                        <li>Contacts</li>
+                        <li onClick={() => { this.goToPage('introductionPage') }}>
+                            {localize.presentation}
+                        </li>
+                        <li onClick={() => { this.goToPage('backgroundPage') }}>
+                            {localize.background}
+                        </li>
+                        <li>
+                            {localize.skills}
+                        </li>
+                        <li>
+                            {localize.personal_experiences}
+                        </li>
+                        <li>
+                            {localize.hobbies}
+                        </li>
+                        <li>
+                            {localize.contacts}
+                        </li>
                     </ul>
 
                     {this.languageSelectionRender()}
