@@ -17,14 +17,15 @@ import './assets/styles/style.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT COMPONENTS ZONE
-import Navbar from './assets/components/navbar/navbar';
-import SimpleModal from './assets/components/simpleModal/simpleModal';
+import Navbar from './assets/uiComponents/navbar/navbar';
+import SimpleModal from './assets/uiComponents/simpleModal/simpleModal';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT PAGES ZONE
 import IntroductionPage from './pages/introductionPage/introductionPage';
 import TimeLinePage from './pages/timeLinePage/timeLinePage';
 import SkillsPage from './pages/skillsPage/skillsPage';
+import HobbiesPage from './pages/hobbiesPage/hobbiesPage';
 import ContactPage from './pages/contactPage/contactPage';
 // END IMPORT PAGES ZONE
 
@@ -71,6 +72,7 @@ class App extends React.Component<Props, State> {
         this.state = {
             language: 'fr',
             pageToShow: 'introductionPage',
+            pageToShow: 'backgroundPage',
             simpleModalParams: {},
             mySwiper: null,
             currentPageIndex: 0,
@@ -88,6 +90,7 @@ class App extends React.Component<Props, State> {
         this.setState({
             mySwiper: new Swiper('.swiper-container', {
                 initialSlide: 0,
+                initialSlide: 1,
                 preloadImages: true,
                 keyboard: {
                     enabled: true,
@@ -193,6 +196,16 @@ class App extends React.Component<Props, State> {
         )
     }
 
+    protected hobbiesPageRender = () => {
+        return (
+            <HobbiesPage
+                language={this.state.language}
+                currentPageIndex={this.state.currentPageIndex}
+                showSimpleModal={this.showSimpleModal}
+            />
+        )
+    }
+
     protected contactPageRender = () => {
         return (
             <ContactPage
@@ -222,6 +235,7 @@ class App extends React.Component<Props, State> {
                         {this.introductionPageRender()}
                         {this.timeLinePageRender()}
                         {this.skillsPageRender()}
+                        {this.hobbiesPageRender()}
                         {this.contactPageRender()}
                     </div>
 
