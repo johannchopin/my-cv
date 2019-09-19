@@ -1,0 +1,138 @@
+@import "../../styles/toolsBundler.scss";
+
+#navbar {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 4em;
+    height: 4em;
+    border-radius: 0 0 0 100%;
+    background-color: black;
+    transition-duration: 0.5s;
+    color: white;
+    z-index: 10;
+
+    #icon {
+        position: relative;
+        font-size: 1.5em;
+        top: .5em;
+        left: 1em;
+
+        &.selected {
+            color: #FBBC05;
+        }
+    }
+
+    .container {
+        display: none;
+        font-family: 'ubuntu';
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-top: 3em;
+        opacity: 0;
+
+        h1 {
+            font-size: 3rem;
+            border: solid white 3px;
+            padding: 10px 20px;
+        }
+
+        ul {
+            margin-top: 40px;
+            padding-left: 40px;
+            border-left: solid white 3px;
+
+            li {
+                list-style-type: none;
+                margin: 10px 0;
+                font-size: 1.2em;
+                transition-duration: 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                    color: rgb(251, 188, 5);
+                }
+            }
+        }
+
+        #languageSelection {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            margin-top: 1em;
+
+            svg {
+                width: 10vw;
+
+                &.selected-language {
+                    border: solid .15em rgb(251, 188, 5);
+                    padding: .15em;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        width: 100px;
+        height: 95px;
+
+        #icon div {
+            background-color: rgb(251, 188, 5);
+        }
+    }
+}
+
+@keyframes showMenuAnimation {
+    from {}
+
+    to {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+@keyframes hideMenuAnimation {
+    from {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    to {}
+}
+
+
+// TODO: Move to style.scss
+@keyframes apparition {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: $BIG_SCREEN_MIN_SIZE) {
+    #navbar {
+        .container {
+            ul {
+                li {
+                    font-size: 1.5em;
+                }
+            }
+
+            #languageSelection {
+
+                svg {
+                    width: 10vh;
+                }
+            }
+        }
+    }
+}
