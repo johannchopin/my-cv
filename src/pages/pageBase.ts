@@ -13,8 +13,22 @@ export default class _pageBase {
         const elmtsToAnimate = $(`#${pageId} .animate-me`);
 
         elmtsToAnimate.each(function () {
+            let animationName = 'rotation';
+            const elmtClass = $(this).attr('class');
+
+            if (elmtClass !== undefined) {
+                if (elmtClass.includes("animation-")) {
+                    const animationClassWithEndClass = elmtClass.substring(elmtClass.indexOf("animation-"), elmtClass.length);
+                    const animationClass = (animationClassWithEndClass.split(' '))[0];
+                    const className = animationClass.replace("animation-", '');
+
+                    animationName = className;
+                }
+            }
+
+
             $(this).css({
-                animation: 'rotation 1s forwards',
+                animation: animationName + ' 1s forwards',
                 animationDelay: animationDelay + 's',
             });
 
