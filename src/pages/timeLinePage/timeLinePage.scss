@@ -22,9 +22,8 @@
 
     a:hover {
         color: black;
-        background: #FBBC05;
-        border-bottom: 0.35em solid black;
-    }
+        background: #FBBC05;border-bottom: 0.35em solid black;
+}
 
     strong {
         font-weight: 600;
@@ -60,12 +59,6 @@
         font-weight: 100;
         max-width: 90%;
 
-        h1 {
-            letter-spacing: 1.5px;
-            font-weight: 100;
-            font-size: 1.4em;
-        }
-
         h2,
         h3 {
             letter-spacing: 1.5px;
@@ -79,44 +72,39 @@
             margin-bottom: 50px;
             position: relative;
             padding-left: .5em;
+
+            .event-date {
+                color: #FBBC05;
+                font-weight: 100;
+                font-size: 1.2em;
+            }
+
+            &:before,
+            &:after {
+                position: absolute;
+                display: block;
+                top: 0;
+            }
+
+            &:last-of-type {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border: none;
+            }
+
+            &:after {
+                box-shadow: 0 0 0 .3em #FBBC05;
+                left: -1.02em;
+                background: #313534;
+                border-radius: 50%;
+                height: .7em;
+                width: .7em;
+                content: "";
+                top: 5px;
+            }
         }
 
-        .event:last-of-type {
-            padding-bottom: 0;
-            margin-bottom: 0;
-            border: none;
-        }
-
-        .event:before,
-        .event:after {
-            position: absolute;
-            display: block;
-            top: 0;
-        }
-
-        .event:before {
-            top: -1.3em;
-            color: #FBBC05;
-            content: attr(data-date);
-            font-weight: 100;
-            font-size: 1.2em;
-            min-width: 120px;
-        }
-
-        .event:after {
-            box-shadow: 0 0 0 .3em #FBBC05;
-            left: -1.02em;
-            background: #313534;
-            border-radius: 50%;
-            height: .7em;
-            width: .7em;
-            content: "";
-            top: 5px;
-        }
     }
-
-
-
 }
 
 
