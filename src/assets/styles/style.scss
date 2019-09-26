@@ -293,6 +293,17 @@ body {
     }
 }
 
+@keyframes goUp {
+    0% {
+        transform: translateY(2em);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @keyframes fadeApparition {
     from {
         opacity: 0;
