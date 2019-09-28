@@ -72,7 +72,7 @@ class App extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             language: 'fr',
-            pageToShow: 'backgroundPage',
+            pageToShow: 'introductionPage',
             pagesId: {
                 'introductionPage': 0,
                 'backgroundPage': 1,
@@ -94,9 +94,10 @@ class App extends React.Component<IProps, IState> {
     protected init() {
         this.initUI();
 
+        const initialPageId = this.state.pagesId[this.state.pageToShow];
         this.setState({
             mySwiper: new Swiper('.swiper-container', {
-                initialSlide: 0,
+                initialSlide: initialPageId,
                 preloadImages: true,
                 keyboard: {
                     enabled: true,
