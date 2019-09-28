@@ -50,18 +50,18 @@ import {
 // END IMPORT INTERFACE ZONE
 
 
-interface IProps {
-}
+interface IProps { }
 
 interface IState {
     language: TLanguages,
     pageToShow: TPages,
-    pagesId: Object,
+    pagesId: TPagesId,
     simpleModalParams: ISimpleModalParams,
     mySwiper: Swiper,
     currentPageIndex: number,
 }
 
+type TPagesId = { [pageName in TPages]: number }
 // TODO : Change setState calling
 // use -> this.setState(prevState => ({ test: "test" }))
 // instead of -> this.setState({ test: "test" })
