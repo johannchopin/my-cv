@@ -101,14 +101,15 @@ export default class TimeLinePage extends React.Component<Props, State> {
                 <div id="timeline-content">
                     <ul className="timeline">
                         <li className="event animate-me animation-goUp">
-                            <p className="event-date">65Million B.C.</p>
-                            <h2>Dinosaurs Roamed the Earth</h2>
-                            <p>RAWWWWWWRRR 🐢🦂</p>
+                            <p className="event-date">2017</p>
+                            <h2>Début de mes études à l'<i>ISFATES</i></h2>
+                            <h2>J'obtiens en 2017 mon BAC S</h2>
+                            <p>(option section européenne physique-chimie en allemand et Langues et cultures de l'antiquité: latin) avec mention '<i>Bien</i>'</p>
                         </li>
                         <li className="event animate-me animation-goUp">
                             <p className="event-date">2014</p>
                             <h2>Obtention du brevet des collèges, mention 'Très bien'</h2>
-                            <p>"We can be all things to all people!" 📣</p>
+                            <h2>Certification B1 en allemand, KMK</h2>
                         </li>
                     </ul>
                 </div>
