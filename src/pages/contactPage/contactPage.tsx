@@ -65,7 +65,7 @@ export default class ContactPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'contactPage',
-            pageIndex: 2, // TODO: don't forget to update this !! 
+            pageIndex: 4, // TODO: don't forget to update this !! 
             textInFromInput: '',
             textInSubjectInput: '',
             textInMsgInput: '',
@@ -76,7 +76,7 @@ export default class ContactPage extends React.Component<Props, State> {
     protected maxCharactersInSubject = 30;
 
     componentDidMount() {
-        // TODO: Do something
+        this.init();
     }
 
     componentDidUpdate(oldProps: Props) {
@@ -96,6 +96,7 @@ export default class ContactPage extends React.Component<Props, State> {
     }
 
     protected clearUI(): void {
+        PageBase.clearPage(this.state.pageId);
     }
 
     protected onPageChange(): void {
@@ -198,7 +199,7 @@ export default class ContactPage extends React.Component<Props, State> {
                 <div className="form">
                     <input
                         type="text"
-                        className="form-control m-2"
+                        className="form-control m-2 animate-me"
                         value={this.state.textInFromInput}
                         onChange={this.onFromInputChange}
                         placeholder={LOCALIZE[this.props.lang].from}
@@ -206,14 +207,14 @@ export default class ContactPage extends React.Component<Props, State> {
 
                     <input
                         type="text"
-                        className="form-control m-2"
+                        className="form-control m-2 animate-me"
                         value={this.state.textInSubjectInput}
                         onChange={this.onSubjectInputChange}
                         placeholder={LOCALIZE[this.props.lang].subject}
                     />
 
                     <textarea
-                        className="form-control m-2"
+                        className="form-control m-2 animate-me"
                         value={this.state.textInMsgInput}
                         onChange={this.onMsgInputChange}
                         placeholder={LOCALIZE[this.props.lang].message}
@@ -221,10 +222,11 @@ export default class ContactPage extends React.Component<Props, State> {
                     ></textarea>
                     <p id="charactersCounter">{this.maxCharactersInMsg - this.state.textInMsgInput.length}</p>
 
-                    <button type="button" className="btn btn-primary" onClick={() => this.onSubmitBtnClick()}>
+                    <button type="button" className="btn btn-primary animate-me" onClick={() => this.onSubmitBtnClick()}>
                         <i className="fas fa-paper-plane fa-fw"></i> {localize['send']}
                     </button>
                 </div>
+
                 <div id="contactCtn">
                     <a href="tel:+33767873773">
                         <div id="contacts_1" className="animate-me">
@@ -239,6 +241,7 @@ export default class ContactPage extends React.Component<Props, State> {
                         </div>
                     </a>
                     {/* TODO: Debug pdf opening */}
+
                     <a href="img/cv.pdf" target="blanck" id="cv">
                         <p>-télécharger la version papier-</p>
                     </a>
