@@ -56,6 +56,7 @@ interface Props {
 interface State {
     language: TLanguages,
     pageToShow: TPages,
+    pagesId: Object,
     simpleModalParams: ISimpleModalParams,
     mySwiper: Swiper,
     currentPageIndex: number,
@@ -71,8 +72,12 @@ class App extends React.Component<Props, State> {
         super(props);
         this.state = {
             language: 'fr',
-            pageToShow: 'introductionPage',
             pageToShow: 'backgroundPage',
+            pagesId: {
+                'introductionPage': 0,
+                'backgroundPage': 1,
+                'skillsPage': 2,
+            },
             simpleModalParams: {},
             mySwiper: null,
             currentPageIndex: 0,
@@ -90,7 +95,6 @@ class App extends React.Component<Props, State> {
         this.setState({
             mySwiper: new Swiper('.swiper-container', {
                 initialSlide: 0,
-                initialSlide: 1,
                 preloadImages: true,
                 keyboard: {
                     enabled: true,
@@ -134,11 +138,8 @@ class App extends React.Component<Props, State> {
     }
 
     protected goToPage = (pageName: TPages): void => {
-        switch (pageName) {
-            case 'introductionPage':
-                this.state.mySwiper.slideTo(0, 1000);
-                break;
-        }
+        const pageId = this.state.pagesId[pageName];
+        this.state.mySwiper.slideTo(pageId, 1000);
     };
 
     protected showSimpleModal = (params: ISimpleModalParams): void => {
