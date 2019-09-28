@@ -77,6 +77,8 @@ class App extends React.Component<IProps, IState> {
                 'introductionPage': 0,
                 'backgroundPage': 1,
                 'skillsPage': 2,
+                'hobbiesPage': 3,
+                'contactPage': 4,
             },
             simpleModalParams: {},
             mySwiper: null,
