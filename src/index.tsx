@@ -50,10 +50,10 @@ import {
 // END IMPORT INTERFACE ZONE
 
 
-interface Props {
+interface IProps {
 }
 
-interface State {
+interface IState {
     language: TLanguages,
     pageToShow: TPages,
     pagesId: Object,
@@ -66,9 +66,9 @@ interface State {
 // use -> this.setState(prevState => ({ test: "test" }))
 // instead of -> this.setState({ test: "test" })
 
-class App extends React.Component<Props, State> {
+class App extends React.Component<IProps, IState> {
 
-    constructor(props: Props) {
+    constructor(props: IProps) {
         super(props);
         this.state = {
             language: 'fr',
