@@ -46,7 +46,7 @@
         border-bottom-right-radius: .6em;
         border-top-right-radius: .6em;
         background: #2C2F2E;
-        color: rgba(255, 255, 255, 0.8);
+        color: #fff;
         margin: 50px auto;
         position: relative;
         line-height: 1.4em;
@@ -59,7 +59,7 @@
 
         h2 {
             font-weight: 400;
-            font-size: 1.4em;
+            font-size: 1.2em;
 
             &:before {
                 content: "- ";
@@ -79,6 +79,17 @@
                 font-weight: 100;
                 font-size: 1.2em;
             }
+
+            i {
+                color: #ffcc00;
+                font-style: initial;
+            }
+
+            p:not(.event-date) {
+                padding-left: 1em;
+                opacity: .9;
+            }
+
 
             &:before,
             &:after {
