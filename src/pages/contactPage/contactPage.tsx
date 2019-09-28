@@ -199,7 +199,7 @@ export default class ContactPage extends React.Component<Props, State> {
                 <div className="form">
                     <input
                         type="text"
-                        className="form-control m-2 animate-me"
+                        className="form-control m-2 animate-me animation-goUp"
                         value={this.state.textInFromInput}
                         onChange={this.onFromInputChange}
                         placeholder={LOCALIZE[this.props.lang].from}
@@ -207,42 +207,45 @@ export default class ContactPage extends React.Component<Props, State> {
 
                     <input
                         type="text"
-                        className="form-control m-2 animate-me"
+                        className="form-control m-2 animate-me animation-goUp"
                         value={this.state.textInSubjectInput}
                         onChange={this.onSubjectInputChange}
                         placeholder={LOCALIZE[this.props.lang].subject}
                     />
 
                     <textarea
-                        className="form-control m-2 animate-me"
+                        className="form-control m-2 animate-me animation-goUp"
                         value={this.state.textInMsgInput}
                         onChange={this.onMsgInputChange}
                         placeholder={LOCALIZE[this.props.lang].message}
                         rows={10}
                     ></textarea>
-                    <p id="charactersCounter">{this.maxCharactersInMsg - this.state.textInMsgInput.length}</p>
 
-                    <button type="button" className="btn btn-primary animate-me" onClick={() => this.onSubmitBtnClick()}>
+                    <p id="charactersCounter" className="animate-me animation-goUp">
+                        {this.maxCharactersInMsg - this.state.textInMsgInput.length}
+                    </p>
+
+                    <button type="button" className="btn btn-primary animate-me animation-goUp" onClick={() => this.onSubmitBtnClick()}>
                         <i className="fas fa-paper-plane fa-fw"></i> {localize['send']}
                     </button>
                 </div>
 
                 <div id="contactCtn">
                     <a href="tel:+33767873773">
-                        <div id="contacts_1" className="animate-me">
+                        <div id="contacts_1" className="animate-me animation-goUp">
                             <i className="fas fa-mobile-alt"></i>
                             <p>07 67 87 37 73</p>
                         </div>
                     </a>
                     <a href="mailto:johannchopin@protonmail.com">
-                        <div id="contacts_2" className="animate-me">
+                        <div id="contacts_2" className="animate-me animation-goUp">
                             <i className="far fa-envelope"></i>
                             <p>johannchopin@protonmail.com</p>
                         </div>
                     </a>
                     {/* TODO: Debug pdf opening */}
 
-                    <a href="img/cv.pdf" target="blanck" id="cv">
+                    <a href="img/cv.pdf" target="blanck" id="cv" className="animate-me animation-goUp">
                         <p>-télécharger la version papier-</p>
                     </a>
                 </div>
