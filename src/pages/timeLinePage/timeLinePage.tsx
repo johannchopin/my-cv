@@ -102,12 +102,12 @@ export default class TimeLinePage extends React.Component<Props, State> {
                     <ul className="timeline">
                         <li className="event animate-me animation-goUp">
                             <p className="event-date">65Million B.C.</p>
-                            <h3>Dinosaurs Roamed the Earth</h3>
+                            <h2>Dinosaurs Roamed the Earth</h2>
                             <p>RAWWWWWWRRR 🐢🦂</p>
                         </li>
                         <li className="event animate-me animation-goUp">
-                            <p className="event-date">2005</p>
-                            <h3>Creative Component Launched</h3>
+                            <p className="event-date">2014</p>
+                            <h2>Obtention du brevet des collèges, mention 'Très bien'</h2>
                             <p>"We can be all things to all people!" 📣</p>
                         </li>
                     </ul>

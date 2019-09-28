@@ -41,7 +41,6 @@
         text-align: center;
     }
 
-    /* Timeline */
     .timeline {
         border-left: .4em solid #FBBC05;
         border-bottom-right-radius: .6em;
@@ -58,10 +57,14 @@
         font-weight: 100;
         max-width: 90%;
 
-        h2,
-        h3 {
+        h2 {
             font-weight: 400;
             font-size: 1.4em;
+
+            &:before {
+                content: "- ";
+                color: #FBBC05;
+            }
         }
 
         .event {
