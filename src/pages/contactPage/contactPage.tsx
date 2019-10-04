@@ -231,12 +231,6 @@ export default class ContactPage extends React.Component<Props, State> {
                 </div>
 
                 <div id="contactCtn">
-                    <a href="tel:+33767873773">
-                        <div id="contacts_1" className="animate-me animation-goUp">
-                            <i className="fas fa-mobile-alt"></i>
-                            <p>07 67 87 37 73</p>
-                        </div>
-                    </a>
                     <a href="mailto:johannchopin@protonmail.com">
                         <div id="contacts_2" className="animate-me animation-goUp">
                             <i className="far fa-envelope"></i>
