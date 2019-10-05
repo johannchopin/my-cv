@@ -1,3 +1,5 @@
+@import '../../assets/styles/toolsBundler.scss';
+
 #skillsPage {
     h1 {
         opacity: 0;
@@ -54,7 +56,7 @@
         }
 
         img {
-            width: 100px;
+            width: 2.5em;
         }
     }
 
@@ -123,7 +125,8 @@
 }
 
 
-@media (max-width: 991px) {
+//TODO: Use min-width
+@media (max-width: $BIG_SCREEN_MIN_SIZE) {
     #skillsPage {
         h1 {
             display: flex;
