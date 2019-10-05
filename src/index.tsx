@@ -81,6 +81,7 @@ class App extends React.Component<IProps, IState> {
                 'contactPage': 4,
             },
             simpleModalParams: {},
+            //@ts-ignore
             mySwiper: null,
             currentPageIndex: 0,
         };
