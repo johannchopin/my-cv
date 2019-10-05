@@ -16,6 +16,8 @@ import a2 from './assets/img/a2.png';
 import b1 from './assets/img/b1.png';
 //@ts-ignore
 import b2 from './assets/img/b2.png';
+//@ts-ignore
+import TypescriptIcon from '../../assets/img/typescript-icon.svg';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -135,27 +137,45 @@ export default class SkillsPage extends React.Component<Props, State> {
                     </div>
                     <div className="animate-me" id="softwareSkills">
                         <h2>SOFTWARE</h2>
-                        <h3>Word, Excel, Powerpoint :</h3>
+                        <h3>
+                            <i className="fas fa-laptop"></i>
+                            Word, Excel, Powerpoint :
+                        </h3>
                         <div className="animated-gauge">
                             <div className="jauge0"></div>
                         </div>
-                        <h3>HTML5 :</h3>
+                        <h3>
+                            <i className="fab fa-html5"></i>
+                            HTML5 :
+                        </h3>
                         <div className="animated-gauge">
                             <div className="jauge1"></div>
                         </div>
-                        <h3>CSS3 :</h3>
+                        <h3>
+                            <i className="fab fa-css3-alt"></i>
+                            CSS3 :
+                        </h3>
                         <div className="animated-gauge">
                             <div className="jauge2"></div>
                         </div>
-                        <h3>JAVASCRIPT :</h3>
+                        <h3 id="typescriptSkills">
+                            <TypescriptIcon />
+                            TypeScript :
+                        </h3>
                         <div className="animated-gauge">
                             <div className="jauge5"></div>
                         </div>
-                        <h3>PHP :</h3>
+                        <h3>
+                            <i className="fab fa-php"></i>
+                            PHP :
+                        </h3>
                         <div className="animated-gauge">
                             <div className="jauge3"></div>
                         </div>
-                        <h3>Python :</h3>
+                        <h3>
+                            <i className="fab fa-python"></i>
+                            Python :
+                        </h3>
                         <div className="animated-gauge">
                             <div className="jauge4"></div>
                         </div>
