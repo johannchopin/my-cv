@@ -102,11 +102,12 @@ export default class TimeLinePage extends React.Component<Props, State> {
                     <ul className="timeline">
                         <li className="event animate-me animation-goUp">
                             <p className="event-date">2018</p>
-                            <h2>J'effectue ma deuxième année<i>DIVA</i></h2>
-                            <p>La DIVA (DFHI-Isfates-Verein-Association) est l’association étudiante de l’ISFATES</p>
+                            <h2>Je travail en tant que développeur fullstack à l'entreprise <a href="http://www.eurokey.de/index.php?id=1">Eurokey</a></h2>
+                            <h2>J'effectue ma deuxième année à la HTW à Sarrebruecken en allemagne</h2>
                         </li>
                         <li className="event animate-me animation-goUp">
                             <p className="event-date">2017</p>
+                            <h2>Stage d'un mois dans l'entreprise de développement mobile <a href="https://www.hotcity.lu/en/" target="_blank">Hotcity</a> au Luxembourg</h2>
                             <h2>Nomination au poste de reponsable informatique de la <i>DIVA</i></h2>
                             <p>La DIVA (DFHI-Isfates-Verein-Association) est l’association étudiante de l’ISFATES</p>
                             <h2>Début de mes études en informatique à l'<i>ISFATES</i></h2>
