@@ -40,7 +40,7 @@ export interface ISendMeEmailResponse extends IRequestResponse {
 // END API INTERFACES
 
 // TYPES ZONE
-export type TPages = 'introductionPage' | 'backgroundPage' | 'skillsPage' | 'hobbiesPage' | 'contactPage';
+export type TPages = 'introductionPage' | 'backgroundPage' | 'skillsPage' | 'hobbiesPage' | 'personalExperiences' | 'contactPage';
 export type TLanguages = 'en' | 'fr' | 'de';
 export type TSimpleModalType = 'success' | 'warning' | 'danger';
 // END TYPES ZONE
