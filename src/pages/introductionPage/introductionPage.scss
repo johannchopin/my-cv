@@ -7,7 +7,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-bottom: dashed white 8px;
+        border-bottom: dashed $lightWhite .4em;
     }
 
     .header_slide_0 h1 {
@@ -34,7 +34,7 @@
         opacity: 0;
         height: 20vh;
         border-radius: 50%;
-        border: solid white 8px;
+        border: solid $lightWhite 8px;
     }
 
     .presentation_slide_0 {
