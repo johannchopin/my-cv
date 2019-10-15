@@ -65,7 +65,7 @@ export default class ContactPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'contactPage',
-            pageIndex: 4, // TODO: don't forget to update this !! 
+            pageIndex: 5, // TODO: don't forget to update this !! 
             textInFromInput: '',
             textInSubjectInput: '',
             textInMsgInput: '',
