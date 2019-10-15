@@ -72,6 +72,7 @@ export default class Navbar extends React.Component<Props, State> {
             const navbar = $("#navbar");
             const container = $("#navbar > .container");
 
+            // TODO: Write openNavbar() and closeNavbar() methods
             if (this.state.showNavbar) {
                 navbar.css({
                     animation: 'showMenuAnimation 0.5s forwards',
