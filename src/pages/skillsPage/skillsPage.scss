@@ -1,18 +1,6 @@
 @import '../../assets/styles/toolsBundler.scss';
 
 #skillsPage {
-    h1 {
-        opacity: 0;
-        display: inline-block;
-        color: initial;
-        margin: 10px 0 0 20px;
-        font-size: 3rem;
-        line-height: 80px;
-        padding: 20px;
-        border-radius: 20px;
-        background-color: rgb(251, 188, 5);
-    }
-
     .skills-ctn {
         display: flex;
         justify-content: space-evenly;
@@ -149,15 +137,6 @@
 //TODO: Use min-width
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
     #skillsPage {
-        h1 {
-            display: flex;
-            justify-content: center;
-            font-size: 2rem;
-            line-height: normal;
-            padding: 10px;
-            margin: 70px 20px 0 20px;
-        }
-
         .skills-ctn {
             flex-wrap: wrap;
         }
