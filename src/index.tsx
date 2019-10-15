@@ -26,6 +26,7 @@ import IntroductionPage from './pages/introductionPage/introductionPage';
 import TimeLinePage from './pages/timeLinePage/timeLinePage';
 import SkillsPage from './pages/skillsPage/skillsPage';
 import HobbiesPage from './pages/hobbiesPage/hobbiesPage';
+import PersonalExperiencesPage from './pages/personalExperiencesPage/personalExperiencesPage';
 import ContactPage from './pages/contactPage/contactPage';
 // END IMPORT PAGES ZONE
 
@@ -72,13 +73,13 @@ class App extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             language: 'fr',
-            pageToShow: 'introductionPage',
             pagesId: {
                 'introductionPage': 0,
                 'backgroundPage': 1,
                 'skillsPage': 2,
-                'hobbiesPage': 3,
-                'contactPage': 4,
+                'personalExperiences': 3,
+                'hobbiesPage': 4,
+                'contactPage': 5,
             },
             simpleModalParams: {},
             //@ts-ignore
@@ -212,6 +213,15 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
+    protected personalExperiencesPageRender = () => {
+        return (
+            <PersonalExperiencesPage
+                language={this.state.language}
+                currentPageIndex={this.state.currentPageIndex}
+            />
+        )
+    }
+
     protected contactPageRender = () => {
         return (
             <ContactPage
@@ -241,6 +251,7 @@ class App extends React.Component<IProps, IState> {
                         {this.introductionPageRender()}
                         {this.timeLinePageRender()}
                         {this.skillsPageRender()}
+                        {this.personalExperiencesPageRender()}
                         {this.hobbiesPageRender()}
                         {this.contactPageRender()}
                     </div>
