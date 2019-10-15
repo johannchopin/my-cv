@@ -94,7 +94,7 @@ export default class TimeLinePage extends React.Component<Props, State> {
 
         return (
             <div id={this.state.pageId} className="swiper-slide">
-                <h1 className="animate-me">
+                <h1 className="animate-me slide-title">
                     {localize.my_background}
                 </h1>
 
