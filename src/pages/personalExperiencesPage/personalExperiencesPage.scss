@@ -1,8 +1,72 @@
 @import '../../assets/styles/toolsBundler.scss';
 
-#personalExperiencesPage {}
+#personalExperiencesPage {
+    * {
+        line-height: initial;
+    }
+
+    a {
+        color: #ffcc00;
+        padding: .1em;
+        transition-duration: .3s;
+
+        i {
+            margin-right: .2em;
+        }
+    }
+
+    a:hover {
+        background: #000;
+        border-radius: .2em;
+    }
+
+    i {
+        color: #ffcc00;
+        font-style: initial;
+    }
+
+    #experiencesCtn {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 80px;
+        margin-bottom: 40px;
+
+        div {
+            color: #fff;
+            opacity: 0;
+            max-width: 22%;
+            font-size: 1.4rem;
+            padding: 20px 15px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            margin: 0 10px 40px 10px;
+
+            &:nth-child(n) {
+                background-color: rgb(53, 53, 53);
+                box-shadow: 2px 2px 4px rgb(53, 53, 53);
+            }
+
+            &:nth-child(2n) {
+                color: initial;
+                background-color: rgb(231, 231, 231);
+                box-shadow: 2px 2px 4px rgb(231, 231, 231);
+            }
+        }
+    }
+}
 
 
-@media (min-width: $BIG_SCREEN_MIN_SIZE) {
-    #personalExperiencesPage {}
+@media (max-width: $BIG_SCREEN_MIN_SIZE) {
+    #personalExperiencesPage {
+        #experiencesCtn {
+            justify-content: center;
+
+            div {
+                max-width: 80%;
+                font-size: 1.3em;
+            }
+        }
+    }
 }

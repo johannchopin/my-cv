@@ -94,6 +94,41 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
         return (
             <div id={this.state.pageId} className="swiper-slide">
                 <h1 className="animate-me slide-title">Experiences:</h1>
+
+                <div id="experiencesCtn">
+                    <div className="animate-me">
+                        <p>
+                            Stage au sein de l'entreprise <a href="https://www.hotcity.lu/fr/">Hotcity S.A</a> (1
+							mois) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP<br /><br />
+                            <a href="./img/hotcityRecommandation.pdf" target="_blank">
+                                <i className="fas fa-file-alt"></i>Lettre de recommandation
+                            </a>
+                        </p>
+                    </div>
+                    <div className="animate-me">
+                        <p>
+                            Travail de recherche dans les laboratoires du <i>CNRS</i> de Strasbourg dans le cadre des
+							TPE<br /><br />
+                            Participation au <i>Congrès Trinational des Sciences et des Techniques</i> avec présentation
+							orale (projet d’étude: Les nanotubes de carbone révolutionneront-ils le dépistage du
+							cancer?)
+						</p>
+                    </div>
+                    <div className="animate-me">
+                        <p>
+                            Participation aux Olympiades Nationales de Chimie à l’<i>ECPM</i> de Strasbourg<br /><br />
+                            Journée de recherche scientifique avec des étudiants allemands de la <i>Hochschule</i> de
+							Pirmasens
+						</p>
+                    </div>
+                    <div className="animate-me">
+                        <p>
+                            Participation à de nombreuses <i>colonies</i> de vacances en France et à l'étranger (Grèce,
+							Suède, Norvège, Islande, Malte, Canada) en semi-autonomie<br /><br />
+                            Représentations de <i>concerts</i>
+                        </p>
+                    </div>
+                </div>
             </div>
         )
     }
