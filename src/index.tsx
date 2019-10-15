@@ -196,6 +196,7 @@ class App extends React.Component<IProps, IState> {
     protected skillsPageRender = () => {
         return (
             <SkillsPage
+                language={this.state.language}
                 currentPageIndex={this.state.currentPageIndex}
             />
         )
