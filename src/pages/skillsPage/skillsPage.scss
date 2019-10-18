@@ -18,19 +18,19 @@
         }
     }
 
-    .langues,
+    #langues,
     #softwareSkills {
         opacity: 0;
-        min-width: 25%;
         display: flex;
+        min-width: 25%;
         margin: 40px 0;
         flex-direction: column;
         border-radius: 40px;
+        padding: 1.6em 1em;
     }
 
-    .langues {
+    #langues {
         background-color: rgb(231, 231, 231);
-        padding: 0 20px;
         box-shadow: 2px 2px 4px rgb(231, 231, 231);
 
         h2 {
@@ -58,9 +58,7 @@
 
     #softwareSkills {
         background-color: rgb(53, 53, 53);
-        padding: 0 20px;
         box-shadow: 2px 2px 4px rgb(53, 53, 53);
-        padding: 1.6em 1em;
 
         h3 {
             color: white;
