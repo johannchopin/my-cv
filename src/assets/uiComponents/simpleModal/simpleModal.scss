@@ -1,8 +1,22 @@
+@import "../../styles/toolsBundler.scss";
+
 #simpleModal {
 
     .alert {
+        align-self: center;
+        margin: 0 20vw;
         margin-top: 2.5em;
         text-align: center;
     }
 
+}
+
+@media (max-width: $BIG_SCREEN_MIN_SIZE) {
+    #simpleModal {
+        .alert {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+    }
 }
