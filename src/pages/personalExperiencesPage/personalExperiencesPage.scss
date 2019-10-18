@@ -29,6 +29,7 @@
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        padding: 0 1em;
         margin-top: 80px;
         margin-bottom: 40px;
 
@@ -38,10 +39,11 @@
             max-width: 22%;
             font-size: 1.4rem;
             padding: 20px 15px;
-            border-radius: 30px;
+            border-radius: .4em;
             display: flex;
             align-items: center;
-            margin: 0 10px 40px 10px;
+            margin: 0 1em;
+            margin-bottom: 1.5em;
 
             &:nth-child(n) {
                 background-color: rgb(53, 53, 53);
@@ -61,6 +63,7 @@
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
     #personalExperiencesPage {
         #experiencesCtn {
+            padding: 0;
             justify-content: center;
 
             div {
