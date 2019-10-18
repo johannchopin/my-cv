@@ -54,6 +54,11 @@
                 color: initial;
                 background-color: rgb(231, 231, 231);
                 box-shadow: 2px 2px 4px rgb(231, 231, 231);
+
+                a,
+                i {
+                    text-shadow: .05em .05em 0 rgb(53, 53, 53);
+                }
             }
         }
     }
