@@ -100,7 +100,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                         <p>
                             Stage au sein de l'entreprise <a href="https://www.hotcity.lu/fr/">Hotcity S.A</a> (1
 							mois) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP<br /><br />
-                            <a href="./img/hotcityRecommandation.pdf" target="_blank">
+                            <a href="https://cv.johannchopin.fr/img/hotcityRecommandation.pdf" target="_blank">
                                 <i className="fas fa-file-alt"></i>Lettre de recommandation
                             </a>
                         </p>
