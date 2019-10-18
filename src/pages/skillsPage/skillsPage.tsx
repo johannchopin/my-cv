@@ -133,7 +133,7 @@ export default class SkillsPage extends React.Component<Props, State> {
                             <p>Allemand</p>
                         </div>
                         <div>
-                            <img src={b1} />
+                            <img src={b2} />
                             <p>Anglais</p>
                         </div>
                         <div>
