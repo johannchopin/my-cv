@@ -225,7 +225,7 @@ export default class ContactPage extends React.Component<Props, State> {
                         {this.maxCharactersInMsg - this.state.textInMsgInput.length}
                     </p>
 
-                    <button type="button" className="btn btn-primary animate-me animation-goUp" onClick={() => this.onSubmitBtnClick()}>
+                    <button type="button" className="btn btn-gold animate-me animation-goUp" onClick={() => this.onSubmitBtnClick()}>
                         <i className="fas fa-paper-plane fa-fw"></i> {localize['send']}
                     </button>
                 </div>
