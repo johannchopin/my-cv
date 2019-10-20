@@ -8,6 +8,7 @@ import './navbar.scss';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
+import IconHandler from '../iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -143,7 +144,7 @@ export default class Navbar extends React.Component<Props, State> {
 
         return (
             <nav id="navbar" onClick={() => { this.showOrHideNavbar() }}>
-                <i id="icon" className={this.state.showNavbar ? "fas fa-bars selected" : "fas fa-bars"}></i>
+                <IconHandler icon="bars" className={this.state.showNavbar ? "selected" : ""} />
                 <div className="container">
                     <h1>MENU</h1>
                     <ul>
