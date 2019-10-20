@@ -2,10 +2,10 @@ const LOCALIZE = {
     'de': {
         send: "Senden",
         email_has_been_sent: "Ihre E-Mail wurde erfolgreich an mich gesendet! Ich würde mich freuen, sie zu beantworten.",
-        subject: "TODO...",
+        subject: "Inhalt...",
         from: "Ihre E-Mail...",
-        message: "TODO...",
-        download_cv: "todo",
+        message: "Meldung...",
+        download_cv: "-die Papierversion herunterladen-",
         enter_valid_email: "Bitte geben Sie eine gültige E-Mail ein !",
     },
     'fr': {
@@ -24,7 +24,7 @@ const LOCALIZE = {
         subject: "Subject...",
         from: "From...",
         message: "Message...",
-        download_cv: "todo",
+        download_cv: "-download the paper version-",
         enter_valid_email: "Please enter a valid email !",
     },
 };
