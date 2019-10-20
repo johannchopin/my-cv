@@ -238,7 +238,7 @@ export default class ContactPage extends React.Component<Props, State> {
                     {/* TODO: Debug pdf opening */}
 
                     <a href="img/cv.pdf" target="blanck" id="cv" className="animate-me animation-goUp">
-                        <p>-télécharger la version papier-</p>
+                        <p>{localize.download_cv}</p>
                     </a>
                 </div>
             </div>
