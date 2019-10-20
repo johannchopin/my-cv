@@ -31,6 +31,8 @@ import FrFlagSvg from './imgs/fr.svg';
 import DeFlagSvg from './imgs/de.svg';
 // @ts-ignore
 import UsFlagSvg from './imgs/us.svg';
+// @ts-ignore
+import GitlabIcon from '../../img/gitlabIcon.svg';
 // END IMPORT IMAGES ZONE
 
 
@@ -100,7 +102,7 @@ export default class Navbar extends React.Component<Props, State> {
         this.showOrHideNavbar();
     }
 
-    protected languageSelectionRender = () => {
+    protected languageSelectionRender = (): React.ReactNode => {
         return (
             <div id="languageSelection">
 
@@ -118,6 +120,20 @@ export default class Navbar extends React.Component<Props, State> {
                 />
 
             </div>
+        )
+    }
+
+    protected gitlabRepoRender = (): React.ReactNode => {
+        return (
+            <a
+                href="https://gitlab.com/johannchopin/mycv-2019"
+                target="_blank"
+                id="gitlabRepo"
+                className="clickable"
+            >
+                <GitlabIcon />
+                <h2>See project repo</h2>
+            </a>
         )
     }
 
@@ -152,6 +168,7 @@ export default class Navbar extends React.Component<Props, State> {
                     </ul>
 
                     {this.languageSelectionRender()}
+                    {this.gitlabRepoRender()}
                 </div>
             </nav>
         )

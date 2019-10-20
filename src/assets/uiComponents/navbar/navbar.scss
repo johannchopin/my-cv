@@ -35,7 +35,7 @@
         opacity: 0;
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             border: solid white 3px;
             padding: 10px 20px;
         }
@@ -71,6 +71,26 @@
                     border: solid .15em rgb(251, 188, 5);
                     padding: .15em;
                 }
+            }
+        }
+
+        #gitlabRepo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2em;
+
+            svg {
+                width: 4.5em;
+            }
+
+            h2 {
+                margin-top: .2em;
+                font-size: .9em;
+                color: #000;
+                padding: .2em .3em;
+                border-radius: .2em;
+                background-color: $gitlab-main-color;
             }
         }
     }
