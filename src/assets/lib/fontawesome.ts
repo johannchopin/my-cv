@@ -19,6 +19,7 @@ import {
     faBolt,
     faCog,
     faHome,
+    faBars,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -41,4 +42,5 @@ library.add(
     faBolt,
     faCog,
     faHome,
+    faBars,
 );
