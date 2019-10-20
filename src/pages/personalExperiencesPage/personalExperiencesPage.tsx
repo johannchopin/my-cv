@@ -18,6 +18,7 @@ const PageBase = new _pageBase();
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
+import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -108,11 +109,12 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                         </ul>
 
                     </div>
-                    <div className="animate-me">
+                    <div id="hotcityInternship" className="animate-me">
                         <p dangerouslySetInnerHTML={{ __html: localize.internship_hotcity.introduction }}></p>
                         <br />
-                        <a href="https://cv.johannchopin.fr/img/hotcityRecommandation.pdf" target="_blank">
-                            <i className="fas fa-file-alt"></i>{localize.internship_hotcity.letter_of_recommendation}
+                        <a id="hotcityLetter" href="https://cv.johannchopin.fr/img/hotcityRecommandation.pdf" target="_blank">
+                            <IconHandler className="animate-me" icon="file-alt" />
+                            <p>{localize.internship_hotcity.letter_of_recommendation}</p>
                         </a>
                     </div>
                     <div className="animate-me">

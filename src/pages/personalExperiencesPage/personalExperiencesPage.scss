@@ -6,7 +6,7 @@
         padding: .1em;
         transition-duration: .3s;
 
-        i {
+        .fa-icon {
             margin-right: .2em;
         }
     }
@@ -16,6 +16,7 @@
         border-radius: .2em;
     }
 
+    .fa-icon,
     i {
         color: #ffcc00;
         font-style: initial;
@@ -28,7 +29,7 @@
         padding: 0 1em;
         margin-bottom: 40px;
 
-        div {
+        &>div {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -60,6 +61,10 @@
                 i {
                     text-shadow: .08em .08em .1em rgb(0, 0, 0);
                 }
+
+                .fa-icon {
+                    color: #000;
+                }
             }
 
             ul {
@@ -76,6 +81,13 @@
                         color: $cv-gold;
                     }
                 }
+            }
+        }
+
+        #hotcityInternship {
+            #hotcityLetter {
+                display: flex;
+                align-items: center;
             }
         }
     }
