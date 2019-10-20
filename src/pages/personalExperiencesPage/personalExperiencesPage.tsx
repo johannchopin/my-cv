@@ -102,8 +102,8 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                         <p>{localize.work_eurokey.complement}</p>
                         <br />
                         <ul>
-                            {localize.work_eurokey.tasks.map((task: string): React.ReactNode => {
-                                return <li>{task}</li>
+                            {localize.work_eurokey.tasks.map((task: string, i: number): React.ReactNode => {
+                                return <li key={i}>{task}</li>
                             })}
                         </ul>
 
