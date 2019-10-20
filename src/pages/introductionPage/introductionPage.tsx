@@ -19,6 +19,7 @@ import myNiceFace from './assets/img/myNiceFace.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
+import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -108,7 +109,7 @@ export default class IntroductionPage extends React.Component<Props, State> {
                 </p>
                 <div id="indication" className="animate-me">
                     <p>Swiper vers la droite pour parcourir mon CV</p>
-                    <i className="fas fa-arrow-right"></i>
+                    <IconHandler icon="arrow-right" />
                 </div>
             </div>
         )

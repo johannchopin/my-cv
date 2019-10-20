@@ -28,6 +28,7 @@ import {
     faHome,
     faBars,
     faLaptop,
+    faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -56,4 +57,5 @@ library.add(
     faHtml5,
     faPhp,
     faPython,
+    faArrowRight,
 );
