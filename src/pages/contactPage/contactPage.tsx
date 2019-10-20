@@ -231,11 +231,9 @@ export default class ContactPage extends React.Component<Props, State> {
                 </div>
 
                 <div id="contactCtn">
-                    <a href="mailto:johannchopin@protonmail.com">
-                        <div id="contacts_2" className="animate-me animation-goUp">
-                            <i className="far fa-envelope"></i>
-                            <p>johannchopin@protonmail.com</p>
-                        </div>
+                    <a href="mailto:johannchopin@protonmail.com" className="animate-me animation-goUp">
+                        <i className="far fa-envelope"></i>
+                        <p>johannchopin@protonmail.com</p>
                     </a>
                     {/* TODO: Debug pdf opening */}
 
