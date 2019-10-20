@@ -1,5 +1,12 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import {
+    fab,
+    faPhp,
+    faPython,
+    faHtml5,
+    faCss3Alt
+} from '@fortawesome/free-brands-svg-icons';
+
 import {
     faGift,
     faListUl,
@@ -20,6 +27,7 @@ import {
     faCog,
     faHome,
     faBars,
+    faLaptop,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -43,4 +51,9 @@ library.add(
     faCog,
     faHome,
     faBars,
+    faLaptop,
+    faCss3Alt,
+    faHtml5,
+    faPhp,
+    faPython,
 );
