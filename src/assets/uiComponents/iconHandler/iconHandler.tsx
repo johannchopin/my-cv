@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { IconProp, IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core';
 
 // IMPORT HELPER ZONE
 import Helper from '../../../helper';
@@ -15,7 +15,8 @@ import './iconHandler.scss';
 
 // INTERFACE ZONE
 interface IProps {
-    icon: IconProp,
+    icon: IconName,
+    prefix?: IconPrefix,
     className?: string,
     onClick?: () => void
 }
@@ -41,6 +42,10 @@ export default class IconHandler extends React.Component<IProps> {
         }
     }
 
+    protected getFontawesomeIconPrefix = (): IconPrefix => {
+        return this.props.prefix !== undefined ? this.props.prefix : 'fas';
+    }
+
 
     render() {
         return (
@@ -49,7 +54,7 @@ export default class IconHandler extends React.Component<IProps> {
                 className={this.getClassName()}
                 onClick={() => { this.onIconClick() }}
             >
-                <FontAwesomeIcon icon={this.props.icon} />
+                <FontAwesomeIcon icon={[this.getFontawesomeIconPrefix(), this.props.icon]} />
             </div>
         );
     }
