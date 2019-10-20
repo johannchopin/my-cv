@@ -12,6 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "@babel/preset-react": "^7.6.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.6",
     "@svgr/parcel-plugin-svgr": "^4.3.3",
     "@types/bootstrap": "^4.3.1",
     "@types/jquery": "^3.3.31",
