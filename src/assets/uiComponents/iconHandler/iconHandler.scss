@@ -1,0 +1,11 @@
+#faIconCtn {
+    display: inline;
+
+    &.with-pl {
+        padding-left: .4em;
+    }
+
+    &.with-pr {
+        padding-right: .4em;
+    }
+}
