@@ -97,19 +97,23 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
 
                 <div id="experiencesCtn">
                     <div className="animate-me">
-                        <p>
-                            Dévelopeur fullstack durant 10 mois à l'entreprise <a href="http://www.eurokey.de/index.php?id=1">Eurokey</a> à Sarrebruecken<br />
-                            Ma tâche
-    					</p>
+                        <p dangerouslySetInnerHTML={{ __html: localize.work_eurokey.introduction }}></p>
+                        <br />
+                        <p>{localize.work_eurokey.complement}</p>
+                        <br />
+                        <ul>
+                            {localize.work_eurokey.tasks.map((task: string): React.ReactNode => {
+                                return <li>{task}</li>
+                            })}
+                        </ul>
+
                     </div>
                     <div className="animate-me">
-                        <p>
-                            Stage au sein de l'entreprise <a href="https://www.hotcity.lu/fr/">Hotcity S.A</a> (1
-							mois) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP<br /><br />
-                            <a href="https://cv.johannchopin.fr/img/hotcityRecommandation.pdf" target="_blank">
-                                <i className="fas fa-file-alt"></i>Lettre de recommandation
-                            </a>
-                        </p>
+                        <p dangerouslySetInnerHTML={{ __html: localize.internship_hotcity.introduction }}></p>
+                        <br />
+                        <a href="https://cv.johannchopin.fr/img/hotcityRecommandation.pdf" target="_blank">
+                            <i className="fas fa-file-alt"></i>{localize.internship_hotcity.letter_of_recommendation}
+                        </a>
                     </div>
                     <div className="animate-me">
                         <p>
@@ -131,7 +135,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                         <p>
                             Participation à de nombreuses <i>colonies</i> de vacances en France et à l'étranger (Grèce,
 							Suède, Norvège, Islande, Malte, Canada) en semi-autonomie<br /><br />
-                            Représentations de <i>concerts</i>
+                            Représentations de <i>concerts</i> en tant que guitariste
                         </p>
                     </div>
                 </div>
