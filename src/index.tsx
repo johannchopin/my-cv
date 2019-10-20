@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom';
 // IMPORT LIBRARIES ZONE
 import './assets/lib/jquery';
 import './assets/lib/bootstrap';
+import './assets/lib/fontawesome';
 
 // IMPORT SWIPER LIBRARY ZONE
 import Swiper from 'swiper';
