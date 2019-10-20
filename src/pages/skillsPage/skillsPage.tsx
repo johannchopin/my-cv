@@ -25,6 +25,7 @@ import TypescriptIcon from '../../assets/img/typescript-icon.svg';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
+import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -145,6 +146,7 @@ export default class SkillsPage extends React.Component<Props, State> {
                     <div className="animate-me" id="softwareSkills">
                         <h2>SOFTWARE</h2>
                         <h3>
+                            <IconHandler icon="laptop" />
                             <i className="fas fa-laptop"></i>
                             Word, Excel, Powerpoint :
                         </h3>
@@ -152,14 +154,14 @@ export default class SkillsPage extends React.Component<Props, State> {
                             <div className="jauge0"></div>
                         </div>
                         <h3>
-                            <i className="fab fa-html5"></i>
+                            <IconHandler prefix="fab" icon="html5" />
                             HTML5 :
                         </h3>
                         <div className="animated-gauge">
                             <div className="jauge1"></div>
                         </div>
                         <h3>
-                            <i className="fab fa-css3-alt"></i>
+                            <IconHandler prefix="fab" icon="css3-alt" />
                             CSS3 :
                         </h3>
                         <div className="animated-gauge">
@@ -173,14 +175,14 @@ export default class SkillsPage extends React.Component<Props, State> {
                             <div className="jauge5"></div>
                         </div>
                         <h3>
-                            <i className="fab fa-php"></i>
+                            <IconHandler prefix="fab" icon="php" />
                             PHP :
                         </h3>
                         <div className="animated-gauge">
                             <div className="jauge3"></div>
                         </div>
                         <h3>
-                            <i className="fab fa-python"></i>
+                            <IconHandler prefix="fab" icon="python" />
                             Python :
                         </h3>
                         <div className="animated-gauge">
