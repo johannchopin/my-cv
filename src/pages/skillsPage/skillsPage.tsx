@@ -147,7 +147,6 @@ export default class SkillsPage extends React.Component<Props, State> {
                         <h2>SOFTWARE</h2>
                         <h3>
                             <IconHandler icon="laptop" />
-                            <i className="fas fa-laptop"></i>
                             Word, Excel, Powerpoint :
                         </h3>
                         <div className="animated-gauge">
