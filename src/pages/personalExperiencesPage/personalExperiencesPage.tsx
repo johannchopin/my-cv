@@ -93,9 +93,15 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
 
         return (
             <div id={this.state.pageId} className="swiper-slide">
-                <h1 className="animate-me slide-title">Experiences:</h1>
+                <h1 className="animate-me slide-title">Experiences</h1>
 
                 <div id="experiencesCtn">
+                    <div className="animate-me">
+                        <p>
+                            Dévelopeur fullstack durant 10 mois à l'entreprise <a href="http://www.eurokey.de/index.php?id=1">Eurokey</a> à Sarrebruecken<br />
+                            Ma tâche
+    					</p>
+                    </div>
                     <div className="animate-me">
                         <p>
                             Stage au sein de l'entreprise <a href="https://www.hotcity.lu/fr/">Hotcity S.A</a> (1
