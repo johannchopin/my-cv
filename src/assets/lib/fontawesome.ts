@@ -29,6 +29,7 @@ import {
     faBars,
     faLaptop,
     faArrowRight,
+    faFileAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -58,4 +59,5 @@ library.add(
     faPhp,
     faPython,
     faArrowRight,
+    faFileAlt,
 );
