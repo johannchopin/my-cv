@@ -245,7 +245,6 @@ body {
 
 // INIT SWIPER
 .swiper-container {
-
     .swiper-wrapper {
         height: 100vh;
         width: 100vw;
@@ -278,8 +277,16 @@ body {
 
     .swiper-pagination {
         padding: 5px;
-        background-color: rgba(200, 200, 200, 0.8);
+        background-color: rgba(53, 53, 53, .8);
         border-radius: 20px;
+
+        .swiper-pagination-bullet {
+            &::not(.swiper-pagination-bullet-active-main) {
+                background-color: rgba(251, 188, 5, 1);
+            }
+
+            background-color: $cv-gold;
+        }
     }
 }
 
