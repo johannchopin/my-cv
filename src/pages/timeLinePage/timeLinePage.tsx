@@ -103,11 +103,6 @@ export default class TimeLinePage extends React.Component<Props, State> {
                         <li className="event animate-me animation-goUp">
                             <p className="event-date">2018</p>
                             <h2>Employé en tant que développeur fullstack à l'entreprise <a href="http://www.eurokey.de/index.php?id=1">Eurokey</a></h2>
-
-                            {/* 
-                            <p>Mon rôle consistait à développer des interfaces permettant aux autres développeur de l'entreprise de consulter et tester les différentes applications déjà existante</p>
-                            */}
-
                             <h2>J'effectue ma deuxième année à la HTW à Sarrebruck en allemagne</h2>
                         </li>
                         <li className="event animate-me animation-goUp">
