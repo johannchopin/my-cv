@@ -47,9 +47,6 @@ interface State {
     showNavbar: boolean,
 }
 
-// TODO : Change setState calling
-// use -> this.setState(prevState => ({ test: "test" }))
-// instead of -> this.setState({ test: "test" })
 
 export default class Navbar extends React.Component<Props, State> {
 
