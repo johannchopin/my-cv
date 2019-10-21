@@ -16,6 +16,8 @@ const PageBase = new _pageBase();
 // IMPORT IMAGES ZONE
 //@ts-ignore
 import myNiceFace from './assets/img/myNiceFace.png';
+//@ts-ignore
+import WaveSvg from '../../assets/img/wave-design.svg';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -97,13 +99,20 @@ export default class IntroductionPage extends React.Component<Props, State> {
 
         return (
             <div id={this.state.pageId} className="swiper-slide">
-                <div className="header_slide_0">
+                <header>
                     <h1 id="slide_0_h1" className="animate-me">Chopin Johann</h1>
+
                     <p id="slide_0_p" className="animate-me">- Étudiant en Informatique -</p>
-                </div>
-                <div className="img_container">
+
+                    <div id="waveSvg" className="animate-me animation-topApparition">
+                        <WaveSvg />
+                    </div>
+                </header>
+
+                <div className="my-face-ctn">
                     <img id="slide_0_img" className="animate-me" src={myNiceFace} />
                 </div>
+
                 <p className="presentation_slide_0 animate-me" id="presentation_slide_0">
                     {localize["introduction_sentence"]}
                 </p>
