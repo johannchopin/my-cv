@@ -49,13 +49,13 @@ export default class IconHandler extends React.Component<IProps> {
 
     render() {
         return (
-            <div
+            <span
                 id={this.componentId}
                 className={this.getClassName()}
                 onClick={() => { this.onIconClick() }}
             >
                 <FontAwesomeIcon icon={[this.getFontawesomeIconPrefix(), this.props.icon]} />
-            </div>
+            </span>
         );
     }
 }
