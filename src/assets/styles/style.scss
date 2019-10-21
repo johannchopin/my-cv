@@ -248,15 +248,14 @@ body {
     .swiper-wrapper {
         height: 100vh;
         width: 100vw;
-        background-color: $lightWhite;
 
         .swiper-slide {
             height: 100%;
             width: 100%;
-            background-color: initial;
             font-family: 'ubuntu';
             overflow-y: auto;
             overflow-x: hidden;
+            background-color: $lightWhite;
             padding-bottom: 2em;
 
             &::-webkit-scrollbar {
