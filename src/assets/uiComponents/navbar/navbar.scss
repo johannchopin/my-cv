@@ -109,7 +109,10 @@
 }
 
 @keyframes showMenuAnimation {
-    from {}
+    from {
+        width: 4em;
+        height: 4em;
+    }
 
     to {
         width: 100%;
@@ -125,7 +128,10 @@
         border-radius: 0;
     }
 
-    to {}
+    to {
+        width: 4em;
+        height: 4em;
+    }
 }
 
 
