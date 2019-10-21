@@ -10,7 +10,7 @@
     border-radius: 0 0 0 100%;
     background-color: black;
     transition-duration: 0.5s;
-    color: white;
+    color: $lightWhite;
     z-index: 10;
 
     .fa-icon {
@@ -36,14 +36,15 @@
 
         h1 {
             font-size: 2.5rem;
-            border: solid white 3px;
+            border: solid $lightWhite 3px;
+            border-radius: .2em;
             padding: 10px 20px;
         }
 
         ul {
             margin-top: 40px;
             padding-left: 40px;
-            border-left: solid white 3px;
+            border-left: solid $lightWhite 3px;
 
             li {
                 list-style-type: none;
