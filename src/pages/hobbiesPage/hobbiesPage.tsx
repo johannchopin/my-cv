@@ -17,6 +17,7 @@ const PageBase = new _pageBase();
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
+import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -99,6 +100,35 @@ export default class HobbiesPage extends React.Component<Props, State> {
         return (
             <div id={this.state.pageId} className="swiper-slide">
                 <h1 className="animate-me slide-title">{localize.title}</h1>
+
+                <div id="hobbiesCtn">
+
+                    <div className="animate-me">
+                        <div className="icon">
+                            <IconHandler icon="terminal" />
+                        </div>
+                        <h2>{localize.programming}</h2>
+                        <p>
+                            <IconHandler prefix="fab" icon="react" className="react-icon" />
+                            {localize.react_lover}
+                        </p>
+                    </div>
+
+                    <div className="animate-me">
+                        <div className="icon">
+                            <IconHandler icon="music" />
+                        </div>
+                        <h2>{localize.play_music}</h2>
+                    </div>
+
+                    <div className="animate-me">
+                        <div className="icon">
+                            <IconHandler icon="fish" />
+                        </div>
+                        <h2>{localize.dive}</h2>
+                    </div>
+
+                </div >
             </div >
         )
     }

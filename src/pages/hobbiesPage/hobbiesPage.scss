@@ -2,4 +2,93 @@
 
 $CONTAINER_ID: "#hobbiesPage";
 
-#{getContainerId()} {}
+#{getContainerId()} {
+    #hobbiesCtn {
+        display: flex;
+        justify-content: space-evenly;
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25vw;
+            padding: 2em;
+            border-radius: .4em;
+            background-color: $cv-brown;
+            box-shadow: 0 0 1em $cv-brown;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: 0 0 .4em .4em;
+                background-color: #e7e7e7;
+                transform: translate(0, .6em);
+                z-index: -1;
+            }
+
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 5em;
+                height: 5em;
+                border-radius: 50%;
+                background-color: $cv-brown;
+
+                .fa-icon {
+                    color: $cv-gold;
+                    font-size: 2em;
+                }
+            }
+
+            h2 {
+                color: $cv-brown;
+                margin-top: .8em;
+                text-align: center;
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1.2em;
+
+                .react-icon {
+                    color: $cv-pink;
+                    font-size: 1.8em;
+                    padding-right: .1em;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: $BIG_SCREEN_MIN_SIZE) {
+    #{getContainerId()} {
+        #hobbiesCtn {
+            flex-direction: column;
+            align-items: center;
+
+            &>div {
+                width: 80%;
+                font-size: 1.3em;
+                margin-bottom: 2em;
+
+                .icon {
+                    width: 4em;
+                    height: 4em;
+
+                    .fa-icon {
+                        font-size: 1.5em;
+                    }
+                }
+
+                h2 {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}
