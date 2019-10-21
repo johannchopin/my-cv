@@ -8,6 +8,7 @@
         "jsx": "react",
         "strict": true,
         "allowJs": true,
+        "strictPropertyInitialization": false,
         "baseUrl": ".",
         "paths": {
             "~*": [
