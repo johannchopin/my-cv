@@ -98,7 +98,7 @@ export default class HobbiesPage extends React.Component<Props, State> {
 
         return (
             <div id={this.state.pageId} className="swiper-slide">
-                <h1 className="animate-me">hobbiesPage</h1>
+                <h1 className="animate-me slide-title">{localize.title}</h1>
             </div >
         )
     }
