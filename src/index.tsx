@@ -97,42 +97,47 @@ class App extends React.Component<IProps, IState> {
     protected init() {
         this.initUI();
 
-        const initialPageId = this.state.pagesId[this.state.pageToShow];
-        this.setState({
-            mySwiper: new Swiper('.swiper-container', {
-                initialSlide: initialPageId,
-                preloadImages: true,
-                keyboard: {
-                    enabled: true,
-                    onlyInViewport: false,
-                },
-
-                // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                    dynamicBullets: true,
-                },
-
-                // Navigation arrows
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-
-                // And if we need scrollbar
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    hide: true,
-                    draggable: true,
-                },
-            })
-        }, () => { this.initSwiper() })
+        this.setState((prevState: IState) => ({
+            mySwiper: this.getInitialisedSwiper()
+        }), () => { this.initSwiper() })
 
     }
 
     protected initUI() {
         Helper.setFavicon(Favicon);
+    }
+
+    protected getInitialisedSwiper = (): Swiper => {
+        const initialPageId = this.state.pagesId[this.state.pageToShow];
+
+        return new Swiper('.swiper-container', {
+            initialSlide: initialPageId,
+            preloadImages: true,
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+
+            // Pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // Scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: true,
+                draggable: true,
+            },
+        })
     }
 
     protected initSwiper = () => {
