@@ -74,6 +74,7 @@ class App extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             language: 'fr',
+            pageToShow: 'personalExperiences',
             pagesId: {
                 'introductionPage': 0,
                 'backgroundPage': 1,
