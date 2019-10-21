@@ -84,7 +84,7 @@ export default class Navbar extends React.Component<Props, State> {
                 });
             } else {
                 navbar.css({
-                    animation: 'hideMenuAnimation 0.5s',
+                    animation: 'hideMenuAnimation 0.5s forwards',
                 });
 
                 container.css({
