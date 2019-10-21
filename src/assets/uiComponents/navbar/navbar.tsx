@@ -168,8 +168,10 @@ export default class Navbar extends React.Component<Props, State> {
                         <li onClick={() => { this.goToPage('personalExperiences') }}>
                             {localize.personal_experiences}
                         </li>
+                        <li onClick={() => { this.goToPage('hobbiesPage') }}>
                             {localize.hobbies}
                         </li>
+                        <li onClick={() => { this.goToPage('contactPage') }}>
                             {localize.contacts}
                         </li>
                     </ul>
