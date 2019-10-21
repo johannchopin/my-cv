@@ -113,8 +113,8 @@ export default class IntroductionPage extends React.Component<Props, State> {
                     <img id="slide_0_img" className="animate-me" src={myNiceFace} />
                 </div>
 
-                <p className="presentation_slide_0 animate-me" id="presentation_slide_0">
-                    {localize["introduction_sentence"]}
+                <p className="presentation-text animate-me">
+                    {localize["introduction_text"]}
                 </p>
                 <div id="indication" className="animate-me">
                     <p>Swiper vers la droite pour parcourir mon CV</p>
