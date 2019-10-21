@@ -97,6 +97,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                 <h1 className="animate-me slide-title">Experiences</h1>
 
                 <div id="experiencesCtn">
+
                     <div className="animate-me">
                         <p dangerouslySetInnerHTML={{ __html: localize.work_eurokey.introduction }}></p>
                         <br />
@@ -107,8 +108,8 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                                 return <li key={i}>{task}</li>
                             })}
                         </ul>
-
                     </div>
+
                     <div id="hotcityInternship" className="animate-me">
                         <p dangerouslySetInnerHTML={{ __html: localize.internship_hotcity.introduction }}></p>
                         <br />
@@ -117,6 +118,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                             <p>{localize.internship_hotcity.letter_of_recommendation}</p>
                         </a>
                     </div>
+
                     <div className="animate-me">
                         <p>
                             Travail de recherche dans les laboratoires du <i>CNRS</i> de Strasbourg dans le cadre des
@@ -126,6 +128,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
 							cancer?)
 						</p>
                     </div>
+
                     <div className="animate-me">
                         <p>
                             Participation aux Olympiades Nationales de Chimie à l’<i>ECPM</i> de Strasbourg<br /><br />
@@ -133,6 +136,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
 							Pirmasens
 						</p>
                     </div>
+
                     <div className="animate-me">
                         <p>
                             Participation à de nombreuses <i>colonies</i> de vacances en France et à l'étranger (Grèce,
@@ -140,6 +144,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                             Représentations de <i>concerts</i> en tant que guitariste
                         </p>
                     </div>
+
                 </div>
             </div>
         )
