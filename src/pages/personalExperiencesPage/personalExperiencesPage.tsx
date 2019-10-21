@@ -118,29 +118,23 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                     </div>
 
                     <div className="animate-me">
-                        <p>
-                            Travail de recherche dans les laboratoires du <i>CNRS</i> de Strasbourg dans le cadre des
-							TPE<br /><br />
-                            Participation au <i>Congrès Trinational des Sciences et des Techniques</i> avec présentation
-							orale (projet d’étude: Les nanotubes de carbone révolutionneront-ils le dépistage du
-							cancer?)
-						</p>
+                        <p dangerouslySetInnerHTML={{ __html: localize.school.cnrs }}></p>
+                        <br />
+                        <p dangerouslySetInnerHTML={{ __html: localize.school.tpe }}></p>
                     </div>
 
                     <div className="animate-me">
-                        <p>
-                            Participation aux Olympiades Nationales de Chimie à l’<i>ECPM</i> de Strasbourg<br /><br />
-                            Journée de recherche scientifique avec des étudiants allemands de la <i>Hochschule</i> de
-							Pirmasens
-						</p>
+                        <p dangerouslySetInnerHTML={{ __html: localize.school.ecpm }}></p>
+                        <br />
+                        <p dangerouslySetInnerHTML={{ __html: localize.school.pirmasens }}></p>
                     </div>
 
                     <div className="animate-me">
-                        <p>
-                            Participation à de nombreuses <i>colonies</i> de vacances en France et à l'étranger (Grèce,
-							Suède, Norvège, Islande, Malte, Canada) en semi-autonomie<br /><br />
-                            Représentations de <i>concerts</i> en tant que guitariste
-                        </p>
+                        <p dangerouslySetInnerHTML={{ __html: localize.school.pirmasens }}></p>
+                        <br />
+                        <p dangerouslySetInnerHTML={{ __html: localize.summer_camp }}></p>
+                        <br />
+                        <p dangerouslySetInnerHTML={{ __html: localize.concert }}></p>
                     </div>
 
                 </div>
