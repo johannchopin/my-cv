@@ -3,10 +3,11 @@
 #personalExperiencesPage {
     a {
         color: #ffcc00;
-        padding: .1em;
+        padding: .1em .2em;
         transition-duration: .3s;
 
         .fa-icon {
+            transition-duration: .3s;
             margin-right: .2em;
         }
     }
@@ -14,11 +15,15 @@
     a:hover {
         background: #000;
         border-radius: .2em;
+
+        .fa-icon {
+            color: $cv-gold !important;
+        }
     }
 
     .fa-icon,
     i {
-        color: #ffcc00;
+        color: $cv-gold;
         font-style: initial;
     }
 
