@@ -4,7 +4,8 @@ import {
     faPhp,
     faPython,
     faHtml5,
-    faCss3Alt
+    faCss3Alt,
+    faReact,
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -30,6 +31,10 @@ import {
     faLaptop,
     faArrowRight,
     faFileAlt,
+    faMusic,
+    faFish,
+    faSnowboarding,
+    faTerminal,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -60,4 +65,9 @@ library.add(
     faPython,
     faArrowRight,
     faFileAlt,
+    faMusic,
+    faFish,
+    faSnowboarding,
+    faTerminal,
+    faReact,
 );
