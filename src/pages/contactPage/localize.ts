@@ -5,7 +5,7 @@ const LOCALIZE = {
         subject: "Inhalt...",
         from: "Ihre E-Mail...",
         message: "Meldung...",
-        download_cv: "-die Papierversion herunterladen-",
+        download_cv: "- die Papierversion herunterladen -",
         enter_valid_email: "Bitte geben Sie eine gültige E-Mail ein !",
     },
     'fr': {
@@ -14,7 +14,7 @@ const LOCALIZE = {
         subject: "Sujet...",
         from: "Votre email...",
         message: "Message...",
-        download_cv: "-télécharger la version papier-",
+        download_cv: "- télécharger la version papier -",
         enter_valid_email: "Veuillez entrer un email valide !",
     },
 
@@ -24,7 +24,7 @@ const LOCALIZE = {
         subject: "Subject...",
         from: "From...",
         message: "Message...",
-        download_cv: "-download the paper version-",
+        download_cv: "- download the paper version -",
         enter_valid_email: "Please enter a valid email !",
     },
 };
