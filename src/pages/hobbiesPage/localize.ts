@@ -1,12 +1,12 @@
 const LOCALIZE = {
-    'de': {
-        'title': "Meine Hobbys",
+    de: {
+        title: "Meine Hobbys",
     },
-    'fr': {
-        'title': "Mes loisirs",
+    fr: {
+        title: "Mes loisirs",
     },
-    'en': {
-        'title': "My hobbies",
+    en: {
+        title: "My hobbies",
     }
 }
 
