@@ -125,6 +125,8 @@ export default class Navbar extends React.Component<Props, State> {
     }
 
     protected gitlabRepoRender = (): React.ReactNode => {
+        const localize = LOCALIZE[this.props.language];
+
         return (
             <a
                 href="https://gitlab.com/johannchopin/mycv-2019"
@@ -133,7 +135,7 @@ export default class Navbar extends React.Component<Props, State> {
                 className="clickable"
             >
                 <GitlabIcon />
-                <h2>See project repo</h2>
+                <h2>{localize.check_repo}</h2>
             </a>
         )
     }
