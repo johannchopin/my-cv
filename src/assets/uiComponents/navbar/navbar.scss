@@ -68,8 +68,10 @@
             svg {
                 width: 10vw;
                 border-radius: .3em;
+                transition-duration: .2s;
 
-                &.selected-language {
+                &.selected-language,
+                &:hover {
                     border: solid .15em $cv-gold;
                     padding: .15em;
                 }
