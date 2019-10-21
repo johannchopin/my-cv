@@ -50,6 +50,8 @@ interface State {
 
 export default class Navbar extends React.Component<Props, State> {
 
+    protected navbar: JQuery;
+    protected container: JQuery;
 
     constructor(props: Props) {
         super(props);
@@ -63,33 +65,40 @@ export default class Navbar extends React.Component<Props, State> {
         this.init();
     }
 
-    protected init = (): void => { }
+    protected init = (): void => {
+        this.navbar = $("#navbar");
+        this.container = $("#navbar > .container");
+    }
+
+    protected showNavbar = (): void => {
+        this.navbar.css({
+            animation: 'showMenuAnimation 0.5s forwards',
+        });
+        this.container.css({
+            display: 'flex',
+            animation: 'apparition 0.5s forwards',
+            animationDelay: '0.6s',
+        });
+    }
+
+    protected hideNavbar = (): void => {
+        this.navbar.css({
+            animation: 'hideMenuAnimation 0.5s forwards',
+        });
+
+        this.container.css({
+            display: 'none',
+        })
+    }
 
     protected showOrHideNavbar = (): void => {
         this.setState({
             showNavbar: !this.state.showNavbar,
         }, () => {
-            const navbar = $("#navbar");
-            const container = $("#navbar > .container");
-
-            // TODO: Write openNavbar() and closeNavbar() methods
             if (this.state.showNavbar) {
-                navbar.css({
-                    animation: 'showMenuAnimation 0.5s forwards',
-                });
-                container.css({
-                    display: 'flex',
-                    animation: 'apparition 0.5s forwards',
-                    animationDelay: '0.6s',
-                });
+                this.showNavbar();
             } else {
-                navbar.css({
-                    animation: 'hideMenuAnimation 0.5s forwards',
-                });
-
-                container.css({
-                    display: 'none',
-                })
+                this.hideNavbar();
             }
 
         })
@@ -159,10 +168,8 @@ export default class Navbar extends React.Component<Props, State> {
                         <li onClick={() => { this.goToPage('personalExperiences') }}>
                             {localize.personal_experiences}
                         </li>
-                        <li>
                             {localize.hobbies}
                         </li>
-                        <li>
                             {localize.contacts}
                         </li>
                     </ul>
