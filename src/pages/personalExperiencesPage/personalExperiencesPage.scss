@@ -59,7 +59,7 @@
 
             &:nth-child(2n) {
                 color: initial;
-                background-color: rgb(231, 231, 231);
+                background-color: $cv-grey;
                 box-shadow: 2px 2px 4px rgb(231, 231, 231);
 
                 a,
