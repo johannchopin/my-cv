@@ -90,7 +90,6 @@ export default class IntroductionPage extends React.Component<Props, State> {
             this.init();
         } else {
             this.clearUI();
-            PageBase.clearPage(this.state.pageId);
         }
     }
 

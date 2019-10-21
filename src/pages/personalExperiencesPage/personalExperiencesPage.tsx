@@ -78,14 +78,15 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
         PageBase.initPage(this.state.pageId);
     }
 
-    protected clearUI(): void { }
+    protected clearUI(): void {
+        PageBase.clearPage(this.state.pageId);
+    }
 
     protected onPageChange(): void {
         if (this.props.currentPageIndex === this.state.pageIndex) {
             this.init();
         } else {
             this.clearUI();
-            PageBase.clearPage(this.state.pageId);
         }
     }
 

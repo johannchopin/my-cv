@@ -87,6 +87,7 @@ export default class SkillsPage extends React.Component<Props, State> {
     }
 
     protected clearUI(): void {
+        PageBase.clearPage(this.state.pageId);
         this.initGauges();
     }
 
@@ -95,7 +96,6 @@ export default class SkillsPage extends React.Component<Props, State> {
             this.init();
         } else {
             this.clearUI();
-            PageBase.clearPage(this.state.pageId);
         }
     }
 
