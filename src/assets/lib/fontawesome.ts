@@ -6,6 +6,7 @@ import {
     faHtml5,
     faCss3Alt,
     faReact,
+    faAdobe,
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -70,4 +71,5 @@ library.add(
     faSnowboarding,
     faTerminal,
     faReact,
+    faAdobe,
 );
