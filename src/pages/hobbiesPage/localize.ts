@@ -5,6 +5,7 @@ const LOCALIZE = {
         dive: "Tauchen (CMAS1 Level)",
         programming: "Programmierung (Typescript, Python, PHP)",
         react_lover: "React lover",
+        make_icon: "Erstellung von Icons",
     },
     fr: {
         title: "Mes loisirs",
@@ -12,6 +13,7 @@ const LOCALIZE = {
         dive: "Plongée (niveau CMAS1)",
         programming: "Programmation (Typescript, Python, PHP)",
         react_lover: "React fan",
+        make_icon: "Création d'icônes",
     },
     en: {
         title: "My hobbies",
@@ -19,6 +21,7 @@ const LOCALIZE = {
         dive: "Diving (CMAS1 level)",
         programming: "Programming (Typescript, Python, PHP)",
         react_lover: "React lover",
+        make_icon: "Icons creation",
     }
 }
 
