@@ -54,7 +54,7 @@ export default class HobbiesPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'hobbiesPage',
-            pageIndex: 4,
+            pageIndex: 5,
         };
     }
 

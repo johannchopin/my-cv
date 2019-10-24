@@ -41,7 +41,7 @@ import {
 
 
 interface Props {
-    lang: TLanguages,
+    language: TLanguages,
     currentPageIndex: number,
     showSimpleModal: (params: ISimpleModalParams) => void,
 }
@@ -63,7 +63,7 @@ export default class ContactPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'contactPage',
-            pageIndex: 5, // TODO: don't forget to update this !! 
+            pageIndex: 6, // TODO: don't forget to update this !! 
             textInFromInput: '',
             textInSubjectInput: '',
             textInMsgInput: '',
@@ -167,7 +167,7 @@ export default class ContactPage extends React.Component<Props, State> {
         if (result.response.hasEmailBeSend) {
             this.props.showSimpleModal({
                 type: 'success',
-                'message': LOCALIZE[this.props.lang]['email_has_been_sent']
+                'message': LOCALIZE[this.props.language]['email_has_been_sent']
             })
 
             this.resetInputs();
@@ -188,7 +188,7 @@ export default class ContactPage extends React.Component<Props, State> {
 
 
     render() {
-        const localize = LOCALIZE[this.props.lang];
+        const localize = LOCALIZE[this.props.language];
 
         return (
             <div id={this.state.pageId} className="swiper-slide">
@@ -199,7 +199,7 @@ export default class ContactPage extends React.Component<Props, State> {
                         className="form-control m-2 animate-me animation-goUp"
                         value={this.state.textInFromInput}
                         onChange={this.onFromInputChange}
-                        placeholder={LOCALIZE[this.props.lang].from}
+                        placeholder={LOCALIZE[this.props.language].from}
                     />
 
                     <input
@@ -207,14 +207,14 @@ export default class ContactPage extends React.Component<Props, State> {
                         className="form-control m-2 animate-me animation-goUp"
                         value={this.state.textInSubjectInput}
                         onChange={this.onSubjectInputChange}
-                        placeholder={LOCALIZE[this.props.lang].subject}
+                        placeholder={LOCALIZE[this.props.language].subject}
                     />
 
                     <textarea
                         className="form-control m-2 animate-me animation-goUp"
                         value={this.state.textInMsgInput}
                         onChange={this.onMsgInputChange}
-                        placeholder={LOCALIZE[this.props.lang].message}
+                        placeholder={LOCALIZE[this.props.language].message}
                         rows={10}
                     ></textarea>
 
