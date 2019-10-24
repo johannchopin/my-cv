@@ -100,6 +100,7 @@ export default class HobbiesPage extends React.Component<Props, State> {
                 <div id="hobbiesCtn">
 
                     <div className="col">
+
                         <div className="animate-me">
                             <div className="icon">
                                 <IconHandler icon="terminal" />
@@ -109,6 +110,12 @@ export default class HobbiesPage extends React.Component<Props, State> {
                                 <IconHandler prefix="fab" icon="react" className="react-icon" />
                                 {localize.react_lover}
                             </p>
+                        </div>
+                        <div className="animate-me">
+                            <div className="icon">
+                                <IconHandler icon="fish" />
+                            </div>
+                            <h2>{localize.dive}</h2>
                         </div>
 
                     </div>
@@ -140,23 +147,6 @@ export default class HobbiesPage extends React.Component<Props, State> {
                                 </a>
                             </div>
                         </div>
-
-                        <div className="animate-me">
-                            <div className="icon">
-                                <IconHandler icon="fish" />
-                            </div>
-                            <h2>{localize.dive}</h2>
-                        </div>
-                        <div className="animate-me">
-                            <div className="icon">
-                                <IconHandler icon="terminal" />
-                            </div>
-                            <h2>{localize.programming}</h2>
-                            <p>
-                                <IconHandler prefix="fab" icon="react" className="react-icon" />
-                                {localize.react_lover}
-                            </p>
-                        </div>
                     </div>
 
                     <div className="col">
@@ -166,18 +156,9 @@ export default class HobbiesPage extends React.Component<Props, State> {
                             </div>
                             <h2>{localize.play_music}</h2>
                         </div>
-                        <div className="animate-me">
-                            <div className="icon">
-                                <IconHandler icon="music" />
-                            </div>
-                            <h2>{localize.play_music}</h2>
-                        </div>
                     </div>
-
-
-
-                </div >
-            </div >
+                </div>
+            </div>
         )
     }
 }
