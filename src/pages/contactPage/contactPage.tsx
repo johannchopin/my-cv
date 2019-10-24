@@ -231,7 +231,7 @@ export default class ContactPage extends React.Component<Props, State> {
                 <div id="contactCtn">
                     <a href="mailto:johannchopin@protonmail.com" className="animate-me animation-goUp">
                         <IconHandler icon="envelope" />
-                        <p>johannchopin@protonmail.com</p>
+                        <p>johannchopin@pm.me</p>
                     </a>
 
                     <a href="img/cv.pdf" target="blanck" id="cv" className="animate-me animation-goUp">
