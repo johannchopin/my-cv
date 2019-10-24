@@ -122,7 +122,7 @@ export default class SkillsPage extends React.Component<Props, State> {
 
         return (
             <div id={this.state.pageId} className="swiper-slide">
-                <h1 className="animate-me slide-title">Compétence</h1>
+                <h1 className="animate-me slide-title">{localize.title}</h1>
 
                 <div className="skills-ctn">
                     <div className="langues animate-me" id="langues">
