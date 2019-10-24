@@ -8,75 +8,81 @@ $CONTAINER_ID: "#hobbiesPage";
         flex-wrap: wrap;
         justify-content: space-evenly;
 
-        &>div {
+        .col {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 26vw;
-            padding: 2em;
-            margin-bottom: 2em;
-            border-radius: .4em;
-            background-color: $cv-brown;
-            box-shadow: 0 0 1em $cv-brown;
 
-            &::before {
-                position: absolute;
-                top: 0;
-                content: "";
-                width: 100%;
-                height: 100%;
-                border-radius: 0 0 .4em .4em;
-                background-color: #e7e7e7;
-                transform: translate(0, .6em);
-                z-index: -1;
-            }
-
-            .icon {
+            .animate-me {
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
                 align-items: center;
-                width: 5em;
-                height: 5em;
-                border-radius: 50%;
+                width: 26vw;
+                padding: 2em;
+                margin-bottom: 2em;
+                border-radius: .4em;
                 background-color: $cv-brown;
+                box-shadow: 0 0 1em $cv-brown;
 
-                .fa-icon {
-                    color: $cv-gold;
-                    font-size: 2em;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0 0 .4em .4em;
+                    background-color: #e7e7e7;
+                    transform: translate(0, .6em);
+                    z-index: -1;
                 }
-            }
 
-            h2 {
-                color: $cv-brown;
-                margin-top: .8em;
-                text-align: center;
-                font-size: 1.5em;
-            }
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 5em;
+                    height: 5em;
+                    border-radius: 50%;
+                    background-color: $cv-brown;
 
-            p {
-                font-size: 1.2em;
-
-                .react-icon {
-                    color: $cv-pink;
-                    font-size: 1.8em;
-                    padding-right: .1em;
+                    .fa-icon {
+                        color: $cv-gold;
+                        font-size: 2em;
+                    }
                 }
-            }
 
-            &#makeIconCtn {
-                .icons {
-                    margin-top: 1em;
+                h2 {
+                    color: $cv-brown;
+                    margin-top: .8em;
+                    text-align: center;
+                    font-size: 1.5em;
+                }
 
-                    a {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        border-bottom: solid .1em $cv-brown;
-                        padding: 1em 0;
+                p {
+                    font-size: 1.2em;
 
-                        img {
-                            margin-top: .5em;
-                            width: 40%;
+                    .react-icon {
+                        color: $cv-pink;
+                        font-size: 1.8em;
+                        padding-right: .1em;
+                    }
+                }
+
+                &#makeIconCtn {
+                    .icons {
+                        margin-top: 1em;
+
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            border-bottom: solid .1em $cv-brown;
+                            padding: 1em 0;
+
+                            img {
+                                margin-top: .5em;
+                                width: 40%;
+                            }
                         }
                     }
                 }
@@ -92,7 +98,7 @@ $CONTAINER_ID: "#hobbiesPage";
             flex-direction: column;
             align-items: center;
 
-            &>div {
+            .col .animate-me {
                 width: 80%;
                 font-size: 1.3em;
 
