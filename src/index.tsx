@@ -28,6 +28,7 @@ import TimeLinePage from './pages/timeLinePage/timeLinePage';
 import SkillsPage from './pages/skillsPage/skillsPage';
 import HobbiesPage from './pages/hobbiesPage/hobbiesPage';
 import PersonalExperiencesPage from './pages/personalExperiencesPage/personalExperiencesPage';
+import ProjectsPage from './pages/projectsPage/projectsPage';
 import ContactPage from './pages/contactPage/contactPage';
 // END IMPORT PAGES ZONE
 
@@ -75,13 +76,15 @@ class App extends React.Component<IProps, IState> {
         this.state = {
             language: 'fr',
             pageToShow: 'personalExperiences',
+            pageToShow: 'hobbiesPage',
             pagesId: {
                 'introductionPage': 0,
                 'backgroundPage': 1,
                 'skillsPage': 2,
                 'personalExperiences': 3,
-                'hobbiesPage': 4,
-                'contactPage': 5,
+                'projectsPage': 4,
+                'hobbiesPage': 5,
+                'contactPage': 6,
             },
             simpleModalParams: {},
             //@ts-ignore
@@ -210,6 +213,15 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
+    protected projectsPageRender = () => {
+        return (
+            <ProjectsPage
+                language={this.state.language}
+                currentPageIndex={this.state.currentPageIndex}
+            />
+        )
+    }
+
     protected hobbiesPageRender = () => {
         return (
             <HobbiesPage
@@ -232,7 +244,7 @@ class App extends React.Component<IProps, IState> {
     protected contactPageRender = () => {
         return (
             <ContactPage
-                lang={this.state.language}
+                language={this.state.language}
                 currentPageIndex={this.state.currentPageIndex}
                 showSimpleModal={this.showSimpleModal}
             />
@@ -259,6 +271,7 @@ class App extends React.Component<IProps, IState> {
                         {this.timeLinePageRender()}
                         {this.skillsPageRender()}
                         {this.personalExperiencesPageRender()}
+                        {this.projectsPageRender()}
                         {this.hobbiesPageRender()}
                         {this.contactPageRender()}
                     </div>
