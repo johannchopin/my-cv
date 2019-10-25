@@ -7,6 +7,7 @@ import {
     faCss3Alt,
     faReact,
     faAdobe,
+    faGitAlt,
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -72,4 +73,5 @@ library.add(
     faTerminal,
     faReact,
     faAdobe,
+    faGitAlt,
 );
