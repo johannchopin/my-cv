@@ -111,10 +111,15 @@ export default class IntroductionPage extends React.Component<Props, State> {
 
                 <p className="presentation-text animate-me">
                     {localize["introduction_text"]}
+                    {localize.introduction_text}
                 </p>
                 <div id="indication" className="animate-me">
                     <p>Swiper vers la droite pour parcourir mon CV</p>
                     <IconHandler icon="arrow-right" />
+
+                <div id="swipeIndication" className="animate-me animation-goUp">
+                    <p>{localize.swipe_indication}</p>
+                    <IconHandler icon="arrow-right" className="with-pl" />
                 </div>
             </div>
         )
