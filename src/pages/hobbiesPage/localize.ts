@@ -6,6 +6,7 @@ const LOCALIZE = {
         programming: "Programmierung (Typescript, Python, PHP)",
         react_lover: "React lover",
         make_icon: "Erstellung von Icons",
+        snowboard: "Snowboardfahren",
     },
     fr: {
         title: "Mes loisirs",
@@ -14,6 +15,7 @@ const LOCALIZE = {
         programming: "Programmation (Typescript, Python, PHP)",
         react_lover: "React fan",
         make_icon: "Création d'icônes",
+        snowboard: "Snowboard ",
     },
     en: {
         title: "My hobbies",
@@ -22,6 +24,7 @@ const LOCALIZE = {
         programming: "Programming (Typescript, Python, PHP)",
         react_lover: "React lover",
         make_icon: "Icons creation",
+        snowboard: "Faire du snowboard",
     }
 }
 

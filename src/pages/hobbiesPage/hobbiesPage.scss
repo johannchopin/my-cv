@@ -45,7 +45,8 @@ $CONTAINER_ID: "#hobbiesPage";
                     border-radius: 50%;
                     background-color: $cv-brown;
 
-                    .fa-icon {
+                    .fa-icon,
+                    &>svg {
                         color: $cv-gold;
                         font-size: 2em;
                     }
@@ -84,6 +85,15 @@ $CONTAINER_ID: "#hobbiesPage";
                                 width: 40%;
                             }
                         }
+                    }
+
+                    .illustrator {
+                        margin-top: -.2em;
+                        font-size: .9em;
+                        padding: 0 .2em;
+                        border-radius: .2em;
+                        background-color: $cv-brown;
+                        color: $cv-gold;
                     }
                 }
             }
