@@ -258,6 +258,10 @@ body {
             background-color: $lightWhite;
             padding-bottom: 2em;
 
+            &.not-scrollable {
+                overflow-y: hidden;
+            }
+
             &::-webkit-scrollbar {
                 width: .8vw;
             }
