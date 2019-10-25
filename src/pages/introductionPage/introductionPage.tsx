@@ -48,6 +48,8 @@ interface State {
 
 export default class IntroductionPage extends React.Component<Props, State> {
 
+    protected page: JQuery;
+    protected swypeIndication: JQuery;
 
     constructor(props: Props) {
         super(props);
@@ -58,11 +60,11 @@ export default class IntroductionPage extends React.Component<Props, State> {
         };
     }
 
-    componentDidMount() {
+    componentDidMount = (): void => {
         this.init();
     }
 
-    componentDidUpdate(oldProps: Props) {
+    componentDidUpdate = (oldProps: Props): void => {
         const newProps = this.props;
 
         if (oldProps.currentPageIndex !== newProps.currentPageIndex) {
@@ -74,7 +76,12 @@ export default class IntroductionPage extends React.Component<Props, State> {
         this.initUI();
     }
 
-    protected initUI(): void {
+    protected initUI = (): void => {
+        this.page = $(`#${this.state.pageId}`);
+        this.swypeIndication = $(`#${this.state.pageId} #swipeIndication`);
+
+        this.initSwypeIndicationAnimation();
+
         PageBase.initPage(this.state.pageId);
     }
 
@@ -90,11 +97,20 @@ export default class IntroductionPage extends React.Component<Props, State> {
         }
     }
 
-    render() {
+    protected initSwypeIndicationAnimation(): void {
+        this.page.on("click", (): void => {
+            this.swypeIndication.css({
+                animation: "goDown .5s forwards",
+            });
+        });
+    }
+
+
+    render(): React.ReactNode {
         const localize = LOCALIZE[this.props.lang];
 
         return (
-            <div id={this.state.pageId} className="swiper-slide">
+            <div id={this.state.pageId} className="swiper-slide not-scrollable">
                 <header>
                     <h1 id="slide_0_h1" className="animate-me">Chopin Johann</h1>
 
@@ -110,12 +126,8 @@ export default class IntroductionPage extends React.Component<Props, State> {
                 </div>
 
                 <p className="presentation-text animate-me">
-                    {localize["introduction_text"]}
                     {localize.introduction_text}
                 </p>
-                <div id="indication" className="animate-me">
-                    <p>Swiper vers la droite pour parcourir mon CV</p>
-                    <IconHandler icon="arrow-right" />
 
                 <div id="swipeIndication" className="animate-me animation-goUp">
                     <p>{localize.swipe_indication}</p>
