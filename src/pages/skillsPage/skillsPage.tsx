@@ -135,10 +135,6 @@ export default class SkillsPage extends React.Component<Props, State> {
                             <img src={b2} />
                             <p>Anglais</p>
                         </div>
-                        <div>
-                            <img src={a2} />
-                            <p>Latin</p>
-                        </div>
                     </div>
                     <div className="animate-me" id="softwareSkills">
                         <h2>SOFTWARE</h2>
