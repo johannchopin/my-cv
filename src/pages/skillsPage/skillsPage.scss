@@ -92,18 +92,13 @@
             background-color: white;
             border-radius: 20px;
             margin-top: .1em;
-        }
 
-        .jauge0,
-        .jauge1,
-        .jauge2,
-        .jauge3,
-        .jauge4,
-        .jauge5 {
-            position: relative;
-            height: 100%;
-            background-color: rgb(251, 188, 5);
-            border-radius: 20px 0 0 20px;
+            &>div {
+                position: relative;
+                height: 100%;
+                background-color: rgb(251, 188, 5);
+                border-radius: 20px 0 0 20px;
+            }
         }
 
         .jauge0 {
@@ -125,6 +120,10 @@
 
         .jauge5 {
             width: 80%;
+        }
+
+        .jauge-git {
+            width: 75%;
         }
     }
 

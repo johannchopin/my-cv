@@ -180,6 +180,13 @@ export default class SkillsPage extends React.Component<Props, State> {
                         <div className="animated-gauge">
                             <div className="jauge4"></div>
                         </div>
+                        <h3>
+                            <IconHandler prefix="fab" icon="git-alt" />
+                            Git :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-git"></div>
+                        </div>
                     </div>
                 </div>
             </div>
