@@ -332,6 +332,18 @@ body {
     }
 }
 
+@keyframes goDown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(2em);
+        opacity: 0;
+    }
+}
+
 @keyframes fadeApparition {
     from {
         opacity: 0;
