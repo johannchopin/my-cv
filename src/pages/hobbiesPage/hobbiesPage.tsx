@@ -132,16 +132,20 @@ export default class HobbiesPage extends React.Component<Props, State> {
                             <h2>{localize.make_icon}</h2>
 
                             <div className="icons">
+                                <a href="https://johannchopin.fr/icon/caretaker/" target="_blank" className="clickable-effect">
                                     <img src="https://johannchopin.fr/icon/caretaker/icons/v3.0.png" />
                                     <img src="https://johannchopin.fr/icon/caretaker/icons/v2.4white.png" />
                                 </a>
 
+                                <a href="https://johannchopin.fr/icon/adventskalender/" target="_blank" className="clickable-effect">
                                     <img src="https://johannchopin.fr/icon/adventskalender/icons/v2.2.svg" />
                                 </a>
 
+                                <a href="https://johannchopin.fr/icon/forum_jgr/" target="_blank" className="clickable-effect">
                                     <img src="https://johannchopin.fr/icon/forum_jgr/icons/v1.2.png" />
                                 </a>
 
+                                <a href="https://johannchopin.fr/icon/isfates_sweet/" target="_blank" className="clickable-effect">
                                     <img src="https://johannchopin.fr/icon/isfates_sweet/icons/v5.0.svg" />
                                 </a>
                             </div>
