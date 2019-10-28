@@ -114,7 +114,7 @@ export default class IntroductionPage extends React.Component<Props, State> {
                 <header>
                     <h1 id="slide_0_h1" className="animate-me">Chopin Johann</h1>
 
-                    <p id="slide_0_p" className="animate-me">- Étudiant en Informatique -</p>
+                    <p id="slide_0_p" className="animate-me">- {localize.student} -</p>
 
                     <div id="waveSvg" className="animate-me animation-topApparition">
                         <WaveSvg />
