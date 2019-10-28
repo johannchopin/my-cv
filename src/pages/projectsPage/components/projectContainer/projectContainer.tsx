@@ -16,7 +16,6 @@ import './projectContainer.scss';
 
 // IMPORT COMPONENTS ZONE
 import IconHandler from '../../../../assets/uiComponents/iconHandler/iconHandler';
-import { string } from 'prop-types';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -34,7 +33,7 @@ interface Props {
     image: string,
     summary: string,
     isGitlabRepo?: boolean,
-    technologiesUsed?: string[] | Object,
+    technologiesUsed?: string[],
 }
 
 interface State { }
@@ -50,23 +49,16 @@ export default class ProjectContainer extends React.Component<Props, State> {
     }
 
     protected technologiesUsedRender = (): React.ReactNode => {
-        const technologiesUsed = this.props.technologiesUsed;
-
-        if (technologiesUsed !== undefined) {
-            if (technologiesUsed instanceof Object) {
-                return ''; // TODO: Finish this
-            }
-            if (Array.isArray(technologiesUsed)) {
-                return (
-                    <ul className="techno">
-                        {technologiesUsed.map((techo: string, i: number) => {
-                            return (
-                                <li key={i}>{techo}</li>
-                            )
-                        })}
-                    </ul>
-                )
-            }
+        if (this.props.technologiesUsed !== undefined) {
+            return (
+                <ul className="techno">
+                    {this.props.technologiesUsed.map((techo: string, i: number) => {
+                        return (
+                            <li key={i}>{techo}</li>
+                        )
+                    })}
+                </ul>
+            )
         }
 
         return '';
