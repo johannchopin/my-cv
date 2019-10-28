@@ -7,7 +7,7 @@ const LOCALIZE = {
         projects: "Projekte",
         hobbies: "Hobbys",
         contacts: "Kontakte",
-        check_repo: "Checken Sie die Projekteinreichung an",
+        check_repo: "Sehen Sie den Quellcode",
     },
     fr: {
         presentation: "Présentation",
@@ -17,7 +17,7 @@ const LOCALIZE = {
         projects: "Projets",
         hobbies: "Loisirs",
         contacts: "Contacts",
-        check_repo: "Voir le dépôt du projet",
+        check_repo: "Voir le code source",
     },
 
     en: {
@@ -28,7 +28,7 @@ const LOCALIZE = {
         projects: "Projects",
         hobbies: "Hobbies",
         contacts: "Contacts",
-        check_repo: "See the project repo",
+        check_repo: "View source code",
     },
 };
 
