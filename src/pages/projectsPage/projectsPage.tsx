@@ -16,6 +16,8 @@ const PageBase = new _pageBase();
 // IMPORT IMAGES ZONE
 //@ts-ignore
 import WalkinloveLogo from '../../assets/img/walkinlove-logo.png';
+//@ts-ignore
+import CaretakerIcon from '../../assets/img/caretaker-icon.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -99,9 +101,17 @@ export default class ProjectsPage extends React.Component<Props, State> {
 
                 <div className="projects-ctn">
                     <ProjectContainer
+                        link=""
+                        title="Caretaker-Smarthome"
+                        year={2019}
+                        image={CaretakerIcon}
+                        summary="This is my L3 big project at ISFATES. We have to create a smarthome that is connected to an app. I was the project manager and and the IT manager of the project."
+                        technologiesUsed={{ "test": "" }}
+                    />
+                    <ProjectContainer
                         link="https://gitlab.com/johannchopin/walkinlove-website"
                         title="WalkInLove-Website"
-                        year={2019}
+                        year={2017}
                         image={WalkinloveLogo}
                         summary="My first completed PHP website create at ISFATES"
                         isGitlabRepo={true}
