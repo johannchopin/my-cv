@@ -5,7 +5,7 @@ a.project-ctn {
     background-color: $cv-brown;
     margin-bottom: 2em;
     border-radius: .2em;
-    min-width: 70vw;
+    width: 70vw;
     padding: 2em;
     color: #fff;
 
@@ -22,6 +22,7 @@ a.project-ctn {
             background-color: #fff;
             width: 5em;
             height: 5em;
+            padding: .5em;
             margin-right: .8em;
 
             img {
@@ -81,17 +82,20 @@ a.project-ctn {
 }
 
 
-
-
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
 
     a.project-ctn {
+        width: 100%;
+        padding: .8em;
+
         .header {
 
-            .img-ctn {}
+            .img-ctn {
+                padding: .2em;
+            }
 
             h2 {
-                font-size: 1.5em;
+                font-size: 1.1em;
             }
 
             h3 {
