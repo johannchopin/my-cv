@@ -18,6 +18,8 @@ const PageBase = new _pageBase();
 import WalkinloveLogo from '../../assets/img/walkinlove-logo.png';
 //@ts-ignore
 import CaretakerIcon from '../../assets/img/caretaker-icon.png';
+//@ts-ignore
+import AdventskalendarIcon from '../../assets/img/adventskalendar-icon.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -106,7 +108,15 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         year={2019}
                         image={CaretakerIcon}
                         summary="This is my L3 big project at ISFATES. We have to create a smarthome that is connected to an app. I was the project manager and and the IT manager of the project."
-                        technologiesUsed={{ "test": "" }}
+                        technologiesUsed={["Typescript", "React Framework", "Scss", "php", "Python"]}
+                    />
+                    <ProjectContainer
+                        link=""
+                        title="ISFATES-Adventskalendar"
+                        year={2019}
+                        image={AdventskalendarIcon}
+                        summary="This is my L3 big project at ISFATES. We have to create a smarthome that is connected to an app. I was the project manager and and the IT manager of the project."
+                        technologiesUsed={["Typescript", "React Framework", "Scss", "php", "Python"]}
                     />
                     <ProjectContainer
                         link="https://gitlab.com/johannchopin/walkinlove-website"
