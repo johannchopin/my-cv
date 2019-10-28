@@ -15,10 +15,12 @@ const PageBase = new _pageBase();
 
 // IMPORT IMAGES ZONE
 //@ts-ignore
+import WalkinloveLogo from '../../assets/img/walkinlove-logo.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
 import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
+import ProjectContainer from './components/projectContainer/projectContainer';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -73,12 +75,10 @@ export default class ProjectsPage extends React.Component<Props, State> {
 
     protected initUI(): void {
         PageBase.initPage(this.state.pageId);
-        this.animateGauges();
     }
 
     protected clearUI(): void {
         PageBase.clearPage(this.state.pageId);
-        this.initGauges();
     }
 
     protected onPageChange(): void {
@@ -89,26 +89,6 @@ export default class ProjectsPage extends React.Component<Props, State> {
         }
     }
 
-    protected initGauges(): void {
-        const gaugeToAnimate = $(`#${this.state.pageId} .animated-gauge`);
-
-        gaugeToAnimate.each(function () {
-            $(this).css({
-                animation: 'none',
-            });
-        });
-    }
-
-    protected animateGauges(): void {
-        const gaugeToAnimate = $(`#${this.state.pageId} .animated-gauge`);
-
-        gaugeToAnimate.each(function () {
-            $(this).css({
-                animation: 'gaugeAnimation 2s forwards',
-                animationDelay: '0.6s',
-            });
-        });
-    }
 
     render() {
         const localize = LOCALIZE[this.props.language];
@@ -117,11 +97,16 @@ export default class ProjectsPage extends React.Component<Props, State> {
             <div id={this.state.pageId} className="swiper-slide">
                 <h1 className="animate-me slide-title">{localize.title}</h1>
 
-                <div className="project-ctn">
-                    <div className="animate-me">
-                        <p>Latin</p>
-                    </div>
-
+                <div className="projects-ctn">
+                    <ProjectContainer
+                        link="https://gitlab.com/johannchopin/walkinlove-website"
+                        title="WalkInLove-Website"
+                        year={2019}
+                        image={WalkinloveLogo}
+                        summary="My first completed PHP website create at ISFATES"
+                        isGitlabRepo={true}
+                        technologiesUsed={['php', 'html', 'css', 'javascript']}
+                    />
                 </div>
             </div>
         )
