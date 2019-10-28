@@ -1,0 +1,107 @@
+@import '../../../../assets/styles/toolsBundler.scss';
+
+
+a.project-ctn {
+    background-color: $cv-brown;
+    margin-bottom: 2em;
+    border-radius: .2em;
+    min-width: 70vw;
+    padding: 2em;
+    color: #fff;
+
+    a:hover {
+        color: #000;
+    }
+
+    .header {
+        display: flex;
+
+        .img-ctn {
+            display: flex;
+            border-radius: .2em;
+            background-color: #fff;
+            width: 5em;
+            height: 5em;
+            margin-right: .8em;
+
+            img {
+                margin: auto;
+                width: 100%;
+            }
+        }
+
+        h2 {
+            color: #000;
+            background-color: $cv-gold;
+            border-radius: .1em;
+            padding: 0 .2em;
+            font-size: 2em;
+            text-align: center;
+            margin: 0;
+        }
+
+        h3 {
+            margin: 0;
+
+            &::before {
+                content: "> ";
+                color: $cv-gold;
+            }
+        }
+    }
+
+    .body {
+        margin-top: 1em;
+
+        h4 {
+            font-size: 1.1em;
+        }
+
+        .techno {
+
+            li {
+                &::before {
+                    content: "- ";
+                    color: $cv-gold;
+                    margin-right: .2em;
+                }
+            }
+        }
+    }
+
+    .fa-icon {
+        &.gitlab-icon {
+            position: absolute;
+            top: .2em;
+            right: .5em;
+            font-size: 2em;
+            color: $cv-gold;
+        }
+    }
+}
+
+
+
+
+@media (max-width: $BIG_SCREEN_MIN_SIZE) {
+
+    a.project-ctn {
+        .header {
+
+            .img-ctn {}
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        .body {
+            h4 {}
+        }
+    }
+
+}
