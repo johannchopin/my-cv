@@ -108,7 +108,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         year={2019}
                         image={CaretakerIcon}
                         summary="This is my L3 big project at ISFATES. We have to create a smarthome that is connected to an app. I was the project manager and and the IT manager of the project."
-                        technologiesUsed={["Typescript", "React Framework", "Scss", "php", "Python"]}
+                        technologiesUsed={["Typescript", "React Framework", "Scss", "PhP", "Python"]}
                     />
                     <ProjectContainer
                         link=""
@@ -116,7 +116,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         year={2019}
                         image={AdventskalendarIcon}
                         summary="This is my L3 big project at ISFATES. We have to create a smarthome that is connected to an app. I was the project manager and and the IT manager of the project."
-                        technologiesUsed={["Typescript", "React Framework", "Scss", "php", "Python"]}
+                        technologiesUsed={["Typescript", "React Framework", "Scss", "PhP", "Python"]}
                     />
                     <ProjectContainer
                         link="https://gitlab.com/johannchopin/walkinlove-website"
