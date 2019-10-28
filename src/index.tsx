@@ -34,9 +34,7 @@ import ContactPage from './pages/contactPage/contactPage';
 
 // IMPORT IMAGES ZONE   
 
-// TODO: Fix bug -> ts can't import images like this
 // @ts-ignore
-import * as Favicon from './assets/img/favicon.png';
 // END IMPORT IMAGES ZONE
 
 // INIT HELPERS METHODS ZONE
@@ -106,9 +104,7 @@ class App extends React.Component<IProps, IState> {
 
     }
 
-    protected initUI() {
-        Helper.setFavicon(Favicon);
-    }
+    protected initUI() { }
 
     protected getInitialisedSwiper = (): Swiper => {
         const initialPageId = this.state.pagesId[this.state.pageToShow];
