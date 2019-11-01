@@ -92,7 +92,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
 
         return (
             <div id={this.state.pageId} className="swiper-slide">
-                <h1 className="animate-me slide-title">Experiences</h1>
+                <h1 className="animate-me slide-title">{localize.title}</h1>
 
                 <div id="experiencesCtn">
 

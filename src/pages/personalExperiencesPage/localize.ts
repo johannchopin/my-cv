@@ -1,5 +1,6 @@
 const LOCALIZE = {
     'de': {
+        title: "Erfahrungen",
         'languages': 'Sprachen',
         'work_eurokey': {
             'introduction': "10 Monate lang Fullstack-Entwickler bei der Firma <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> in Saarbrücken",
@@ -25,6 +26,7 @@ const LOCALIZE = {
         concert: "Darstellungen von <i>Konzerten</i> als Gitarrist",
     },
     'fr': {
+        title: "Expériences",
         'languages': 'Langues',
         'work_eurokey': {
             'introduction': "Dévelopeur fullstack durant 10 mois à l'entreprise <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> à Sarrebruck",
@@ -50,6 +52,7 @@ const LOCALIZE = {
         concert: "Représentations de <i>concerts</i> en tant que guitariste",
     },
     'en': {
+        title: "Experiences",
         'languages': 'Languages',
         'work_eurokey': {
             'introduction': "Fullstack developer for 10 months at the company <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> in Saarbrücken",
