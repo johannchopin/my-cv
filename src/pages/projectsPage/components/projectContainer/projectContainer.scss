@@ -1,7 +1,8 @@
 @import '../../../../assets/styles/toolsBundler.scss';
 
 
-a.project-ctn {
+.project-ctn {
+    display: inline-block;
     background-color: $cv-brown;
     margin-bottom: 2em;
     border-radius: .2em;
@@ -9,8 +10,12 @@ a.project-ctn {
     padding: 2em;
     color: #fff;
 
+    a {
+        color: #fff;
+    }
+
     a:hover {
-        color: #000;
+        color: #fff;
     }
 
     .header {
@@ -70,21 +75,20 @@ a.project-ctn {
         }
     }
 
-    .fa-icon {
-        &.gitlab-icon {
-            position: absolute;
-            top: .2em;
-            right: .5em;
-            font-size: 2em;
-            color: $cv-gold;
-        }
+    .gitlab-icon {
+        position: absolute;
+        top: .2em;
+        right: .5em;
+        font-size: 2em;
+        color: $cv-gold;
     }
+
 }
 
 
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
 
-    a.project-ctn {
+    .project-ctn {
         width: 100%;
         padding: .8em;
 

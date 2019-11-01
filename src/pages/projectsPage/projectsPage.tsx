@@ -119,12 +119,12 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         technologiesUsed={["Typescript", "React Framework", "Scss", "PhP", "Python"]}
                     />
                     <ProjectContainer
-                        link="https://gitlab.com/johannchopin/walkinlove-website"
+                        link="https://stackoverflow.com/questions/tagged/css"
                         title="WalkInLove-Website"
                         year={2017}
                         image={WalkinloveLogo}
                         summary="My first completed PHP website create at ISFATES"
-                        isGitlabRepo={true}
+                        linkToGitRepo="https://gitlab.com/johannchopin/walkinlove-website"
                         technologiesUsed={['php', 'html', 'css', 'javascript']}
                     />
                 </div>

@@ -18,8 +18,9 @@ import './projectContainer.scss';
 import IconHandler from '../../../../assets/uiComponents/iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
 
-
 // INIT HELPERS METHODS ZONE
+import _Helper from '../../../../helper';
+const Helper = new _Helper();
 // END INIT HELPERS METHODS ZONE
 
 // IMPORT INTERFACE ZONE
@@ -32,7 +33,7 @@ interface Props {
     year: number,
     image: string,
     summary: string,
-    isGitlabRepo?: boolean,
+    linkToGitRepo?: string,
     technologiesUsed?: string[],
 }
 
@@ -64,32 +65,47 @@ export default class ProjectContainer extends React.Component<Props, State> {
         return '';
     }
 
+    protected linkToGitlabRepoRender = (): React.ReactNode => {
+        if (Helper.isSet(this.props.linkToGitRepo)) {
+            return (
+                <a href={this.props.linkToGitRepo} className="gitlab-icon" target="_blank">
+                    <IconHandler prefix="fab" icon="gitlab" />
+                </a>
+            )
+        }
+
+        return '';
+    }
+
 
     render() {
         return (
-            <a
-                href={this.props.link}
-                target="_blank"
+            <div
                 className="animate-me project-ctn"
             >
-                <div className="header">
-                    <div className="img-ctn">
-                        <img src={this.props.image} />
+                <a
+                    href={this.props.link}
+                    target="_blank"
+                >
+                    <div className="header">
+                        <div className="img-ctn">
+                            <img src={this.props.image} />
+                        </div>
+                        <div>
+                            <h2>{this.props.title}</h2>
+                            <h3>{this.props.year}</h3>
+                        </div>
                     </div>
-                    <div>
-                        <h2>{this.props.title}</h2>
-                        <h3>{this.props.year}</h3>
+                    <div className="body">
+                        <h4>{this.props.summary}</h4>
+                        <br />
+                        <h4>Technologies used :</h4>
+                        {this.technologiesUsedRender()}
                     </div>
-                </div>
-                <div className="body">
-                    <h4>{this.props.summary}</h4>
-                    <br />
-                    <h4>Technologies used :</h4>
-                    {this.technologiesUsedRender()}
-                </div>
+                </a>
 
-                {this.props.isGitlabRepo ? <IconHandler prefix="fab" icon="gitlab" className="gitlab-icon" /> : ''}
-            </a>
+                {this.linkToGitlabRepoRender()}
+            </div>
         )
     }
 }
