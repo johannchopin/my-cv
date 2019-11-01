@@ -113,6 +113,10 @@ export default class _Helper {
         return elmt === undefined;
     }
 
+    public isSet(elmt: any): boolean {
+        return !this.isUndefined(elmt) && !this.isNull(elmt);
+    }
+
     public hashStringMd5(string: string): string {
         const h = Crypto.createHash('md5');
         h.update(string);
