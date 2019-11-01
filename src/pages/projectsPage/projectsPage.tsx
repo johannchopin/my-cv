@@ -119,7 +119,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         technologiesUsed={["Typescript", "React Framework", "Scss", "PhP", "Python"]}
                     />
                     <ProjectContainer
-                        link="https://stackoverflow.com/questions/tagged/css"
+                        link="https://test.johannchopin.fr/walkinlove/"
                         title="WalkInLove-Website"
                         year={2017}
                         image={WalkinloveLogo}
