@@ -141,7 +141,7 @@ class App extends React.Component<IProps, IState> {
 
     protected initSwiper = () => {
         this.state.mySwiper.on('slideChangeTransitionEnd', () => {
-            this.setState(prevState => ({
+            this.setState((prevState: IState) => ({
                 currentPageIndex: this.state.mySwiper.activeIndex,
             }));
         });
@@ -171,7 +171,7 @@ class App extends React.Component<IProps, IState> {
         });
     };
 
-    protected navbarRender() {
+    protected navbarRender = (): React.ReactNode => {
         return (
             <Navbar
                 goToPage={this.goToPage}
@@ -181,7 +181,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected introductionPageRender = () => {
+    protected introductionPageRender = (): React.ReactNode => {
         return (
             <IntroductionPage
                 lang={this.state.language}
@@ -190,7 +190,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected timeLinePageRender = () => {
+    protected timeLinePageRender = (): React.ReactNode => {
         return (
             <TimeLinePage
                 language={this.state.language}
@@ -199,7 +199,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected skillsPageRender = () => {
+    protected skillsPageRender = (): React.ReactNode => {
         return (
             <SkillsPage
                 language={this.state.language}
@@ -208,7 +208,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected projectsPageRender = () => {
+    protected projectsPageRender = (): React.ReactNode => {
         return (
             <ProjectsPage
                 language={this.state.language}
@@ -217,7 +217,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected hobbiesPageRender = () => {
+    protected hobbiesPageRender = (): React.ReactNode => {
         return (
             <HobbiesPage
                 language={this.state.language}
@@ -227,7 +227,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected personalExperiencesPageRender = () => {
+    protected personalExperiencesPageRender = (): React.ReactNode => {
         return (
             <PersonalExperiencesPage
                 language={this.state.language}
@@ -236,7 +236,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected contactPageRender = () => {
+    protected contactPageRender = (): React.ReactNode => {
         return (
             <ContactPage
                 language={this.state.language}
@@ -246,7 +246,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected modalsRender() {
+    protected modalsRender = (): React.ReactNode => {
         return (
             <div id="modals">
                 <SimpleModal params={this.state.simpleModalParams} />
