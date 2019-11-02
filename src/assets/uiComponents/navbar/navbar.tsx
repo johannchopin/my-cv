@@ -159,7 +159,7 @@ export default class Navbar extends React.Component<Props, State> {
                         <li onClick={() => { this.goToPage('introductionPage') }}>
                             {localize.presentation}
                         </li>
-                        <li onClick={() => { this.goToPage('backgroundPage') }}>
+                        <li onClick={() => { this.goToPage('timeLinePage') }}>
                             {localize.background}
                         </li>
                         <li onClick={() => { this.goToPage('skillsPage') }}>
