@@ -109,15 +109,15 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         title="Caretaker-Smarthome"
                         year={2019}
                         image={CaretakerIcon}
-                        summary="This is my L3 big project at ISFATES. We have to create a smarthome that is connected to an app. I was the project manager and and the IT manager of the project."
+                        summary={localize.project_caretaker.summary}
                         technologiesUsed={["Typescript", "React Framework", "Scss", "PhP", "Python"]}
                     />
                     <ProjectContainer
                         link=""
-                        title="ISFATES-Adventskalendar"
+                        title="ISFATES-Adventskalender"
                         year={2019}
                         image={AdventskalendarIcon}
-                        summary="This is my L3 big project at ISFATES. We have to create a smarthome that is connected to an app. I was the project manager and and the IT manager of the project."
+                        summary={localize.project_adventskalender.summary}
                         technologiesUsed={["Typescript", "React Framework", "Scss", "PhP", "Python"]}
                     />
                     <ProjectContainer
@@ -125,7 +125,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         title="Astropulse-Experience"
                         year={2018}
                         image={AstropulseIcon}
-                        summary="My first completed PHP website create at ISFATES"
+                        summary={localize.project_astropulse.summary}
                         linkToGitRepo="https://gitlab.com/johannchopin/htw18-19_uxdesign-form"
                         technologiesUsed={['php', 'html', 'css', 'javascript', 'mysql']}
                     />
@@ -134,7 +134,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         title="WalkInLove-Website"
                         year={2017}
                         image={WalkinloveLogo}
-                        summary="My first completed PHP website create at ISFATES"
+                        summary={localize.project_walkinlove.summary}
                         linkToGitRepo="https://gitlab.com/johannchopin/walkinlove-website"
                         technologiesUsed={['php', 'html', 'css', 'javascript']}
                     />
