@@ -73,7 +73,7 @@ class App extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             language: 'fr',
-            pageToShow: 'introductionPage',
+            initialPage: 'projectsPage',
             pagesId: {
                 'introductionPage': 0,
                 'timeLinePage': 1,
@@ -94,14 +94,20 @@ class App extends React.Component<IProps, IState> {
         this.init();
     }
 
-
     protected init() {
+        this.setCurrentPageIndex();
         this.initUI();
 
         this.setState((prevState: IState) => ({
             mySwiper: this.getInitialisedSwiper()
         }), () => { this.initSwiper() })
 
+    }
+
+    protected setCurrentPageIndex = (): void => {
+        this.setState((prevState: IState) => ({
+            currentPageIndex: this.state.pagesId[this.state.initialPage],
+        }))
     }
 
     protected initUI() {
@@ -115,7 +121,7 @@ class App extends React.Component<IProps, IState> {
     }
 
     protected getInitialisedSwiper = (): Swiper => {
-        const initialPageId = this.state.pagesId[this.state.pageToShow];
+        const initialPageId = this.state.pagesId[this.state.initialPage];
 
         return new Swiper('.swiper-container', {
             initialSlide: initialPageId,
