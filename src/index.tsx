@@ -104,7 +104,15 @@ class App extends React.Component<IProps, IState> {
 
     }
 
-    protected initUI() { }
+    protected initUI() {
+        this.initBootstrapTooltipsPlugins();
+    }
+
+    protected initBootstrapTooltipsPlugins = (): void => {
+        $((): void => {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    }
 
     protected getInitialisedSwiper = (): Swiper => {
         const initialPageId = this.state.pagesId[this.state.pageToShow];
