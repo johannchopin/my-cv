@@ -1,12 +1,12 @@
 const LOCALIZE = {
-    'de': {
-        'my_background': 'Mein Hintergrund',
+    de: {
+        title: 'Mein Hintergrund',
     },
-    'fr': {
-        'my_background': 'Mon parcours',
+    fr: {
+        title: 'Mon parcours',
     },
-    'en': {
-        'my_background': 'My background',
+    en: {
+        title: 'My background',
     }
 }
 

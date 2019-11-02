@@ -91,7 +91,7 @@ export default class TimeLinePage extends React.Component<Props, State> {
         return (
             <div id={this.state.pageId} className="swiper-slide">
                 <h1 className="animate-me slide-title">
-                    {localize.my_background}
+                    {localize.title}
                 </h1>
 
                 <div id="timeline-content">
@@ -100,7 +100,7 @@ export default class TimeLinePage extends React.Component<Props, State> {
                             <p className="event-date">2018</p>
                             <h2>Employé en tant que développeur fullstack à l'entreprise <a href="http://www.eurokey.de/index.php?id=1">Eurokey</a></h2>
                             <h2>Renomination au poste de reponsable informatique de la <a href="http://diva.dfhi-isfates.eu/" target="_blank">DIVA</a></h2>
-                            <h2>J'effectue ma deuxième année à la HTW à Sarrebruck en allemagne</h2>
+                            <h2>J'effectue ma deuxième année d'étude à la HTW à Sarrebruck en allemagne</h2>
                         </li>
                         <li className="event animate-me animation-goUp">
                             <p className="event-date">2017</p>
