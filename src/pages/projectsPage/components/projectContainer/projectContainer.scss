@@ -89,7 +89,7 @@
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
 
     .project-ctn {
-        width: 100%;
+        width: 95%;
         padding: .8em;
 
         .header {
@@ -105,10 +105,6 @@
             h3 {
                 font-size: 1.5em;
             }
-        }
-
-        .body {
-            h4 {}
         }
     }
 
