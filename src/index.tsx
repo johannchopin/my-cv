@@ -55,7 +55,7 @@ interface IProps { }
 
 interface IState {
     language: TLanguages,
-    pageToShow: TPages,
+    initialPage: TPages,
     pagesId: TPagesId,
     simpleModalParams: ISimpleModalParams,
     mySwiper: Swiper,
