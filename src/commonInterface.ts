@@ -41,7 +41,7 @@ export interface ISendMeEmailResponse extends IRequestResponse {
 
 // TYPES ZONE
 // TODO: Replace personalExperiences to personalExperiencesPage
-export type TPages = 'introductionPage' | 'timeLinePage' | 'skillsPage' | 'hobbiesPage' | 'personalExperiences' | 'projectsPage' | 'contactPage';
+export type TPages = 'introductionPage' | 'timeLinePage' | 'skillsPage' | 'hobbiesPage' | 'personalExperiencesPage' | 'projectsPage' | 'contactPage';
 export type TLanguages = 'en' | 'fr' | 'de';
 export type TSimpleModalType = 'success' | 'warning' | 'danger';
 // END TYPES ZONE
