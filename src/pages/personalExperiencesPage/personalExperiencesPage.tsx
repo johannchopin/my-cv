@@ -59,33 +59,12 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
         this.init();
     }
 
-    componentDidUpdate(oldProps: Props) {
-        const newProps = this.props;
-
-        if (oldProps.currentPageIndex !== newProps.currentPageIndex) {
-            this.onPageChange();
-        }
-    }
-
     protected init = (): void => {
         this.initUI();
     }
 
-    protected initUI(): void {
-        PageBase.initPage(this.state.pageId);
-    }
+    protected initUI(): void { }
 
-    protected clearUI(): void {
-        PageBase.clearPage(this.state.pageId);
-    }
-
-    protected onPageChange(): void {
-        if (this.props.currentPageIndex === this.state.pageIndex) {
-            this.init();
-        } else {
-            this.clearUI();
-        }
-    }
 
     render() {
         const localize = LOCALIZE[this.props.language];

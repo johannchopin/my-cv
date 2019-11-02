@@ -22,6 +22,11 @@ import Navbar from './assets/uiComponents/navbar/navbar';
 import SimpleModal from './assets/uiComponents/simpleModal/simpleModal';
 // END IMPORT COMPONENTS ZONE
 
+// IMPORT PAGEBASE ZONE
+import _pageBase from './pages/pageBase';
+const PageBase = new _pageBase();
+// END IMPORT PAGEBASE ZONE
+
 // IMPORT PAGES ZONE
 import IntroductionPage from './pages/introductionPage/introductionPage';
 import TimeLinePage from './pages/timeLinePage/timeLinePage';
@@ -90,7 +95,7 @@ class App extends React.Component<IProps, IState> {
         };
     }
 
-    componentDidMount = () => {
+    componentDidMount = (): void => {
         this.init();
     }
 
@@ -112,6 +117,7 @@ class App extends React.Component<IProps, IState> {
 
     protected initUI() {
         this.initBootstrapTooltipsPlugins();
+        this.initPageById(0);
     }
 
     protected initBootstrapTooltipsPlugins = (): void => {
@@ -155,10 +161,43 @@ class App extends React.Component<IProps, IState> {
 
     protected initSwiper = () => {
         this.state.mySwiper.on('slideChangeTransitionEnd', () => {
-            this.setState((prevState: IState) => ({
-                currentPageIndex: this.state.mySwiper.activeIndex,
-            }));
+            this.triggerPageChange(this.state.mySwiper.activeIndex);
         });
+    }
+
+    protected triggerPageChange = (pageId: number): void => {
+        const pageToClearId = this.state.currentPageIndex;
+
+        this.setState((prevState: IState) => ({
+            currentPageIndex: pageId,
+        }), (): void => {
+            this.initPageById(pageId);
+            this.clearPageById(pageToClearId);
+        });
+    }
+
+    protected getPageIdBySwiperIndex = (swiperIndex: number): TPages => {
+        const pagesId = this.state.pagesId;
+
+        for (const pageName in pagesId) {
+            if (pagesId.hasOwnProperty(pageName)) {
+                if (pagesId[pageName] === swiperIndex) {
+                    return pageName;
+                }
+            }
+        }
+    }
+
+    protected initPageById = (pageId: number): void => {
+        const pageName = this.getPageIdBySwiperIndex(pageId);
+
+        PageBase.initPage(pageName);
+    }
+
+    protected clearPageById = (pageId: number): void => {
+        const pageName = this.getPageIdBySwiperIndex(pageId);
+
+        PageBase.clearPage(pageName);
     }
 
     protected goToPage = (pageName: TPages): void => {

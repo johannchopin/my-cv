@@ -58,7 +58,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            pageId: 'myProjectsPage',
+            pageId: 'projectsPage',
             pageIndex: 4, // TODO: don't forget to update this !!
         };
     }
@@ -67,33 +67,11 @@ export default class ProjectsPage extends React.Component<Props, State> {
         this.initUI();
     }
 
-    componentDidUpdate(oldProps: Props) {
-        const newProps = this.props;
-
-        if (oldProps.currentPageIndex !== newProps.currentPageIndex) {
-            this.onPageChange();
-        }
-    }
-
     protected init = (): void => {
         this.initUI();
     }
 
-    protected initUI(): void {
-        PageBase.initPage(this.state.pageId);
-    }
-
-    protected clearUI(): void {
-        PageBase.clearPage(this.state.pageId);
-    }
-
-    protected onPageChange(): void {
-        if (this.props.currentPageIndex === this.state.pageIndex) {
-            this.init();
-        } else {
-            this.clearUI();
-        }
-    }
+    protected initUI(): void { }
 
 
     render() {

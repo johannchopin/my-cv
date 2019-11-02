@@ -64,14 +64,6 @@ export default class IntroductionPage extends React.Component<Props, State> {
         this.init();
     }
 
-    componentDidUpdate = (oldProps: Props): void => {
-        const newProps = this.props;
-
-        if (oldProps.currentPageIndex !== newProps.currentPageIndex) {
-            this.onPageChange();
-        }
-    }
-
     protected init = (): void => {
         this.initUI();
     }
@@ -81,20 +73,6 @@ export default class IntroductionPage extends React.Component<Props, State> {
         this.swypeIndication = $(`#${this.state.pageId} #swipeIndication`);
 
         this.initSwypeIndicationAnimation();
-
-        PageBase.initPage(this.state.pageId);
-    }
-
-    protected clearUI(): void {
-        PageBase.clearPage(this.state.pageId);
-    }
-
-    protected onPageChange(): void {
-        if (this.props.currentPageIndex === this.state.pageIndex) {
-            this.init();
-        } else {
-            this.clearUI();
-        }
     }
 
     protected initSwypeIndicationAnimation(): void {

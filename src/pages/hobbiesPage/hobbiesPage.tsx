@@ -63,33 +63,12 @@ export default class HobbiesPage extends React.Component<IProps, IState> {
         this.init();
     }
 
-    componentDidUpdate = (oldProps: IProps): void => {
-        const newProps = this.props;
-
-        if (oldProps.currentPageIndex !== newProps.currentPageIndex) {
-            this.onPageChange();
-        }
-    }
-
     protected init = (): void => {
         this.initUI();
     }
 
-    protected initUI(): void {
-        PageBase.initPage(this.state.pageId);
-    }
+    protected initUI(): void { }
 
-    protected clearUI(): void {
-        PageBase.clearPage(this.state.pageId);
-    }
-
-    protected onPageChange(): void {
-        if (this.props.currentPageIndex === this.state.pageIndex) {
-            this.init();
-        } else {
-            this.clearUI();
-        }
-    }
 
     render() {
         const localize = LOCALIZE[this.props.language];
