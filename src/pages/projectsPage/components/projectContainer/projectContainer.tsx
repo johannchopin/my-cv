@@ -5,6 +5,7 @@ import './projectContainer.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT LOCALIZE ZONE
+import LOCALIZE from './localize';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT PAGEBASE ZONE
@@ -24,10 +25,12 @@ const Helper = new _Helper();
 // END INIT HELPERS METHODS ZONE
 
 // IMPORT INTERFACE ZONE
+import { TLanguages } from '../../../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
 interface Props {
+    language: TLanguages,
     link: string,
     title: string,
     year: number,
@@ -66,9 +69,18 @@ export default class ProjectContainer extends React.Component<Props, State> {
     }
 
     protected linkToGitlabRepoRender = (): React.ReactNode => {
+        const checkoutRepoTranslation = LOCALIZE[this.props.language].check_repo;
+
         if (Helper.isSet(this.props.linkToGitRepo)) {
             return (
-                <a href={this.props.linkToGitRepo} className="gitlab-icon" target="_blank">
+                <a
+                    href={this.props.linkToGitRepo}
+                    target="_blank"
+                    className="gitlab-icon"
+                    data-toggle="tooltip"
+                    data-placement="left"
+                    title={checkoutRepoTranslation}
+                >
                     <IconHandler prefix="fab" icon="gitlab" />
                 </a>
             )

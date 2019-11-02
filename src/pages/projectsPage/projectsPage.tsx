@@ -105,38 +105,42 @@ export default class ProjectsPage extends React.Component<Props, State> {
 
                 <div className="projects-ctn">
                     <ProjectContainer
+                        language={this.props.language}
                         link=""
                         title="Caretaker-Smarthome"
                         year={2019}
                         image={CaretakerIcon}
                         summary={localize.project_caretaker.summary}
-                        technologiesUsed={["Typescript", "React Framework", "Scss", "PhP", "Python"]}
+                        technologiesUsed={["Typescript", "React Framework", "Scss", "Php", "Python"]}
                     />
                     <ProjectContainer
+                        language={this.props.language}
                         link=""
                         title="ISFATES-Adventskalender"
                         year={2019}
                         image={AdventskalendarIcon}
                         summary={localize.project_adventskalender.summary}
-                        technologiesUsed={["Typescript", "React Framework", "Scss", "PhP", "Python"]}
+                        technologiesUsed={["Typescript", "React Framework", "Scss", "Php", "Python"]}
                     />
                     <ProjectContainer
+                        language={this.props.language}
                         link="https://astropulse.johannchopin.fr/"
                         title="Astropulse-Experience"
                         year={2018}
                         image={AstropulseIcon}
                         summary={localize.project_astropulse.summary}
                         linkToGitRepo="https://gitlab.com/johannchopin/htw18-19_uxdesign-form"
-                        technologiesUsed={['php', 'html', 'css', 'javascript', 'mysql']}
+                        technologiesUsed={['Php', 'Html', 'Css', 'Javascript', 'MySql']}
                     />
                     <ProjectContainer
+                        language={this.props.language}
                         link="https://test.johannchopin.fr/walkinlove/"
                         title="WalkInLove-Website"
                         year={2017}
                         image={WalkinloveLogo}
                         summary={localize.project_walkinlove.summary}
                         linkToGitRepo="https://gitlab.com/johannchopin/walkinlove-website"
-                        technologiesUsed={['php', 'html', 'css', 'javascript']}
+                        technologiesUsed={['Php', 'Html', 'Css', 'Javascript']}
                     />
                 </div>
             </div>
