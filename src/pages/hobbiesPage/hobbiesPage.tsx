@@ -35,22 +35,22 @@ import {
 // END IMPORT INTERFACE ZONE
 
 
-interface Props {
+interface IProps {
     language: TLanguages
     currentPageIndex: number,
     showSimpleModal: (params: ISimpleModalParams) => void,
 }
 
-interface State {
+interface IState {
     pageId: string,
     pageIndex: number,
 }
 
 
-export default class HobbiesPage extends React.Component<Props, State> {
+export default class HobbiesPage extends React.Component<IProps, IState> {
 
 
-    constructor(props: Props) {
+    constructor(props: IProps) {
         super(props);
 
         this.state = {
@@ -59,11 +59,11 @@ export default class HobbiesPage extends React.Component<Props, State> {
         };
     }
 
-    componentDidMount() {
+    componentDidMount(): void {
         this.init();
     }
 
-    componentDidUpdate(oldProps: Props) {
+    componentDidUpdate = (oldProps: IProps): void => {
         const newProps = this.props;
 
         if (oldProps.currentPageIndex !== newProps.currentPageIndex) {
