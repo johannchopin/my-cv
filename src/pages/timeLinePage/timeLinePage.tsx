@@ -98,25 +98,31 @@ export default class TimeLinePage extends React.Component<Props, State> {
                     <ul className="timeline">
                         <li className="event animate-me animation-goUp">
                             <p className="event-date">2018</p>
-                            <h2>Employé en tant que développeur fullstack à l'entreprise <a href="http://www.eurokey.de/index.php?id=1">Eurokey</a></h2>
-                            <h2>Renomination au poste de reponsable informatique de la <a href="http://diva.dfhi-isfates.eu/" target="_blank">DIVA</a></h2>
-                            <h2>J'effectue ma deuxième année d'étude à la HTW à Sarrebruck en allemagne</h2>
+
+                            <h2 dangerouslySetInnerHTML={{ __html: localize.year_2018.eurokey.title }}></h2>
+
+                            <h2 dangerouslySetInnerHTML={{ __html: localize.year_2018.diva.title }}></h2>
+
+                            <h2>{localize.year_2018.htw.title}</h2>
                         </li>
                         <li className="event animate-me animation-goUp">
                             <p className="event-date">2017</p>
-                            <h2>Stage d'un mois dans l'entreprise de développement mobile <a href="https://www.hotcity.lu/en/" target="_blank">Hotcity</a> au Luxembourg</h2>
-                            <h2>Nomination au poste de reponsable informatique de la <a href="http://diva.dfhi-isfates.eu/" target="_blank">DIVA</a></h2>
-                            <p>La DIVA (DFHI-Isfates-Verein-Association) est l’association étudiante de l’ISFATES</p>
-                            <h2>Début de mes études en informatique à l'<i>ISFATES</i></h2>
-                            <p>Institut supérieur franco-allemand de techniques, d'économie et de sciences</p>
-                            <p></p>
-                            <h2>J'obtiens mon BAC S</h2>
-                            <p>(option section européenne physique-chimie en allemand et Langues et cultures de l'antiquité: latin) avec mention '<i>Bien</i>'</p>
+
+                            <h2 dangerouslySetInnerHTML={{ __html: localize.year_2017.hotcity.title }}></h2>
+
+                            <h2 dangerouslySetInnerHTML={{ __html: localize.year_2017.diva.title }}></h2>
+                            <p>{localize.year_2017.diva.complement}</p>
+
+                            <h2 dangerouslySetInnerHTML={{ __html: localize.year_2017.start_isfates.title }}></h2>
+                            <p>Institut Supérieur Franco-Allemand de Techniques, d'Economie et de Sciences</p>
+
+                            <h2>{localize.year_2017.bac.title}</h2>
+                            <p dangerouslySetInnerHTML={{ __html: localize.year_2017.bac.complement }}></p>
                         </li>
                         <li className="event animate-me animation-goUp">
                             <p className="event-date">2014</p>
-                            <h2>Obtention du brevet des collèges, mention 'Très bien'</h2>
-                            <h2>Certification B1 en allemand, KMK</h2>
+                            <h2>{localize.year_2014.brevet}</h2>
+                            <h2>{localize.year_2014.c1_certificate}</h2>
                         </li>
                     </ul>
                 </div>
