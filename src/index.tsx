@@ -76,7 +76,7 @@ class App extends React.Component<IProps, IState> {
             pageToShow: 'introductionPage',
             pagesId: {
                 'introductionPage': 0,
-                'backgroundPage': 1,
+                'timeLinePage': 1,
                 'skillsPage': 2,
                 'personalExperiences': 3,
                 'projectsPage': 4,
