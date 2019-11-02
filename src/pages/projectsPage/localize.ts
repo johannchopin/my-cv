@@ -1,6 +1,6 @@
 const LOCALIZE = {
     de: {
-        title: "meine Projekte",
+        title: "Meine Projekte",
         project_caretaker: {
             summary: "Dies ist mein 3. Studienjahr Projekt bei ISFATES. Wir mussten ein Smart Home Modell entwickeln, das mit einer fortschrittlichen Webanwendung verbunden ist. Ich war der Projektleiter und der IT-Manager des Projekts.",
         },
