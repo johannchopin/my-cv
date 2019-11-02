@@ -1,15 +1,15 @@
 const LOCALIZE = {
-    'de': {
-        'title': 'Fähigkeiten ',
-        'languages': 'Sprachen',
+    de: {
+        title: 'Fähigkeiten ',
+        languages: 'Sprachen',
     },
-    'fr': {
-        'title': 'Compétences',
-        'languages': 'Langues',
+    fr: {
+        title: 'Compétences',
+        languages: 'Langues',
     },
-    'en': {
-        'title': 'Skills',
-        'languages': 'Languages',
+    en: {
+        title: 'Skills',
+        languages: 'Languages',
     }
 }
 
