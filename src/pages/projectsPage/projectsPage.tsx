@@ -64,7 +64,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
     }
 
     componentDidMount() {
-        // TODO: Do something
+        this.initUI();
     }
 
     componentDidUpdate(oldProps: Props) {
