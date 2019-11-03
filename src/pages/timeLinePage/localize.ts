@@ -1,17 +1,17 @@
 const LOCALIZE = {
     de: {
-        title: 'Mein Hintergrund',
+        title: 'Mein Werdegang',
         year_2014: {
-            c1_certificate: "B1 Zertifizierung in deutscher Sprache, KMK",
-            brevet: "Erhalt des Zertifikats der Hauptschule, Erwähnung 'Sehr gut'",
+            c1_certificate: "B1-Zertifizierung der Kultusministerkonferenz in deutscher Sprache",
+            brevet: "Mittlere Reife mit Prädikat 'Sehr gut'",
         },
         year_2017: {
             bac: {
-                title: "Ich bekomme mein BAC S (wissenschaftlich)",
-                complement: "(Option Europäische Sektion Physik und Chemie in Deutsch und Sprachen und Kulturen der Antike: Latein) mit der Erwähnung '<i>Bien</i>'",
+                title: "Wissenschaftliches Abitur",
+                complement: "(Option Europäische Sektion Physik und Chemie in Deutsch sowie Sprachen und Kulturen der Antike: Latein) mit Prädikat '<i>Gut</i>'",
             },
             start_isfates: {
-                title: "Beginn meines Informatikstudiums bei <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
+                title: "Beginn des Informatikstudiums bei <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
                 complement: "",
             },
             diva: {

@@ -1,7 +1,7 @@
 const LOCALIZE = {
     de: {
-        introduction_text: "\"Als 20-jähriger Student am Institut Supérieur Franco-Allemand de Techniques, d'Économies et de Sciences (ISFATES) interessiere ich mich seit einigen Jahren für Programmierung und das Internet. Ehrgeizig und bereit, hoffe ich, dem Profil zu entsprechen, das Sie suchen.\"",
-        swipe_indication: "Wischen Sie nach rechts, um meinen Lebenslauf zu durchsuchen.",
+        introduction_text: "\"Als 20-jähriger Student am Institut Supérieur Franco-Allemand de Techniques, d'Économies et de Sciences (ISFATES) interessiere ich mich seit einigen Jahren für Webprogrammierung und Internet. Ehrgeizig und zuverlässig, hoffe ich, dem Profil zu entsprechen, das Sie suchen.\"",
+        swipe_indication: "Swipen Sie nach rechts, um meinen Lebenslauf einzusehen",
         student: "Student der Informatik",
     },
     fr: {
