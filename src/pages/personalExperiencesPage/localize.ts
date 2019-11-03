@@ -13,7 +13,7 @@ const LOCALIZE = {
             ]
         },
         internship_hotcity: {
-            introduction: "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 Monate), in denen ich zusätzlich zu <i>Web-Integration</i> und PHP-Entwicklung",
+            introduction: "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 Monate im 2018), in denen ich zusätzlich zu <i>Web-Integration</i> und PHP-Entwicklung",
             letter_of_recommendation: "Empfehlungsschreiben",
         },
         diva: "",
@@ -40,7 +40,7 @@ const LOCALIZE = {
             ]
         },
         internship_hotcity: {
-            introduction: "Stage au sein de l'entreprise de développement mobile <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 mois) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP",
+            introduction: "Stage au sein de l'entreprise de développement mobile <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 mois en 2018) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP",
             letter_of_recommendation: "Lettre de recommandation",
         },
         diva: "Nomination au poste de reponsable informatique de la <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> en 2018 puis 2019. La DFHI-ISFATES-Verein-Association est l’association étudiante de l’ISFATES. J'y ai accompli différentes tâches tel que le refactoring du site officiel (nouvelle charte graphique et mise en place d'une interface administrateur) ainsi que la création d'affiches et de logos",
@@ -67,7 +67,7 @@ const LOCALIZE = {
             ]
         },
         internship_hotcity: {
-            introduction: "Internship in the company <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 months) where I designed mobile application interfaces in addition to doing <i>web integration</i> and PHP development",
+            introduction: "Internship in the company <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 months in 2018) where I designed mobile application interfaces in addition to doing <i>web integration</i> and PHP development",
             letter_of_recommendation: "Letter of recommendation",
         },
         diva: "",
