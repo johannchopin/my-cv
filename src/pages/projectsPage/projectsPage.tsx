@@ -110,6 +110,9 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         linkToGitRepo="https://gitlab.com/johannchopin/htw18-19_uxdesign-form"
                         technologiesUsed={['Php', 'Html', 'Css', 'Javascript', 'MySql']}
                     />
+
+                    {/* TODO: Add DIVA website */}
+
                     <ProjectContainer
                         language={this.props.language}
                         link="https://test.johannchopin.fr/walkinlove/"
