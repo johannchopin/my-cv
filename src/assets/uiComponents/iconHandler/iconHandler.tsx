@@ -2,10 +2,6 @@ import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp, IconPrefix, IconName } from '@fortawesome/fontawesome-svg-core';
 
-// IMPORT HELPER ZONE
-import Helper from '../../../helper';
-// END IMPORT HELPER ZONE
-
 // IMPORT STYLES ZONE
 import './iconHandler.scss';
 // END IMPORT STYLES ZONE

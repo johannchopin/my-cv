@@ -11,12 +11,6 @@ import './navbar.scss';
 import IconHandler from '../iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
 
-
-// INIT HELPERS METHODS ZONE
-import _Helper from '../../../helper';
-const Helper = new _Helper();
-// END INIT HELPERS METHODS ZONE
-
 // IMPORT LOCALIZE ZONE
 import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE

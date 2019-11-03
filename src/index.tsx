@@ -42,11 +42,6 @@ import ContactPage from './pages/contactPage/contactPage';
 // @ts-ignore
 // END IMPORT IMAGES ZONE
 
-// INIT HELPERS METHODS ZONE
-import _Helper from './helper';
-const Helper = new _Helper();
-// END INIT HELPERS METHODS ZONE
-
 // IMPORT INTERFACE ZONE
 import {
     TPages,

@@ -26,8 +26,7 @@ import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
 
 
 // INIT HELPERS METHODS ZONE
-import _Helper from '../../helper';
-const Helper = new _Helper();
+import Helper from '../../helper';
 // END INIT HELPERS METHODS ZONE
 
 // IMPORT INTERFACE ZONE
@@ -152,7 +151,7 @@ export default class ContactPage extends React.Component<Props, State> {
         } else {
             this.props.showSimpleModal({
                 type: 'danger',
-                'message': 'Please wait a little bit before sending a new message !', // TODO: Handle error with different way maybe error number
+                'message': 'Email not send !', // TODO: Handle error with different way maybe error number
             })
         }
     }

@@ -31,12 +31,6 @@ import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
 import ProjectContainer from './components/projectContainer/projectContainer';
 // END IMPORT COMPONENTS ZONE
 
-
-// INIT HELPERS METHODS ZONE
-import _Helper from '../../helper';
-const Helper = new _Helper();
-// END INIT HELPERS METHODS ZONE
-
 // IMPORT INTERFACE ZONE
 import { TLanguages } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE

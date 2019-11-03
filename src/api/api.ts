@@ -8,8 +8,7 @@ import * as CREDENTIALS from './credentials.json';
 // END IMPORT CREDENTIALS
 
 // INIT HELPER METHODS ZONE
-import _Helper from '../helper';
-const Helper = new _Helper();
+import Helper from '../helper';
 // END INIT HELPER METHODS ZONEy
 
 export default class _api {
