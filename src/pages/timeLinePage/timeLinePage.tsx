@@ -76,7 +76,7 @@ export default class TimeLinePage extends React.Component<Props, State> {
                 <div id="timeline-content">
                     <ul className="timeline">
                         <li className="event animate-me animation-goUp">
-                            <p className="event-date">2018</p>
+                            <p className="event-date">2018-2019</p>
 
                             <h2 dangerouslySetInnerHTML={{ __html: localize.year_2018.eurokey.title }}></h2>
 
@@ -85,7 +85,7 @@ export default class TimeLinePage extends React.Component<Props, State> {
                             <h2>{localize.year_2018.htw.title}</h2>
                         </li>
                         <li className="event animate-me animation-goUp">
-                            <p className="event-date">2017</p>
+                            <p className="event-date">2017-2018</p>
 
                             <h2 dangerouslySetInnerHTML={{ __html: localize.year_2017.hotcity.title }}></h2>
 
@@ -99,7 +99,7 @@ export default class TimeLinePage extends React.Component<Props, State> {
                             <p dangerouslySetInnerHTML={{ __html: localize.year_2017.bac.complement }}></p>
                         </li>
                         <li className="event animate-me animation-goUp">
-                            <p className="event-date">2014</p>
+                            <p className="event-date">2014-2015</p>
                             <h2>{localize.year_2014.brevet}</h2>
                             <h2>{localize.year_2014.c1_certificate}</h2>
                         </li>
