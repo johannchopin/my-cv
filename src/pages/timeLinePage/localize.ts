@@ -42,7 +42,7 @@ const LOCALIZE = {
         },
         year_2017: {
             bac: {
-                title: "J'obtiens mon BAC S (scientifique)",
+                title: "Obtention du BAC S (scientifique)",
                 complement: "(option section européenne physique-chimie en allemand et Langues et cultures de l'antiquité: latin) avec mention '<i>Bien</i>'",
             },
             start_isfates: {
@@ -77,7 +77,7 @@ const LOCALIZE = {
         },
         year_2017: {
             bac: {
-                title: "I get my BAC S (scientific)",
+                title: "Obtaining the BAC S (scientific)",
                 complement: "(option European section physics and chemistry in German and Languages and cultures of antiquity: Latin) with the mention '<i>Bien</i>'",
             },
             start_isfates: {
