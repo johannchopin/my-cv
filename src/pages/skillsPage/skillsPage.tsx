@@ -127,15 +127,15 @@ export default class SkillsPage extends React.Component<Props, State> {
                         <h2>{localize.languages}</h2>
                         <div>
                             <img src={C2} />
-                            <p>Français</p>
+                            <p>{localize.french}</p>
                         </div>
                         <div>
                             <img src={B2} />
-                            <p>Allemand</p>
+                            <p>{localize.german}</p>
                         </div>
                         <div>
                             <img src={B2} />
-                            <p>Anglais</p>
+                            <p>{localize.english}</p>
                         </div>
                     </div>
                     <div className="animate-me" id="softwareSkills">
