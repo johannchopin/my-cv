@@ -14,10 +14,6 @@ const LOCALIZE = {
                 title: "Beginn des Informatikstudiums bei <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
                 complement: "",
             },
-            diva: {
-                title: "Ernennung zum IT-Manager der <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a>",
-                complement: "Die DIVA (DFHI-Isfates-Verein) ist die studentische Vereinigung der ISFATES",
-            },
             hotcity: {
                 title: "Einmonatiges Praktikum in der mobilen Entwicklungsgesellschaft <a href=\"https://www.hotcity.lu/en/\" target=\"_blank\">Hotcity</a> in Luxemburg",
             }
@@ -25,9 +21,6 @@ const LOCALIZE = {
         year_2018: {
             htw: {
                 title: "Ich bin im zweiten Studienjahr an der HTW in Saarbrücken, Deutschland",
-            },
-            diva: {
-                title: "Renominierung als IT-Manager der <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a>",
             },
             eurokey: {
                 title: "Angestellt als Fullstack-Developer bei der Firma <a href=\"http://www.eurokey.de/index.php?id=1\" target=\"_blank\">Eurokey</a>",
@@ -49,10 +42,6 @@ const LOCALIZE = {
                 title: "Début de mes études en informatique à l'<a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
                 complement: "",
             },
-            diva: {
-                title: "Nomination au poste de reponsable informatique de la <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a>",
-                complement: "La DIVA (DFHI-Isfates-Verein-Association) est l’association étudiante de l’ISFATES",
-            },
             hotcity: {
                 title: "Stage d'un mois dans l'entreprise de développement mobile <a href=\"https://www.hotcity.lu/en/\" target=\"_blank\">Hotcity</a> au Luxembourg",
             }
@@ -60,9 +49,6 @@ const LOCALIZE = {
         year_2018: {
             htw: {
                 title: "J'effectue ma deuxième année d'étude à la HTW à Sarrebruck en allemagne",
-            },
-            diva: {
-                title: "Renomination au poste de reponsable informatique de la <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a>",
             },
             eurokey: {
                 title: "Employé en tant que développeur fullstack à l'entreprise <a href=\"http://www.eurokey.de/index.php?id=1\" target=\"_blank\">Eurokey</a>",
@@ -84,10 +70,6 @@ const LOCALIZE = {
                 title: "Start of my studies in computer science at <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
                 complement: "",
             },
-            diva: {
-                title: "Appointment to the position of IT manager of the <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a>",
-                complement: "The DIVA (DFHI-Isfates-Verein-Association) is the student association of the ISFATES",
-            },
             hotcity: {
                 title: "One-month internship in the mobile development company <a href=\"https://www.hotcity.lu/en/\" target=\"_blank\">Hotcity</a> in Luxembourg",
             }
@@ -95,9 +77,6 @@ const LOCALIZE = {
         year_2018: {
             htw: {
                 title: "I am in my second year of study at HTW in Saarbrücken, Germany",
-            },
-            diva: {
-                title: "Renomination as IT manager of the <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a>",
             },
             eurokey: {
                 title: "Employed as a fullstack developer at the company <a href=\"http://www.eurokey.de/index.php?id=1\" target=\"_blank\">Eurokey</a>",
