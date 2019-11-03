@@ -15,11 +15,9 @@ const PageBase = new _pageBase();
 
 // IMPORT IMAGES ZONE
 //@ts-ignore
-import a2 from './assets/img/a2.png';
+import C2 from './assets/img/c2.png';
 //@ts-ignore
-import b1 from './assets/img/b1.png';
-//@ts-ignore
-import b2 from './assets/img/b2.png';
+import B2 from './assets/img/b2.png';
 //@ts-ignore
 import TypescriptIcon from '../../assets/img/typescript-icon.svg';
 // END IMPORT IMAGES ZONE
@@ -58,7 +56,7 @@ export default class SkillsPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'skillsPage',
-            pageIndex: 2, // TODO: don't forget to update this !!
+            pageIndex: 2,
         };
     }
 
@@ -128,11 +126,15 @@ export default class SkillsPage extends React.Component<Props, State> {
                     <div className="langues animate-me" id="langues">
                         <h2>{localize.languages}</h2>
                         <div>
-                            <img src={b2} />
+                            <img src={C2} />
+                            <p>Français</p>
+                        </div>
+                        <div>
+                            <img src={B2} />
                             <p>Allemand</p>
                         </div>
                         <div>
-                            <img src={b2} />
+                            <img src={B2} />
                             <p>Anglais</p>
                         </div>
                     </div>
