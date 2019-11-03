@@ -22,6 +22,8 @@ import CaretakerIcon from '../../assets/img/caretaker-icon.png';
 import AdventskalendarIcon from '../../assets/img/adventskalendar-icon.png';
 //@ts-ignore
 import AstropulseIcon from '../../assets/img/astropulse-icon.png';
+//@ts-ignore
+import DivaLogo from '../../assets/img/diva-logo.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -110,9 +112,15 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         linkToGitRepo="https://gitlab.com/johannchopin/htw18-19_uxdesign-form"
                         technologiesUsed={['Php', 'Html', 'Css', 'Javascript', 'MySql']}
                     />
-
-                    {/* TODO: Add DIVA website */}
-
+                    <ProjectContainer
+                        language={this.props.language}
+                        link="http://diva.dfhi-isfates.eu/"
+                        title="DIVA-Homepage"
+                        year={2017}
+                        image={DivaLogo}
+                        summary={localize.project_diva.summary}
+                        technologiesUsed={['Php', 'Html', 'Css', 'Javascript', 'Bootstrap']}
+                    />
                     <ProjectContainer
                         language={this.props.language}
                         link="https://test.johannchopin.fr/walkinlove/"

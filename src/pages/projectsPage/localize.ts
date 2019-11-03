@@ -10,6 +10,9 @@ const LOCALIZE = {
         project_astropulse: {
             summary: "Erstellung einer Online-Umfrage, die zeigt, dass die Frequenz eines Pulsars unsere Wahrnehmung von Zeit beeinflussen kann. Projekt, das im Rahmen meines Studiums durchgeführt wurde.",
         },
+        project_diva: {
+            summary: "",
+        },
         project_walkinlove: {
             summary: "Realisierung einer Website mit php im Rahmen meines Studiums.",
         }
@@ -17,13 +20,16 @@ const LOCALIZE = {
     fr: {
         title: "Mes projets",
         project_caretaker: {
-            summary: "C'est mon projet de L3 chez ISFATES. Nous avons dû créer un modèle de maison intelligente connecté à une application web progressive. J'étais le chef de projet et le responsable informatique du projet.",
+            summary: "Projet de 3ème année à l'ISFATES. Nous avons dû créer un modèle de maison intelligente connecté à une application web progressive. J'étais le chef de projet et le responsable informatique du projet.",
         },
         project_adventskalender: {
-            summary: "Responsable informatique pour la création d'une progressive web app simulant un calendrier de l'avent pour les étudiants ISFATES. L'argent récolté sera reversé à plusieurs associations",
+            summary: "Responsable informatique de la création d'une progressive web app simulant un calendrier de l'avent pour les étudiants de l'ISFATES. L'argent récolté sera reversé à plusieurs associations",
         },
         project_astropulse: {
             summary: "Création d'une enquête en ligne montrant que la fréquence d'un pulsar peut influencer notre perception du temps. Projet réalisé dans le cadre de mes études",
+        },
+        project_diva: {
+            summary: "Refactoring frontend et backend du site officiel de l'association étudiante de l'ISFATES: la DIVA",
         },
         project_walkinlove: {
             summary: "Réalisation d'un site web avec php dans le cadre de mes études.",
@@ -39,6 +45,9 @@ const LOCALIZE = {
         },
         project_astropulse: {
             summary: "Creation of an online survey showing that the frequency of a pulsar can influence our perception of time. Project carried out as part of my studies",
+        },
+        project_diva: {
+            summary: "",
         },
         project_walkinlove: {
             summary: "Realization of a website with php as part of my studies.",
