@@ -16,6 +16,7 @@ const LOCALIZE = {
             introduction: "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 Monate), in denen ich zusätzlich zu <i>Web-Integration</i> und PHP-Entwicklung",
             letter_of_recommendation: "Empfehlungsschreiben",
         },
+        diva: "",
         school: {
             cnrs: "Forschungsarbeiten in den Labors des <i>CNRS</i> in Straßburg im Rahmen der TPE",
             tpe: "Teilnahme am <i>Trinational Congress of Science and Technology</i> mit mündlicher Präsentation (Studienprojekt: Werden Carbon Nanotubes die Krebsvorsorge revolutionieren?)",
@@ -39,9 +40,10 @@ const LOCALIZE = {
             ]
         },
         internship_hotcity: {
-            introduction: "Stage au sein de l'entreprise <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 mois) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP",
+            introduction: "Stage au sein de l'entreprise de développement mobile <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 mois) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP",
             letter_of_recommendation: "Lettre de recommandation",
         },
+        diva: "Nomination au poste de reponsable informatique de la <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> en 2018 puis 2019. La DFHI-ISFATES-Verein-Association est l’association étudiante de l’ISFATES. J'y ai accompli différentes tâches tel que le refactoring du site officiel (nouvelle charte graphique et mise en place d'une interface administrateur) ainsi que la création d'affiches et de logos",
         school: {
             cnrs: "Travail de recherche dans les laboratoires du <i>CNRS</i> de Strasbourg dans le cadre des TPE",
             tpe: "Participation au <i>Congrès Trinational des Sciences et des Techniques</i> avec présentation orale (projet d’étude: Les nanotubes de carbone révolutionneront-ils le dépistage du cancer?)",
@@ -68,6 +70,7 @@ const LOCALIZE = {
             introduction: "Internship in the company <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 months) where I designed mobile application interfaces in addition to doing <i>web integration</i> and PHP development",
             letter_of_recommendation: "Letter of recommendation",
         },
+        diva: "",
         school: {
             cnrs: "Research work in the laboratories of the <i>CNRS</i> in Strasbourg as part of the TPE",
             tpe: "Participation in the <i>Trinational Congress of Science and Technology</i> with oral presentation (study project: Will carbon nanotubes revolutionize cancer screening?)",
