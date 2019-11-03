@@ -3,7 +3,7 @@ const LOCALIZE = {
         title: "Erfahrungen",
         languages: 'Sprachen',
         work_eurokey: {
-            introduction: "9 Monate lang Fullstack-Entwickler bei der Firma <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> in Saarbrücken",
+            introduction: "9 Monate lang Fullstack-Entwickler bei der Firma <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> in Saarbrücken im 2019",
             complement: "Meine Aufgabe war es, die Entwicklung einer App für die Entwickler des Unternehmens fortzusetzen, die es ihnen ermöglichen, die Erstellung kommerzialisierter Apps einfacher zu verwalten",
             tasks: [
                 "Codegenerator",
@@ -30,7 +30,7 @@ const LOCALIZE = {
         title: "Expériences",
         languages: 'Langues',
         work_eurokey: {
-            introduction: "Dévelopeur fullstack durant 9 mois à l'entreprise <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> à Sarrebruck",
+            introduction: "Dévelopeur fullstack durant 9 mois à l'entreprise <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> à Sarrebruck en 2019",
             complement: "Ma tâche consistait à continuer le développement d'une application destiné aux développeur de la boite leur permettant de gérer plus aisément la création des applications commercialisées",
             tasks: [
                 "Génerateur de code",
@@ -57,7 +57,7 @@ const LOCALIZE = {
         title: "Experiences",
         languages: 'Languages',
         work_eurokey: {
-            introduction: "Fullstack developer for 9 months at the company <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> in Saarbrücken",
+            introduction: "Fullstack developer for 9 months at the company <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> in Saarbrücken in 2019",
             complement: "My task was to continue the development of an application for the developers of the company allowing them to more easily manage the creation of commercialized applications",
             tasks: [
                 "Code Generator",
