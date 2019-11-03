@@ -1,25 +1,6 @@
 @import '../../assets/styles/toolsBundler.scss';
 
 #personalExperiencesPage {
-    a {
-        color: #ffcc00;
-        padding: .1em .2em;
-        transition-duration: .3s;
-
-        .fa-icon {
-            transition-duration: .3s;
-            margin-right: .2em;
-        }
-    }
-
-    a:hover {
-        background: #000;
-        border-radius: .2em;
-
-        .fa-icon {
-            color: $cv-gold !important;
-        }
-    }
 
     .fa-icon,
     i {
@@ -48,6 +29,27 @@
             margin: 0 1em;
             margin-bottom: 1.5em;
 
+            a,
+            i {
+                color: #ffcc00;
+                padding: .1em .2em;
+                transition-duration: .3s;
+
+                .fa-icon {
+                    transition-duration: .3s;
+                    margin-right: .2em;
+                }
+            }
+
+            a:hover {
+                background: #000;
+                border-radius: .2em;
+
+                .fa-icon {
+                    color: $cv-gold !important;
+                }
+            }
+
             p {
                 margin-bottom: 0;
             }
@@ -62,14 +64,21 @@
                 background-color: $cv-grey;
                 box-shadow: 2px 2px 4px rgb(231, 231, 231);
 
-                a,
                 i {
-                    text-shadow: .08em .08em .1em rgb(0, 0, 0);
+                    background: #000;
+                    border-radius: .2em;
                 }
 
-                .fa-icon {
-                    color: #000;
+                a {
+                    background: #000;
+                    border-radius: .2em;
+
+
+                    &:hover {
+                        color: #fff;
+                    }
                 }
+
             }
 
             ul {
