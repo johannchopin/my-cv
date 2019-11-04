@@ -23,8 +23,8 @@ import SimpleModal from './assets/uiComponents/simpleModal/simpleModal';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT PAGEBASE ZONE
-import _pageBase from './pages/pageBase';
-const PageBase = new _pageBase();
+import _PageBase from './pages/pageBase';
+const PageBase = new _PageBase();
 // END IMPORT PAGEBASE ZONE
 
 // IMPORT PAGES ZONE

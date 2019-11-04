@@ -1,4 +1,4 @@
-export default class _pageBase {
+export default class _PageBase {
 
     public initPage(pageId: string): void {
         this.animateAll(pageId);

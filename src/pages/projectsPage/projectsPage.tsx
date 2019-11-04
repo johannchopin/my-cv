@@ -8,11 +8,6 @@ import './projectsPage.scss';
 import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
-// IMPORT PAGEBASE ZONE
-import _pageBase from '../pageBase';
-const PageBase = new _pageBase();
-// END IMPORT PAGEBASE ZONE
-
 // IMPORT IMAGES ZONE
 //@ts-ignore
 import WalkinloveLogo from '../../assets/img/walkinlove-logo.png';
@@ -27,7 +22,6 @@ import DivaLogo from '../../assets/img/diva-logo.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
 import ProjectContainer from './components/projectContainer/projectContainer';
 // END IMPORT COMPONENTS ZONE
 

@@ -8,11 +8,6 @@ import './introductionPage.scss';
 import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
-// IMPORT PAGEBASE ZONE
-import _pageBase from '../pageBase';
-const PageBase = new _pageBase();
-// END IMPORT PAGEBASE ZONE
-
 // IMPORT IMAGES ZONE
 //@ts-ignore
 import myNiceFace from './assets/img/myNiceFace.png';

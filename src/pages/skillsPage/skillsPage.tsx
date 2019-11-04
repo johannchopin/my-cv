@@ -9,8 +9,8 @@ import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT PAGEBASE ZONE
-import _pageBase from '../pageBase';
-const PageBase = new _pageBase();
+import _PageBase from '../pageBase';
+const PageBase = new _PageBase();
 // END IMPORT PAGEBASE ZONE
 
 // IMPORT IMAGES ZONE
