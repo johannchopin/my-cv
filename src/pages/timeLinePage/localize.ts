@@ -1,6 +1,6 @@
 const LOCALIZE = {
     de: {
-        title: 'Mein Werdegang',
+        title: 'Ausbildung',
         year_2014: {
             c1_certificate: "B1-Zertifizierung der Kultusministerkonferenz in deutscher Sprache",
             brevet: "Mittlere Reife mit Prädikat 'Sehr gut'",
@@ -44,7 +44,7 @@ const LOCALIZE = {
         },
     },
     en: {
-        title: 'My background',
+        title: 'Education',
         year_2014: {
             c1_certificate: "B1 certification in German, KMK",
             brevet: "Obtaining the certificate of the Middle School, mention 'Very good'",
