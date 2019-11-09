@@ -74,11 +74,12 @@ export default class ProjectsPage extends React.Component<Props, State> {
                 <div className="projects-ctn">
                     <ProjectContainer
                         language={this.props.language}
-                        link=""
+                        link="https://caretaker-smarthome.eu/"
                         title="Caretaker-Smarthome"
                         year={2019}
                         image={CaretakerIcon}
                         summary={localize.project_caretaker.summary}
+                        linkToGitRepo="https://gitlab.com/caretaker-smarthome"
                         technologiesUsed={["Typescript", "React Framework", "Scss", "Php", "Python"]}
                     />
                     <ProjectContainer
