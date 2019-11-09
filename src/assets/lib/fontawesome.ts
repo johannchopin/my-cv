@@ -38,6 +38,7 @@ import {
     faFish,
     faSnowboarding,
     faTerminal,
+    faFileCode,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -76,4 +77,5 @@ library.add(
     faAdobe,
     faGitAlt,
     faGitlab,
+    faFileCode,
 );

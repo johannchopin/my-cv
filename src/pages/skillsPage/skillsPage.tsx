@@ -142,18 +142,11 @@ export default class SkillsPage extends React.Component<Props, State> {
                             <div className="jauge0"></div>
                         </div>
                         <h3>
-                            <IconHandler prefix="fab" icon="html5" />
-                            HTML5 :
+                            <IconHandler icon="file-code" />
+                            HTML5+CSS3 :
                         </h3>
                         <div className="animated-gauge">
                             <div className="jauge1"></div>
-                        </div>
-                        <h3>
-                            <IconHandler prefix="fab" icon="css3-alt" />
-                            CSS3 :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge2"></div>
                         </div>
                         <h3 id="typescriptSkills">
                             <TypescriptIcon />
