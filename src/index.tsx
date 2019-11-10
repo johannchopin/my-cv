@@ -20,6 +20,7 @@ import './assets/styles/style.scss';
 // IMPORT COMPONENTS ZONE
 import Navbar from './assets/uiComponents/navbar/navbar';
 import SimpleModal from './assets/uiComponents/simpleModal/simpleModal';
+import LoadingAnimation from './assets/uiComponents/loadingAnimation/loadingAnimation';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT PAGEBASE ZONE
@@ -328,6 +329,7 @@ class App extends React.Component<IProps, IState> {
                 </div>
 
                 {this.modalsRender()}
+                <LoadingAnimation />
             </div>
         )
     }

@@ -1,0 +1,78 @@
+@import "../../styles/toolsBundler.scss";
+
+$CONTAINER_ID: "#loadingAnimation";
+
+#{getContainerId()} {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 100;
+
+    #animationCtn {
+        display: flex;
+        justify-content: center;
+        margin-top: 5em;
+        animation: smoothTopApparition 0.4s forwards;
+
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4em;
+            height: 4em;
+            background-color: $cv-gold;
+            border-radius: 50%;
+
+            svg {
+                color: $cv-brown;
+                font-size: 3em;
+                animation: spin .6s linear infinite;
+            }
+        }
+    }
+
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinInvert {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes smoothTopApparition {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@media (min-width: $BIG_SCREEN_MIN_SIZE) {
+
+    #{getContainerId()} {}
+
+}
