@@ -175,11 +175,11 @@ class App extends React.Component<IProps, IState> {
     protected getPageIdBySwiperIndex = (swiperIndex: number): TPages => {
         const pagesId = this.state.pagesId;
 
-        for (const pageName in pagesId) {
-            if (pagesId.hasOwnProperty(pageName)) {
-                if (pagesId[pageName] === swiperIndex) {
-                    return pageName;
-                }
+        for (const pageIdName in pagesId) {
+            const pageName = pageIdName as TPages;
+
+            if (pagesId[pageName] === swiperIndex) {
+                return pageName
             }
         }
     }
