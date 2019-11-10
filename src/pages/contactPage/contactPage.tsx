@@ -57,7 +57,7 @@ export default class ContactPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'contactPage',
-            pageIndex: 6, // TODO: don't forget to update this !! 
+            pageIndex: 6,
             textInFromInput: '',
             textInSubjectInput: '',
             textInMsgInput: '',
@@ -119,6 +119,8 @@ export default class ContactPage extends React.Component<Props, State> {
     }
 
     protected onSubmitBtnClick = (): void => {
+        const localize = LOCALIZE[this.props.language];
+
         if (this.areInputsValid()) {
             const mailData: ISendMeEmailData = {
                 from: this.state.textInFromInput,
@@ -130,7 +132,8 @@ export default class ContactPage extends React.Component<Props, State> {
         } else {
             this.props.showSimpleModal({
                 type: 'danger',
-                message: 'Please enter a valid email, subject and message !'
+                message: localize.invalid_email_form,
+
             })
         }
     }
