@@ -140,13 +140,28 @@ export default class Navbar extends React.Component<Props, State> {
         )
     }
 
+    protected professionalLinksRender = (): React.ReactNode => {
+        return (
+            <div id="professionalLinks">
+                <a
+                    href="https://stackoverflow.com/users/8583669/johannchopin"
+                    target="_blank"
+                    className="clickable"
+                >
+                    <IconHandler prefix="fab" icon="stack-overflow" />
+                </a>
+            </div>
+        )
+    }
+
 
     render() {
         const localize = LOCALIZE[this.props.language];
 
         return (
             <nav id="navbar" onClick={() => { this.showOrHideNavbar() }}>
-                <IconHandler icon="bars" className={this.state.showNavbar ? "selected" : ""} />
+                <IconHandler icon="bars" className={this.state.showNavbar ? "selected burger" : "burger"} />
+
                 <div className="container">
                     <h1>MENU</h1>
                     <ul>
@@ -175,6 +190,7 @@ export default class Navbar extends React.Component<Props, State> {
 
                     {this.languageSelectionRender()}
                     {this.gitlabRepoRender()}
+                    {this.professionalLinksRender()}
                 </div>
             </nav>
         )
