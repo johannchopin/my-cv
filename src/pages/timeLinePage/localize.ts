@@ -11,8 +11,8 @@ const LOCALIZE = {
                 complement: "(Option Europäische Sektion Physik und Chemie in Deutsch sowie Sprachen und Kulturen der Antike: Latein) mit Prädikat '<i>Gut</i>'",
             },
             start_isfates: {
-                title: "Beginn des Informatikstudiums bei <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
-                complement: "",
+                title: "Beginn des Informatikstudiums bei <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">DFHI</a>",
+                complement: "Deutsch-Französische Hochschulinstitut für Technik und Wirtschaft",
             },
         },
         year_2018: {
@@ -34,7 +34,7 @@ const LOCALIZE = {
             },
             start_isfates: {
                 title: "Début de mes études en informatique à l'<a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
-                complement: "",
+                complement: "Institut Supérieur Franco-Allemand de Techniques, d'Economie et de Sciences",
             },
         },
         year_2018: {
@@ -56,7 +56,7 @@ const LOCALIZE = {
             },
             start_isfates: {
                 title: "Start of my studies in computer science at <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
-                complement: "",
+                complement: "Institut Supérieur Franco-Allemand de Techniques, d'Economie et de Sciences",
             },
         },
         year_2018: {

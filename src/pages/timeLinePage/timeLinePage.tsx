@@ -73,7 +73,7 @@ export default class TimeLinePage extends React.Component<Props, State> {
                             <p className="event-date">2017-2018</p>
 
                             <h2 dangerouslySetInnerHTML={{ __html: localize.year_2017.start_isfates.title }}></h2>
-                            <p>Institut Supérieur Franco-Allemand de Techniques, d'Economie et de Sciences</p>
+                            <p>{localize.year_2017.start_isfates.complement}</p>
 
                             <h2>{localize.year_2017.bac.title}</h2>
                             <p dangerouslySetInnerHTML={{ __html: localize.year_2017.bac.complement }}></p>

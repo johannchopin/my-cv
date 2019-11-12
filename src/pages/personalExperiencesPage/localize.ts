@@ -16,7 +16,7 @@ const LOCALIZE = {
             introduction: "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 Monate im 2018), in denen ich zusätzlich zu <i>Web-Integration</i> und PHP-Entwicklung",
             letter_of_recommendation: "Empfehlungsschreiben",
         },
-        diva: "Ernennung zum IT-Manager der <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> in den Jahren 2018 und 2019. Der DFHI-ISFATES-Verein-Association ist die studentische Vereinigung der ISFATES. Ich habe verschiedene Aufgaben wie das <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">Refactoring der offiziellen Seite</a> (neue Grafikcharta und Implementierung einer Administratoroberfläche) sowie die Erstellung von <i>Postern</i> und <i>Logos</i> durchgeführt",
+        diva: "Ernennung zum IT-Manager der <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> in den Jahren 2018 und 2019. Der DFHI-ISFATES-Verein-Association ist die studentische Vereinigung der DFHI. Ich habe verschiedene Aufgaben wie das <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">Refactoring der offiziellen Seite</a> (neue Grafikcharta und Implementierung einer Administratoroberfläche) sowie die Erstellung von <i>Postern</i> und <i>Logos</i> durchgeführt",
         school: {
             cnrs: "Forschungsarbeiten in den Labors des <i>CNRS</i> in Straßburg im Rahmen der TPE",
             tpe: "Teilnahme am <i>Trinational Congress of Science and Technology</i> mit mündlicher Präsentation (Studienprojekt: Werden Carbon Nanotubes die Krebsvorsorge revolutionieren?)",
