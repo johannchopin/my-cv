@@ -11,7 +11,7 @@ const LOCALIZE = {
             summary: "Erstellung einer Online-Umfrage, die zeigt, dass die Frequenz eines Pulsars unsere Wahrnehmung von Zeit beeinflussen kann. Projekt, das im Rahmen meines Studiums durchgeführt wurde.",
         },
         project_diva: {
-            summary: "",
+            summary: "Refactoring von Frontend und Backend der offiziellen Website der ISFATES-Studentenvereinigung: die DIVA",
         },
         project_walkinlove: {
             summary: "Realisierung einer Website mit php im Rahmen meines Studiums.",
@@ -47,7 +47,7 @@ const LOCALIZE = {
             summary: "Creation of an online survey showing that the frequency of a pulsar can influence our perception of time. Project carried out as part of my studies",
         },
         project_diva: {
-            summary: "",
+            summary: "Refactoring frontend and backend of the official website of the ISFATES student association: the DIVA",
         },
         project_walkinlove: {
             summary: "Realization of a website with php as part of my studies.",
