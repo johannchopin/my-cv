@@ -154,6 +154,13 @@ export default class Navbar extends React.Component<Props, State> {
                     <IconHandler prefix="fab" icon="stack-overflow" />
                 </a>
                 <a
+                    href="https://gitlab.com/johannchopin"
+                    target="_blank"
+                    className="clickable"
+                >
+                    <IconHandler prefix="fab" icon="gitlab" />
+                </a>
+                <a
                     // TODO: Add link to linkedIn
                     target="_blank"
                     className="clickable"
