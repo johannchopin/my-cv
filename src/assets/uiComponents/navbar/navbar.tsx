@@ -12,6 +12,7 @@ import IconHandler from '../iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT LOCALIZE ZONE
+import COMMON_LOCALIZE from '../../../commonLocalize';
 import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
@@ -141,6 +142,8 @@ export default class Navbar extends React.Component<Props, State> {
     }
 
     protected professionalLinksRender = (): React.ReactNode => {
+        const commonLocalize = COMMON_LOCALIZE[this.props.language];
+
         return (
             <div id="professionalLinks">
                 <a
@@ -149,6 +152,16 @@ export default class Navbar extends React.Component<Props, State> {
                     className="clickable"
                 >
                     <IconHandler prefix="fab" icon="stack-overflow" />
+                </a>
+                <a
+                    // TODO: Add link to linkedIn
+                    target="_blank"
+                    className="clickable"
+                    data-toggle="tooltip"
+                    data-placement="right"
+                    title={commonLocalize.feature_coming_soon}
+                >
+                    <IconHandler prefix="fab" icon="linkedin" />
                 </a>
             </div>
         )

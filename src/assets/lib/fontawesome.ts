@@ -10,6 +10,7 @@ import {
     faGitAlt,
     faGitlab,
     faFontAwesome,
+    faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -82,4 +83,5 @@ library.add(
     faFileCode,
     faFontAwesome,
     faCircleNotch,
+    faLinkedin,
 );
