@@ -1,5 +1,5 @@
 const LINK_TO_PHP_LOCAL_API = 'http://localhost:8082/api-common/src/api/';
-const LINK_TO_PHP_SERVER_API = 'https://api.johannchopin.fr/advents_kalender/api/cmds/';
+const LINK_TO_PHP_SERVER_API = 'https://api.johannchopin.fr/common/src/api/';
 
 const PATH_TO_API = LINK_TO_PHP_LOCAL_API;
 
