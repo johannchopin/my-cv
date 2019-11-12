@@ -1,9 +1,9 @@
 const LOCALIZE = {
     de: {
         presentation: "Vorstellung",
-        background: "Schulung",
+        background: "Ausbildung",
         skills: "Fähigkeiten",
-        personal_experiences: "Persönliche Erfahrungen",
+        personal_experiences: "Erfahrungen",
         projects: "Projekte",
         hobbies: "Hobbys",
         contacts: "Kontakte",
