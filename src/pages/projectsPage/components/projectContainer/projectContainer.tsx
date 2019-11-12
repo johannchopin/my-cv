@@ -90,6 +90,8 @@ export default class ProjectContainer extends React.Component<Props, State> {
 
 
     render() {
+        const localize = LOCALIZE[this.props.language];
+
         return (
             <div
                 className="animate-me project-ctn"
@@ -110,7 +112,7 @@ export default class ProjectContainer extends React.Component<Props, State> {
                     <div className="body">
                         <h4>{this.props.summary}</h4>
                         <br />
-                        <h4>Technologies used :</h4>
+                        <h4>{localize.technologies_used} :</h4>
                         {this.technologiesUsedRender()}
                     </div>
                 </a>
