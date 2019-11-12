@@ -156,6 +156,7 @@ export default class ContactPage extends React.Component<Props, State> {
 
     protected resetInputs = (): void => {
         this.setState({
+            textInFromInput: '',
             textInSubjectInput: '',
             textInMsgInput: '',
         });
