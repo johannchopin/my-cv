@@ -3,16 +3,23 @@
         "sourceMap": true,
         "resolveJsonModule": true,
         "noImplicitAny": false, // TODO: Set to true
+        "strictNullChecks": false,
         "module": "commonjs",
         "target": "es6",
         "jsx": "react",
         "strict": true,
         "allowJs": true,
+        "strictPropertyInitialization": false,
         "baseUrl": ".",
         "paths": {
             "~*": [
                 "./src/*"
             ]
-        }
+        },
+        "exclude": [
+            "node_modules/*",
+            ".cache/*",
+            "build/*"
+        ]
     }
 }

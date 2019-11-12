@@ -20,7 +20,13 @@ import './assets/styles/style.scss';
 // IMPORT COMPONENTS ZONE
 import Navbar from './assets/uiComponents/navbar/navbar';
 import SimpleModal from './assets/uiComponents/simpleModal/simpleModal';
+import LoadingAnimation from './assets/uiComponents/loadingAnimation/loadingAnimation';
 // END IMPORT COMPONENTS ZONE
+
+// IMPORT PAGEBASE ZONE
+import _PageBase from './pages/pageBase';
+const PageBase = new _PageBase();
+// END IMPORT PAGEBASE ZONE
 
 // IMPORT PAGES ZONE
 import IntroductionPage from './pages/introductionPage/introductionPage';
@@ -28,20 +34,14 @@ import TimeLinePage from './pages/timeLinePage/timeLinePage';
 import SkillsPage from './pages/skillsPage/skillsPage';
 import HobbiesPage from './pages/hobbiesPage/hobbiesPage';
 import PersonalExperiencesPage from './pages/personalExperiencesPage/personalExperiencesPage';
+import ProjectsPage from './pages/projectsPage/projectsPage';
 import ContactPage from './pages/contactPage/contactPage';
 // END IMPORT PAGES ZONE
 
 // IMPORT IMAGES ZONE   
 
-// TODO: Fix bug -> ts can't import images like this
 // @ts-ignore
-import * as Favicon from './assets/img/favicon.png';
 // END IMPORT IMAGES ZONE
-
-// INIT HELPERS METHODS ZONE
-import _Helper from './helper';
-const Helper = new _Helper();
-// END INIT HELPERS METHODS ZONE
 
 // IMPORT INTERFACE ZONE
 import {
@@ -56,7 +56,7 @@ interface IProps { }
 
 interface IState {
     language: TLanguages,
-    pageToShow: TPages,
+    initialPage: TPages,
     pagesId: TPagesId,
     simpleModalParams: ISimpleModalParams,
     mySwiper: Swiper,
@@ -73,14 +73,16 @@ class App extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
-            language: 'fr',
+            language: 'de',
+            initialPage: 'introductionPage',
             pagesId: {
                 'introductionPage': 0,
-                'backgroundPage': 1,
+                'timeLinePage': 1,
                 'skillsPage': 2,
-                'personalExperiences': 3,
-                'hobbiesPage': 4,
-                'contactPage': 5,
+                'personalExperiencesPage': 3,
+                'projectsPage': 4,
+                'hobbiesPage': 5,
+                'contactPage': 6,
             },
             simpleModalParams: {},
             //@ts-ignore
@@ -89,58 +91,109 @@ class App extends React.Component<IProps, IState> {
         };
     }
 
-    componentDidMount = () => {
+    componentDidMount = (): void => {
         this.init();
     }
 
-
     protected init() {
+        this.setCurrentPageIndex();
         this.initUI();
 
-        const initialPageId = this.state.pagesId[this.state.pageToShow];
-        this.setState({
-            mySwiper: new Swiper('.swiper-container', {
-                initialSlide: initialPageId,
-                preloadImages: true,
-                keyboard: {
-                    enabled: true,
-                    onlyInViewport: false,
-                },
-
-                // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                    dynamicBullets: true,
-                },
-
-                // Navigation arrows
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-
-                // And if we need scrollbar
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    hide: true,
-                    draggable: true,
-                },
-            })
-        }, () => { this.initSwiper() })
+        this.setState((prevState: IState) => ({
+            mySwiper: this.getInitialisedSwiper()
+        }), () => { this.initSwiper() })
 
     }
 
+    protected setCurrentPageIndex = (): void => {
+        this.setState((prevState: IState) => ({
+            currentPageIndex: this.state.pagesId[this.state.initialPage],
+        }))
+    }
+
     protected initUI() {
-        Helper.setFavicon(Favicon);
+        this.initBootstrapTooltipsPlugins();
+        this.initPageById(0);
+    }
+
+    protected initBootstrapTooltipsPlugins = (): void => {
+        $((): void => {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    }
+
+    protected getInitialisedSwiper = (): Swiper => {
+        const initialPageId = this.state.pagesId[this.state.initialPage];
+
+        return new Swiper('.swiper-container', {
+            initialSlide: initialPageId,
+            preloadImages: true,
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+
+            // Pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // Scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: true,
+                draggable: true,
+            },
+        })
     }
 
     protected initSwiper = () => {
         this.state.mySwiper.on('slideChangeTransitionEnd', () => {
-            this.setState(prevState => ({
-                currentPageIndex: this.state.mySwiper.activeIndex,
-            }));
+            this.triggerPageChange(this.state.mySwiper.activeIndex);
         });
+    }
+
+    protected triggerPageChange = (pageId: number): void => {
+        const pageToClearId = this.state.currentPageIndex;
+
+        this.setState((prevState: IState) => ({
+            currentPageIndex: pageId,
+        }), (): void => {
+            this.initPageById(pageId);
+            this.clearPageById(pageToClearId);
+        });
+    }
+
+    protected getPageIdBySwiperIndex = (swiperIndex: number): TPages => {
+        const pagesId = this.state.pagesId;
+
+        for (const pageIdName in pagesId) {
+            const pageName = pageIdName as TPages;
+
+            if (pagesId[pageName] === swiperIndex) {
+                return pageName
+            }
+        }
+    }
+
+    protected initPageById = (pageId: number): void => {
+        const pageName = this.getPageIdBySwiperIndex(pageId);
+
+        PageBase.initPage(pageName);
+    }
+
+    protected clearPageById = (pageId: number): void => {
+        const pageName = this.getPageIdBySwiperIndex(pageId);
+
+        PageBase.clearPage(pageName);
     }
 
     protected goToPage = (pageName: TPages): void => {
@@ -167,7 +220,7 @@ class App extends React.Component<IProps, IState> {
         });
     };
 
-    protected navbarRender() {
+    protected navbarRender = (): React.ReactNode => {
         return (
             <Navbar
                 goToPage={this.goToPage}
@@ -177,7 +230,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected introductionPageRender = () => {
+    protected introductionPageRender = (): React.ReactNode => {
         return (
             <IntroductionPage
                 lang={this.state.language}
@@ -186,7 +239,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected timeLinePageRender = () => {
+    protected timeLinePageRender = (): React.ReactNode => {
         return (
             <TimeLinePage
                 language={this.state.language}
@@ -195,7 +248,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected skillsPageRender = () => {
+    protected skillsPageRender = (): React.ReactNode => {
         return (
             <SkillsPage
                 language={this.state.language}
@@ -204,7 +257,16 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected hobbiesPageRender = () => {
+    protected projectsPageRender = (): React.ReactNode => {
+        return (
+            <ProjectsPage
+                language={this.state.language}
+                currentPageIndex={this.state.currentPageIndex}
+            />
+        )
+    }
+
+    protected hobbiesPageRender = (): React.ReactNode => {
         return (
             <HobbiesPage
                 language={this.state.language}
@@ -214,7 +276,7 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected personalExperiencesPageRender = () => {
+    protected personalExperiencesPageRender = (): React.ReactNode => {
         return (
             <PersonalExperiencesPage
                 language={this.state.language}
@@ -223,17 +285,17 @@ class App extends React.Component<IProps, IState> {
         )
     }
 
-    protected contactPageRender = () => {
+    protected contactPageRender = (): React.ReactNode => {
         return (
             <ContactPage
-                lang={this.state.language}
+                language={this.state.language}
                 currentPageIndex={this.state.currentPageIndex}
                 showSimpleModal={this.showSimpleModal}
             />
         )
     }
 
-    protected modalsRender() {
+    protected modalsRender = (): React.ReactNode => {
         return (
             <div id="modals">
                 <SimpleModal params={this.state.simpleModalParams} />
@@ -253,6 +315,7 @@ class App extends React.Component<IProps, IState> {
                         {this.timeLinePageRender()}
                         {this.skillsPageRender()}
                         {this.personalExperiencesPageRender()}
+                        {this.projectsPageRender()}
                         {this.hobbiesPageRender()}
                         {this.contactPageRender()}
                     </div>
@@ -266,6 +329,7 @@ class App extends React.Component<IProps, IState> {
                 </div>
 
                 {this.modalsRender()}
+                <LoadingAnimation />
             </div>
         )
     }

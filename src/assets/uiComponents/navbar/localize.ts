@@ -1,28 +1,34 @@
 const LOCALIZE = {
-    'de': {
+    de: {
         presentation: "Vorstellung",
-        background: "Schulung",
+        background: "Ausbildung",
         skills: "Fähigkeiten",
-        personal_experiences: "Persönliche Erfahrungen",
+        personal_experiences: "Erfahrungen",
+        projects: "Projekte",
         hobbies: "Hobbys",
         contacts: "Kontakte",
+        check_repo: "Sehen Sie den Quellcode",
     },
-    'fr': {
+    fr: {
         presentation: "Présentation",
         background: "Formation",
         skills: "Compétences",
         personal_experiences: "Expériences personnelle",
+        projects: "Projets",
         hobbies: "Loisirs",
         contacts: "Contacts",
+        check_repo: "Voir le code source",
     },
 
-    'en': {
+    en: {
         presentation: "Presentation",
         background: "Background",
-        skills: "",
+        skills: "Skills",
         personal_experiences: "Personal experiences",
+        projects: "Projects",
         hobbies: "Hobbies",
         contacts: "Contacts",
+        check_repo: "View source code",
     },
 };
 

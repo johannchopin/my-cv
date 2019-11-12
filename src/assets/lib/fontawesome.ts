@@ -4,7 +4,13 @@ import {
     faPhp,
     faPython,
     faHtml5,
-    faCss3Alt
+    faCss3Alt,
+    faReact,
+    faAdobe,
+    faGitAlt,
+    faGitlab,
+    faFontAwesome,
+    faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -30,6 +36,12 @@ import {
     faLaptop,
     faArrowRight,
     faFileAlt,
+    faMusic,
+    faFish,
+    faSnowboarding,
+    faTerminal,
+    faFileCode,
+    faCircleNotch,
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -60,4 +72,16 @@ library.add(
     faPython,
     faArrowRight,
     faFileAlt,
+    faMusic,
+    faFish,
+    faSnowboarding,
+    faTerminal,
+    faReact,
+    faAdobe,
+    faGitAlt,
+    faGitlab,
+    faFileCode,
+    faFontAwesome,
+    faCircleNotch,
+    faLinkedin,
 );

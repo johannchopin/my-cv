@@ -8,22 +8,11 @@ import './timeLinePage.scss';
 import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
-// IMPORT PAGEBASE ZONE
-import _pageBase from '../pageBase';
-const PageBase = new _pageBase();
-// END IMPORT PAGEBASE ZONE
-
 // IMPORT IMAGES ZONE
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
 // END IMPORT COMPONENTS ZONE
-
-
-// INIT HELPERS METHODS ZONE
-import _Helper from '../../helper';
-const Helper = new _Helper();
-// END INIT HELPERS METHODS ZONE
 
 // IMPORT INTERFACE ZONE
 import { TLanguages } from '../../commonInterface';
@@ -40,9 +29,6 @@ interface State {
     pageIndex: number,
 }
 
-// TODO : Change setState calling
-// use -> this.setState(prevState => ({ test: "test" }))
-// instead of -> this.setState({ test: "test" })
 
 export default class TimeLinePage extends React.Component<Props, State> {
 
@@ -60,34 +46,12 @@ export default class TimeLinePage extends React.Component<Props, State> {
         this.init();
     }
 
-    componentDidUpdate(oldProps: Props) {
-        const newProps = this.props;
-
-        if (oldProps.currentPageIndex !== newProps.currentPageIndex) {
-            this.onPageChange();
-        }
-    }
-
     protected init = (): void => {
         this.initUI();
     }
 
-    protected initUI(): void {
-        PageBase.initPage(this.state.pageId);
-    }
+    protected initUI(): void { }
 
-    protected clearUI(): void {
-        PageBase.clearPage(this.state.pageId);
-    }
-
-    protected onPageChange(): void {
-        if (this.props.currentPageIndex === this.state.pageIndex) {
-            this.init();
-        } else {
-            this.clearUI();
-            PageBase.clearPage(this.state.pageId);
-        }
-    }
 
     render() {
         const localize = LOCALIZE[this.props.language];
@@ -95,36 +59,30 @@ export default class TimeLinePage extends React.Component<Props, State> {
         return (
             <div id={this.state.pageId} className="swiper-slide">
                 <h1 className="animate-me slide-title">
-                    {localize.my_background}
+                    {localize.title}
                 </h1>
 
                 <div id="timeline-content">
                     <ul className="timeline">
                         <li className="event animate-me animation-goUp">
-                            <p className="event-date">2018</p>
-                            <h2>Employé en tant que développeur fullstack à l'entreprise <a href="http://www.eurokey.de/index.php?id=1">Eurokey</a></h2>
+                            <p className="event-date">2018-2019</p>
 
-                            {/* 
-                            <p>Mon rôle consistait à développer des interfaces permettant aux autres développeur de l'entreprise de consulter et tester les différentes applications déjà existante</p>
-                            */}
-
-                            <h2>J'effectue ma deuxième année à la HTW à Sarrebruck en allemagne</h2>
+                            <h2>{localize.year_2018.htw.title}</h2>
                         </li>
                         <li className="event animate-me animation-goUp">
-                            <p className="event-date">2017</p>
-                            <h2>Stage d'un mois dans l'entreprise de développement mobile <a href="https://www.hotcity.lu/en/" target="_blank">Hotcity</a> au Luxembourg</h2>
-                            <h2>Nomination au poste de reponsable informatique de la <i>DIVA</i></h2>
-                            <p>La DIVA (DFHI-Isfates-Verein-Association) est l’association étudiante de l’ISFATES</p>
-                            <h2>Début de mes études en informatique à l'<i>ISFATES</i></h2>
-                            <p>Institut supérieur franco-allemand de techniques, d'économie et de sciences</p>
-                            <p></p>
-                            <h2>J'obtiens mon BAC S</h2>
-                            <p>(option section européenne physique-chimie en allemand et Langues et cultures de l'antiquité: latin) avec mention '<i>Bien</i>'</p>
+                            <p className="event-date">2017-2018</p>
+
+                            <h2 dangerouslySetInnerHTML={{ __html: localize.year_2017.start_isfates.title }}></h2>
+                            <p>{localize.year_2017.start_isfates.complement}</p>
+
+                            <h2>{localize.year_2017.bac.title}</h2>
+                            <p dangerouslySetInnerHTML={{ __html: localize.year_2017.bac.complement }}></p>
                         </li>
                         <li className="event animate-me animation-goUp">
-                            <p className="event-date">2014</p>
-                            <h2>Obtention du brevet des collèges, mention 'Très bien'</h2>
-                            <h2>Certification B1 en allemand, KMK</h2>
+                            <p className="event-date">2014-2015</p>
+
+                            <h2>{localize.year_2014.brevet}</h2>
+                            <h2>{localize.year_2014.c1_certificate}</h2>
                         </li>
                     </ul>
                 </div>

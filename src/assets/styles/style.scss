@@ -63,7 +63,7 @@ body {
             margin: .5em 0 1em .5em;
             font-size: 3rem;
             padding: .3em;
-            border-radius: 8px;
+            border-radius: .12em;
             background-color: rgb(251, 188, 5);
         }
     }
@@ -248,16 +248,19 @@ body {
     .swiper-wrapper {
         height: 100vh;
         width: 100vw;
-        background-color: $lightWhite;
 
         .swiper-slide {
             height: 100%;
             width: 100%;
-            background-color: initial;
             font-family: 'ubuntu';
             overflow-y: auto;
             overflow-x: hidden;
+            background-color: $lightWhite;
             padding-bottom: 2em;
+
+            &.not-scrollable {
+                overflow-y: hidden;
+            }
 
             &::-webkit-scrollbar {
                 width: .8vw;
@@ -326,6 +329,18 @@ body {
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes goDown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(2em);
+        opacity: 0;
     }
 }
 

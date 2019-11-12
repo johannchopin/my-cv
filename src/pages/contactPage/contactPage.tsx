@@ -4,11 +4,6 @@ import * as React from 'react';
 import './contactPage.scss';
 // END IMPORT STYLES ZONE
 
-// IMPORT PAGEBASE ZONE
-import _pageBase from '../pageBase';
-const PageBase = new _pageBase();
-// END IMPORT PAGEBASE ZONE
-
 // IMPORT LOCALIZE ZONE
 import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
@@ -26,8 +21,7 @@ import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
 
 
 // INIT HELPERS METHODS ZONE
-import _Helper from '../../helper';
-const Helper = new _Helper();
+import Helper from '../../helper';
 // END INIT HELPERS METHODS ZONE
 
 // IMPORT INTERFACE ZONE
@@ -41,7 +35,7 @@ import {
 
 
 interface Props {
-    lang: TLanguages,
+    language: TLanguages,
     currentPageIndex: number,
     showSimpleModal: (params: ISimpleModalParams) => void,
 }
@@ -54,9 +48,6 @@ interface State {
     textInMsgInput: string,
 }
 
-// TODO : Change setState calling
-// use -> this.setState(prevState => ({ test: "test" }))
-// instead of -> this.setState({ test: "test" })
 
 export default class ContactPage extends React.Component<Props, State> {
 
@@ -66,7 +57,7 @@ export default class ContactPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'contactPage',
-            pageIndex: 5, // TODO: don't forget to update this !! 
+            pageIndex: 6,
             textInFromInput: '',
             textInSubjectInput: '',
             textInMsgInput: '',
@@ -80,34 +71,11 @@ export default class ContactPage extends React.Component<Props, State> {
         this.init();
     }
 
-    componentDidUpdate(oldProps: Props) {
-        const newProps = this.props;
-
-        if (oldProps.currentPageIndex !== newProps.currentPageIndex) {
-            this.onPageChange();
-        }
-    }
-
     protected init = (): void => {
         this.initUI();
     }
 
-    protected initUI(): void {
-        PageBase.initPage(this.state.pageId);
-    }
-
-    protected clearUI(): void {
-        PageBase.clearPage(this.state.pageId);
-    }
-
-    protected onPageChange(): void {
-        if (this.props.currentPageIndex === this.state.pageIndex) {
-            this.init();
-        } else {
-            this.clearUI();
-            PageBase.clearPage(this.state.pageId);
-        }
-    }
+    protected initUI(): void { }
 
     protected onSubjectInputChange = (event): void => {
         this.setState({
@@ -151,6 +119,8 @@ export default class ContactPage extends React.Component<Props, State> {
     }
 
     protected onSubmitBtnClick = (): void => {
+        const localize = LOCALIZE[this.props.language];
+
         if (this.areInputsValid()) {
             const mailData: ISendMeEmailData = {
                 from: this.state.textInFromInput,
@@ -162,7 +132,8 @@ export default class ContactPage extends React.Component<Props, State> {
         } else {
             this.props.showSimpleModal({
                 type: 'danger',
-                message: 'Please enter a valid email, subject and message !'
+                message: localize.invalid_email_form,
+
             })
         }
     }
@@ -171,14 +142,14 @@ export default class ContactPage extends React.Component<Props, State> {
         if (result.response.hasEmailBeSend) {
             this.props.showSimpleModal({
                 type: 'success',
-                'message': LOCALIZE[this.props.lang]['email_has_been_sent']
+                'message': LOCALIZE[this.props.language]['email_has_been_sent']
             })
 
             this.resetInputs();
         } else {
             this.props.showSimpleModal({
                 type: 'danger',
-                'message': 'Please wait a little bit before sending a new message !', // TODO: Handle error with different way maybe error number
+                'message': 'Email not send !', // TODO: Handle error with different way maybe error number
             })
         }
     }
@@ -192,7 +163,7 @@ export default class ContactPage extends React.Component<Props, State> {
 
 
     render() {
-        const localize = LOCALIZE[this.props.lang];
+        const localize = LOCALIZE[this.props.language];
 
         return (
             <div id={this.state.pageId} className="swiper-slide">
@@ -203,7 +174,7 @@ export default class ContactPage extends React.Component<Props, State> {
                         className="form-control m-2 animate-me animation-goUp"
                         value={this.state.textInFromInput}
                         onChange={this.onFromInputChange}
-                        placeholder={LOCALIZE[this.props.lang].from}
+                        placeholder={LOCALIZE[this.props.language].from}
                     />
 
                     <input
@@ -211,14 +182,14 @@ export default class ContactPage extends React.Component<Props, State> {
                         className="form-control m-2 animate-me animation-goUp"
                         value={this.state.textInSubjectInput}
                         onChange={this.onSubjectInputChange}
-                        placeholder={LOCALIZE[this.props.lang].subject}
+                        placeholder={LOCALIZE[this.props.language].subject}
                     />
 
                     <textarea
                         className="form-control m-2 animate-me animation-goUp"
                         value={this.state.textInMsgInput}
                         onChange={this.onMsgInputChange}
-                        placeholder={LOCALIZE[this.props.lang].message}
+                        placeholder={LOCALIZE[this.props.language].message}
                         rows={10}
                     ></textarea>
 
@@ -235,9 +206,8 @@ export default class ContactPage extends React.Component<Props, State> {
                 <div id="contactCtn">
                     <a href="mailto:johannchopin@protonmail.com" className="animate-me animation-goUp">
                         <IconHandler icon="envelope" />
-                        <p>johannchopin@protonmail.com</p>
+                        <p>johannchopin@pm.me</p>
                     </a>
-                    {/* TODO: Debug pdf opening */}
 
                     <a href="img/cv.pdf" target="blanck" id="cv" className="animate-me animation-goUp">
                         <p>{localize.download_cv}</p>

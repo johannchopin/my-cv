@@ -25,12 +25,13 @@
         min-width: 25%;
         margin-bottom: 2em;
         flex-direction: column;
-        border-radius: 40px;
+        border-radius: .4em;
         padding: 1.6em 1em;
+        align-self: flex-start;
     }
 
     #langues {
-        background-color: rgb(231, 231, 231);
+        background-color: $cv-grey;
         box-shadow: 2px 2px 4px rgb(231, 231, 231);
 
         h2 {
@@ -92,18 +93,13 @@
             background-color: white;
             border-radius: 20px;
             margin-top: .1em;
-        }
 
-        .jauge0,
-        .jauge1,
-        .jauge2,
-        .jauge3,
-        .jauge4,
-        .jauge5 {
-            position: relative;
-            height: 100%;
-            background-color: rgb(251, 188, 5);
-            border-radius: 20px 0 0 20px;
+            &>div {
+                position: relative;
+                height: 100%;
+                background-color: rgb(251, 188, 5);
+                border-radius: 20px 0 0 20px;
+            }
         }
 
         .jauge0 {
@@ -112,7 +108,7 @@
 
         .jauge1,
         .jauge2 {
-            width: 75%;
+            width: 90%;
         }
 
         .jauge3 {
@@ -125,6 +121,10 @@
 
         .jauge5 {
             width: 80%;
+        }
+
+        .jauge-git {
+            width: 75%;
         }
     }
 
@@ -141,7 +141,6 @@
 }
 
 
-//TODO: Use min-width
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
     #skillsPage {
         .skills-ctn {
@@ -155,8 +154,6 @@
 
         .langues {
             min-width: 300px;
-
-            img {}
 
             p {
                 font-size: 2rem;

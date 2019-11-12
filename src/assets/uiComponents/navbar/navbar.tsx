@@ -11,13 +11,8 @@ import './navbar.scss';
 import IconHandler from '../iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
 
-
-// INIT HELPERS METHODS ZONE
-import _Helper from '../../../helper';
-const Helper = new _Helper();
-// END INIT HELPERS METHODS ZONE
-
 // IMPORT LOCALIZE ZONE
+import COMMON_LOCALIZE from '../../../commonLocalize';
 import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
@@ -47,12 +42,11 @@ interface State {
     showNavbar: boolean,
 }
 
-// TODO : Change setState calling
-// use -> this.setState(prevState => ({ test: "test" }))
-// instead of -> this.setState({ test: "test" })
 
 export default class Navbar extends React.Component<Props, State> {
 
+    protected navbar: JQuery;
+    protected container: JQuery;
 
     constructor(props: Props) {
         super(props);
@@ -66,33 +60,40 @@ export default class Navbar extends React.Component<Props, State> {
         this.init();
     }
 
-    protected init = (): void => { }
+    protected init = (): void => {
+        this.navbar = $("#navbar");
+        this.container = $("#navbar > .container");
+    }
+
+    protected showNavbar = (): void => {
+        this.navbar.css({
+            animation: 'showMenuAnimation 0.5s forwards',
+        });
+        this.container.css({
+            display: 'flex',
+            animation: 'apparition 0.5s forwards',
+            animationDelay: '0.6s',
+        });
+    }
+
+    protected hideNavbar = (): void => {
+        this.navbar.css({
+            animation: 'hideMenuAnimation 0.5s forwards',
+        });
+
+        this.container.css({
+            display: 'none',
+        })
+    }
 
     protected showOrHideNavbar = (): void => {
         this.setState({
             showNavbar: !this.state.showNavbar,
         }, () => {
-            const navbar = $("#navbar");
-            const container = $("#navbar > .container");
-
-            // TODO: Write openNavbar() and closeNavbar() methods
             if (this.state.showNavbar) {
-                navbar.css({
-                    animation: 'showMenuAnimation 0.5s forwards',
-                });
-                container.css({
-                    display: 'flex',
-                    animation: 'apparition 0.5s forwards',
-                    animationDelay: '0.6s',
-                });
+                this.showNavbar();
             } else {
-                navbar.css({
-                    animation: 'hideMenuAnimation 0.5s',
-                });
-
-                container.css({
-                    display: 'none',
-                })
+                this.hideNavbar();
             }
 
         })
@@ -125,6 +126,8 @@ export default class Navbar extends React.Component<Props, State> {
     }
 
     protected gitlabRepoRender = (): React.ReactNode => {
+        const localize = LOCALIZE[this.props.language];
+
         return (
             <a
                 href="https://gitlab.com/johannchopin/mycv-2019"
@@ -133,8 +136,41 @@ export default class Navbar extends React.Component<Props, State> {
                 className="clickable"
             >
                 <GitlabIcon />
-                <h2>See project repo</h2>
+                <h2>{localize.check_repo}</h2>
             </a>
+        )
+    }
+
+    protected professionalLinksRender = (): React.ReactNode => {
+        const commonLocalize = COMMON_LOCALIZE[this.props.language];
+
+        return (
+            <div id="professionalLinks">
+                <a
+                    href="https://stackoverflow.com/users/8583669/johannchopin"
+                    target="_blank"
+                    className="clickable"
+                >
+                    <IconHandler prefix="fab" icon="stack-overflow" />
+                </a>
+                <a
+                    href="https://gitlab.com/johannchopin"
+                    target="_blank"
+                    className="clickable"
+                >
+                    <IconHandler prefix="fab" icon="gitlab" />
+                </a>
+                <a
+                    // TODO: Add link to linkedIn
+                    target="_blank"
+                    className="clickable"
+                    data-toggle="tooltip"
+                    data-placement="right"
+                    title={commonLocalize.feature_coming_soon}
+                >
+                    <IconHandler prefix="fab" icon="linkedin" />
+                </a>
+            </div>
         )
     }
 
@@ -144,32 +180,37 @@ export default class Navbar extends React.Component<Props, State> {
 
         return (
             <nav id="navbar" onClick={() => { this.showOrHideNavbar() }}>
-                <IconHandler icon="bars" className={this.state.showNavbar ? "selected" : ""} />
+                <IconHandler icon="bars" className={this.state.showNavbar ? "selected burger" : "burger"} />
+
                 <div className="container">
                     <h1>MENU</h1>
                     <ul>
                         <li onClick={() => { this.goToPage('introductionPage') }}>
                             {localize.presentation}
                         </li>
-                        <li onClick={() => { this.goToPage('backgroundPage') }}>
+                        <li onClick={() => { this.goToPage('timeLinePage') }}>
                             {localize.background}
                         </li>
                         <li onClick={() => { this.goToPage('skillsPage') }}>
                             {localize.skills}
                         </li>
-                        <li onClick={() => { this.goToPage('personalExperiences') }}>
+                        <li onClick={() => { this.goToPage('personalExperiencesPage') }}>
                             {localize.personal_experiences}
                         </li>
-                        <li>
+                        <li onClick={() => { this.goToPage('projectsPage') }}>
+                            {localize.projects}
+                        </li>
+                        <li onClick={() => { this.goToPage('hobbiesPage') }}>
                             {localize.hobbies}
                         </li>
-                        <li>
+                        <li onClick={() => { this.goToPage('contactPage') }}>
                             {localize.contacts}
                         </li>
                     </ul>
 
                     {this.languageSelectionRender()}
                     {this.gitlabRepoRender()}
+                    {this.professionalLinksRender()}
                 </div>
             </nav>
         )

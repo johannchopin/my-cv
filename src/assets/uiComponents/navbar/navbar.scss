@@ -10,17 +10,23 @@
     border-radius: 0 0 0 100%;
     background-color: black;
     transition-duration: 0.5s;
-    color: white;
+    color: $lightWhite;
     z-index: 10;
 
-    .fa-icon {
+    .clickable {
+        &:hover {
+            color: $cv-gold !important;
+        }
+    }
+
+    .burger {
         position: relative;
         font-size: 1.5em;
-        top: .5em;
+        top: .3em;
         left: 1em;
 
         &.selected {
-            color: #FBBC05;
+            color: $cv-gold;
         }
     }
 
@@ -36,14 +42,15 @@
 
         h1 {
             font-size: 2.5rem;
-            border: solid white 3px;
+            border: solid $lightWhite 3px;
+            border-radius: .2em;
             padding: 10px 20px;
         }
 
         ul {
             margin-top: 40px;
             padding-left: 40px;
-            border-left: solid white 3px;
+            border-left: solid $lightWhite 3px;
 
             li {
                 list-style-type: none;
@@ -52,9 +59,21 @@
                 transition-duration: 0.5s;
 
                 &:hover {
-                    transform: scale(1.1);
-                    color: rgb(251, 188, 5);
+                    transform: translateX(-.5em);
+                    color: $cv-gold;
                 }
+            }
+        }
+
+        #professionalLinks {
+            position: absolute;
+            top: .3em;
+            right: 1em;
+
+            a {
+                font-size: 1.5em;
+                margin: 0 .2em;
+                color: #fff;
             }
         }
 
@@ -66,9 +85,12 @@
 
             svg {
                 width: 10vw;
+                border-radius: .3em;
+                transition-duration: .2s;
 
-                &.selected-language {
-                    border: solid .15em rgb(251, 188, 5);
+                &.selected-language,
+                &:hover {
+                    border: solid .15em $cv-gold;
                     padding: .15em;
                 }
             }
@@ -101,13 +123,16 @@
         height: 95px;
 
         #icon div {
-            background-color: rgb(251, 188, 5);
+            background-color: $cv-gold;
         }
     }
 }
 
 @keyframes showMenuAnimation {
-    from {}
+    from {
+        width: 4em;
+        height: 4em;
+    }
 
     to {
         width: 100%;
@@ -123,7 +148,10 @@
         border-radius: 0;
     }
 
-    to {}
+    to {
+        width: 4em;
+        height: 4em;
+    }
 }
 
 

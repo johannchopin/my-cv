@@ -1,6 +1,4 @@
 node_modules/
-dist/*
-prod/*
-distLocal/*
+build/*
 .cache/*
 package-lock.json

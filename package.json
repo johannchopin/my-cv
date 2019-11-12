@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./src/index.html --open",
-    "devLocal": "parcel watch ./src/index.html --out-dir ./distLocal --public-url ./",
-    "prod": "parcel build ./src/index.html --out-dir ./prod --public-url ./"
+    "dev": "parcel ./src/index.html --out-dir ./build/dev --open",
+    "devLocal": "parcel watch ./src/index.html --out-dir ./build/devLocal --public-url ./",
+    "prod": "parcel build ./src/index.html --out-dir ./build/prod --public-url ./"
   },
   "author": "Chopin Johann",
   "license": "ISC",

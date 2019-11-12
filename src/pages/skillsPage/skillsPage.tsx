@@ -9,17 +9,15 @@ import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT PAGEBASE ZONE
-import _pageBase from '../pageBase';
-const PageBase = new _pageBase();
+import _PageBase from '../pageBase';
+const PageBase = new _PageBase();
 // END IMPORT PAGEBASE ZONE
 
 // IMPORT IMAGES ZONE
 //@ts-ignore
-import a2 from './assets/img/a2.png';
+import C2 from './assets/img/c2.png';
 //@ts-ignore
-import b1 from './assets/img/b1.png';
-//@ts-ignore
-import b2 from './assets/img/b2.png';
+import B2 from './assets/img/b2.png';
 //@ts-ignore
 import TypescriptIcon from '../../assets/img/typescript-icon.svg';
 // END IMPORT IMAGES ZONE
@@ -27,12 +25,6 @@ import TypescriptIcon from '../../assets/img/typescript-icon.svg';
 // IMPORT COMPONENTS ZONE
 import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
-
-
-// INIT HELPERS METHODS ZONE
-import _Helper from '../../helper';
-const Helper = new _Helper();
-// END INIT HELPERS METHODS ZONE
 
 // IMPORT INTERFACE ZONE
 import { TLanguages } from '../../commonInterface';
@@ -49,9 +41,6 @@ interface State {
     pageIndex: number,
 }
 
-// TODO : Change setState calling
-// use -> this.setState(prevState => ({ test: "test" }))
-// instead of -> this.setState({ test: "test" })
 
 export default class SkillsPage extends React.Component<Props, State> {
 
@@ -61,12 +50,12 @@ export default class SkillsPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'skillsPage',
-            pageIndex: 2, // TODO: don't forget to update this !!
+            pageIndex: 2,
         };
     }
 
     componentDidMount() {
-        // TODO: Do something
+        this.initUI();
     }
 
     componentDidUpdate(oldProps: Props) {
@@ -87,6 +76,7 @@ export default class SkillsPage extends React.Component<Props, State> {
     }
 
     protected clearUI(): void {
+        PageBase.clearPage(this.state.pageId);
         this.initGauges();
     }
 
@@ -95,7 +85,6 @@ export default class SkillsPage extends React.Component<Props, State> {
             this.init();
         } else {
             this.clearUI();
-            PageBase.clearPage(this.state.pageId);
         }
     }
 
@@ -125,22 +114,22 @@ export default class SkillsPage extends React.Component<Props, State> {
 
         return (
             <div id={this.state.pageId} className="swiper-slide">
-                <h1 className="animate-me slide-title">Compétence</h1>
+                <h1 className="animate-me slide-title">{localize.title}</h1>
 
                 <div className="skills-ctn">
                     <div className="langues animate-me" id="langues">
                         <h2>{localize.languages}</h2>
                         <div>
-                            <img src={b2} />
-                            <p>Allemand</p>
+                            <img src={C2} />
+                            <p>{localize.french}</p>
                         </div>
                         <div>
-                            <img src={b2} />
-                            <p>Anglais</p>
+                            <img src={B2} />
+                            <p>{localize.german}</p>
                         </div>
                         <div>
-                            <img src={a2} />
-                            <p>Latin</p>
+                            <img src={B2} />
+                            <p>{localize.english}</p>
                         </div>
                     </div>
                     <div className="animate-me" id="softwareSkills">
@@ -153,18 +142,11 @@ export default class SkillsPage extends React.Component<Props, State> {
                             <div className="jauge0"></div>
                         </div>
                         <h3>
-                            <IconHandler prefix="fab" icon="html5" />
-                            HTML5 :
+                            <IconHandler icon="file-code" />
+                            HTML5+CSS3 :
                         </h3>
                         <div className="animated-gauge">
                             <div className="jauge1"></div>
-                        </div>
-                        <h3>
-                            <IconHandler prefix="fab" icon="css3-alt" />
-                            CSS3 :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge2"></div>
                         </div>
                         <h3 id="typescriptSkills">
                             <TypescriptIcon />
@@ -186,6 +168,13 @@ export default class SkillsPage extends React.Component<Props, State> {
                         </h3>
                         <div className="animated-gauge">
                             <div className="jauge4"></div>
+                        </div>
+                        <h3>
+                            <IconHandler prefix="fab" icon="git-alt" />
+                            Git :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-git"></div>
                         </div>
                     </div>
                 </div>
