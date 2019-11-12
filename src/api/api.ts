@@ -1,11 +1,10 @@
-const LINK_TO_PHP_LOCAL_API = 'http://localhost:8082/api-common/src/api/';
-const LINK_TO_PHP_SERVER_API = 'https://api.johannchopin.fr/advents_kalender/api/cmds/';
-
-const PATH_TO_API = LINK_TO_PHP_LOCAL_API;
-
 // IMPORT CREDENTIALS
 import * as CREDENTIALS from './credentials.json';
 // END IMPORT CREDENTIALS
+
+// IMPORT APP SETTINGS ZONE
+import AppSettings from '../appSettings';
+// END IMPORT APP SETTINGS ZONE
 
 // INIT HELPER METHODS ZONE
 import Helper from '../helper';
@@ -13,8 +12,18 @@ import Helper from '../helper';
 
 export default class _api {
 
+    protected PATH_TO_API: string;
+
+    constructor() {
+        this.setPathToApi();
+    }
+
+    protected setPathToApi(): void {
+        this.PATH_TO_API = AppSettings.settings.api[AppSettings.settings.api_to_use];
+    }
+
     protected getCmdLink(cmdName: string) {
-        return PATH_TO_API + 'cmds/' + cmdName + '/';
+        return this.PATH_TO_API + 'cmds/' + cmdName + '/';
     }
 
     protected uniformPostRequest(request) {
