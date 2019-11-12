@@ -1,6 +1,6 @@
 # :page_facing_up: Welcome to my online CV repo
 
-#### > See it online [here](https://cv.johannchopin.fr/2019/)
+#### > See it online [here](https://cv.johannchopin.fr/)
 
 
 ----
