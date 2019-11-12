@@ -68,6 +68,7 @@ export default class ProjectContainer extends React.Component<Props, State> {
     }
 
     protected linkToGitlabRepoRender = (): React.ReactNode => {
+        // TODO: Fix bug -> on props.language change the tooltip title is not updated with the correct translation
         const checkoutRepoTranslation = LOCALIZE[this.props.language].check_repo;
 
         if (Helper.isSet(this.props.linkToGitRepo)) {
