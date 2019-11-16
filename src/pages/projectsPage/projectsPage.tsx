@@ -19,6 +19,8 @@ import AdventskalendarIcon from '../../assets/img/adventskalendar-icon.png';
 import AstropulseIcon from '../../assets/img/astropulse-icon.png';
 //@ts-ignore
 import DivaLogo from '../../assets/img/diva-logo.png';
+//@ts-ignore
+import ZukunftsforumLogo from '../../assets/img/zukunftsforum-icon.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -90,6 +92,15 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         image={AdventskalendarIcon}
                         summary={localize.project_adventskalender.summary}
                         technologiesUsed={["Typescript", "React Framework", "Scss", "Php", "Python"]}
+                    />
+                    <ProjectContainer
+                        language={this.props.language}
+                        link="https://forum-jgr.com/"
+                        title="Zukunftsforum-Website"
+                        year={2019}
+                        image={ZukunftsforumLogo}
+                        summary={localize.project_zukunftsforum.summary}
+                        technologiesUsed={['WordPress', 'Php', 'Html', 'Css']}
                     />
                     <ProjectContainer
                         language={this.props.language}
