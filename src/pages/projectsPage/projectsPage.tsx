@@ -115,7 +115,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                     <ProjectContainer
                         language={this.props.language}
                         link="http://diva.dfhi-isfates.eu/"
-                        title="DIVA-Homepage"
+                        title="DIVA-Website"
                         year={2017}
                         image={DivaLogo}
                         summary={localize.project_diva.summary}
