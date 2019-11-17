@@ -13,13 +13,13 @@ const LOCALIZE = {
             ]
         },
         internship_hotcity: {
-            introduction: "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 Monate im 2018), in denen ich zusätzlich zu <i>Web-Integration</i> und PHP-Entwicklung",
+            introduction: "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> in Luxemburg (1 Monate im 2018), in denen ich zusätzlich zu <i>Web-Integration</i> und PHP-Entwicklung",
             letter_of_recommendation: "Empfehlungsschreiben",
         },
         diva: "Ernennung zum IT-Manager der <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> in den Jahren 2018 und 2019. Der DFHI-ISFATES-Verein-Association ist die studentische Vereinigung der DFHI. Ich habe verschiedene Aufgaben wie das <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">Refactoring der offiziellen Seite</a> (neue Grafikcharta und Implementierung einer Administratoroberfläche) sowie die Erstellung von <i>Postern</i> und <i>Logos</i> durchgeführt",
         school: {
             cnrs: "Forschungsarbeiten in den Labors des <i>CNRS</i> in Straßburg im Rahmen der TPE",
-            tpe: "Teilnahme am <i>Trinational Congress of Science and Technology</i> mit mündlicher Präsentation (Studienprojekt: Werden Carbon Nanotubes die Krebsvorsorge revolutionieren?)",
+            tpe: "Teilnahme am <i>Trinational Congress of Science and Technology</i> mit mündlicher Präsentation (Studienprojekt: Kohlenstoffnanoröhren - die Revolution für die Krebsfrüherkennung?)",
             ecpm: "Teilnahme an den Nationalen Chemie-Olympiaden auf der <i>ECPM</i> in Straßburg",
             pirmasens: "Wissenschaftlicher Forschungstag mit deutschen Studenten der <i>Hochschule</i> in Pirmasens",
         },
@@ -40,7 +40,7 @@ const LOCALIZE = {
             ]
         },
         internship_hotcity: {
-            introduction: "Stage au sein de l'entreprise de développement mobile <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 mois en 2018) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP",
+            introduction: "Stage au sein de l'entreprise de développement mobile <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> au Luxembourg (1 mois en 2018) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP",
             letter_of_recommendation: "Lettre de recommandation",
         },
         diva: "Nomination au poste de reponsable informatique de la <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> en 2018 puis 2019. La DFHI-ISFATES-Verein-Association est l’association étudiante de l’ISFATES. J'y ai accompli différentes tâches tel que le <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">refactoring du site officiel</a> (nouvelle charte graphique et mise en place d'une interface administrateur) ainsi que la création d'<i>affiches</i> et de <i>logos</i>",
@@ -67,7 +67,7 @@ const LOCALIZE = {
             ]
         },
         internship_hotcity: {
-            introduction: "Internship in the company <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> (1 months in 2018) where I designed mobile application interfaces in addition to doing <i>web integration</i> and PHP development",
+            introduction: "Internship in the company <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> in Luxembourg (1 months in 2018) where I designed mobile application interfaces in addition to doing <i>web integration</i> and PHP development",
             letter_of_recommendation: "Letter of recommendation",
         },
         diva: "Appointment to the position of IT manager of the <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> in 2018 and 2019. The DFHI-ISFATES-Verein-Association is the student association of the ISFATES. I performed different tasks such as the <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">refactoring of the official site</a> (new graphic charter and implementation of an administrator interface) as well as the creation of <i>posters</i> and <i>logos</i>",
