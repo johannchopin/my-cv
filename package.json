@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel ./src/index.html --out-dir ./build/dev --open",
     "devLocal": "parcel watch ./src/index.html --out-dir ./build/devLocal --public-url ./",
-    "prod": "parcel build ./src/index.html --out-dir ./build/prod --public-url ./"
+    "prod": "node ./buildScript/prod.js"
   },
   "author": "Chopin Johann",
   "license": "ISC",
@@ -27,6 +27,7 @@
     "popper.js": "^1.16.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "readline-sync": "^1.4.10",
     "swiper": "^4.5.1"
   },
   "devDependencies": {
