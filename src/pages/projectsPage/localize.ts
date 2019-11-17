@@ -15,6 +15,9 @@ const LOCALIZE = {
         },
         project_walkinlove: {
             summary: "Realisierung einer Website mit php im Rahmen meines Studiums.",
+        },
+        project_zukunftsforum: {
+            summary: "Aufbau einer Wordpress-Website und einer Grafikcharta für den Verein 'Zukunftsforum'",
         }
     },
     fr: {
@@ -33,6 +36,9 @@ const LOCALIZE = {
         },
         project_walkinlove: {
             summary: "Réalisation d'un site web avec php dans le cadre de mes études.",
+        },
+        project_zukunftsforum: {
+            summary: "Mise en place d'un site web WordPress ainsi qu'une charte graphique pour l'association 'Forum d'avenir'",
         }
     },
     en: {
@@ -51,6 +57,9 @@ const LOCALIZE = {
         },
         project_walkinlove: {
             summary: "Realization of a website with php as part of my studies.",
+        },
+        project_zukunftsforum: {
+            summary: "Setting up a WordPress website and a graphic charter for the association 'Forum d'avenir'",
         }
     }
 }

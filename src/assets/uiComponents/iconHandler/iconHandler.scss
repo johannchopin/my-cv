@@ -8,4 +8,16 @@
     &.with-pr {
         padding-right: .4em;
     }
+
+    &.reverse-h {
+        svg {
+            transform: rotateY(180deg);
+        }
+    }
+
+    &.reverse-v {
+        svg {
+            transform: rotateX(180deg);
+        }
+    }
 }

@@ -19,6 +19,8 @@ import AdventskalendarIcon from '../../assets/img/adventskalendar-icon.png';
 import AstropulseIcon from '../../assets/img/astropulse-icon.png';
 //@ts-ignore
 import DivaLogo from '../../assets/img/diva-logo.png';
+//@ts-ignore
+import ZukunftsforumLogo from '../../assets/img/zukunftsforum-icon.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -93,6 +95,15 @@ export default class ProjectsPage extends React.Component<Props, State> {
                     />
                     <ProjectContainer
                         language={this.props.language}
+                        link="https://forum-jgr.com/"
+                        title="Zukunftsforum-Website"
+                        year={2019}
+                        image={ZukunftsforumLogo}
+                        summary={localize.project_zukunftsforum.summary}
+                        technologiesUsed={['WordPress', 'Php', 'Html', 'Css']}
+                    />
+                    <ProjectContainer
+                        language={this.props.language}
                         link="https://astropulse.johannchopin.fr/"
                         title="Astropulse-Experience"
                         year={2018}
@@ -104,7 +115,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                     <ProjectContainer
                         language={this.props.language}
                         link="http://diva.dfhi-isfates.eu/"
-                        title="DIVA-Homepage"
+                        title="DIVA-Website"
                         year={2017}
                         image={DivaLogo}
                         summary={localize.project_diva.summary}

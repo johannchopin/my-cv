@@ -115,6 +115,13 @@
                 background-color: $gitlab-main-color;
             }
         }
+
+        #appVersion {
+            position: absolute;
+            bottom: 0;
+            right: 1em;
+            color: rgba(255, 255, 255, 0.3);
+        }
     }
 
     &:hover {
