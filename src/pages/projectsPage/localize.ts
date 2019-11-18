@@ -2,13 +2,13 @@ const LOCALIZE = {
     de: {
         title: "Meine Projekte",
         project_caretaker: {
-            summary: "Dies ist mein 3. Studienjahr Projekt bei DFHI. Wir mussten ein Smart Home Modell entwickeln, das mit einer fortschrittlichen Webanwendung verbunden ist. Ich war der Projektleiter und der IT-Manager des Projekts.",
+            summary: "Dies ist mein Projekt des sechsten Semesters bei der DFHI. Wir mussten ein Smart Home Modell entwickeln, das mit einer fortschrittlichen Webanwendung verbunden ist. Ich war der Projektleiter und der IT-Manager des Projekts.",
         },
         project_adventskalender: {
             summary: "IT-Manager für die Erstellung einer progressiven Web-App, die einen Adventskalender für DFHI-Studenten simuliert. Das gesammelte Geld wird an mehrere Vereine gespendet.",
         },
         project_astropulse: {
-            summary: "Erstellung einer Online-Umfrage, die zeigt, dass die Frequenz eines Pulsars unsere Wahrnehmung von Zeit beeinflussen kann. Projekt, das im Rahmen meines Studiums durchgeführt wurde.",
+            summary: "Erstellung einer Online-Umfrage, welche zeigt, dass die Frequenz eines Pulsars unsere Wahrnehmung von Zeit beeinflussen kann. Projekt, das im Rahmen meines Studiums durchgeführt wurde.",
         },
         project_diva: {
             summary: "Refactoring von Frontend und Backend der offiziellen Website der DFHI-Studentenvereinigung: die DIVA",

@@ -11,13 +11,13 @@ const LOCALIZE = {
                 complement: "(Option Europäische Sektion Physik und Chemie in Deutsch sowie Sprachen und Kulturen der Antike: Latein) mit Prädikat '<i>Gut</i>'",
             },
             start_isfates: {
-                title: "Beginn des Informatikstudiums bei <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">DFHI</a>",
+                title: "Beginn des Informatikstudiums beim <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">DFHI</a>",
                 complement: "Deutsch-Französische Hochschulinstitut für Technik und Wirtschaft",
             },
         },
         year_2018: {
             htw: {
-                title: "Ich bin im zweiten Studienjahr an der HTW in Saarbrücken, Deutschland",
+                title: "Ich befinde mich im zweiten Studienjahr an der HTW in Saarbrücken, Deutschland",
             },
         },
     },
