@@ -3,8 +3,8 @@ const LOCALIZE = {
         title: "Erfahrungen",
         languages: 'Sprachen',
         work_eurokey: {
-            introduction: "9 Monate lang Fullstack-Entwickler bei der Firma <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> in Saarbrücken im 2019",
-            complement: "Meine Aufgabe war es, die Entwicklung einer App für die Entwickler des Unternehmens fortzusetzen, die es ihnen ermöglichen, die Erstellung kommerzialisierter Apps einfacher zu verwalten",
+            introduction: "9 Monate lang Fullstack-Entwickler bei der Firma <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> in Saarbrücken in 2019",
+            complement: "Meine Aufgabe war es, die Entwicklung einer App für die Entwickler des Unternehmens fortzusetzen, die es ihnen ermöglicht, die Erstellung kommerzialisierter Apps einfacher zu verwalten",
             tasks: [
                 "Codegenerator",
                 "Integration der API Rest von visual studio",
@@ -13,7 +13,7 @@ const LOCALIZE = {
             ]
         },
         internship_hotcity: {
-            introduction: "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> in Luxemburg (1 Monate im 2018), in denen ich zusätzlich zu <i>Web-Integration</i> und PHP-Entwicklung",
+            introduction: "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> in Luxemburg (1 Monate im 2018), in welchem ich zusätzlich zu <i>Web-Integration</i> und PHP-Entwicklung beigetragen habe Empfehlungsschreiben",
             letter_of_recommendation: "Empfehlungsschreiben",
         },
         diva: "Ernennung zum IT-Manager der <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> in den Jahren 2018 und 2019. Der DFHI-ISFATES-Verein-Association ist die studentische Vereinigung der DFHI. Ich habe verschiedene Aufgaben wie das <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">Refactoring der offiziellen Seite</a> (neue Grafikcharta und Implementierung einer Administratoroberfläche) sowie die Erstellung von <i>Postern</i> und <i>Logos</i> durchgeführt",
