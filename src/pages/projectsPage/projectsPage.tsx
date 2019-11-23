@@ -86,7 +86,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                     />
                     <ProjectContainer
                         language={this.props.language}
-                        link=""
+                        link="https://isfates-adventskalender.eu/"
                         title="ISFATES-Adventskalender"
                         year={2019}
                         image={AdventskalendarIcon}
