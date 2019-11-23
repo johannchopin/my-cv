@@ -51,7 +51,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
 
         this.state = {
             pageId: 'projectsPage',
-            pageIndex: 4, // TODO: don't forget to update this !!
+            pageIndex: 4,
         };
     }
 
