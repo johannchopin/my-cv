@@ -40,7 +40,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
 
         this.state = {
             pageId: 'personalExperiencesPage',
-            pageIndex: 3, // TODO: don't forget to update this !!
+            pageIndex: 3,
         };
     }
 

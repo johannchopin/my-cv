@@ -40,7 +40,6 @@ export interface ISendMeEmailResponse extends IRequestResponse {
 // END API INTERFACES
 
 // TYPES ZONE
-// TODO: Replace personalExperiences to personalExperiencesPage
 export type TPages = 'introductionPage' | 'timeLinePage' | 'skillsPage' | 'hobbiesPage' | 'personalExperiencesPage' | 'projectsPage' | 'contactPage';
 export type TLanguages = 'en' | 'fr' | 'de';
 export type TSimpleModalType = 'success' | 'warning' | 'danger';
