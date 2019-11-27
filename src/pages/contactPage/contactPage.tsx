@@ -168,7 +168,7 @@ export default class ContactPage extends React.Component<Props, State> {
 
         return (
             <div id={this.state.pageId} className="swiper-slide">
-                <h1>CONTACT</h1>
+                <h1>{localize.title}</h1>
                 <div className="form">
                     <input
                         type="text"
