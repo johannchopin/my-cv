@@ -4,7 +4,7 @@ const LOCALIZE = {
         languages: 'Sprachen',
         work_eurokey: {
             introduction: "9 Monate lang Fullstack-Entwickler bei der Firma <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> in Saarbrücken in 2019",
-            complement: "Meine Aufgabe war es, die Entwicklung einer App für die Entwickler des Unternehmens fortzusetzen, die es ihnen ermöglicht, die Erstellung kommerzialisierter Apps einfacher zu verwalten",
+            complement: "Meine Aufgabe war es, die Erstellung einer App für die Entwickler des Unternehmens fortzusetzen, die es ihnen ermöglicht, die Erstellung kommerzialisierter Apps einfacher zu verwalten",
             tasks: [
                 "Codegenerator",
                 "Integration der API Rest von visual studio",
@@ -13,7 +13,7 @@ const LOCALIZE = {
             ]
         },
         internship_hotcity: {
-            introduction: "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> in Luxemburg (1 Monate im 2018), in welchem ich zusätzlich zu <i>Web-Integration</i> und PHP-Entwicklung beigetragen habe Empfehlungsschreiben",
+            introduction: "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> in Luxemburg (1 Monat im 2018), in welchem ich zusätzlich zur <i>Web-Integration</i> und PHP-Entwicklung beigetragen habe Empfehlungsschreiben",
             letter_of_recommendation: "Empfehlungsschreiben",
         },
         diva: "Ernennung zum IT-Manager der <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> in den Jahren 2018 und 2019. Der DFHI-ISFATES-Verein-Association ist die studentische Vereinigung der DFHI. Ich habe verschiedene Aufgaben wie das <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">Refactoring der offiziellen Seite</a> (neue Grafikcharta und Implementierung einer Administratoroberfläche) sowie die Erstellung von <i>Postern</i> und <i>Logos</i> durchgeführt",
@@ -31,7 +31,7 @@ const LOCALIZE = {
         languages: 'Langues',
         work_eurokey: {
             introduction: "Dévelopeur fullstack durant 9 mois à l'entreprise <a href=\"http://www.eurokey.de/index.php?id=1\">Eurokey</a> à Sarrebruck en 2019",
-            complement: "Ma tâche consistait à continuer le développement d'une application destiné aux développeur de la boite leur permettant de gérer plus aisément la création des applications commercialisées",
+            complement: "Ma tâche consistait à continuer le développement d'une application destinée aux développeurs de l'entreprise leur permettant de gérer plus aisément la création des applications commercialisées",
             tasks: [
                 "Génerateur de code",
                 "Intégration de l'API Rest de visual studio",
@@ -43,7 +43,7 @@ const LOCALIZE = {
             introduction: "Stage au sein de l'entreprise de développement mobile <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> au Luxembourg (1 mois en 2018) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP",
             letter_of_recommendation: "Lettre de recommandation",
         },
-        diva: "Nomination au poste de reponsable informatique de la <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> en 2018 puis 2019. La DFHI-ISFATES-Verein-Association est l’association étudiante de l’ISFATES. J'y ai accompli différentes tâches tel que le <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">refactoring du site officiel</a> (nouvelle charte graphique et mise en place d'une interface administrateur) ainsi que la création d'<i>affiches</i> et de <i>logos</i>",
+        diva: "Nomination au poste de reponsable informatique de la <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> en 2018 puis 2019. La DFHI-ISFATES-Verein-Association est l’association étudiante de l’ISFATES. J'y ai accompli différentes tâches telles que le <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">refactoring du site officiel</a> (nouvelle charte graphique et mise en place d'une interface administrateur) ainsi que la création d'<i>affiches</i> et de <i>logos</i>",
         school: {
             cnrs: "Travail de recherche dans les laboratoires du <i>CNRS</i> de Strasbourg dans le cadre des TPE",
             tpe: "Participation au <i>Congrès Trinational des Sciences et des Techniques</i> avec présentation orale (projet d’étude: Les nanotubes de carbone révolutionneront-ils le dépistage du cancer?)",
