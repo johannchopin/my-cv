@@ -13,7 +13,7 @@ const LOCALIZE = {
         presentation: "Présentation",
         background: "Formation",
         skills: "Compétences",
-        personal_experiences: "Expériences personnelle",
+        personal_experiences: "Expériences personnelles",
         projects: "Projets",
         hobbies: "Loisirs",
         contacts: "Contact",

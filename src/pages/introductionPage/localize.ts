@@ -5,7 +5,7 @@ const LOCALIZE = {
         student: "Student der Informatik",
     },
     fr: {
-        introduction_text: "\"Étudiant de 20 ans à l'Institut Supérieur Franco-Allemand de Techniques, d’Économies et de Sciences(ISFATES), je me passionne depuis plusieurs annéees déjà à la programmation et au web plus précisement. Ambitieux et volontaire, j'espère correspondre au profil que vous recherchez.\"",
+        introduction_text: "\"Étudiant de 20 ans à l'Institut Supérieur Franco-Allemand de Techniques, d’Économies et de Sciences(ISFATES), je me passionne depuis plusieurs annéees déjà pour la programmation et le web plus précisement. Ambitieux et volontaire, j'espère correspondre au profil que vous recherchez.\"",
         swipe_indication: "Balayez vers la droite pour parcourir mon CV",
         student: "Étudiant en Informatique",
     },

@@ -39,7 +39,7 @@ const LOCALIZE = {
         },
         year_2018: {
             htw: {
-                title: "Deuxième année d'étude à la HTW à Sarrebruck en allemagne",
+                title: "Deuxième année d'études à la HTW à Sarrebruck en Allemagne",
             },
         },
     },
