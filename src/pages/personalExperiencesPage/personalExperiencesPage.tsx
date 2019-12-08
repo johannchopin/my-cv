@@ -79,7 +79,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                     <div id="hotcityInternship" className="animate-me">
                         <p dangerouslySetInnerHTML={{ __html: localize.internship_hotcity.introduction }}></p>
                         <br />
-                        <a id="hotcityLetter" href="https://cv.johannchopin.fr/img/hotcityRecommandation.pdf" target="_blank">
+                        <a id="hotcityLetter" href="https://cv.johannchopin.fr/2019/assets/pdf/hotcity.pdf" target="_blank">
                             <IconHandler icon="file-alt" />
                             <p>{localize.internship_hotcity.letter_of_recommendation}</p>
                         </a>
