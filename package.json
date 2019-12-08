@@ -11,31 +11,31 @@
   "author": "Chopin Johann",
   "license": "ISC",
   "dependencies": {
-    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-react": "^7.7.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@fortawesome/react-fontawesome": "^0.1.6",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "@svgr/parcel-plugin-svgr": "^4.3.3",
     "@types/bootstrap": "^4.3.1",
     "@types/jquery": "^3.3.31",
-    "@types/react": "^16.9.9",
-    "@types/react-dom": "^16.9.2",
-    "@types/swiper": "^4.4.6",
-    "bootstrap": "^4.3.1",
-    "npm": "^6.12.0",
+    "@types/react": "^16.9.15",
+    "@types/react-dom": "^16.9.4",
+    "@types/swiper": "^4.4.9",
+    "bootstrap": "^4.4.1",
+    "npm": "^6.13.2",
     "popper.js": "^1.16.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "readline-sync": "^1.4.10",
     "swiper": "^4.5.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
+    "@babel/core": "^7.7.5",
     "cssnano": "^4.1.10",
     "jquery": "^3.4.1",
     "parcel-bundler": "^1.12.4",
-    "sass": "^1.23.0",
-    "typescript": "^3.6.4"
+    "sass": "^1.23.7",
+    "typescript": "^3.7.3"
   }
 }
