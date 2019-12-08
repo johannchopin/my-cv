@@ -86,6 +86,12 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                     </div>
 
                     <div className="animate-me">
+                        <p dangerouslySetInnerHTML={{ __html: localize.coding_contest.hackaton_lux }}></p>
+                        <br />
+                        <p dangerouslySetInnerHTML={{ __html: localize.coding_contest.battledev }}></p>
+                    </div>
+
+                    <div className="animate-me">
                         <p dangerouslySetInnerHTML={{ __html: localize.diva }}></p>
                     </div>
 
