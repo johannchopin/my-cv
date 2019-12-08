@@ -17,8 +17,8 @@ const LOCALIZE = {
             letter_of_recommendation: "Empfehlungsschreiben",
         },
         coding_contest: {
-            hackaton_lux: "Teilnahme an der von der Universität Luxemburg organisierten <i>\"Design and Coding HACKATHON to Benefit Society!\"</i>.",
-            battledev: "Teilnahme an der 12. Staffel von <i>BattleDev</i> mit der Sprache PHP.",
+            hackaton_lux: "Teilnahme an der von der Universität Luxemburg organisierten \"<i>Design and Coding HACKATHON to Benefit Society!</i>\"",
+            battledev: "Teilnahme an der 12. Staffel von <i>BattleDev</i> mit der Sprache PHP",
         },
         diva: "Ernennung zum IT-Manager der <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> in den Jahren 2018, 2019 und 2020. Der DFHI-ISFATES-Verein-Association ist die studentische Vereinigung der DFHI. Ich habe verschiedene Aufgaben wie das <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">Refactoring der offiziellen Seite</a> (neue Grafikcharta und Implementierung einer Administratoroberfläche) sowie die Erstellung von <i>Postern</i> und <i>Logos</i> durchgeführt",
         school: {
@@ -48,10 +48,10 @@ const LOCALIZE = {
             letter_of_recommendation: "Lettre de recommandation",
         },
         coding_contest: {
-            hackaton_lux: "Participation au <i>\"Design and Coding HACKATHON to Benefit Society!\"</i> organisé par l'université du Luxembourg.",
-            battledev: "Participation à la 12ème saison de <i>BattleDev</i> avec le language PHP.",
+            hackaton_lux: "Participation au \"<i>Design and Coding HACKATHON to Benefit Society!</i>\" organisé par l'université du Luxembourg",
+            battledev: "Participation à la 12ème saison de <i>BattleDev</i> avec le language PHP",
         },
-        diva: "Nomination au poste de reponsable informatique de la <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> en 2018, 2019 et 2020. La DFHI-ISFATES-Verein-Association est l’association étudiante de l’ISFATES. J'y ai accompli différentes tâches telles que le <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">refactoring du site officiel</a> (nouvelle charte graphique et mise en place d'une interface administrateur) ainsi que la création d'<i>affiches</i> et de <i>logos</i>",
+        diva: "Nomination au poste de responsable informatique de la <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> en 2018, 2019 et 2020. La DFHI-ISFATES-Verein-Association est l’association étudiante de l’ISFATES. J'y ai accompli différentes tâches telles que le <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">refactoring du site officiel</a> (nouvelle charte graphique et mise en place d'une interface administrateur) ainsi que la création d'<i>affiches</i> et de <i>logos</i>",
         school: {
             cnrs: "Travail de recherche dans les laboratoires du <i>CNRS</i> de Strasbourg dans le cadre des TPE",
             tpe: "Participation au <i>Congrès Trinational des Sciences et des Techniques</i> avec présentation orale (projet d’étude: Les nanotubes de carbone révolutionneront-ils le dépistage du cancer?)",
@@ -79,8 +79,8 @@ const LOCALIZE = {
             letter_of_recommendation: "Letter of recommendation",
         },
         coding_contest: {
-            hackaton_lux: "Participation in the <i>\"Design and Coding HACKATHON to Benefit Society!\"</i> organized by the University of Luxembourg.",
-            battledev: "Participation in the 12th season of <i>BattleDev</i> with the PHP language.",
+            hackaton_lux: "Participation in the \"<i>Design and Coding HACKATHON to Benefit Society!</i>\" organized by the University of Luxembourg",
+            battledev: "Participation in the 12th season of <i>BattleDev</i> with the PHP language",
         },
         diva: "Appointment to the position of IT manager of the <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">DIVA</a> in 2018, 2019 and 2020. The DFHI-ISFATES-Verein-Association is the student association of the ISFATES. I performed different tasks such as the <a href=\"http://diva.dfhi-isfates.eu/\" target=\"_blank\">refactoring of the official site</a> (new graphic charter and implementation of an administrator interface) as well as the creation of <i>posters</i> and <i>logos</i>",
         school: {

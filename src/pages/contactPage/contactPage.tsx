@@ -162,6 +162,24 @@ export default class ContactPage extends React.Component<Props, State> {
         });
     };
 
+    protected getLinkToCV = (): string => {
+        let cvName = '';
+        switch (this.props.language) {
+            default:
+                cvName = 'myCV2019-fr';
+                break;
+
+            case 'fr':
+                cvName = 'myCV2019-fr';
+                break;
+
+            case 'de':
+                cvName = 'myCV2019-de';
+                break;
+        }
+
+        return `https://cv.johannchopin.fr/2019/assets/pdf/${cvName}.pdf`;
+    }
 
     render() {
         const localize = LOCALIZE[this.props.language];
@@ -210,7 +228,7 @@ export default class ContactPage extends React.Component<Props, State> {
                         <p>johannchopin@pm.me</p>
                     </a>
 
-                    <a href="img/cv.pdf" target="blanck" id="cv" className="animate-me animation-goUp">
+                    <a href={this.getLinkToCV()} target="_blank" id="cv" className="animate-me animation-goUp">
                         <p>{localize.download_cv}</p>
                     </a>
                 </div>
