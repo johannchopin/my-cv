@@ -146,28 +146,42 @@ export default class SkillsPage extends React.Component<Props, State> {
                             HTML5+CSS3 :
                         </h3>
                         <div className="animated-gauge">
-                            <div className="jauge1"></div>
+                            <div className="jauge-html-css"></div>
                         </div>
                         <h3 id="typescriptSkills">
                             <TypescriptIcon />
                             TypeScript :
                         </h3>
                         <div className="animated-gauge">
-                            <div className="jauge5"></div>
+                            <div className="jauge-ts"></div>
+                        </div>
+                        <h3>
+                            <IconHandler prefix="fab" icon="react" />
+                            React :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-react"></div>
+                        </div>
+                        <h3>
+                            <IconHandler prefix="fab" icon="angular" />
+                            Angular :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-angular"></div>
                         </div>
                         <h3>
                             <IconHandler prefix="fab" icon="php" />
                             PHP :
                         </h3>
                         <div className="animated-gauge">
-                            <div className="jauge3"></div>
+                            <div className="jauge-php"></div>
                         </div>
                         <h3>
                             <IconHandler prefix="fab" icon="python" />
                             Python :
                         </h3>
                         <div className="animated-gauge">
-                            <div className="jauge4"></div>
+                            <div className="jauge-python"></div>
                         </div>
                         <h3>
                             <IconHandler prefix="fab" icon="git-alt" />
