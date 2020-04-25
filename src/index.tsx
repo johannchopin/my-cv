@@ -73,7 +73,7 @@ class App extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
-            language: 'de',
+            language: 'en',
             initialPage: 'introductionPage',
             pagesId: {
                 'introductionPage': 0,
