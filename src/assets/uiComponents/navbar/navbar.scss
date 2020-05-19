@@ -1,5 +1,13 @@
 @import "../../styles/toolsBundler.scss";
 
+.tooltip-pr {
+    &~.tooltip {
+        &>.tooltip-inner {
+            margin-right: 500px;
+        }
+    }
+}
+
 #navbar {
     position: absolute;
     display: flex;
@@ -74,6 +82,17 @@
                 font-size: 1.5em;
                 margin: 0 .2em;
                 color: #fff;
+
+                &#stackoverflow {
+                    .reputation {
+                        font-size: .5em;
+                        color: $cv-gold;
+                    }
+                }
+            }
+
+            .tooltip-inner {
+                background-color: #00cc00;
             }
         }
 

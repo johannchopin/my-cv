@@ -41,6 +41,7 @@ interface Props {
 
 interface State {
     showNavbar: boolean,
+    stackoverflowReputation: number,
 }
 
 
@@ -54,6 +55,7 @@ export default class Navbar extends React.Component<Props, State> {
 
         this.state = {
             showNavbar: false,
+            stackoverflowReputation: 0
         };
     }
 
@@ -64,6 +66,22 @@ export default class Navbar extends React.Component<Props, State> {
     protected init = (): void => {
         this.navbar = $("#navbar");
         this.container = $("#navbar > .container");
+        this.fetchStackoverflowReputation();
+    }
+
+    protected fetchStackoverflowReputation = (): void => {
+        fetch('https://cors-anywhere.herokuapp.com/https://stackoverflow.com/users/flair/8583669.json')
+            .then(response => response.json())
+            .then(data => this.setStackoverflowReputation(data.reputation));
+    }
+
+    protected setStackoverflowReputation = (reputation: string) => {
+        const reputationAsNumber = parseFloat(reputation.replace(',', '.'))
+        this.setState(() => {
+            return ({
+                stackoverflowReputation: Math.round(reputationAsNumber * 10) / 10
+            })
+        })
     }
 
     protected showNavbar = (): void => {
@@ -147,30 +165,34 @@ export default class Navbar extends React.Component<Props, State> {
 
         return (
             <div id="professionalLinks">
-                <a
-                    href="https://stackoverflow.com/users/8583669/johannchopin"
-                    target="_blank"
-                    className="clickable"
-                >
-                    <IconHandler prefix="fab" icon="stack-overflow" />
-                </a>
-                <a
-                    href="https://gitlab.com/johannchopin"
-                    target="_blank"
-                    className="clickable"
-                >
-                    <IconHandler prefix="fab" icon="gitlab" />
-                </a>
-                <a
-                    // TODO: Add link to linkedIn
-                    target="_blank"
-                    className="clickable"
-                    data-toggle="tooltip"
-                    data-placement="right"
-                    title={commonLocalize.feature_coming_soon}
-                >
-                    <IconHandler prefix="fab" icon="linkedin" />
-                </a>
+                <div className="row">
+                    <a
+                        id="stackoverflow"
+                        href="https://stackoverflow.com/users/8583669/johannchopin"
+                        target="_blank"
+                        className="clickable d-flex flex-column align-items-center"
+                    >
+                        <IconHandler prefix="fab" icon="stack-overflow" />
+                        <span className="reputation">{this.state.stackoverflowReputation}k</span>
+                    </a>
+                    <a
+                        href="https://gitlab.com/johannchopin"
+                        target="_blank"
+                        className="clickable"
+                    >
+                        <IconHandler prefix="fab" icon="gitlab" />
+                    </a>
+                    <a
+                        // TODO: Add link to linkedIn
+                        target="_blank"
+                        className="clickable"
+                        data-toggle="tooltip"
+                        data-placement="right"
+                        title={commonLocalize.feature_coming_soon}
+                    >
+                        <IconHandler prefix="fab" icon="linkedin" />
+                    </a>
+                </div>
             </div>
         )
     }
