@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel ./src/index.html --out-dir ./build/dev --open",
     "devLocal": "parcel watch ./src/index.html --out-dir ./build/devLocal --public-url ./",
-    "prod": "node ./buildScript/prod.js"
+    "prod": "node ./scripts/prod.js"
   },
   "author": "Chopin Johann",
   "license": "ISC",
