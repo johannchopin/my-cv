@@ -91,6 +91,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         year={2019}
                         image={AdventskalendarIcon}
                         summary={localize.project_adventskalender.summary}
+                        linkToGitRepo="https://gitlab.com/isfates_adventskalender"
                         technologiesUsed={["Typescript", "React Framework", "Scss", "Php", "Python"]}
                     />
                     <ProjectContainer
