@@ -31,7 +31,7 @@ function executeAfterCheckout(fctToExecuteOnSuccess) {
     }
 
     if (isAppAllreadyBuildOnCurrentVersion()) {
-        onAppAllreadyBuild()
+        onAppAlreadyBuild()
     }
 
     fctToExecuteOnSuccess();
@@ -58,7 +58,7 @@ function buildApp() {
 }
 
 
-function onAppAllreadyBuild() {
+function onAppAlreadyBuild() {
 
     var userResponse = readlineSync.question(`>>> App is allready build on version [${appVersion}]. Do you want to build it again? Yes/No: `);
 
