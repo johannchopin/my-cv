@@ -72,6 +72,17 @@ export default class IntroductionPage extends React.Component<Props, State> {
         });
     }
 
+    protected getAge(date: string): number {
+        const today = new Date();
+        const birthDate = new Date(date);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+
+        return age;
+    }
 
     render(): React.ReactNode {
         const localize = LOCALIZE[this.props.lang];
@@ -93,7 +104,7 @@ export default class IntroductionPage extends React.Component<Props, State> {
                 </div>
 
                 <p className="presentation-text animate-me">
-                    {localize.introduction_text}
+                    {localize.introduction_text.replace('__AGE__', this.getAge("1999/04/04").toString())}
                 </p>
 
                 <div id="swipeIndication" className="animate-me animation-goUp">
