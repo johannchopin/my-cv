@@ -149,7 +149,7 @@ export default class Navbar extends React.Component<Props, State> {
 
         return (
             <a
-                href="https://gitlab.com/johannchopin/mycv-2019"
+                href="https://gitlab.com/johannchopin/my-cv"
                 target="_blank"
                 id="gitlabRepo"
                 className="clickable"
