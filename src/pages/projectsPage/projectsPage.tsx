@@ -82,7 +82,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         image={CaretakerIcon}
                         summary={localize.project_caretaker.summary}
                         linkToGitRepo="https://gitlab.com/caretaker-smarthome"
-                        technologiesUsed={["Typescript", "React Framework", "Scss", "Php", "Python"]}
+                        technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
                     />
                     <ProjectContainer
                         language={this.props.language}
@@ -92,7 +92,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         image={AdventskalendarIcon}
                         summary={localize.project_adventskalender.summary}
                         linkToGitRepo="https://gitlab.com/isfates_adventskalender"
-                        technologiesUsed={["Typescript", "React Framework", "Scss", "Php", "Python"]}
+                        technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
                     />
                     <ProjectContainer
                         language={this.props.language}
@@ -101,7 +101,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         year={2019}
                         image={ZukunftsforumLogo}
                         summary={localize.project_zukunftsforum.summary}
-                        technologiesUsed={['WordPress', 'Php', 'Html', 'Css']}
+                        technologiesUsed={['wordpress', 'php', 'html', 'css']}
                     />
                     <ProjectContainer
                         language={this.props.language}
@@ -111,7 +111,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         image={AstropulseIcon}
                         summary={localize.project_astropulse.summary}
                         linkToGitRepo="https://gitlab.com/johannchopin/htw18-19_uxdesign-form"
-                        technologiesUsed={['Php', 'Html', 'Css', 'Javascript', 'MySql']}
+                        technologiesUsed={['php', 'html', 'css', 'javascript', 'mysql']}
                     />
                     <ProjectContainer
                         language={this.props.language}
@@ -120,7 +120,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         year={2017}
                         image={DivaLogo}
                         summary={localize.project_diva.summary}
-                        technologiesUsed={['Php', 'Html', 'Css', 'Javascript', 'Bootstrap']}
+                        technologiesUsed={['php', 'html', 'css', 'javascript', 'bootstrap']}
                     />
                     <ProjectContainer
                         language={this.props.language}
@@ -130,7 +130,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
                         image={WalkinloveLogo}
                         summary={localize.project_walkinlove.summary}
                         linkToGitRepo="https://gitlab.com/johannchopin/walkinlove-website"
-                        technologiesUsed={['Php', 'Html', 'Css', 'Javascript']}
+                        technologiesUsed={['php', 'html', 'css', 'javascript']}
                     />
                 </div>
             </div>
