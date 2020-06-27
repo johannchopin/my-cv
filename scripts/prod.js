@@ -2,7 +2,7 @@ var fs = require('fs');
 var readlineSync = require('readline-sync');
 var { exec } = require('child_process');
 
-var appSettings = require('../app-settings.json');
+var appSettings = require(__dirname + '/../app-settings.json');
 
 var apiToUse = appSettings['api_to_use'];
 var pathToBuild = './build/prod';
