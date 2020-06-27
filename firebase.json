@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "cv-johannchopin",
+    "public": "build/prod",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
