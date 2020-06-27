@@ -1,22 +1,21 @@
-image: node:12.13.0-alpine
+image: node:latest
 
 stages:
-  - build
   - deploy
 
-build:
-  stage: build
-  before_script:
-    - npm install
-  script:
-    - npm run prod
+cache:
+  paths:
+    - node_modules/
 
 deploy:
   stage: deploy
+  environment: production
   before_script:
-    - npm i -g firebase-tools
+    - yarn global add firebase-tools
+    - yarn install
   script:
-    - firebase deploy --token $FIREBASE_TOKEN
+    - yarn prod
+    - firebase deploy --token $FIREBASE_TOKEN -P "my-project-1535834851092"
   only:
     refs:
       - feature/implement-firebase

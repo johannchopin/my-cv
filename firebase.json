@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "cv-johannchopin",
-    "public": "build/prod",
+    "public": "./build/prod",
     "ignore": [
       "firebase.json",
       "**/.*",

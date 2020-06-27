@@ -3,5 +3,5 @@ build/*
 .cache/*
 
 package-lock.json
-app-settings.json
 .firebase/*
+firebase-debug.log

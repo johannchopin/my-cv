@@ -2,9 +2,6 @@ var fs = require('fs');
 var readlineSync = require('readline-sync');
 var { exec } = require('child_process');
 
-var appSettings = require(__dirname + '/../app-settings.json');
-
-var apiToUse = appSettings['api_to_use'];
 var pathToBuild = './build/prod';
 
 var asciiScriptTitle = `
@@ -19,18 +16,8 @@ __       __  ___        __                           __
 function main() {
     console.log(asciiScriptTitle + '\n');
 
-    executeAfterCheckout(buildApp);
+    buildApp();
 }
-
-
-function executeAfterCheckout(fctToExecuteOnSuccess) {
-    if (apiToUse !== 'server') {
-        onApiToUseNotSetToServer();
-    }
-
-    fctToExecuteOnSuccess();
-}
-
 
 function buildApp() {
     var parcelJsBuildCmd = `parcel build ./src/index.html --out-dir ${pathToBuild} --public-url ./`;
