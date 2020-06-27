@@ -1,0 +1,24 @@
+image: node:12.13.0-alpine
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  before_script:
+    - npm install
+  script:
+    - npm run prod
+
+deploy:
+  stage: deploy
+  before_script:
+    - npm i -g firebase-tools
+  script:
+    - firebase deploy --token $FIREBASE_TOKEN
+  only:
+    refs:
+      - feature/implement-firebase
+    changes:
+      - src/**/*
