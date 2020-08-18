@@ -1,5 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    withRouter,
+    RouteComponentProps,
+} from "react-router-dom";
 
 // IMPORT LIBRARIES ZONE
 import './assets/lib/jquery';
@@ -93,6 +100,11 @@ class App extends React.Component<IProps, IState> {
 
     componentDidMount = (): void => {
         this.init();
+        this.props.history.listen(() => {
+            // do something on route change
+            // for my example, close a drawer
+            alert("test")
+        })
     }
 
     protected init() {
@@ -303,39 +315,43 @@ class App extends React.Component<IProps, IState> {
         );
     }
 
-
     render() {
         return (
-            <div>
+            <Router>
                 {this.navbarRender()}
 
-                <div className="swiper-container">
-                    <div className="swiper-wrapper">
-                        {this.introductionPageRender()}
-                        {this.timeLinePageRender()}
-                        {this.skillsPageRender()}
-                        {this.personalExperiencesPageRender()}
-                        {this.projectsPageRender()}
-                        {this.hobbiesPageRender()}
-                        {this.contactPageRender()}
+                <Route exact path="/:page" onChange={(nextState, replace, callback) => {
+                    alert("test")
+                }}>
+                    <div className="swiper-container">
+                        <div className="swiper-wrapper">
+                            {this.introductionPageRender()}
+                            {this.timeLinePageRender()}
+                            {this.skillsPageRender()}
+                            {this.personalExperiencesPageRender()}
+                            {this.projectsPageRender()}
+                            {this.hobbiesPageRender()}
+                            {this.contactPageRender()}
+                        </div>
+
+                        <div className="swiper-pagination"></div>
+
+                        <div className="swiper-button-prev" id="swiper-button-prev"></div>
+                        <div className="swiper-button-next" id="swiper-button-next"></div>
+
+                        <div className="swiper-scrollbar"></div>
                     </div>
+                </Route>
 
-                    <div className="swiper-pagination"></div>
-
-                    <div className="swiper-button-prev" id="swiper-button-prev"></div>
-                    <div className="swiper-button-next" id="swiper-button-next"></div>
-
-                    <div className="swiper-scrollbar"></div>
-                </div>
 
                 {this.modalsRender()}
                 <LoadingAnimation />
-            </div>
+            </Router>
         )
     }
 }
 
 ReactDOM.render(
-    <App />,
+    withRouter(<App />),
     document.getElementById('app') as HTMLElement
 );

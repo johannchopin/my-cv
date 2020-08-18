@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 // IMPORT STYLES ZONE
 import './introductionPage.scss';
@@ -102,6 +103,8 @@ export default class IntroductionPage extends React.Component<Props, State> {
                 <div className="my-face-ctn">
                     <img id="slide_0_img" className="animate-me" src={myNiceFace} />
                 </div>
+
+                <Link to="/netflix">Netflix</Link>
 
                 <p className="presentation-text animate-me">
                     {localize.introduction_text.replace('__AGE__', this.getAge("1999/04/04").toString())}
