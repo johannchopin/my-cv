@@ -18,6 +18,9 @@ const LOCALIZE = {
         },
         project_zukunftsforum: {
             summary: "Aufbau einer Wordpress-Website und einer Grafikcharta für den Verein 'Zukunftsforum'.",
+        },
+        project_gitmoji_browser_extension: {
+            summary: "Die Gitmoji-Erweiterung zum einfachen Suchen und Kopieren von Gitmojis 😜"
         }
     },
     fr: {
@@ -39,6 +42,9 @@ const LOCALIZE = {
         },
         project_zukunftsforum: {
             summary: "Mise en place d'un site web WordPress ainsi que d'une charte graphique pour l'association 'Forum d'avenir'.",
+        },
+        project_gitmoji_browser_extension: {
+            summary: "L'extension Gitmoji pour rechercher et copier facilement les gitmojis 😜"
         }
     },
     en: {
@@ -60,6 +66,9 @@ const LOCALIZE = {
         },
         project_zukunftsforum: {
             summary: "Setting up a WordPress website and a graphic charter for the association 'Forum d'avenir'.",
+        },
+        project_gitmoji_browser_extension: {
+            summary: "The Gitmoji extension to easily search and copy gitmojis 😜"
         }
     }
 }

@@ -21,6 +21,8 @@ import AstropulseIcon from '../../assets/img/astropulse-icon.png';
 import DivaLogo from '../../assets/img/diva-logo.png';
 //@ts-ignore
 import ZukunftsforumLogo from '../../assets/img/zukunftsforum-icon.png';
+//@ts-ignore
+import GitmojiLogo from '../../assets/img/gitmoji.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -74,6 +76,16 @@ export default class ProjectsPage extends React.Component<Props, State> {
                 <h1 className="animate-me slide-title">{localize.title}</h1>
 
                 <div className="projects-ctn">
+                    <ProjectContainer
+                        language={this.props.language}
+                        link="https://github.com/johannchopin/gitmoji-browser-extension"
+                        title="Gitmoji Browser Extension"
+                        year={2020}
+                        image={GitmojiLogo}
+                        summary={localize.project_gitmoji_browser_extension.summary}
+                        linkToGitRepo="https://github.com/johannchopin/gitmoji-browser-extension"
+                        technologiesUsed={['sveltejs', 'html', 'css']}
+                    />
                     <ProjectContainer
                         language={this.props.language}
                         link="https://caretaker-smarthome.eu/"
