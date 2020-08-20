@@ -18,6 +18,6 @@ deploy:
     - firebase deploy --token $FIREBASE_TOKEN -P "my-project-1535834851092"
   only:
     refs:
-      - feature/implement-firebase
+      - master
     changes:
       - src/**/*
