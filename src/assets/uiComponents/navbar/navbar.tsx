@@ -8,7 +8,6 @@ import './navbar.scss';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import AppSettings from '../../../appSettings';
 import IconHandler from '../iconHandler/iconHandler';
 // END IMPORT COMPONENTS ZONE
 
@@ -197,15 +196,6 @@ export default class Navbar extends React.Component<Props, State> {
         )
     }
 
-    protected appVersionRender = (): React.ReactNode => {
-        return (
-            <p id="appVersion">
-                <IconHandler icon="tag" className="with-pr reverse-h" />
-                v{AppSettings.settings.version}
-            </p>
-        )
-    }
-
 
     render(): React.ReactNode {
         const localize = LOCALIZE[this.props.language];
@@ -243,7 +233,6 @@ export default class Navbar extends React.Component<Props, State> {
                     {this.languageSelectionRender()}
                     {this.gitlabRepoRender()}
                     {this.professionalLinksRender()}
-                    {this.appVersionRender()}
                 </div>
             </nav>
         )
