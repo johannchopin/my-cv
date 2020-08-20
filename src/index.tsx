@@ -1,12 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    withRouter,
-    RouteComponentProps,
+    Router
 } from "react-router-dom";
+
+import history from './history';
 
 // IMPORT LIBRARIES ZONE
 import './assets/lib/jquery';
@@ -100,9 +98,8 @@ class App extends React.Component<IProps, IState> {
 
     componentDidMount = (): void => {
         this.init();
-        this.props.history.listen(() => {
-            // do something on route change
-            // for my example, close a drawer
+
+        history.listen(() => {
             alert("test")
         })
     }
@@ -317,32 +314,27 @@ class App extends React.Component<IProps, IState> {
 
     render() {
         return (
-            <Router>
+            <Router history={history}>
                 {this.navbarRender()}
 
-                <Route exact path="/:page" onChange={(nextState, replace, callback) => {
-                    alert("test")
-                }}>
-                    <div className="swiper-container">
-                        <div className="swiper-wrapper">
-                            {this.introductionPageRender()}
-                            {this.timeLinePageRender()}
-                            {this.skillsPageRender()}
-                            {this.personalExperiencesPageRender()}
-                            {this.projectsPageRender()}
-                            {this.hobbiesPageRender()}
-                            {this.contactPageRender()}
-                        </div>
-
-                        <div className="swiper-pagination"></div>
-
-                        <div className="swiper-button-prev" id="swiper-button-prev"></div>
-                        <div className="swiper-button-next" id="swiper-button-next"></div>
-
-                        <div className="swiper-scrollbar"></div>
+                <div className="swiper-container">
+                    <div className="swiper-wrapper">
+                        {this.introductionPageRender()}
+                        {this.timeLinePageRender()}
+                        {this.skillsPageRender()}
+                        {this.personalExperiencesPageRender()}
+                        {this.projectsPageRender()}
+                        {this.hobbiesPageRender()}
+                        {this.contactPageRender()}
                     </div>
-                </Route>
 
+                    <div className="swiper-pagination"></div>
+
+                    <div className="swiper-button-prev" id="swiper-button-prev"></div>
+                    <div className="swiper-button-next" id="swiper-button-next"></div>
+
+                    <div className="swiper-scrollbar"></div>
+                </div>
 
                 {this.modalsRender()}
                 <LoadingAnimation />
@@ -352,6 +344,7 @@ class App extends React.Component<IProps, IState> {
 }
 
 ReactDOM.render(
-    withRouter(<App />),
+    <App />
+    ,
     document.getElementById('app') as HTMLElement
 );
