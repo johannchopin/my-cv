@@ -1,6 +1,6 @@
 @import '../../assets/styles/toolsBundler.scss';
 
-#projectsPage {
+#projects {
     .projects-ctn {
         display: flex;
         flex-direction: column;
@@ -13,7 +13,7 @@
 
 
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
-    #projectsPage {
+    #projects {
         .projects-ctn {
             display: flex;
             align-items: center;

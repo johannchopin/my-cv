@@ -45,7 +45,7 @@ export default class IntroductionPage extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            pageId: 'introductionPage',
+            pageId: 'introduction',
             pageIndex: 0,
         };
     }

@@ -1,6 +1,6 @@
 @import '../../assets/styles/toolsBundler.scss';
 
-#skillsPage {
+#skills {
     .skills-ctn {
         display: flex;
         justify-content: space-evenly;
@@ -149,7 +149,7 @@
 
 
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
-    #skillsPage {
+    #skills {
         .skills-ctn {
             flex-wrap: wrap;
         }

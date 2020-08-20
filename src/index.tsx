@@ -50,7 +50,7 @@ import ContactPage from './pages/contactPage/contactPage';
 
 // IMPORT INTERFACE ZONE
 import {
-    TPages,
+    Pages,
     TLanguages,
     ISimpleModalParams
 } from './commonInterface';
@@ -62,16 +62,20 @@ interface IProps { }
 interface IState {
     language: TLanguages,
     initialPage: TPages,
-    pagesId: TPagesId,
     simpleModalParams: ISimpleModalParams,
     mySwiper: Swiper,
     currentPageIndex: number,
 }
 
-type TPagesId = { [pageName in TPages]: number }
-// TODO : Change setState calling
-// use -> this.setState(prevState => ({ test: "test" }))
-// instead of -> this.setState({ test: "test" })
+const pages = [
+    'introduction',
+    'background',
+    'skills',
+    'experiences',
+    'projects',
+    'hobbies',
+    'contacts'
+]
 
 class App extends React.Component<IProps, IState> {
 
@@ -80,15 +84,6 @@ class App extends React.Component<IProps, IState> {
         this.state = {
             language: 'en',
             initialPage: 'introductionPage',
-            pagesId: {
-                'introductionPage': 0,
-                'timeLinePage': 1,
-                'skillsPage': 2,
-                'personalExperiencesPage': 3,
-                'projectsPage': 4,
-                'hobbiesPage': 5,
-                'contactPage': 6,
-            },
             simpleModalParams: {},
             //@ts-ignore
             mySwiper: null,
@@ -99,25 +94,21 @@ class App extends React.Component<IProps, IState> {
     componentDidMount = (): void => {
         this.init();
 
-        history.listen(() => {
-            alert("test")
+        history.listen(({ location }) => {
+            const path = location.pathname.replace('/', '')
+            if (pages.includes(path)) {
+                this.goToPage(path as TPages)
+            }
         })
     }
 
     protected init() {
-        this.setCurrentPageIndex();
         this.initUI();
 
         this.setState((prevState: IState) => ({
             mySwiper: this.getInitialisedSwiper()
         }), () => { this.initSwiper() })
 
-    }
-
-    protected setCurrentPageIndex = (): void => {
-        this.setState((prevState: IState) => ({
-            currentPageIndex: this.state.pagesId[this.state.initialPage],
-        }))
     }
 
     protected initUI() {
@@ -132,7 +123,7 @@ class App extends React.Component<IProps, IState> {
     }
 
     protected getInitialisedSwiper = (): Swiper => {
-        const initialPageId = this.state.pagesId[this.state.initialPage];
+        const initialPageId = this.getInitialPageId();
 
         return new Swiper('.swiper-container', {
             initialSlide: initialPageId,
@@ -164,6 +155,10 @@ class App extends React.Component<IProps, IState> {
         })
     }
 
+    protected getInitialPageId = (): number => {
+        return this.getPageId(history.location.pathname.replace('/', ''))
+    }
+
     protected initSwiper = () => {
         this.state.mySwiper.on('slideChangeTransitionEnd', () => {
             this.triggerPageChange(this.state.mySwiper.activeIndex);
@@ -182,15 +177,7 @@ class App extends React.Component<IProps, IState> {
     }
 
     protected getPageIdBySwiperIndex = (swiperIndex: number): TPages => {
-        const pagesId = this.state.pagesId;
-
-        for (const pageIdName in pagesId) {
-            const pageName = pageIdName as TPages;
-
-            if (pagesId[pageName] === swiperIndex) {
-                return pageName
-            }
-        }
+        return pages[swiperIndex];
     }
 
     protected initPageById = (pageId: number): void => {
@@ -205,8 +192,30 @@ class App extends React.Component<IProps, IState> {
         PageBase.clearPage(pageName);
     }
 
-    protected goToPage = (pageName: TPages): void => {
-        const pageId = this.state.pagesId[pageName];
+    protected getPageId = (pageName: Pages): number => {
+        switch (pageName) {
+            case 'introduction':
+                return 0;
+            case 'background':
+                return 1;
+            case 'skills':
+                return 2;
+            case 'hobbies':
+                return 3;
+            case 'experiences':
+                return 4;
+            case 'projects':
+                return 5;
+            case 'contacts':
+                return 6;
+
+            default:
+                return 0;
+        }
+    }
+
+    protected goToPage = (pageName: Pages): void => {
+        const pageId = this.getPageId(pageName)
         this.state.mySwiper.slideTo(pageId, 1000);
     };
 
