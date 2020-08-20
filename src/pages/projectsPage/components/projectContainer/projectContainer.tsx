@@ -57,7 +57,7 @@ export default class ProjectContainer extends React.Component<Props, State> {
                 <ul className="techno">
                     {this.props.technologiesUsed.map((techo: string, i: number) => {
                         return (
-                            <li key={i}>{techo}</li>
+                            <li key={i} className="badge">{techo}</li>
                         )
                     })}
                 </ul>
@@ -112,8 +112,6 @@ export default class ProjectContainer extends React.Component<Props, State> {
                     </div>
                     <div className="body">
                         <h4>{this.props.summary}</h4>
-                        <br />
-                        <h4>{localize.technologies_used} :</h4>
                         {this.technologiesUsedRender()}
                     </div>
                 </a>

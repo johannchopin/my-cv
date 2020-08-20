@@ -1,0 +1,23 @@
+image: node:latest
+
+stages:
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+deploy:
+  stage: deploy
+  environment: production
+  before_script:
+    - yarn global add firebase-tools
+    - yarn install
+  script:
+    - yarn prod
+    - firebase deploy --token $FIREBASE_TOKEN -P "my-project-1535834851092"
+  only:
+    refs:
+      - master
+    changes:
+      - src/**/*

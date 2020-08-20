@@ -1,0 +1,9 @@
+{
+    "name": "my-cv-2019",
+    "version": "<version>",
+    "api_to_use": "server",
+    "api": {
+        "local": "<link/to/api>",
+        "server": "https://api.johannchopin.fr/common/src/api/"
+    }
+}
