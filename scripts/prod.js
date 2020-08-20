@@ -2,12 +2,7 @@ var fs = require('fs');
 var readlineSync = require('readline-sync');
 var { exec } = require('child_process');
 
-var appSettings = require('../app-settings.json');
-
-var absolutePathToProject = 'C:/UwAmp/www/mycv-2019';
-var apiToUse = appSettings['api_to_use'];
-var appVersion = appSettings['version'];
-var pathToBuild = absolutePathToProject + '/build/prod/' + appVersion;
+var pathToBuild = './build/prod';
 
 var asciiScriptTitle = `
 __       __  ___        __                           __
@@ -21,30 +16,11 @@ __       __  ___        __                           __
 function main() {
     console.log(asciiScriptTitle + '\n');
 
-    executeAfterCheckout(buildApp);
+    buildApp();
 }
-
-
-function executeAfterCheckout(fctToExecuteOnSuccess) {
-    if (apiToUse !== 'server') {
-        onApiToUseNotSetToServer();
-    }
-
-    if (isAppAllreadyBuildOnCurrentVersion()) {
-        onAppAlreadyBuild()
-    }
-
-    fctToExecuteOnSuccess();
-}
-
-
-function isAppAllreadyBuildOnCurrentVersion() {
-    return fs.existsSync(pathToBuild);
-}
-
 
 function buildApp() {
-    var parcelJsBuildCmd = `parcel build ${absolutePathToProject}/src/index.html --out-dir ${pathToBuild} --public-url ./`;
+    var parcelJsBuildCmd = `parcel build ./src/index.html --out-dir ${pathToBuild} --public-url ./`;
 
     deleteFolder(pathToBuild);
     exec(parcelJsBuildCmd, function (err, stdout, stderr) {
@@ -55,16 +31,6 @@ function buildApp() {
             console.log(`stderr: ${stderr}`);
         }
     });
-}
-
-
-function onAppAlreadyBuild() {
-
-    var userResponse = readlineSync.question(`>>> App is allready build on version [${appVersion}]. Do you want to build it again? Yes/No: `);
-
-    if (userResponse !== "Yes") {
-        process.exit(1);
-    }
 }
 
 
