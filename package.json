@@ -27,6 +27,7 @@
     "popper.js": "^1.16.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "readline-sync": "^1.4.10",
     "swiper": "^4.5.1"
   },
