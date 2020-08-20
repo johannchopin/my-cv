@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 // IMPORT STYLES ZONE
 import './navbar.scss';
@@ -207,26 +208,26 @@ export default class Navbar extends React.Component<Props, State> {
                 <div className="container">
                     <h1>MENU</h1>
                     <ul>
-                        <li onClick={() => { this.goToPage('introductionPage') }}>
-                            {localize.presentation}
+                        <li>
+                            <Link to="/">{localize.presentation}</Link>
                         </li>
-                        <li onClick={() => { this.goToPage('timeLinePage') }}>
-                            {localize.background}
+                        <li>
+                            <Link to="/background">{localize.background}</Link>
                         </li>
-                        <li onClick={() => { this.goToPage('skillsPage') }}>
-                            {localize.skills}
+                        <li>
+                            <Link to="/skills">{localize.skills}</Link>
                         </li>
-                        <li onClick={() => { this.goToPage('personalExperiencesPage') }}>
-                            {localize.personal_experiences}
+                        <li>
+                            <Link to="/experiences">{localize.personal_experiences}</Link>
                         </li>
-                        <li onClick={() => { this.goToPage('projectsPage') }}>
-                            {localize.projects}
+                        <li>
+                            <Link to="/projects">{localize.projects}</Link>
                         </li>
-                        <li onClick={() => { this.goToPage('hobbiesPage') }}>
-                            {localize.hobbies}
+                        <li>
+                            <Link to="/hobbies">{localize.hobbies}</Link>
                         </li>
-                        <li onClick={() => { this.goToPage('contactPage') }}>
-                            {localize.contacts}
+                        <li>
+                            <Link to="/contacts">{localize.contacts}</Link>
                         </li>
                     </ul>
 
