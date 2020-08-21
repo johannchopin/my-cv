@@ -1,6 +1,6 @@
 @import "../../assets/styles/variables.scss";
 
-#introduction {
+#presentation {
     header {
         position: relative;
         display: flex;
@@ -105,7 +105,7 @@
 
 
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
-    #introduction {
+    #presentation {
         header {
             #waveSvg {
                 transform: translateY(-10%);

@@ -68,7 +68,7 @@ interface IState {
 }
 
 const pages: Page[] = [
-    'introduction',
+    'presentation',
     'background',
     'skills',
     'experiences',
@@ -83,7 +83,7 @@ class App extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             language: 'en',
-            initialPage: 'introduction',
+            initialPage: pages[this.getInitialPageId()],
             simpleModalParams: {},
             //@ts-ignore
             mySwiper: null,
@@ -194,7 +194,7 @@ class App extends React.Component<IProps, IState> {
 
     protected getPageId = (pageName: string): number => {
         switch (pageName) {
-            case 'introduction':
+            case 'presentation':
                 return 0;
             case 'background':
                 return 1;
