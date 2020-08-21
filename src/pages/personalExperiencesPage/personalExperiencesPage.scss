@@ -1,6 +1,6 @@
 @import '../../assets/styles/toolsBundler.scss';
 
-#personalExperiencesPage {
+#experiences {
 
     .fa-icon,
     i {
@@ -109,7 +109,7 @@
 
 
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
-    #personalExperiencesPage {
+    #experiences {
         #experiencesCtn {
             padding: 0;
             justify-content: center;

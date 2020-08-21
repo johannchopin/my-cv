@@ -56,7 +56,7 @@ export default class ContactPage extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            pageId: 'contactPage',
+            pageId: 'contacts',
             pageIndex: 6,
             textInFromInput: '',
             textInSubjectInput: '',

@@ -37,7 +37,7 @@ export default class TimeLinePage extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            pageId: 'timeLinePage',
+            pageId: 'background',
             pageIndex: 1,
         };
     }

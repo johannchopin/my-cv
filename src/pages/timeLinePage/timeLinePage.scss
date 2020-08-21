@@ -1,7 +1,6 @@
 @import "../../assets/styles/variables.scss";
 
-#timeLinePage {
-
+#background {
     p {
         font-weight: 300;
     }
@@ -112,7 +111,7 @@
 
 
 @media (min-width: $BIG_SCREEN_MIN_SIZE) {
-    #timeLinePage {
+    #background {
         .timeline {
             max-width: 70%;
         }

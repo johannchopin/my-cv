@@ -1,6 +1,6 @@
 @import "../../assets/styles/variables.scss";
 
-#introductionPage {
+#presentation {
     header {
         position: relative;
         display: flex;
@@ -31,7 +31,6 @@
             transform: translateY(-30%);
             width: 100vw;
             opacity: 0;
-            //animation: topApparition 2s forwards;
 
             svg {
                 width: 100vw;
@@ -105,7 +104,7 @@
 
 
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
-    #introductionPage {
+    #presentation {
         header {
             #waveSvg {
                 transform: translateY(-10%);

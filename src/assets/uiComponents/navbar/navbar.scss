@@ -63,12 +63,17 @@
             li {
                 list-style-type: none;
                 margin: 10px 0;
-                font-size: 1.2em;
                 transition-duration: 0.5s;
 
-                &:hover {
-                    transform: translateX(-.5em);
-                    color: $cv-gold;
+                a {
+                    font-size: 1.2em;
+                    color: $lightWhite;
+                    text-decoration: none;
+
+                    &:hover {
+                        transform: translateX(-.5em);
+                        color: $cv-gold;
+                    }
                 }
             }
         }
