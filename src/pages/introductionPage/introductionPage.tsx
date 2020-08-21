@@ -104,8 +104,6 @@ export default class IntroductionPage extends React.Component<Props, State> {
                     <img id="slide_0_img" className="animate-me" src={myNiceFace} />
                 </div>
 
-                <Link to="/netflix">Netflix</Link>
-
                 <p className="presentation-text animate-me">
                     {localize.introduction_text.replace('__AGE__', this.getAge("1999/04/04").toString())}
                 </p>
