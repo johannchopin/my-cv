@@ -50,7 +50,7 @@ import ContactPage from './pages/contactPage/contactPage';
 
 // IMPORT INTERFACE ZONE
 import {
-    Pages,
+    Page,
     TLanguages,
     ISimpleModalParams
 } from './commonInterface';
@@ -61,13 +61,13 @@ interface IProps { }
 
 interface IState {
     language: TLanguages,
-    initialPage: TPages,
+    initialPage: Page,
     simpleModalParams: ISimpleModalParams,
     mySwiper: Swiper,
     currentPageIndex: number,
 }
 
-const pages = [
+const pages: Page[] = [
     'introduction',
     'background',
     'skills',
@@ -83,7 +83,7 @@ class App extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             language: 'en',
-            initialPage: 'introductionPage',
+            initialPage: 'introduction',
             simpleModalParams: {},
             //@ts-ignore
             mySwiper: null,
@@ -97,7 +97,7 @@ class App extends React.Component<IProps, IState> {
         history.listen(({ location }) => {
             const path = location.pathname.replace('/', '')
             if (pages.includes(path)) {
-                this.goToPage(path as TPages)
+                this.goToPage(path as Page)
             }
         })
     }
@@ -176,7 +176,7 @@ class App extends React.Component<IProps, IState> {
         });
     }
 
-    protected getPageIdBySwiperIndex = (swiperIndex: number): TPages => {
+    protected getPageIdBySwiperIndex = (swiperIndex: number): Page => {
         return pages[swiperIndex];
     }
 
@@ -192,7 +192,7 @@ class App extends React.Component<IProps, IState> {
         PageBase.clearPage(pageName);
     }
 
-    protected getPageId = (pageName: Pages): number => {
+    protected getPageId = (pageName: string): number => {
         switch (pageName) {
             case 'introduction':
                 return 0;
@@ -214,7 +214,7 @@ class App extends React.Component<IProps, IState> {
         }
     }
 
-    protected goToPage = (pageName: Pages): void => {
+    protected goToPage = (pageName: Page): void => {
         const pageId = this.getPageId(pageName)
         this.state.mySwiper.slideTo(pageId, 1000);
     };
