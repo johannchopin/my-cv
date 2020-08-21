@@ -169,7 +169,7 @@ class App extends React.Component<IProps, IState> {
     protected triggerPageChange = (pageId: number): void => {
         const pageToClearId = this.state.currentPageIndex;
 
-        this.setState((prevState: IState) => ({
+        this.setState(() => ({
             currentPageIndex: pageId,
         }), (): void => {
             this.initPageById(pageId);
@@ -192,25 +192,9 @@ class App extends React.Component<IProps, IState> {
     }
 
     protected getPageId = (pageName: string): number => {
-        switch (pageName) {
-            case 'presentation':
-                return 0;
-            case 'background':
-                return 1;
-            case 'skills':
-                return 2;
-            case 'hobbies':
-                return 3;
-            case 'experiences':
-                return 4;
-            case 'projects':
-                return 5;
-            case 'contacts':
-                return 6;
+        const pageId = pages.findIndex(page => page === pageName)
 
-            default:
-                return 0;
-        }
+        return pageId !== -1 ? pageId : 0
     }
 
     protected goToPage = (pageName: Page): void => {
