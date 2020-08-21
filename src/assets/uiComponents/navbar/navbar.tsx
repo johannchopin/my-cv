@@ -209,7 +209,7 @@ export default class Navbar extends React.Component<Props, State> {
                     <h1>MENU</h1>
                     <ul>
                         <li>
-                            <Link to="/">{localize.presentation}</Link>
+                            <Link to="/presentation">{localize.presentation}</Link>
                         </li>
                         <li>
                             <Link to="/background">{localize.background}</Link>
