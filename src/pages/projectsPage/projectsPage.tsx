@@ -52,7 +52,7 @@ export default class ProjectsPage extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            pageId: 'projectsPage',
+            pageId: 'projects',
             pageIndex: 4,
         };
     }

@@ -1,5 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import {
+    Router
+} from "react-router-dom";
+
+import history from './history';
 
 // IMPORT LIBRARIES ZONE
 import './assets/lib/jquery';
@@ -45,7 +50,7 @@ import ContactPage from './pages/contactPage/contactPage';
 
 // IMPORT INTERFACE ZONE
 import {
-    TPages,
+    Page,
     TLanguages,
     ISimpleModalParams
 } from './commonInterface';
@@ -56,17 +61,21 @@ interface IProps { }
 
 interface IState {
     language: TLanguages,
-    initialPage: TPages,
-    pagesId: TPagesId,
+    initialPage: Page,
     simpleModalParams: ISimpleModalParams,
     mySwiper: Swiper,
     currentPageIndex: number,
 }
 
-type TPagesId = { [pageName in TPages]: number }
-// TODO : Change setState calling
-// use -> this.setState(prevState => ({ test: "test" }))
-// instead of -> this.setState({ test: "test" })
+const pages: Page[] = [
+    'presentation',
+    'background',
+    'skills',
+    'experiences',
+    'projects',
+    'hobbies',
+    'contacts'
+]
 
 class App extends React.Component<IProps, IState> {
 
@@ -74,29 +83,26 @@ class App extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             language: 'en',
-            initialPage: 'introductionPage',
-            pagesId: {
-                'introductionPage': 0,
-                'timeLinePage': 1,
-                'skillsPage': 2,
-                'personalExperiencesPage': 3,
-                'projectsPage': 4,
-                'hobbiesPage': 5,
-                'contactPage': 6,
-            },
+            initialPage: pages[this.getInitialPageId()],
             simpleModalParams: {},
             //@ts-ignore
             mySwiper: null,
-            currentPageIndex: 0,
+            currentPageIndex: this.getInitialPageId(),
         };
     }
 
     componentDidMount = (): void => {
         this.init();
+
+        history.listen(({ location }) => {
+            const path = location.pathname.replace('/', '')
+            if (pages.includes(path)) {
+                this.goToPage(path as Page)
+            }
+        })
     }
 
     protected init() {
-        this.setCurrentPageIndex();
         this.initUI();
 
         this.setState((prevState: IState) => ({
@@ -105,15 +111,8 @@ class App extends React.Component<IProps, IState> {
 
     }
 
-    protected setCurrentPageIndex = (): void => {
-        this.setState((prevState: IState) => ({
-            currentPageIndex: this.state.pagesId[this.state.initialPage],
-        }))
-    }
-
     protected initUI() {
         this.initBootstrapTooltipsPlugins();
-        this.initPageById(0);
     }
 
     protected initBootstrapTooltipsPlugins = (): void => {
@@ -123,7 +122,7 @@ class App extends React.Component<IProps, IState> {
     }
 
     protected getInitialisedSwiper = (): Swiper => {
-        const initialPageId = this.state.pagesId[this.state.initialPage];
+        const initialPageId = this.getInitialPageId();
 
         return new Swiper('.swiper-container', {
             initialSlide: initialPageId,
@@ -155,7 +154,13 @@ class App extends React.Component<IProps, IState> {
         })
     }
 
+    protected getInitialPageId = (): number => {
+        return this.getPageId(history.location.pathname.replace('/', ''))
+    }
+
     protected initSwiper = () => {
+        this.initPageById(this.getInitialPageId());
+
         this.state.mySwiper.on('slideChangeTransitionEnd', () => {
             this.triggerPageChange(this.state.mySwiper.activeIndex);
         });
@@ -164,40 +169,36 @@ class App extends React.Component<IProps, IState> {
     protected triggerPageChange = (pageId: number): void => {
         const pageToClearId = this.state.currentPageIndex;
 
-        this.setState((prevState: IState) => ({
+        this.setState(() => ({
             currentPageIndex: pageId,
         }), (): void => {
             this.initPageById(pageId);
             this.clearPageById(pageToClearId);
         });
+
+        history.push(pages[pageId]);
     }
 
-    protected getPageIdBySwiperIndex = (swiperIndex: number): TPages => {
-        const pagesId = this.state.pagesId;
-
-        for (const pageIdName in pagesId) {
-            const pageName = pageIdName as TPages;
-
-            if (pagesId[pageName] === swiperIndex) {
-                return pageName
-            }
-        }
+    protected getPageIdBySwiperIndex = (swiperIndex: number): Page => {
+        return pages[swiperIndex];
     }
 
     protected initPageById = (pageId: number): void => {
-        const pageName = this.getPageIdBySwiperIndex(pageId);
-
-        PageBase.initPage(pageName);
+        PageBase.initPage(pages[pageId]);
     }
 
     protected clearPageById = (pageId: number): void => {
-        const pageName = this.getPageIdBySwiperIndex(pageId);
-
-        PageBase.clearPage(pageName);
+        PageBase.clearPage(pages[pageId]);
     }
 
-    protected goToPage = (pageName: TPages): void => {
-        const pageId = this.state.pagesId[pageName];
+    protected getPageId = (pageName: string): number => {
+        const pageId = pages.findIndex(page => page === pageName)
+
+        return pageId !== -1 ? pageId : 0
+    }
+
+    protected goToPage = (pageName: Page): void => {
+        const pageId = this.getPageId(pageName)
         this.state.mySwiper.slideTo(pageId, 1000);
     };
 
@@ -303,10 +304,9 @@ class App extends React.Component<IProps, IState> {
         );
     }
 
-
     render() {
         return (
-            <div>
+            <Router history={history}>
                 {this.navbarRender()}
 
                 <div className="swiper-container">
@@ -330,12 +330,13 @@ class App extends React.Component<IProps, IState> {
 
                 {this.modalsRender()}
                 <LoadingAnimation />
-            </div>
+            </Router>
         )
     }
 }
 
 ReactDOM.render(
-    <App />,
+    <App />
+    ,
     document.getElementById('app') as HTMLElement
 );

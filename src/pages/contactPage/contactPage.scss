@@ -1,6 +1,6 @@
 @import "../../assets/styles/toolsBundler.scss";
 
-#contactPage {
+#contacts {
     color: initial;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@
 
 
 @media (max-width: 991px) {
-    #contactPage {
+    #contacts {
         h1 {
             font-size: 2.5rem;
             text-align: left;
@@ -121,7 +121,7 @@
 
 
 @media (max-width: $BIG_SCREEN_MIN_SIZE) {
-    #contactPage {
+    #contacts {
         #contactCtn {
             a {
                 flex-direction: column;

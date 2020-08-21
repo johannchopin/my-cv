@@ -43,7 +43,7 @@ export default class HobbiesPage extends React.Component<IProps, IState> {
         super(props);
 
         this.state = {
-            pageId: 'hobbiesPage',
+            pageId: 'hobbies',
             pageIndex: 5,
         };
     }

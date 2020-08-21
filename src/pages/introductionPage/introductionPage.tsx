@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 // IMPORT STYLES ZONE
 import './introductionPage.scss';
@@ -44,7 +45,7 @@ export default class IntroductionPage extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            pageId: 'introductionPage',
+            pageId: 'presentation',
             pageIndex: 0,
         };
     }
