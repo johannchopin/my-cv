@@ -87,7 +87,7 @@ class App extends React.Component<IProps, IState> {
             simpleModalParams: {},
             //@ts-ignore
             mySwiper: null,
-            currentPageIndex: 0,
+            currentPageIndex: this.getInitialPageId(),
         };
     }
 
@@ -113,7 +113,6 @@ class App extends React.Component<IProps, IState> {
 
     protected initUI() {
         this.initBootstrapTooltipsPlugins();
-        this.initPageById(0);
     }
 
     protected initBootstrapTooltipsPlugins = (): void => {
@@ -160,6 +159,8 @@ class App extends React.Component<IProps, IState> {
     }
 
     protected initSwiper = () => {
+        this.initPageById(this.getInitialPageId());
+
         this.state.mySwiper.on('slideChangeTransitionEnd', () => {
             this.triggerPageChange(this.state.mySwiper.activeIndex);
         });
@@ -174,6 +175,8 @@ class App extends React.Component<IProps, IState> {
             this.initPageById(pageId);
             this.clearPageById(pageToClearId);
         });
+
+        history.push(pages[pageId]);
     }
 
     protected getPageIdBySwiperIndex = (swiperIndex: number): Page => {
@@ -181,15 +184,11 @@ class App extends React.Component<IProps, IState> {
     }
 
     protected initPageById = (pageId: number): void => {
-        const pageName = this.getPageIdBySwiperIndex(pageId);
-
-        PageBase.initPage(pageName);
+        PageBase.initPage(pages[pageId]);
     }
 
     protected clearPageById = (pageId: number): void => {
-        const pageName = this.getPageIdBySwiperIndex(pageId);
-
-        PageBase.clearPage(pageName);
+        PageBase.clearPage(pages[pageId]);
     }
 
     protected getPageId = (pageName: string): number => {
