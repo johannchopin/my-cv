@@ -52,7 +52,7 @@ import ContactPage from './pages/contactPage/contactPage';
 import {
     Page,
     TLanguages,
-    ISimpleModalParams
+    SimpleModalParams
 } from './commonInterface';
 // END IMPORT INTERFACE ZONE
 
@@ -62,7 +62,7 @@ interface IProps { }
 interface IState {
     language: TLanguages,
     initialPage: Page,
-    simpleModalParams: ISimpleModalParams,
+    simpleModalParams: SimpleModalParams,
     mySwiper: Swiper,
     currentPageIndex: number,
 }
@@ -202,7 +202,7 @@ class App extends React.Component<IProps, IState> {
         this.state.mySwiper.slideTo(pageId, 1000);
     };
 
-    protected showSimpleModal = (params: ISimpleModalParams): void => {
+    protected showSimpleModal = (params: SimpleModalParams): void => {
         this.setState({
             simpleModalParams: params,
         }, () => {

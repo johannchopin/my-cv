@@ -26,7 +26,7 @@ import Helper from '../../helper';
 
 // IMPORT INTERFACE ZONE
 import {
-    ISimpleModalParams,
+    SimpleModalParams,
     TLanguages,
     ISendMeEmailData,
     ISendMeEmailResponse
@@ -37,7 +37,7 @@ import {
 interface Props {
     language: TLanguages,
     currentPageIndex: number,
-    showSimpleModal: (params: ISimpleModalParams) => void,
+    showSimpleModal: (params: SimpleModalParams) => void,
 }
 
 interface State {

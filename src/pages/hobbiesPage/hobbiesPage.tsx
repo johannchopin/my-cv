@@ -19,7 +19,7 @@ import Icon from '../../assets/uiComponents/Icon/Icon';
 // IMPORT INTERFACE ZONE
 import {
     TLanguages,
-    ISimpleModalParams
+    SimpleModalParams
 } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
@@ -27,7 +27,7 @@ import {
 interface IProps {
     language: TLanguages
     currentPageIndex: number,
-    showSimpleModal: (params: ISimpleModalParams) => void,
+    showSimpleModal: (params: SimpleModalParams) => void,
 }
 
 interface IState {

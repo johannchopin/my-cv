@@ -1,4 +1,4 @@
-export interface ISimpleModalParams {
+export interface SimpleModalParams {
     type?: TSimpleModalType,
     message?: string,
 }
