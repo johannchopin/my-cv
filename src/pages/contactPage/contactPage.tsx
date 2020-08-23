@@ -12,9 +12,6 @@ import LOCALIZE from './localize'
 import ApiCmds from '../../api/apiCmds';
 // END IMPORT APICMDS ZONE
 
-// IMPORT IMAGES ZONE
-// END IMPORT IMAGES ZONE
-
 // IMPORT COMPONENTS ZONE
 import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
@@ -34,103 +31,67 @@ import {
 // END IMPORT INTERFACE ZONE
 
 
-interface Props {
+interface ContactPageProps {
     language: TLanguages,
-    currentPageIndex: number,
     showSimpleModal: (params: SimpleModalParams) => void,
 }
 
-interface State {
-    pageId: string,
-    pageIndex: number,
-    textInFromInput: string,
-    textInSubjectInput: string,
-    textInMsgInput: string,
+type FormState = {
+    from: string
+    subject: string
+    message: string
 }
 
+const ContactPage: React.FC<ContactPageProps> = (props) => {
+    const {language, showSimpleModal} = props
+    const maxCharactersInMsg = 1024;
+    const maxCharactersInSubject = 30;
+    const [formState, setFormState] = React.useState<FormState>({
+        from: '',
+        subject: '',
+        message: ''
+    })
 
-export default class ContactPage extends React.Component<Props, State> {
-
-
-    constructor(props: Props) {
-        super(props);
-
-        this.state = {
-            pageId: 'contacts',
-            pageIndex: 6,
-            textInFromInput: '',
-            textInSubjectInput: '',
-            textInMsgInput: '',
-        };
-    }
-
-    protected maxCharactersInMsg = 1024;
-    protected maxCharactersInSubject = 30;
-
-    componentDidMount() {
-        this.init();
-    }
-
-    protected init = (): void => {
-        this.initUI();
-    }
-
-    protected initUI(): void { }
-
-    protected onSubjectInputChange = (event): void => {
-        this.setState({
-            textInSubjectInput: event.target.value,
-        });
-    }
-
-    protected onFromInputChange = (event): void => {
-        this.setState({
-            textInFromInput: event.target.value,
-        });
-    }
-
-    protected onMsgInputChange = (event): void => {
+    const onMsgInputChange = (event): void => {
         const msg = event.target.value;
 
-        if (msg.length <= this.maxCharactersInMsg) {
-            this.setState({
-                textInMsgInput: msg,
-            });
+        if (msg.length <= maxCharactersInMsg) {
+            setFormState({...formState, message: msg})
         }
     }
 
-    protected areInputsValid = (): boolean => {
-        const textInMsgInputLength = this.state.textInMsgInput.length;
-        const textInSubjectInputLength = this.state.textInSubjectInput.length;
+    const areInputsValid = (): boolean => {
+        const textInMsgInputLength = formState.message.length;
+        const textInSubjectInputLength = formState.subject.length;
 
-        if (!Helper.isEmail(this.state.textInFromInput)) {
+        if (!Helper.isEmail(formState.from)) {
             return false;
         }
 
-        if (textInMsgInputLength > this.maxCharactersInMsg || textInMsgInputLength === 0) {
+        if (textInMsgInputLength > maxCharactersInMsg || textInMsgInputLength === 0) {
             return false;
         }
 
-        if (textInSubjectInputLength > this.maxCharactersInSubject || textInSubjectInputLength === 0) {
+        if (textInSubjectInputLength > maxCharactersInSubject || textInSubjectInputLength === 0) {
             return false;
         }
 
         return true;
     }
 
-    protected onSubmitBtnClick = (): void => {
-        const localize = LOCALIZE[this.props.language];
+    const onSubmitBtnClick = (): void => {
+        const localize = LOCALIZE[language];
 
-        if (this.areInputsValid()) {
+        if (areInputsValid()) {
             const mailData: ISendMeEmailData = {
-                from: this.state.textInFromInput,
-                subject: this.state.textInSubjectInput,
-                message: this.state.textInMsgInput,
+                from: formState.from,
+                subject: formState.subject,
+                message: formState.message
             }
 
-            ApiCmds.sendMeEmail(mailData, this.onSendMeEmailCallback);
+            ApiCmds.sendMeEmail(mailData, onSendMeEmailCallback);
         } else {
-            this.props.showSimpleModal({
+            showSimpleModal({
                 type: 'danger',
                 message: localize.invalid_email_form,
 
@@ -138,33 +99,33 @@ export default class ContactPage extends React.Component<Props, State> {
         }
     }
 
-    protected onSendMeEmailCallback = (result: ISendMeEmailResponse): void => {
+    const onSendMeEmailCallback = (result: ISendMeEmailResponse): void => {
         if (result.response.hasEmailBeSend) {
-            this.props.showSimpleModal({
+            showSimpleModal({
                 type: 'success',
-                'message': LOCALIZE[this.props.language]['email_has_been_sent']
+                'message': LOCALIZE[language]['email_has_been_sent']
             })
 
-            this.resetInputs();
+            resetInputs();
         } else {
-            this.props.showSimpleModal({
+            showSimpleModal({
                 type: 'danger',
                 'message': 'Email not send !', // TODO: Handle error with different way maybe error number
             })
         }
     }
 
-    protected resetInputs = (): void => {
-        this.setState({
-            textInFromInput: '',
-            textInSubjectInput: '',
-            textInMsgInput: '',
-        });
+    const resetInputs = (): void => {
+        setFormState({
+            from: '',
+            message: '',
+            subject: ''
+        })
     };
 
-    protected getLinkToCV = (): string => {
+    const getLinkToCV = (): string => {
         let cvName = '';
-        switch (this.props.language) {
+        switch (language) {
             default:
                 cvName = 'myCV2019-fr';
                 break;
@@ -181,58 +142,62 @@ export default class ContactPage extends React.Component<Props, State> {
         return `https://cv.johannchopin.fr/2019/assets/pdf/${cvName}.pdf`;
     }
 
-    render() {
-        const localize = LOCALIZE[this.props.language];
+    const localize = LOCALIZE[language];
 
-        return (
-            <div id={this.state.pageId} className="swiper-slide">
-                <h1>{localize.title}</h1>
-                <div className="form">
-                    <input
-                        type="text"
-                        className="form-control m-2 animate-me animation-goUp"
-                        value={this.state.textInFromInput}
-                        onChange={this.onFromInputChange}
-                        placeholder={LOCALIZE[this.props.language].from}
-                    />
+    return (
+        <div id='contacts' className="swiper-slide">
+            <h1>{localize.title}</h1>
+            <div className="form">
+                <input
+                    type="text"
+                    className="form-control m-2 animate-me animation-goUp"
+                    value={formState.from}
+                    onChange={(event): void => {
+                        setFormState({...formState, from: event.target.value})
+                    }}
+                    placeholder={LOCALIZE[language].from}
+                />
 
-                    <input
-                        type="text"
-                        className="form-control m-2 animate-me animation-goUp"
-                        value={this.state.textInSubjectInput}
-                        onChange={this.onSubjectInputChange}
-                        placeholder={LOCALIZE[this.props.language].subject}
-                    />
+                <input
+                    type="text"
+                    className="form-control m-2 animate-me animation-goUp"
+                    value={formState.subject}
+                    onChange={(event): void => {
+                        setFormState({...formState, subject: event.target.value})
+                    }}
+                    placeholder={LOCALIZE[language].subject}
+                />
 
-                    <textarea
-                        className="form-control m-2 animate-me animation-goUp"
-                        value={this.state.textInMsgInput}
-                        onChange={this.onMsgInputChange}
-                        placeholder={LOCALIZE[this.props.language].message}
-                        rows={10}
-                    ></textarea>
+                <textarea
+                    className="form-control m-2 animate-me animation-goUp"
+                    value={formState.message}
+                    onChange={onMsgInputChange}
+                    placeholder={LOCALIZE[language].message}
+                    rows={10}
+                ></textarea>
 
-                    <p id="charactersCounter" className="animate-me animation-goUp">
-                        {this.maxCharactersInMsg - this.state.textInMsgInput.length}
-                    </p>
+                <p id="charactersCounter" className="animate-me animation-goUp">
+                    {maxCharactersInMsg - formState.message.length}
+                </p>
 
-                    <button type="button" className="btn btn-gold animate-me animation-goUp" onClick={() => this.onSubmitBtnClick()}>
-                        <Icon icon="paper-plane" className="with-pr" />
-                        {localize['send']}
-                    </button>
-                </div>
-
-                <div id="contactCtn">
-                    <a href="mailto:johannchopin@protonmail.com" className="animate-me animation-goUp">
-                        <Icon icon="envelope" />
-                        <p>johannchopin@pm.me</p>
-                    </a>
-
-                    <a href={this.getLinkToCV()} target="_blank" id="cv" className="animate-me animation-goUp">
-                        <p>{localize.download_cv}</p>
-                    </a>
-                </div>
+                <button type="button" className="btn btn-gold animate-me animation-goUp" onClick={() => onSubmitBtnClick()}>
+                    <Icon icon="paper-plane" className="with-pr" />
+                    {localize['send']}
+                </button>
             </div>
-        )
-    }
+
+            <div id="contactCtn">
+                <a href="mailto:johannchopin@protonmail.com" className="animate-me animation-goUp">
+                    <Icon icon="envelope" />
+                    <p>johannchopin@pm.me</p>
+                </a>
+
+                <a href={getLinkToCV()} target="_blank" id="cv" className="animate-me animation-goUp">
+                    <p>{localize.download_cv}</p>
+                </a>
+            </div>
+        </div>
+    )
 }
+
+export default ContactPage
