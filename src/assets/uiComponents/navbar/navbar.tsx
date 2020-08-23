@@ -18,7 +18,7 @@ import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT INTERFACE ZONE
-import { TPages, TLanguages } from '../../../commonInterface';
+import { Page, TLanguages } from '../../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 // IMPORT IMAGES ZONE
@@ -34,7 +34,7 @@ import GitlabIcon from '../../img/gitlabIcon.svg';
 
 
 interface Props {
-    goToPage: (pageName: TPages) => void,
+    goToPage: (pageName: Page) => void,
     setLanguage: (language: TLanguages) => void,
     language: TLanguages;
 }
@@ -118,7 +118,7 @@ export default class Navbar extends React.Component<Props, State> {
         })
     }
 
-    protected goToPage = (pageName: TPages): void => {
+    protected goToPage = (pageName: Page): void => {
         this.props.goToPage(pageName);
         this.showOrHideNavbar();
     }
