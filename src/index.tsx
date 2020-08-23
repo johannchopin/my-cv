@@ -25,7 +25,7 @@ import './assets/styles/style.scss';
 // IMPORT COMPONENTS ZONE
 import Navbar from './assets/uiComponents/navbar/navbar';
 import SimpleModal from './assets/uiComponents/simpleModal/simpleModal';
-import LoadingAnimation from './assets/uiComponents/loadingAnimation/loadingAnimation';
+import LoadingAnimation from './assets/uiComponents/LoadingAnimation/LoadingAnimation';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT PAGEBASE ZONE
