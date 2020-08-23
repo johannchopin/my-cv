@@ -34,118 +34,91 @@ import { TLanguages } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
-interface Props {
-    currentPageIndex: number,
+export interface ProjectsPageProps {
     language: TLanguages,
 }
 
-interface State {
-    pageId: string,
-    pageIndex: number,
-}
+const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
+    const { language } = props;
 
+    const localize = LOCALIZE[language];
 
-export default class ProjectsPage extends React.Component<Props, State> {
+    return (
+        <div id="projects" className="swiper-slide">
+            <h1 className="animate-me slide-title">{localize.title}</h1>
 
-
-    constructor(props: Props) {
-        super(props);
-
-        this.state = {
-            pageId: 'projects',
-            pageIndex: 4,
-        };
-    }
-
-    componentDidMount() {
-        this.initUI();
-    }
-
-    protected init = (): void => {
-        this.initUI();
-    }
-
-    protected initUI(): void { }
-
-
-    render() {
-        const localize = LOCALIZE[this.props.language];
-
-        return (
-            <div id={this.state.pageId} className="swiper-slide">
-                <h1 className="animate-me slide-title">{localize.title}</h1>
-
-                <div className="projects-ctn">
-                    <ProjectContainer
-                        language={this.props.language}
-                        link="https://github.com/johannchopin/gitmoji-browser-extension"
-                        title="Gitmoji Browser Extension"
-                        year={2020}
-                        image={GitmojiLogo}
-                        summary={localize.project_gitmoji_browser_extension.summary}
-                        linkToGitRepo="https://github.com/johannchopin/gitmoji-browser-extension"
-                        technologiesUsed={['sveltejs', 'html', 'css']}
-                    />
-                    <ProjectContainer
-                        language={this.props.language}
-                        link="https://caretaker-smarthome.eu/"
-                        title="Caretaker-Smarthome"
-                        year={2019}
-                        image={CaretakerIcon}
-                        summary={localize.project_caretaker.summary}
-                        linkToGitRepo="https://gitlab.com/caretaker-smarthome"
-                        technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
-                    />
-                    <ProjectContainer
-                        language={this.props.language}
-                        link="https://isfates-adventskalender.eu/"
-                        title="ISFATES-Adventskalender"
-                        year={2019}
-                        image={AdventskalendarIcon}
-                        summary={localize.project_adventskalender.summary}
-                        linkToGitRepo="https://gitlab.com/isfates_adventskalender"
-                        technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
-                    />
-                    <ProjectContainer
-                        language={this.props.language}
-                        link="https://forum-jgr.com/"
-                        title="Zukunftsforum-Website"
-                        year={2019}
-                        image={ZukunftsforumLogo}
-                        summary={localize.project_zukunftsforum.summary}
-                        technologiesUsed={['wordpress', 'php', 'html', 'css']}
-                    />
-                    <ProjectContainer
-                        language={this.props.language}
-                        link="https://astropulse.johannchopin.fr/"
-                        title="Astropulse-Experience"
-                        year={2018}
-                        image={AstropulseIcon}
-                        summary={localize.project_astropulse.summary}
-                        linkToGitRepo="https://gitlab.com/johannchopin/htw18-19_uxdesign-form"
-                        technologiesUsed={['php', 'html', 'css', 'javascript', 'mysql']}
-                    />
-                    <ProjectContainer
-                        language={this.props.language}
-                        link="http://diva.dfhi-isfates.eu/"
-                        title="DIVA-Website"
-                        year={2017}
-                        image={DivaLogo}
-                        summary={localize.project_diva.summary}
-                        technologiesUsed={['php', 'html', 'css', 'javascript', 'bootstrap']}
-                    />
-                    <ProjectContainer
-                        language={this.props.language}
-                        link="https://test.johannchopin.fr/walkinlove/"
-                        title="WalkInLove-Website"
-                        year={2017}
-                        image={WalkinloveLogo}
-                        summary={localize.project_walkinlove.summary}
-                        linkToGitRepo="https://gitlab.com/johannchopin/walkinlove-website"
-                        technologiesUsed={['php', 'html', 'css', 'javascript']}
-                    />
-                </div>
+            <div className="projects-ctn">
+                <ProjectContainer
+                    language={language}
+                    link="https://github.com/johannchopin/gitmoji-browser-extension"
+                    title="Gitmoji Browser Extension"
+                    year={2020}
+                    image={GitmojiLogo}
+                    summary={localize.project_gitmoji_browser_extension.summary}
+                    linkToGitRepo="https://github.com/johannchopin/gitmoji-browser-extension"
+                    technologiesUsed={['sveltejs', 'html', 'css']}
+                />
+                <ProjectContainer
+                    language={language}
+                    link="https://caretaker-smarthome.eu/"
+                    title="Caretaker-Smarthome"
+                    year={2019}
+                    image={CaretakerIcon}
+                    summary={localize.project_caretaker.summary}
+                    linkToGitRepo="https://gitlab.com/caretaker-smarthome"
+                    technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
+                />
+                <ProjectContainer
+                    language={language}
+                    link="https://isfates-adventskalender.eu/"
+                    title="ISFATES-Adventskalender"
+                    year={2019}
+                    image={AdventskalendarIcon}
+                    summary={localize.project_adventskalender.summary}
+                    linkToGitRepo="https://gitlab.com/isfates_adventskalender"
+                    technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
+                />
+                <ProjectContainer
+                    language={language}
+                    link="https://forum-jgr.com/"
+                    title="Zukunftsforum-Website"
+                    year={2019}
+                    image={ZukunftsforumLogo}
+                    summary={localize.project_zukunftsforum.summary}
+                    technologiesUsed={['wordpress', 'php', 'html', 'css']}
+                />
+                <ProjectContainer
+                    language={language}
+                    link="https://astropulse.johannchopin.fr/"
+                    title="Astropulse-Experience"
+                    year={2018}
+                    image={AstropulseIcon}
+                    summary={localize.project_astropulse.summary}
+                    linkToGitRepo="https://gitlab.com/johannchopin/htw18-19_uxdesign-form"
+                    technologiesUsed={['php', 'html', 'css', 'javascript', 'mysql']}
+                />
+                <ProjectContainer
+                    language={language}
+                    link="http://diva.dfhi-isfates.eu/"
+                    title="DIVA-Website"
+                    year={2017}
+                    image={DivaLogo}
+                    summary={localize.project_diva.summary}
+                    technologiesUsed={['php', 'html', 'css', 'javascript', 'bootstrap']}
+                />
+                <ProjectContainer
+                    language={language}
+                    link="https://test.johannchopin.fr/walkinlove/"
+                    title="WalkInLove-Website"
+                    year={2017}
+                    image={WalkinloveLogo}
+                    summary={localize.project_walkinlove.summary}
+                    linkToGitRepo="https://gitlab.com/johannchopin/walkinlove-website"
+                    technologiesUsed={['php', 'html', 'css', 'javascript']}
+                />
             </div>
-        )
-    }
+        </div>
+    )
 }
+
+export default ProjectsPage
