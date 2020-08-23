@@ -234,8 +234,7 @@ class App extends React.Component<IProps, IState> {
     protected introductionPageRender = (): React.ReactNode => {
         return (
             <IntroductionPage
-                lang={this.state.language}
-                currentPageIndex={this.state.currentPageIndex}
+                language={this.state.language}
             />
         )
     }

@@ -82,6 +82,10 @@
         border-radius: .4em;
         padding: .2em .4em;
 
+        &.close {
+            animation: goDown .5s forwards !important;
+        }
+
         p {
             margin: 0;
         }
