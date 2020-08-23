@@ -23,7 +23,7 @@ import './assets/styles/style.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT COMPONENTS ZONE
-import Navbar from './assets/uiComponents/navbar/navbar';
+import Navbar from './assets/uiComponents/navbar/Navbar';
 import SimpleModal from './assets/uiComponents/simpleModal/simpleModal';
 import LoadingAnimation from './assets/uiComponents/LoadingAnimation/LoadingAnimation';
 // END IMPORT COMPONENTS ZONE

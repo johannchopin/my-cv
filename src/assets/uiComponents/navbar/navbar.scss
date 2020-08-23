@@ -20,6 +20,17 @@
     transition-duration: 0.5s;
     color: $lightWhite;
     z-index: 10;
+    animation: hideMenuAnimation 0.5s forwards;
+
+    &.open {
+        animation: showMenuAnimation 0.5s forwards;
+
+        .container {
+            display: flex;
+            animation: apparition 0.5s forwards;
+            animation-delay: .6s;
+        }
+    }
 
     .clickable {
         &:hover {

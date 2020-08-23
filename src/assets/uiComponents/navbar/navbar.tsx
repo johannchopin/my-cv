@@ -2,11 +2,8 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 // IMPORT STYLES ZONE
-import './navbar.scss';
+import './Navbar.scss';
 // END IMPORT STYLES ZONE
-
-// IMPORT IMAGES ZONE
-// END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
 import Icon from '../Icon/Icon';
@@ -32,120 +29,56 @@ import UsFlagSvg from './imgs/us.svg';
 import GitlabIcon from '../../img/gitlabIcon.svg';
 // END IMPORT IMAGES ZONE
 
-
-interface Props {
+interface NavbarProps {
     goToPage: (pageName: Page) => void,
     setLanguage: (language: TLanguages) => void,
     language: TLanguages;
 }
 
-interface State {
-    showNavbar: boolean,
-    stackoverflowReputation: number,
-}
+const Navbar: React.FC<NavbarProps> = (props) => {
+    const {setLanguage, language} = props
 
+    const [isOpen, setIsOpen] = React.useState<boolean>(false);
+    const [SOReputation, setSOReputation] = React.useState<number>(0);
 
-export default class Navbar extends React.Component<Props, State> {
-
-    protected navbar: JQuery;
-    protected container: JQuery;
-
-    constructor(props: Props) {
-        super(props);
-
-        this.state = {
-            showNavbar: false,
-            stackoverflowReputation: 0
-        };
-    }
-
-    componentDidMount() {
-        this.init();
-    }
-
-    protected init = (): void => {
-        this.navbar = $("#navbar");
-        this.container = $("#navbar > .container");
-        this.fetchStackoverflowReputation();
-    }
-
-    protected fetchStackoverflowReputation = (): void => {
+    const fetchStackoverflowReputation = (): void => {
         fetch('https://cors-anywhere.herokuapp.com/https://stackoverflow.com/users/flair/8583669.json')
             .then(response => response.json())
-            .then(data => this.setStackoverflowReputation(data.reputation));
+            .then(data => setStackoverflowReputation(data.reputation));
     }
 
-    protected setStackoverflowReputation = (reputation: string) => {
-        const reputationAsNumber = parseFloat(reputation.replace(',', '.'))
-        this.setState(() => {
-            return ({
-                stackoverflowReputation: Math.round(reputationAsNumber * 10) / 10
-            })
-        })
+    const setStackoverflowReputation = (reputation: string) => {
+        const reputationAsNumber = parseFloat(reputation.replace(',', '.'));
+        setSOReputation(Math.round(reputationAsNumber * 10) / 10);
     }
 
-    protected showNavbar = (): void => {
-        this.navbar.css({
-            animation: 'showMenuAnimation 0.5s forwards',
-        });
-        this.container.css({
-            display: 'flex',
-            animation: 'apparition 0.5s forwards',
-            animationDelay: '0.6s',
-        });
+    const toggleNavbar = (): void => {
+        setIsOpen(!isOpen)
     }
 
-    protected hideNavbar = (): void => {
-        this.navbar.css({
-            animation: 'hideMenuAnimation 0.5s forwards',
-        });
-
-        this.container.css({
-            display: 'none',
-        })
-    }
-
-    protected showOrHideNavbar = (): void => {
-        this.setState({
-            showNavbar: !this.state.showNavbar,
-        }, () => {
-            if (this.state.showNavbar) {
-                this.showNavbar();
-            } else {
-                this.hideNavbar();
-            }
-
-        })
-    }
-
-    protected goToPage = (pageName: Page): void => {
-        this.props.goToPage(pageName);
-        this.showOrHideNavbar();
-    }
-
-    protected languageSelectionRender = (): React.ReactNode => {
+    const languageSelectionRender = (): React.ReactNode => {
         return (
             <div id="languageSelection">
 
                 <FrFlagSvg
-                    className={this.props.language === 'fr' ? 'selected-language' : ''}
-                    onClick={() => this.props.setLanguage('fr')}
+                    className={language === 'fr' ? 'selected-language' : ''}
+                    onClick={() => setLanguage('fr')}
                 />
                 <DeFlagSvg
-                    className={this.props.language === 'de' ? 'selected-language' : ''}
-                    onClick={() => this.props.setLanguage('de')}
+                    className={language === 'de' ? 'selected-language' : ''}
+                    onClick={() => setLanguage('de')}
                 />
                 <UsFlagSvg
-                    className={this.props.language === 'en' ? 'selected-language' : ''}
-                    onClick={() => this.props.setLanguage('en')}
+                    className={language === 'en' ? 'selected-language' : ''}
+                    onClick={() => setLanguage('en')}
                 />
 
             </div>
         )
     }
 
-    protected gitlabRepoRender = (): React.ReactNode => {
-        const localize = LOCALIZE[this.props.language];
+    const gitlabRepoRender = (): React.ReactNode => {
+        const localize = LOCALIZE[language];
 
         return (
             <a
@@ -160,8 +93,8 @@ export default class Navbar extends React.Component<Props, State> {
         )
     }
 
-    protected professionalLinksRender = (): React.ReactNode => {
-        const commonLocalize = COMMON_LOCALIZE[this.props.language];
+    const professionalLinksRender = (): React.ReactNode => {
+        const commonLocalize = COMMON_LOCALIZE[language];
 
         return (
             <div id="professionalLinks">
@@ -173,7 +106,7 @@ export default class Navbar extends React.Component<Props, State> {
                         className="clickable d-flex flex-column align-items-center"
                     >
                         <Icon prefix="fab" icon="stack-overflow" />
-                        <span className="reputation">{this.state.stackoverflowReputation}k</span>
+                        <span className="reputation">{SOReputation}k</span>
                     </a>
                     <a
                         href="https://gitlab.com/johannchopin"
@@ -197,45 +130,48 @@ export default class Navbar extends React.Component<Props, State> {
         )
     }
 
+    React.useEffect(() => {
+        fetchStackoverflowReputation();
+    }, [])
+        
+    const localize = LOCALIZE[language];
 
-    render(): React.ReactNode {
-        const localize = LOCALIZE[this.props.language];
+    return (
+        <nav id="navbar" onClick={() => { toggleNavbar() }} className={isOpen ? "open" : ""}>
+            <Icon icon="bars" className={isOpen ? "selected burger" : "burger"} />
 
-        return (
-            <nav id="navbar" onClick={() => { this.showOrHideNavbar() }}>
-                <Icon icon="bars" className={this.state.showNavbar ? "selected burger" : "burger"} />
+            <div className="container">
+                <h1>MENU</h1>
+                <ul>
+                    <li>
+                        <Link to="/presentation">{localize.presentation}</Link>
+                    </li>
+                    <li>
+                        <Link to="/background">{localize.background}</Link>
+                    </li>
+                    <li>
+                        <Link to="/skills">{localize.skills}</Link>
+                    </li>
+                    <li>
+                        <Link to="/experiences">{localize.personal_experiences}</Link>
+                    </li>
+                    <li>
+                        <Link to="/projects">{localize.projects}</Link>
+                    </li>
+                    <li>
+                        <Link to="/hobbies">{localize.hobbies}</Link>
+                    </li>
+                    <li>
+                        <Link to="/contacts">{localize.contacts}</Link>
+                    </li>
+                </ul>
 
-                <div className="container">
-                    <h1>MENU</h1>
-                    <ul>
-                        <li>
-                            <Link to="/presentation">{localize.presentation}</Link>
-                        </li>
-                        <li>
-                            <Link to="/background">{localize.background}</Link>
-                        </li>
-                        <li>
-                            <Link to="/skills">{localize.skills}</Link>
-                        </li>
-                        <li>
-                            <Link to="/experiences">{localize.personal_experiences}</Link>
-                        </li>
-                        <li>
-                            <Link to="/projects">{localize.projects}</Link>
-                        </li>
-                        <li>
-                            <Link to="/hobbies">{localize.hobbies}</Link>
-                        </li>
-                        <li>
-                            <Link to="/contacts">{localize.contacts}</Link>
-                        </li>
-                    </ul>
-
-                    {this.languageSelectionRender()}
-                    {this.gitlabRepoRender()}
-                    {this.professionalLinksRender()}
-                </div>
-            </nav>
-        )
-    }
+                {languageSelectionRender()}
+                {gitlabRepoRender()}
+                {professionalLinksRender()}
+            </div>
+        </nav>
+    )
 }
+
+export default Navbar
