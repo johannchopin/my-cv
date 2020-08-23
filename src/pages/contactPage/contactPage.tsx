@@ -16,7 +16,7 @@ import ApiCmds from '../../api/apiCmds';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
+import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -217,14 +217,14 @@ export default class ContactPage extends React.Component<Props, State> {
                     </p>
 
                     <button type="button" className="btn btn-gold animate-me animation-goUp" onClick={() => this.onSubmitBtnClick()}>
-                        <IconHandler icon="paper-plane" className="with-pr" />
+                        <Icon icon="paper-plane" className="with-pr" />
                         {localize['send']}
                     </button>
                 </div>
 
                 <div id="contactCtn">
                     <a href="mailto:johannchopin@protonmail.com" className="animate-me animation-goUp">
-                        <IconHandler icon="envelope" />
+                        <Icon icon="envelope" />
                         <p>johannchopin@pm.me</p>
                     </a>
 

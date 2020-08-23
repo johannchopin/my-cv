@@ -13,7 +13,7 @@ import LOCALIZE from './localize'
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
+import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
@@ -72,17 +72,17 @@ export default class HobbiesPage extends React.Component<IProps, IState> {
 
                         <div className="animate-me">
                             <div className="icon">
-                                <IconHandler icon="terminal" />
+                                <Icon icon="terminal" />
                             </div>
                             <h2>{localize.programming}</h2>
                             <p>
-                                <IconHandler prefix="fab" icon="react" className="react-icon" />
+                                <Icon prefix="fab" icon="react" className="react-icon" />
                                 {localize.react_lover}
                             </p>
                         </div>
                         <div className="animate-me">
                             <div className="icon">
-                                <IconHandler icon="fish" />
+                                <Icon icon="fish" />
                             </div>
                             <h2>{localize.dive}</h2>
                         </div>
@@ -93,7 +93,7 @@ export default class HobbiesPage extends React.Component<IProps, IState> {
 
                         <div id="makeIconCtn" className="animate-me">
                             <div className="icon">
-                                <IconHandler prefix="fab" icon="adobe" />
+                                <Icon prefix="fab" icon="adobe" />
                             </div>
                             <p className="illustrator">Illustrator</p>
 
@@ -123,13 +123,13 @@ export default class HobbiesPage extends React.Component<IProps, IState> {
                     <div className="col">
                         <div className="animate-me">
                             <div className="icon">
-                                <IconHandler icon="music" />
+                                <Icon icon="music" />
                             </div>
                             <h2>{localize.play_music}</h2>
                         </div>
                         <div className="animate-me">
                             <div className="icon">
-                                <IconHandler icon="snowboarding" />
+                                <Icon icon="snowboarding" />
                             </div>
                             <h2>{localize.snowboard}</h2>
                         </div>

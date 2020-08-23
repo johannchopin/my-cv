@@ -16,7 +16,7 @@ import LOCALIZE from './localize';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import IconHandler from '../../../../assets/uiComponents/iconHandler/iconHandler';
+import Icon from '../../../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // INIT HELPERS METHODS ZONE
@@ -81,7 +81,7 @@ export default class ProjectContainer extends React.Component<Props, State> {
                     data-placement="left"
                     title={checkoutRepoTranslation}
                 >
-                    <IconHandler prefix="fab" icon="gitlab" />
+                    <Icon prefix="fab" icon="gitlab" />
                 </a>
             )
         }

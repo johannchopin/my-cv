@@ -13,7 +13,7 @@ import LOCALIZE from './localize'
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
+import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
@@ -80,7 +80,7 @@ export default class PersonalExperiencesPage extends React.Component<Props, Stat
                         <p dangerouslySetInnerHTML={{ __html: localize.internship_hotcity.introduction }}></p>
                         <br />
                         <a id="hotcityLetter" href="https://cv.johannchopin.fr/2019/assets/pdf/hotcity.pdf" target="_blank">
-                            <IconHandler icon="file-alt" />
+                            <Icon icon="file-alt" />
                             <p>{localize.internship_hotcity.letter_of_recommendation}</p>
                         </a>
                     </div>

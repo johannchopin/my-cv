@@ -9,7 +9,7 @@ import './navbar.scss';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import IconHandler from '../iconHandler/iconHandler';
+import Icon from '../Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT LOCALIZE ZONE
@@ -172,7 +172,7 @@ export default class Navbar extends React.Component<Props, State> {
                         target="_blank"
                         className="clickable d-flex flex-column align-items-center"
                     >
-                        <IconHandler prefix="fab" icon="stack-overflow" />
+                        <Icon prefix="fab" icon="stack-overflow" />
                         <span className="reputation">{this.state.stackoverflowReputation}k</span>
                     </a>
                     <a
@@ -180,7 +180,7 @@ export default class Navbar extends React.Component<Props, State> {
                         target="_blank"
                         className="clickable"
                     >
-                        <IconHandler prefix="fab" icon="gitlab" />
+                        <Icon prefix="fab" icon="gitlab" />
                     </a>
                     <a
                         // TODO: Add link to linkedIn
@@ -190,7 +190,7 @@ export default class Navbar extends React.Component<Props, State> {
                         data-placement="right"
                         title={commonLocalize.feature_coming_soon}
                     >
-                        <IconHandler prefix="fab" icon="linkedin" />
+                        <Icon prefix="fab" icon="linkedin" />
                     </a>
                 </div>
             </div>
@@ -203,7 +203,7 @@ export default class Navbar extends React.Component<Props, State> {
 
         return (
             <nav id="navbar" onClick={() => { this.showOrHideNavbar() }}>
-                <IconHandler icon="bars" className={this.state.showNavbar ? "selected burger" : "burger"} />
+                <Icon icon="bars" className={this.state.showNavbar ? "selected burger" : "burger"} />
 
                 <div className="container">
                     <h1>MENU</h1>

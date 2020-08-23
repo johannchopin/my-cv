@@ -17,7 +17,7 @@ import WaveSvg from '../../assets/img/wave-design.svg';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import IconHandler from '../../assets/uiComponents/iconHandler/iconHandler';
+import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
@@ -110,7 +110,7 @@ export default class IntroductionPage extends React.Component<Props, State> {
 
                 <div id="swipeIndication" className="animate-me animation-goUp">
                     <p>{localize.swipe_indication}</p>
-                    <IconHandler icon="arrow-right" className="with-pl" />
+                    <Icon icon="arrow-right" className="with-pl" />
                 </div>
             </div>
         )

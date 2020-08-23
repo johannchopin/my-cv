@@ -6,7 +6,7 @@ import './loadingAnimation.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT COMPONENTS ZONE
-import IconHandler from '../iconHandler/iconHandler';
+import Icon from '../Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT ASSETS ZONE
@@ -35,7 +35,7 @@ export default class LoadingAnimation extends React.Component<IProps, IState> {
 
                 <div id="animationCtn">
                     <div className="loader">
-                        <IconHandler icon="circle-notch" />
+                        <Icon icon="circle-notch" />
                     </div>
                 </div>
 
