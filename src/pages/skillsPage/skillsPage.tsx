@@ -27,12 +27,12 @@ import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
-import { TLanguages } from '../../commonInterface';
+import { Language } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
 interface SkillsPageProps {
-    language: TLanguages,
+    language: Language,
     active: boolean
 }
 

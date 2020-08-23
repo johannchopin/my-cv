@@ -20,12 +20,12 @@ import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
-import { TLanguages } from '../../commonInterface';
+import { Language } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
 interface IntroductionPageProps {
-    language: TLanguages
+    language: Language
 }
 
 const IntroductionPage: React.FC<IntroductionPageProps> = (props) => {

@@ -24,7 +24,7 @@ import Helper from '../../helper';
 // IMPORT INTERFACE ZONE
 import {
     SimpleModalParams,
-    TLanguages,
+    Language,
     ISendMeEmailData,
     ISendMeEmailResponse
 } from '../../commonInterface';
@@ -32,7 +32,7 @@ import {
 
 
 interface ContactPageProps {
-    language: TLanguages,
+    language: Language,
     showSimpleModal: (params: SimpleModalParams) => void,
 }
 

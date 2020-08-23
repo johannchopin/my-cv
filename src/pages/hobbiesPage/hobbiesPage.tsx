@@ -14,13 +14,13 @@ import Icon from '../../assets/uiComponents/Icon/Icon';
 
 // IMPORT INTERFACE ZONE
 import {
-    TLanguages
+    Language
 } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
 interface HobbiesPageProps {
-    language: TLanguages
+    language: Language
 }
 
 const HobbiesPage: React.FC<HobbiesPageProps> = (props) => {

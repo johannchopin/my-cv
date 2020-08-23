@@ -13,12 +13,12 @@ import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
-import { TLanguages } from '../../commonInterface';
+import { Language } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
 interface PersonalExperiencesPageProps {
-    language: TLanguages,
+    language: Language,
 }
 
 

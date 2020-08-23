@@ -9,12 +9,12 @@ import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT INTERFACE ZONE
-import { TLanguages } from '../../commonInterface';
+import { Language } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
 interface TimeLinePageProps {
-    language: TLanguages
+    language: Language
 }
 
 const TimeLinePage: React.FC<TimeLinePageProps> = (props) => {

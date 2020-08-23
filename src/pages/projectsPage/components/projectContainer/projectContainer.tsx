@@ -17,12 +17,12 @@ import Helper from '../../../../helper';
 // END INIT HELPERS METHODS ZONE
 
 // IMPORT INTERFACE ZONE
-import { TLanguages } from '../../../../commonInterface';
+import { Language } from '../../../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
 interface ProjectContainerProps {
-    language: TLanguages,
+    language: Language,
     link: string,
     title: string,
     year: number,

@@ -41,6 +41,6 @@ export interface ISendMeEmailResponse extends IRequestResponse {
 
 // TYPES ZONE
 export type Page = 'presentation' | 'background' | 'skills' | 'hobbies' | 'experiences' | 'projects' | 'contacts';
-export type TLanguages = 'en' | 'fr' | 'de';
+export type Language = 'en' | 'fr' | 'de';
 export type TSimpleModalType = 'success' | 'warning' | 'danger';
 // END TYPES ZONE

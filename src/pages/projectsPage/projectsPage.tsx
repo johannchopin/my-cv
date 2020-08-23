@@ -30,12 +30,12 @@ import ProjectContainer from './components/projectContainer/projectContainer';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
-import { TLanguages } from '../../commonInterface';
+import { Language } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
 export interface ProjectsPageProps {
-    language: TLanguages,
+    language: Language,
 }
 
 const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {

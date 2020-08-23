@@ -15,7 +15,7 @@ import LOCALIZE from './localize'
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT INTERFACE ZONE
-import { Page, TLanguages } from '../../../commonInterface';
+import { Page, Language } from '../../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 // IMPORT IMAGES ZONE
@@ -31,8 +31,8 @@ import GitlabIcon from '../../img/gitlabIcon.svg';
 
 interface NavbarProps {
     goToPage: (pageName: Page) => void,
-    setLanguage: (language: TLanguages) => void,
-    language: TLanguages;
+    setLanguage: (language: Language) => void,
+    language: Language;
 }
 
 const Navbar: React.FC<NavbarProps> = (props) => {
