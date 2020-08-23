@@ -31,65 +31,16 @@ import { TLanguages } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
-interface Props {
-    currentPageIndex: number,
+interface SkillsPageProps {
     language: TLanguages,
+    active: boolean
 }
 
-interface State {
-    pageId: string,
-    pageIndex: number,
-}
+const SkillsPage: React.FC<SkillsPageProps> = (props) => {
+    const { language, active } = props;
 
-
-export default class SkillsPage extends React.Component<Props, State> {
-
-
-    constructor(props: Props) {
-        super(props);
-
-        this.state = {
-            pageId: 'skills',
-            pageIndex: 2,
-        };
-    }
-
-    componentDidMount() {
-        this.initUI();
-    }
-
-    componentDidUpdate(oldProps: Props) {
-        const newProps = this.props;
-
-        if (oldProps.currentPageIndex !== newProps.currentPageIndex) {
-            this.onPageChange();
-        }
-    }
-
-    protected init = (): void => {
-        this.initUI();
-    }
-
-    protected initUI(): void {
-        PageBase.initPage(this.state.pageId);
-        this.animateGauges();
-    }
-
-    protected clearUI(): void {
-        PageBase.clearPage(this.state.pageId);
-        this.initGauges();
-    }
-
-    protected onPageChange(): void {
-        if (this.props.currentPageIndex === this.state.pageIndex) {
-            this.init();
-        } else {
-            this.clearUI();
-        }
-    }
-
-    protected initGauges(): void {
-        const gaugeToAnimate = $(`#${this.state.pageId} .animated-gauge`);
+    const initGauges = (): void => {
+        const gaugeToAnimate = $('#skills .animated-gauge');
 
         gaugeToAnimate.each(function () {
             $(this).css({
@@ -98,8 +49,8 @@ export default class SkillsPage extends React.Component<Props, State> {
         });
     }
 
-    protected animateGauges(): void {
-        const gaugeToAnimate = $(`#${this.state.pageId} .animated-gauge`);
+    const animateGauges = (): void => {
+        const gaugeToAnimate = $('#skills .animated-gauge');
 
         gaugeToAnimate.each(function () {
             $(this).css({
@@ -109,90 +60,98 @@ export default class SkillsPage extends React.Component<Props, State> {
         });
     }
 
-    render() {
-        const localize = LOCALIZE[this.props.language];
+    React.useEffect(() => {
+        if (active) {
+            animateGauges();            
+        } else {
+            initGauges();
+        }
+    }, [active])
 
-        return (
-            <div id={this.state.pageId} className="swiper-slide">
-                <h1 className="animate-me slide-title">{localize.title}</h1>
+    const localize = LOCALIZE[language];
 
-                <div className="skills-ctn">
-                    <div className="langues animate-me" id="langues">
-                        <h2>{localize.languages}</h2>
-                        <div>
-                            <img src={C2} />
-                            <p>{localize.french}</p>
-                        </div>
-                        <div>
-                            <img src={B2} />
-                            <p>{localize.german}</p>
-                        </div>
-                        <div>
-                            <img src={B2} />
-                            <p>{localize.english}</p>
-                        </div>
+    return (
+        <div id="skills" className="swiper-slide">
+            <h1 className="animate-me slide-title">{localize.title}</h1>
+
+            <div className="skills-ctn">
+                <div className="langues animate-me" id="langues">
+                    <h2>{localize.languages}</h2>
+                    <div>
+                        <img src={C2} />
+                        <p>{localize.french}</p>
                     </div>
-                    <div className="animate-me" id="softwareSkills">
-                        <h2>SOFTWARE</h2>
-                        <h3>
-                            <Icon icon="laptop" />
-                            Word, Excel, Powerpoint :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge0"></div>
-                        </div>
-                        <h3>
-                            <Icon icon="file-code" />
-                            HTML5+CSS3 :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge-html-css"></div>
-                        </div>
-                        <h3 id="typescriptSkills">
-                            <TypescriptIcon />
-                            TypeScript :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge-ts"></div>
-                        </div>
-                        <h3>
-                            <Icon prefix="fab" icon="react" />
-                            React :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge-react"></div>
-                        </div>
-                        <h3>
-                            <Icon prefix="fab" icon="angular" />
-                            Angular :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge-angular"></div>
-                        </div>
-                        <h3>
-                            <Icon prefix="fab" icon="php" />
-                            PHP :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge-php"></div>
-                        </div>
-                        <h3>
-                            <Icon prefix="fab" icon="python" />
-                            Python :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge-python"></div>
-                        </div>
-                        <h3>
-                            <Icon prefix="fab" icon="git-alt" />
-                            Git :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge-git"></div>
-                        </div>
+                    <div>
+                        <img src={B2} />
+                        <p>{localize.german}</p>
+                    </div>
+                    <div>
+                        <img src={B2} />
+                        <p>{localize.english}</p>
+                    </div>
+                </div>
+                <div className="animate-me" id="softwareSkills">
+                    <h2>SOFTWARE</h2>
+                    <h3>
+                        <Icon icon="laptop" />
+                        Word, Excel, Powerpoint :
+                    </h3>
+                    <div className="animated-gauge">
+                        <div className="jauge0"></div>
+                    </div>
+                    <h3>
+                        <Icon icon="file-code" />
+                        HTML5+CSS3 :
+                    </h3>
+                    <div className="animated-gauge">
+                        <div className="jauge-html-css"></div>
+                    </div>
+                    <h3 id="typescriptSkills">
+                        <TypescriptIcon />
+                        TypeScript :
+                    </h3>
+                    <div className="animated-gauge">
+                        <div className="jauge-ts"></div>
+                    </div>
+                    <h3>
+                        <Icon prefix="fab" icon="react" />
+                        React :
+                    </h3>
+                    <div className="animated-gauge">
+                        <div className="jauge-react"></div>
+                    </div>
+                    <h3>
+                        <Icon prefix="fab" icon="angular" />
+                        Angular :
+                    </h3>
+                    <div className="animated-gauge">
+                        <div className="jauge-angular"></div>
+                    </div>
+                    <h3>
+                        <Icon prefix="fab" icon="php" />
+                        PHP :
+                    </h3>
+                    <div className="animated-gauge">
+                        <div className="jauge-php"></div>
+                    </div>
+                    <h3>
+                        <Icon prefix="fab" icon="python" />
+                        Python :
+                    </h3>
+                    <div className="animated-gauge">
+                        <div className="jauge-python"></div>
+                    </div>
+                    <h3>
+                        <Icon prefix="fab" icon="git-alt" />
+                        Git :
+                    </h3>
+                    <div className="animated-gauge">
+                        <div className="jauge-git"></div>
                     </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
+
+export default SkillsPage

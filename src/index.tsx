@@ -252,7 +252,7 @@ class App extends React.Component<IProps, IState> {
         return (
             <SkillsPage
                 language={this.state.language}
-                currentPageIndex={this.state.currentPageIndex}
+                active={this.state.currentPageIndex === this.getPageId('skills')}
             />
         )
     }
@@ -261,7 +261,6 @@ class App extends React.Component<IProps, IState> {
         return (
             <ProjectsPage
                 language={this.state.language}
-                currentPageIndex={this.state.currentPageIndex}
             />
         )
     }
@@ -270,8 +269,6 @@ class App extends React.Component<IProps, IState> {
         return (
             <HobbiesPage
                 language={this.state.language}
-                currentPageIndex={this.state.currentPageIndex}
-                showSimpleModal={this.showSimpleModal}
             />
         )
     }
@@ -280,7 +277,6 @@ class App extends React.Component<IProps, IState> {
         return (
             <PersonalExperiencesPage
                 language={this.state.language}
-                currentPageIndex={this.state.currentPageIndex}
             />
         )
     }
@@ -289,7 +285,6 @@ class App extends React.Component<IProps, IState> {
         return (
             <ContactPage
                 language={this.state.language}
-                currentPageIndex={this.state.currentPageIndex}
                 showSimpleModal={this.showSimpleModal}
             />
         )
