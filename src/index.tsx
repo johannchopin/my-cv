@@ -129,22 +129,16 @@ const App: React.FC = () => {
 
         initPageById(getInitialPageId());
 
-        swiperToInit.on('slideChangeTransitionEnd', () => {
-            triggerPageChange(swiperToInit.activeIndex);
-        });
-
         return swiperToInit;
     }
    
-    const triggerPageChange = (pageId: number): void => {
-        const pageToClearId = getPageId(currentPage);
+    const triggerPageChange = (newPageId: number, previousPageId: number): void => {
+        setCurrentPage(pages[newPageId])
 
-        setCurrentPage(pages[pageId])
+        initPageById(newPageId);
+        clearPageById(previousPageId);
 
-        initPageById(pageId);
-        clearPageById(pageToClearId);
-
-        history.push(pages[pageId]);
+        history.push(pages[newPageId]);
     }
 
     const initPageById = (pageId: number): void => {
@@ -248,8 +242,10 @@ const App: React.FC = () => {
         );
     }
 
-    React.useEffect(() => {
-        init();
+    const initSwiper = (): void => {
+        swiper.on('slideChangeTransitionEnd', () => {
+            triggerPageChange(swiper.activeIndex, swiper.previousIndex);
+        });
 
         history.listen(({ location }) => {
             const path = location.pathname.replace('/', '')
@@ -257,7 +253,17 @@ const App: React.FC = () => {
                 goToPage(path as Page)
             }
         })
+    }
+
+    React.useEffect(() => {
+        init();
     }, [])
+
+    React.useEffect(() => {
+        if (swiper !== null) {
+            initSwiper()
+        }
+    }, [swiper])
 
     React.useEffect(() => {
         if (simpleModalParams !== null) {
