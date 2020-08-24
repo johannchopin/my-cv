@@ -16,8 +16,6 @@ import Swiper from 'swiper';
 import './assets/lib/swiper/swiper.min.css';
 // IMPORT SWIPER LIBRARY ZONE
 
-// END IMPORT LIBRARIES ZONE
-
 // IMPORT STYLES ZONE
 import './assets/styles/style.scss';
 // END IMPORT STYLES ZONE
@@ -43,24 +41,17 @@ import ProjectsPage from './pages/projectsPage/projectsPage';
 import ContactPage from './pages/contactPage/contactPage';
 // END IMPORT PAGES ZONE
 
-// IMPORT IMAGES ZONE   
-
-// @ts-ignore
-// END IMPORT IMAGES ZONE
-
 // IMPORT INTERFACE ZONE
 import {
     Page,
-    TLanguages,
+    Language,
     SimpleModalParams
 } from './commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
-interface IProps { }
-
-interface IState {
-    language: TLanguages,
+interface State {
+    language: Language,
     initialPage: Page,
     simpleModalParams: SimpleModalParams,
     mySwiper: Swiper,
@@ -77,54 +68,37 @@ const pages: Page[] = [
     'contacts'
 ]
 
-class App extends React.Component<IProps, IState> {
+const App: React.FC = () => {
+    const getPageId = (pageName: string): number => {
+        const pageId = pages.findIndex(page => page === pageName)
 
-    constructor(props: IProps) {
-        super(props);
-        this.state = {
-            language: 'en',
-            initialPage: pages[this.getInitialPageId()],
-            simpleModalParams: {},
-            //@ts-ignore
-            mySwiper: null,
-            currentPageIndex: this.getInitialPageId(),
-        };
+        return pageId !== -1 ? pageId : 0
     }
 
-    componentDidMount = (): void => {
-        this.init();
-
-        history.listen(({ location }) => {
-            const path = location.pathname.replace('/', '')
-            if (pages.includes(path)) {
-                this.goToPage(path as Page)
-            }
-        })
+    const getInitialPageId = (): number => {
+        return getPageId(history.location.pathname.replace('/', ''))
     }
 
-    protected init() {
-        this.initUI();
-
-        this.setState((prevState: IState) => ({
-            mySwiper: this.getInitialisedSwiper()
-        }), () => { this.initSwiper() })
-
+    const [language, setLanguage] = React.useState<Language>('en');
+    const [simpleModalParams, setSimpleModalParams] = React.useState<SimpleModalParams | null>(null)
+    const [swiper, setSwiper] = React.useState<Swiper | null> (null)
+    const [currentPage, setCurrentPage] = React.useState<Page> (pages[getInitialPageId()])
+    
+    const init = () => {
+        initBootstrapTooltipsPlugins();
+        setSwiper(getInitialisedSwiper())
     }
-
-    protected initUI() {
-        this.initBootstrapTooltipsPlugins();
-    }
-
-    protected initBootstrapTooltipsPlugins = (): void => {
+    
+    const initBootstrapTooltipsPlugins = (): void => {
         $((): void => {
             $('[data-toggle="tooltip"]').tooltip()
         });
     }
 
-    protected getInitialisedSwiper = (): Swiper => {
-        const initialPageId = this.getInitialPageId();
+    const getInitialisedSwiper = (): Swiper => {
+        const initialPageId = getInitialPageId();
 
-        return new Swiper('.swiper-container', {
+        const swiperToInit = new Swiper('.swiper-container', {
             initialSlide: initialPageId,
             preloadImages: true,
             keyboard: {
@@ -152,62 +126,42 @@ class App extends React.Component<IProps, IState> {
                 draggable: true,
             },
         })
-    }
 
-    protected getInitialPageId = (): number => {
-        return this.getPageId(history.location.pathname.replace('/', ''))
-    }
+        initPageById(getInitialPageId());
 
-    protected initSwiper = () => {
-        this.initPageById(this.getInitialPageId());
-
-        this.state.mySwiper.on('slideChangeTransitionEnd', () => {
-            this.triggerPageChange(this.state.mySwiper.activeIndex);
+        swiperToInit.on('slideChangeTransitionEnd', () => {
+            triggerPageChange(swiperToInit.activeIndex);
         });
+
+        return swiperToInit;
     }
+   
+    const triggerPageChange = (pageId: number): void => {
+        const pageToClearId = getPageId(currentPage);
 
-    protected triggerPageChange = (pageId: number): void => {
-        const pageToClearId = this.state.currentPageIndex;
+        setCurrentPage(pages[pageId])
 
-        this.setState(() => ({
-            currentPageIndex: pageId,
-        }), (): void => {
-            this.initPageById(pageId);
-            this.clearPageById(pageToClearId);
-        });
+        initPageById(pageId);
+        clearPageById(pageToClearId);
 
         history.push(pages[pageId]);
     }
 
-    protected getPageIdBySwiperIndex = (swiperIndex: number): Page => {
-        return pages[swiperIndex];
-    }
-
-    protected initPageById = (pageId: number): void => {
+    const initPageById = (pageId: number): void => {
         PageBase.initPage(pages[pageId]);
     }
 
-    protected clearPageById = (pageId: number): void => {
+    const clearPageById = (pageId: number): void => {
         PageBase.clearPage(pages[pageId]);
     }
 
-    protected getPageId = (pageName: string): number => {
-        const pageId = pages.findIndex(page => page === pageName)
-
-        return pageId !== -1 ? pageId : 0
-    }
-
-    protected goToPage = (pageName: Page): void => {
-        const pageId = this.getPageId(pageName)
-        this.state.mySwiper.slideTo(pageId, 1000);
+    const goToPage = (pageName: Page): void => {
+        const pageId = getPageId(pageName)
+        swiper.slideTo(pageId, 1000);
     };
 
-    protected showSimpleModal = (params: SimpleModalParams): void => {
-        this.setState({
-            simpleModalParams: params,
-        }, () => {
-            $('#simpleModal').modal();
-        });
+    const showSimpleModal = (params: SimpleModalParams): void => {
+        setSimpleModalParams(params)
 
         // Hide simple modal after 2.3s
         setTimeout(() => {
@@ -215,118 +169,129 @@ class App extends React.Component<IProps, IState> {
         }, 2300);
     };
 
-    protected setLanguage = (language: TLanguages) => {
-        this.setState({
-            language: language,
-        });
-    };
-
-    protected navbarRender = (): React.ReactNode => {
+    const navbarRender = (): React.ReactNode => {
         return (
             <Navbar
-                goToPage={this.goToPage}
-                setLanguage={this.setLanguage}
-                language={this.state.language}
+                goToPage={goToPage}
+                setLanguage={setLanguage}
+                language={language}
             />
         )
     }
 
-    protected introductionPageRender = (): React.ReactNode => {
+    const introductionPageRender = (): React.ReactNode => {
         return (
             <IntroductionPage
-                language={this.state.language}
+                language={language}
             />
         )
     }
 
-    protected timeLinePageRender = (): React.ReactNode => {
+    const timeLinePageRender = (): React.ReactNode => {
         return (
             <TimeLinePage
-                language={this.state.language}
-                currentPageIndex={this.state.currentPageIndex}
+                language={language}
             />
         )
     }
 
-    protected skillsPageRender = (): React.ReactNode => {
+    const skillsPageRender = (): React.ReactNode => {
         return (
             <SkillsPage
-                language={this.state.language}
-                active={this.state.currentPageIndex === this.getPageId('skills')}
+                language={language}
+                active={currentPage === 'skills'}
             />
         )
     }
 
-    protected projectsPageRender = (): React.ReactNode => {
+    const projectsPageRender = (): React.ReactNode => {
         return (
             <ProjectsPage
-                language={this.state.language}
+                language={language}
             />
         )
     }
 
-    protected hobbiesPageRender = (): React.ReactNode => {
+    const hobbiesPageRender = (): React.ReactNode => {
         return (
             <HobbiesPage
-                language={this.state.language}
+                language={language}
             />
         )
     }
 
-    protected personalExperiencesPageRender = (): React.ReactNode => {
+    const personalExperiencesPageRender = (): React.ReactNode => {
         return (
             <PersonalExperiencesPage
-                language={this.state.language}
+                language={language}
             />
         )
     }
 
-    protected contactPageRender = (): React.ReactNode => {
+    const contactPageRender = (): React.ReactNode => {
         return (
             <ContactPage
-                language={this.state.language}
-                showSimpleModal={this.showSimpleModal}
+                language={language}
+                showSimpleModal={showSimpleModal}
             />
         )
     }
 
-    protected modalsRender = (): React.ReactNode => {
+    const modalsRender = (): React.ReactNode => {
         return (
             <div id="modals">
-                <SimpleModal params={this.state.simpleModalParams} />
+                <SimpleModal 
+                    type={simpleModalParams?.type? simpleModalParams.type : 'success'}
+                    message={simpleModalParams?.message? simpleModalParams.message : ''}
+                />
             </div>
         );
     }
 
-    render() {
-        return (
-            <Router history={history}>
-                {this.navbarRender()}
+    React.useEffect(() => {
+        init();
 
-                <div className="swiper-container">
-                    <div className="swiper-wrapper">
-                        {this.introductionPageRender()}
-                        {this.timeLinePageRender()}
-                        {this.skillsPageRender()}
-                        {this.personalExperiencesPageRender()}
-                        {this.projectsPageRender()}
-                        {this.hobbiesPageRender()}
-                        {this.contactPageRender()}
-                    </div>
+        history.listen(({ location }) => {
+            const path = location.pathname.replace('/', '')
+            if (pages.includes(path as Page)) {
+                goToPage(path as Page)
+            }
+        })
+    }, [])
 
-                    <div className="swiper-pagination"></div>
+    React.useEffect(() => {
+        if (simpleModalParams !== null) {
+            $('#simpleModal').modal();
+        }
+    }, [simpleModalParams])
 
-                    <div className="swiper-button-prev" id="swiper-button-prev"></div>
-                    <div className="swiper-button-next" id="swiper-button-next"></div>
+    return (
+        <Router history={history}>
+            {navbarRender()}
 
-                    <div className="swiper-scrollbar"></div>
+            <div className="swiper-container">
+                <div className="swiper-wrapper">
+                    {introductionPageRender()}
+                    {timeLinePageRender()}
+                    {skillsPageRender()}
+                    {personalExperiencesPageRender()}
+                    {projectsPageRender()}
+                    {hobbiesPageRender()}
+                    {contactPageRender()}
                 </div>
 
-                {this.modalsRender()}
-                <LoadingAnimation />
-            </Router>
-        )
-    }
+                <div className="swiper-pagination"></div>
+
+                <div className="swiper-button-prev" id="swiper-button-prev"></div>
+                <div className="swiper-button-next" id="swiper-button-next"></div>
+
+                <div className="swiper-scrollbar"></div>
+            </div>
+
+            {modalsRender()}
+            <LoadingAnimation />
+        </Router>
+    )
 }
 
 ReactDOM.render(

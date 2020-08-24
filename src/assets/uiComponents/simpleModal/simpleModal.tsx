@@ -9,13 +9,12 @@ import { SimpleModalParams } from '../../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 // INTERFACE ZONE
-export interface SimpleModalProps {
-    params: SimpleModalParams,
-}
+export type SimpleModalProps = SimpleModalParams
 // END INTERFACE ZONE
 
 const SimpleModal: React.FC<SimpleModalProps> = (props) => {
-    const {type, message} = props.params
+
+    const {type = 'success', message = ''} = props
 
     return (
         <div className="modal fade" id="simpleModal" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
