@@ -5,34 +5,26 @@ import './simpleModal.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT INTERFACE ZONE
-import { ISimpleModalParams } from '../../../commonInterface';
+import { SimpleModalParams } from '../../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 // INTERFACE ZONE
-interface IProps {
-    params: ISimpleModalParams,
-}
-
-interface IState { }
+export type SimpleModalProps = SimpleModalParams
 // END INTERFACE ZONE
 
-export default class SimpleModal extends React.Component<IProps, IState> {
-    constructor(props: IProps) {
-        super(props);
+const SimpleModal: React.FC<SimpleModalProps> = (props) => {
 
-        this.state = {};
-    }
+    const {type = 'success', message = ''} = props
 
-
-    render() {
-        return (
-            <div className="modal fade" id="simpleModal" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
-                <div className="modal-dialog" role="document">
-                    <div className={'alert alert-' + this.props.params.type} role="alert">
-                        {this.props.params.message}
-                    </div>
+    return (
+        <div className="modal fade" id="simpleModal" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+            <div className="modal-dialog" role="document">
+                <div className={`alert alert-${type}`} role="alert">
+                    {message}
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
+
+export default SimpleModal

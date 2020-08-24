@@ -11,6 +11,10 @@
         "allowJs": true,
         "strictPropertyInitialization": false,
         "baseUrl": ".",
+        "lib": [
+            "dom",
+            "es7"
+         ],
         "paths": {
             "~*": [
                 "./src/*"
