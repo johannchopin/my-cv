@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import './Navbar.scss';
 // END IMPORT STYLES ZONE
 
+import { AppContext } from '~contexts/App';
+
 // IMPORT COMPONENTS ZONE
 import Icon from '../Icon/Icon';
 // END IMPORT COMPONENTS ZONE
@@ -38,6 +40,8 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = (props) => {
     const {setLanguage, language} = props
 
+    const { setLang } = React.useContext(AppContext)
+
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
     const [SOReputation, setSOReputation] = React.useState<number>(0);
 
@@ -62,15 +66,15 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 
                 <FrFlagSvg
                     className={language === 'fr' ? 'selected-language' : ''}
-                    onClick={() => setLanguage('fr')}
+                    onClick={() => setLang('fr')}
                 />
                 <DeFlagSvg
                     className={language === 'de' ? 'selected-language' : ''}
-                    onClick={() => setLanguage('de')}
+                    onClick={() => setLang('de')}
                 />
                 <UsFlagSvg
                     className={language === 'en' ? 'selected-language' : ''}
-                    onClick={() => setLanguage('en')}
+                    onClick={() => setLang('en')}
                 />
 
             </div>
