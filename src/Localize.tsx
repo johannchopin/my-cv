@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-import { useLocalize, Translation, TranslationVars } from '~helpers/useLocalize';
+import { useLocalize as importedUseLocalize, Translation, TranslationVars } from '~helpers/useLocalize';
+
+export const useLocalize = importedUseLocalize
 
 // I N T E R F A C E S
 export interface LocalizeProps {
