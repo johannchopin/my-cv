@@ -21,6 +21,7 @@ import './assets/styles/style.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT COMPONENTS ZONE
+import AppProvider from '~contexts/App';
 import Navbar from './assets/uiComponents/Navbar/Navbar';
 import SimpleModal from './assets/uiComponents/simpleModal/simpleModal';
 import LoadingAnimation from './assets/uiComponents/LoadingAnimation/LoadingAnimation';
@@ -273,29 +274,33 @@ const App: React.FC = () => {
 
     return (
         <Router history={history}>
-            {navbarRender()}
+            <AppProvider>
 
-            <div className="swiper-container">
-                <div className="swiper-wrapper">
-                    {introductionPageRender()}
-                    {timeLinePageRender()}
-                    {skillsPageRender()}
-                    {personalExperiencesPageRender()}
-                    {projectsPageRender()}
-                    {hobbiesPageRender()}
-                    {contactPageRender()}
+                {navbarRender()}
+
+                <div className="swiper-container">
+                    <div className="swiper-wrapper">
+                        {introductionPageRender()}
+                        {timeLinePageRender()}
+                        {skillsPageRender()}
+                        {personalExperiencesPageRender()}
+                        {projectsPageRender()}
+                        {hobbiesPageRender()}
+                        {contactPageRender()}
+                    </div>
+
+                    <div className="swiper-pagination"></div>
+
+                    <div className="swiper-button-prev" id="swiper-button-prev"></div>
+                    <div className="swiper-button-next" id="swiper-button-next"></div>
+
+                    <div className="swiper-scrollbar"></div>
                 </div>
 
-                <div className="swiper-pagination"></div>
+                {modalsRender()}
+                <LoadingAnimation />
 
-                <div className="swiper-button-prev" id="swiper-button-prev"></div>
-                <div className="swiper-button-next" id="swiper-button-next"></div>
-
-                <div className="swiper-scrollbar"></div>
-            </div>
-
-            {modalsRender()}
-            <LoadingAnimation />
+            </AppProvider>
         </Router>
     )
 }
