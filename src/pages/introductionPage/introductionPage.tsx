@@ -6,6 +6,7 @@ import './introductionPage.scss';
 
 // IMPORT LOCALIZE ZONE
 import * as localize from './localize.json'
+import Localize from '~Localize';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT IMAGES ZONE
@@ -21,8 +22,6 @@ import Icon from '../../assets/uiComponents/Icon/Icon';
 
 // IMPORT INTERFACE ZONE
 import { Language } from '../../commonInterface';
-import { useLocalize } from '~helpers/useLocalize';
-import Localize from '~Localize';
 // END IMPORT INTERFACE ZONE
 
 
