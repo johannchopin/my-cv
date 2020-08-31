@@ -56,7 +56,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     image={GitmojiLogo}
                     summary={localize.project_gitmoji_browser_extension.summary}
                     linkToGitRepo="https://github.com/johannchopin/gitmoji-browser-extension"
-                    technologiesUsed={['sveltejs', 'html', 'css']}
+                    technologiesUsed={['sveltejs', 'html', 'css', 'browser-extension']}
                 />
                 <ProjectContainer
                     language={language}
