@@ -5,7 +5,9 @@ import './projectsPage.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT LOCALIZE ZONE
-import LOCALIZE from './localize'
+import * as localize from './localize.json'
+import { useLocalize } from '~helpers/useLocalize';
+import Localize from '~Localize';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT IMAGES ZONE
@@ -41,11 +43,11 @@ export interface ProjectsPageProps {
 const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
     const { language } = props;
 
-    const localize = LOCALIZE[language];
-
     return (
         <div id="projects" className="swiper-slide">
-            <h1 className="animate-me slide-title">{localize.title}</h1>
+            <h1 className="animate-me slide-title">
+                <Localize translations={localize.title} />
+            </h1>
 
             <div className="projects-ctn">
                 <ProjectContainer
@@ -54,7 +56,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     title="Gitmoji Browser Extension"
                     year={2020}
                     image={GitmojiLogo}
-                    summary={localize.project_gitmoji_browser_extension.summary}
+                    summary={useLocalize(localize.gitmoji_browser_extension)}
                     linkToGitRepo="https://github.com/johannchopin/gitmoji-browser-extension"
                     technologiesUsed={['sveltejs', 'html', 'css']}
                 />
@@ -64,7 +66,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     title="Caretaker-Smarthome"
                     year={2019}
                     image={CaretakerIcon}
-                    summary={localize.project_caretaker.summary}
+                    summary={useLocalize(localize.caretaker)}
                     linkToGitRepo="https://gitlab.com/caretaker-smarthome"
                     technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
                 />
@@ -74,7 +76,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     title="ISFATES-Adventskalender"
                     year={2019}
                     image={AdventskalendarIcon}
-                    summary={localize.project_adventskalender.summary}
+                    summary={useLocalize(localize.adventskalender)}
                     linkToGitRepo="https://gitlab.com/isfates_adventskalender"
                     technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
                 />
@@ -84,7 +86,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     title="Zukunftsforum-Website"
                     year={2019}
                     image={ZukunftsforumLogo}
-                    summary={localize.project_zukunftsforum.summary}
+                    summary={useLocalize(localize.zukunftsforum)}
                     technologiesUsed={['wordpress', 'php', 'html', 'css']}
                 />
                 <ProjectContainer
@@ -93,7 +95,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     title="Astropulse-Experience"
                     year={2018}
                     image={AstropulseIcon}
-                    summary={localize.project_astropulse.summary}
+                    summary={useLocalize(localize.astropulse)}
                     linkToGitRepo="https://gitlab.com/johannchopin/htw18-19_uxdesign-form"
                     technologiesUsed={['php', 'html', 'css', 'javascript', 'mysql']}
                 />
@@ -103,7 +105,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     title="DIVA-Website"
                     year={2017}
                     image={DivaLogo}
-                    summary={localize.project_diva.summary}
+                    summary={useLocalize(localize.diva)}
                     technologiesUsed={['php', 'html', 'css', 'javascript', 'bootstrap']}
                 />
                 <ProjectContainer
@@ -112,7 +114,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     title="WalkInLove-Website"
                     year={2017}
                     image={WalkinloveLogo}
-                    summary={localize.project_walkinlove.summary}
+                    summary={useLocalize(localize.walkinlove)}
                     linkToGitRepo="https://gitlab.com/johannchopin/walkinlove-website"
                     technologiesUsed={['php', 'html', 'css', 'javascript']}
                 />
