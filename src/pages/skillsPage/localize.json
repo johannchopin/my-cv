@@ -1,0 +1,27 @@
+{
+    "title": {
+        "en": "Skills",
+        "fr": "Compétences",
+        "de": "Fähigkeiten"
+    },
+    "languages": {
+        "en": "Languages",
+        "fr": "Langues",
+        "de": "Sprachen"
+    },
+    "french": {
+        "en": "French",
+        "fr": "Français",
+        "de": "Französisch"
+    },
+    "german": {
+        "en": "German",
+        "fr": "Allemand",
+        "de": "Deutsch"
+    },
+    "english": {
+        "en": "English",
+        "fr": "Anglais",
+        "de": "Englisch"
+    }
+}
