@@ -60,7 +60,7 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                 />
                 <ProjectContainer
                     language={language}
-                    link="https://caretaker-smarthome.eu/"
+                    link="http://caretaker-smarthome.johannchopin.fr/"
                     title="Caretaker-Smarthome"
                     year={2019}
                     image={CaretakerIcon}
