@@ -130,8 +130,8 @@ const Navbar: React.FC = () => {
     }, [])
         
     return (
-        <nav id="navbar" onClick={() => { toggleNavbar() }} className={isOpen ? "open" : ""}>
-            <Icon icon="bars" className={isOpen ? "selected burger" : "burger"} />
+        <nav id="navbar" className={isOpen ? "open" : ""}>
+            <Icon icon="bars" onClick={() => { toggleNavbar() }} className={isOpen ? "selected burger" : "burger"} />
 
             <div className="container">
                 <ul>

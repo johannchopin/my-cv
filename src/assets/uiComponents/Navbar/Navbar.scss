@@ -40,6 +40,9 @@
 
     .burger {
         position: relative;
+        display: flex;
+        height: fit-content;
+        cursor: pointer;
         font-size: 1.5em;
         top: .3em;
         left: 1em;
@@ -145,7 +148,6 @@
     }
 
     &:hover {
-        cursor: pointer;
         width: 100px;
         height: 95px;
 
