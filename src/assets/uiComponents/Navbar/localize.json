@@ -1,0 +1,42 @@
+{
+    "presentation": {
+        "en": "Presentation",
+        "fr": "Présentation",
+        "de": "Vorstellung"
+    },
+    "background": {
+        "en": "Background",
+        "fr": "Formation",
+        "de": "Ausbildung"
+    },
+    "skills": {
+        "en": "Skills",
+        "fr": "Compétences",
+        "de": "Fähigkeiten"
+    },
+    "personal_experiences": {
+        "en": "Personal experiences",
+        "fr": "Expériences personnelles",
+        "de": "Erfahrungen"
+    },
+    "projects": {
+        "en": "Projects",
+        "fr": "Projets",
+        "de": "Projekte"
+    },
+    "hobbies": {
+        "en": "Hobbies",
+        "fr": "Loisirs",
+        "de": "Hobbys"
+    },
+    "contacts": {
+        "en": "Contact",
+        "fr": "Contact",
+        "de": "Kontakt"
+    },
+    "check_repo": {
+        "en": "View source code",
+        "fr": "Voir le code source",
+        "de": "Sehen Sie den Quellcode"
+    }
+}

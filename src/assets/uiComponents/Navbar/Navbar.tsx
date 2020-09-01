@@ -13,7 +13,7 @@ import Icon from '../Icon/Icon';
 
 // IMPORT LOCALIZE ZONE
 import COMMON_LOCALIZE from '../../../commonLocalize';
-import LOCALIZE from './localize'
+import * as localize from './localize.json'
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT INTERFACE ZONE
@@ -29,6 +29,7 @@ import DeFlagSvg from './imgs/de.svg';
 import UsFlagSvg from './imgs/us.svg';
 // @ts-ignore
 import GitlabIcon from '../../img/gitlabIcon.svg';
+import Localize from '~Localize';
 // END IMPORT IMAGES ZONE
 
 interface NavbarProps {
@@ -82,8 +83,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
     }
 
     const gitlabRepoRender = (): React.ReactNode => {
-        const localize = LOCALIZE[language];
-
         return (
             <a
                 href="https://gitlab.com/johannchopin/my-cv"
@@ -92,7 +91,9 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                 className="clickable"
             >
                 <GitlabIcon />
-                <h2>{localize.check_repo}</h2>
+                <h2>
+                    <Localize translations={localize.check_repo} />
+                </h2>
             </a>
         )
     }
@@ -138,8 +139,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
         fetchStackoverflowReputation();
     }, [])
         
-    const localize = LOCALIZE[language];
-
     return (
         <nav id="navbar" onClick={() => { toggleNavbar() }} className={isOpen ? "open" : ""}>
             <Icon icon="bars" className={isOpen ? "selected burger" : "burger"} />
@@ -148,25 +147,39 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                 <h1>MENU</h1>
                 <ul>
                     <li>
-                        <Link to="/presentation">{localize.presentation}</Link>
+                        <Link to="/presentation">
+                            <Localize translations={localize.presentation} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/background">{localize.background}</Link>
+                        <Link to="/background">
+                            <Localize translations={localize.background} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/skills">{localize.skills}</Link>
+                        <Link to="/skills">
+                            <Localize translations={localize.skills} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/experiences">{localize.personal_experiences}</Link>
+                        <Link to="/experiences">
+                            <Localize translations={localize.personal_experiences} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/projects">{localize.projects}</Link>
+                        <Link to="/projects">
+                            <Localize translations={localize.projects} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/hobbies">{localize.hobbies}</Link>
+                        <Link to="/hobbies">
+                            <Localize translations={localize.hobbies} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/contacts">{localize.contacts}</Link>
+                        <Link to="/contacts">
+                            <Localize translations={localize.contacts} /> 
+                        </Link>
                     </li>
                 </ul>
 
