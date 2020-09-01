@@ -5,7 +5,9 @@ import './timeLinePage.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT LOCALIZE ZONE
-import LOCALIZE from './localize'
+import * as localize from './localize.json'
+import Localize from '~Localize';
+import { useLocalize } from '~helpers/useLocalize';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT INTERFACE ZONE
@@ -20,12 +22,10 @@ interface TimeLinePageProps {
 const TimeLinePage: React.FC<TimeLinePageProps> = (props) => {
     const { language } = props
 
-    const localize = LOCALIZE[language];
-
     return (
         <div id="background" className="swiper-slide">
             <h1 className="animate-me slide-title">
-                {localize.title}
+                <Localize translations={localize.title}/>
             </h1>
 
             <div id="timeline-content">
@@ -33,22 +33,24 @@ const TimeLinePage: React.FC<TimeLinePageProps> = (props) => {
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2018-2019</p>
 
-                        <h2>{localize.year_2018.htw.title}</h2>
+                        <h2>
+                            <Localize translations={localize.htw_start} />
+                        </h2>
                     </li>
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2017-2018</p>
 
-                        <h2 dangerouslySetInnerHTML={{ __html: localize.year_2017.start_isfates.title }}></h2>
-                        <p>{localize.year_2017.start_isfates.complement}</p>
+                        <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.start_isfates) }}></h2>
+                        <p><Localize translations={localize.start_isfates_description} /></p>
 
-                        <h2>{localize.year_2017.bac.title}</h2>
-                        <p dangerouslySetInnerHTML={{ __html: localize.year_2017.bac.complement }}></p>
+                        <h2><Localize translations={localize.bac} /></h2>
+                        <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.bac_description)}}></p>
                     </li>
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2014-2015</p>
 
-                        <h2>{localize.year_2014.brevet}</h2>
-                        <h2>{localize.year_2014.c1_certificate}</h2>
+                        <h2><Localize translations={localize.brevet} /></h2>
+                        <h2><Localize translations={localize.c1_certificate} /></h2>
                     </li>
                 </ul>
             </div>
