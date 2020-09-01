@@ -134,7 +134,6 @@ const Navbar: React.FC = () => {
             <Icon icon="bars" className={isOpen ? "selected burger" : "burger"} />
 
             <div className="container">
-                <h1>MENU</h1>
                 <ul>
                     <li>
                         <Link to="/presentation">
