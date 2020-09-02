@@ -12,7 +12,6 @@ import Icon from '../Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT LOCALIZE ZONE
-import COMMON_LOCALIZE from '../../../commonLocalize';
 import * as localize from './localize.json'
 // END IMPORT LOCALIZE ZONE
 
@@ -30,6 +29,7 @@ import UsFlagSvg from './imgs/us.svg';
 // @ts-ignore
 import GitlabIcon from '../../img/gitlabIcon.svg';
 import Localize from '~Localize';
+import { useLocalize } from '~helpers/useLocalize';
 // END IMPORT IMAGES ZONE
 
 interface NavbarProps {
@@ -99,8 +99,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
     }
 
     const professionalLinksRender = (): React.ReactNode => {
-        const commonLocalize = COMMON_LOCALIZE[language];
-
         return (
             <div id="professionalLinks">
                 <div className="row">
@@ -126,7 +124,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                         className="clickable"
                         data-toggle="tooltip"
                         data-placement="right"
-                        title={commonLocalize.feature_coming_soon}
+                        title={useLocalize(localize.feature_coming_soon)}
                     >
                         <Icon prefix="fab" icon="linkedin" />
                     </a>
