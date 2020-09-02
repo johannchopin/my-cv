@@ -1,0 +1,42 @@
+{
+    "title": {
+        "en": "Education",
+        "fr": "Mon parcours",
+        "de": "Ausbildung"
+    },
+    "brevet": {
+        "en": "Obtaining the certificate of the Middle School, mention 'Very good'",
+        "fr": "Obtention du brevet des collèges, mention 'Très bien'",
+        "de": "Mittlere Reife mit Prädikat 'Sehr gut'"
+    },
+    "c1_certificate": {
+        "en": "B1 certification in German, KMK",
+        "fr": "Certification B1 en allemand, KMK",
+        "de": "B1-Zertifizierung der Kultusministerkonferenz in deutscher Sprache"
+    },
+    "bac": {
+        "en": "Obtaining the BAC S (scientific)",
+        "fr": "Obtention du BAC S (scientifique)",
+        "de": "Wissenschaftliches Abitur"
+    },
+    "bac_description": {
+        "en": "(option European section physics and chemistry in German and Languages and cultures of antiquity: Latin) with the mention '<i>Bien</i>'",
+        "fr": "(option section européenne physique-chimie en allemand et Langues et cultures de l'antiquité: latin) avec mention '<i>Bien</i>'",
+        "de": "(Option Europäische Sektion Physik und Chemie in Deutsch sowie Sprachen und Kulturen der Antike: Latein) mit Prädikat '<i>Gut</i>'"
+    },
+    "start_isfates": {
+        "en": "Start of my studies in computer science at <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
+        "fr": "Début de mes études en informatique à l'<a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
+        "de": "Beginn des Informatikstudiums beim <a href=\"https://www.dfhi-isfates.eu/de/\" target=\"_blank\">DFHI</a>"
+    },
+    "start_isfates_description": {
+        "en": "Institut Supérieur Franco-Allemand de Techniques, d'Economie et de Sciences",
+        "fr": "Institut Supérieur Franco-Allemand de Techniques, d'Economie et de Sciences",
+        "de": "Deutsch-Französisches Hochschulinstitut für Technik und Wirtschaft"
+    },
+    "htw_start": {
+        "en": "Second year of study at HTW in Saarbrücken, Germany",
+        "fr": "Deuxième année d'études à la HTW à Sarrebruck en Allemagne",
+        "de": "Zweites Studienjahr an der HTW in Saarbrücken, Deutschland"
+    }
+}

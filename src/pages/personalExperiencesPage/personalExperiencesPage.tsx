@@ -5,7 +5,8 @@ import './personalExperiencesPage.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT LOCALIZE ZONE
-import LOCALIZE from './localize'
+import * as localize from './localize.json'
+import { useLocalize } from '~helpers/useLocalize';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -14,74 +15,63 @@ import Icon from '../../assets/uiComponents/Icon/Icon';
 
 // IMPORT INTERFACE ZONE
 import { Language } from '../../commonInterface';
+import Localize from '~Localize';
 // END IMPORT INTERFACE ZONE
 
 
-interface PersonalExperiencesPageProps {
-    language: Language,
-}
-
-
-const PersonalExperiencesPage: React.FC<PersonalExperiencesPageProps> = (props) => {
-    const { language } = props;
-
-    const localize = LOCALIZE[language];
-
+const PersonalExperiencesPage: React.FC = () => {
     return (
         <div id="experiences" className="swiper-slide">
-            <h1 className="animate-me slide-title">{localize.title}</h1>
+            <h1 className="animate-me slide-title">
+                <Localize translations={localize.title} />
+            </h1>
 
             <div id="experiencesCtn">
 
                 <div className="animate-me">
-                    <p dangerouslySetInnerHTML={{ __html: localize.work_eurokey.introduction }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_eurokey.introduction) }}></p>
                     <br />
-                    <p>{localize.work_eurokey.complement}</p>
+                    <p><Localize translations={localize.work_eurokey.complement} /></p>
                     <br />
-                    <ul>
-                        {localize.work_eurokey.tasks.map((task: string, i: number): React.ReactNode => {
-                            return <li key={i}>{task}</li>
-                        })}
-                    </ul>
                 </div>
 
                 <div id="hotcityInternship" className="animate-me">
-                    <p dangerouslySetInnerHTML={{ __html: localize.internship_hotcity.introduction }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.internship_hotcity) }}></p>
                     <br />
                     <a id="hotcityLetter" href="https://cv.johannchopin.fr/2019/assets/pdf/hotcity.pdf" target="_blank">
                         <Icon icon="file-alt" />
-                        <p>{localize.internship_hotcity.letter_of_recommendation}</p>
+                        <p><Localize translations={localize.letter_of_recommendation} /></p>
                     </a>
                 </div>
 
                 <div className="animate-me">
-                    <p dangerouslySetInnerHTML={{ __html: localize.coding_contest.hackaton_lux }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.hackaton_lux) }}></p>
                     <br />
-                    <p dangerouslySetInnerHTML={{ __html: localize.coding_contest.battledev }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.battledev) }}></p>
                 </div>
 
                 <div className="animate-me">
-                    <p dangerouslySetInnerHTML={{ __html: localize.diva }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.diva) }}></p>
                 </div>
 
                 <div className="animate-me">
-                    <p dangerouslySetInnerHTML={{ __html: localize.school.cnrs }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.cnrs) }}></p>
                     <br />
-                    <p dangerouslySetInnerHTML={{ __html: localize.school.tpe }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.tpe) }}></p>
                 </div>
 
                 <div className="animate-me">
-                    <p dangerouslySetInnerHTML={{ __html: localize.school.ecpm }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.ecpm) }}></p>
                     <br />
-                    <p dangerouslySetInnerHTML={{ __html: localize.school.pirmasens }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.pirmasens) }}></p>
                 </div>
 
                 <div className="animate-me">
-                    <p dangerouslySetInnerHTML={{ __html: localize.school.pirmasens }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.pirmasens) }}></p>
                     <br />
-                    <p dangerouslySetInnerHTML={{ __html: localize.summer_camp }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.summer_camp) }}></p>
                     <br />
-                    <p dangerouslySetInnerHTML={{ __html: localize.concert }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.concert) }}></p>
                 </div>
 
             </div>

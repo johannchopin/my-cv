@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom';
 import './Navbar.scss';
 // END IMPORT STYLES ZONE
 
+import { AppContext } from '~contexts/App';
+
 // IMPORT COMPONENTS ZONE
 import Icon from '../Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT LOCALIZE ZONE
-import COMMON_LOCALIZE from '../../../commonLocalize';
-import LOCALIZE from './localize'
+import * as localize from './localize.json'
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT INTERFACE ZONE
@@ -27,16 +28,12 @@ import DeFlagSvg from './imgs/de.svg';
 import UsFlagSvg from './imgs/us.svg';
 // @ts-ignore
 import GitlabIcon from '../../img/gitlabIcon.svg';
+import Localize from '~Localize';
+import { useLocalize } from '~helpers/useLocalize';
 // END IMPORT IMAGES ZONE
 
-interface NavbarProps {
-    goToPage: (pageName: Page) => void,
-    setLanguage: (language: Language) => void,
-    language: Language;
-}
-
-const Navbar: React.FC<NavbarProps> = (props) => {
-    const {setLanguage, language} = props
+const Navbar: React.FC = () => {
+    const { lang, setLang } = React.useContext(AppContext)
 
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
     const [SOReputation, setSOReputation] = React.useState<number>(0);
@@ -61,16 +58,16 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             <div id="languageSelection">
 
                 <FrFlagSvg
-                    className={language === 'fr' ? 'selected-language' : ''}
-                    onClick={() => setLanguage('fr')}
+                    className={lang === 'fr' ? 'selected-language' : ''}
+                    onClick={() => setLang('fr')}
                 />
                 <DeFlagSvg
-                    className={language === 'de' ? 'selected-language' : ''}
-                    onClick={() => setLanguage('de')}
+                    className={lang === 'de' ? 'selected-language' : ''}
+                    onClick={() => setLang('de')}
                 />
                 <UsFlagSvg
-                    className={language === 'en' ? 'selected-language' : ''}
-                    onClick={() => setLanguage('en')}
+                    className={lang === 'en' ? 'selected-language' : ''}
+                    onClick={() => setLang('en')}
                 />
 
             </div>
@@ -78,8 +75,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
     }
 
     const gitlabRepoRender = (): React.ReactNode => {
-        const localize = LOCALIZE[language];
-
         return (
             <a
                 href="https://gitlab.com/johannchopin/my-cv"
@@ -88,14 +83,14 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                 className="clickable"
             >
                 <GitlabIcon />
-                <h2>{localize.check_repo}</h2>
+                <h2>
+                    <Localize translations={localize.check_repo} />
+                </h2>
             </a>
         )
     }
 
     const professionalLinksRender = (): React.ReactNode => {
-        const commonLocalize = COMMON_LOCALIZE[language];
-
         return (
             <div id="professionalLinks">
                 <div className="row">
@@ -121,7 +116,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                         className="clickable"
                         data-toggle="tooltip"
                         data-placement="right"
-                        title={commonLocalize.feature_coming_soon}
+                        title={useLocalize(localize.feature_coming_soon)}
                     >
                         <Icon prefix="fab" icon="linkedin" />
                     </a>
@@ -134,8 +129,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
         fetchStackoverflowReputation();
     }, [])
         
-    const localize = LOCALIZE[language];
-
     return (
         <nav id="navbar" onClick={() => { toggleNavbar() }} className={isOpen ? "open" : ""}>
             <Icon icon="bars" className={isOpen ? "selected burger" : "burger"} />
@@ -144,25 +137,39 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                 <h1>MENU</h1>
                 <ul>
                     <li>
-                        <Link to="/presentation">{localize.presentation}</Link>
+                        <Link to="/presentation">
+                            <Localize translations={localize.presentation} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/background">{localize.background}</Link>
+                        <Link to="/background">
+                            <Localize translations={localize.background} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/skills">{localize.skills}</Link>
+                        <Link to="/skills">
+                            <Localize translations={localize.skills} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/experiences">{localize.personal_experiences}</Link>
+                        <Link to="/experiences">
+                            <Localize translations={localize.personal_experiences} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/projects">{localize.projects}</Link>
+                        <Link to="/projects">
+                            <Localize translations={localize.projects} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/hobbies">{localize.hobbies}</Link>
+                        <Link to="/hobbies">
+                            <Localize translations={localize.hobbies} /> 
+                        </Link>
                     </li>
                     <li>
-                        <Link to="/contacts">{localize.contacts}</Link>
+                        <Link to="/contacts">
+                            <Localize translations={localize.contacts} /> 
+                        </Link>
                     </li>
                 </ul>
 

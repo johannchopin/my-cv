@@ -5,7 +5,7 @@ import './projectContainer.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT LOCALIZE ZONE
-import LOCALIZE from './localize';
+import * as localize from './localize.json';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -18,11 +18,10 @@ import Helper from '../../../../helper';
 
 // IMPORT INTERFACE ZONE
 import { Language } from '../../../../commonInterface';
+import { useLocalize } from '~helpers/useLocalize';
 // END IMPORT INTERFACE ZONE
 
-
 interface ProjectContainerProps {
-    language: Language,
     link: string,
     title: string,
     year: number,
@@ -34,7 +33,6 @@ interface ProjectContainerProps {
 
 const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
     const {
-        language,
         link,
         title,
         year,
@@ -62,8 +60,6 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
 
     const linkToGitlabRepoRender = (): React.ReactNode => {
         // TODO: Fix bug -> on props.language change the tooltip title is not updated with the correct translation
-        const checkoutRepoTranslation = LOCALIZE[language].check_repo;
-
         if (Helper.isSet(linkToGitRepo)) {
             return (
                 <a
@@ -72,7 +68,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
                     className="gitlab-icon"
                     data-toggle="tooltip"
                     data-placement="left"
-                    title={checkoutRepoTranslation}
+                    title={useLocalize(localize.check_repo)}
                 >
                     <Icon prefix="fab" icon="gitlab" />
                 </a>
@@ -82,8 +78,6 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
         return '';
     }
 
-
-    const localize = LOCALIZE[language];
 
     return (
         <div

@@ -5,7 +5,8 @@ import './introductionPage.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT LOCALIZE ZONE
-import LOCALIZE from './localize'
+import * as localize from './localize.json'
+import Localize from '~Localize';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT IMAGES ZONE
@@ -24,13 +25,7 @@ import { Language } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
-interface IntroductionPageProps {
-    language: Language
-}
-
-const IntroductionPage: React.FC<IntroductionPageProps> = (props) => {
-    const { language } = props
-
+const IntroductionPage: React.FC = () => {
     const [isSwypeToastOpen, setIsSwypeToastOpen] = React.useState<boolean>(true);
 
     const getAge = (date: string): number => {
@@ -45,14 +40,14 @@ const IntroductionPage: React.FC<IntroductionPageProps> = (props) => {
         return age;
     }
 
-    const localize = LOCALIZE[language];
-
     return (
         <div id='presentation' className="swiper-slide not-scrollable" onClick={():void => { setIsSwypeToastOpen(false) }}>
             <header>
                 <h1 id="slide_0_h1" className="animate-me">Chopin Johann</h1>
 
-                <p id="slide_0_p" className="animate-me">- {localize.student} -</p>
+                <p id="slide_0_p" className="animate-me">
+                    - <Localize translations={localize.student} /> -
+                </p>
 
                 <div id="waveSvg" className="animate-me animation-topApparition">
                     <WaveSvg />
@@ -64,11 +59,14 @@ const IntroductionPage: React.FC<IntroductionPageProps> = (props) => {
             </div>
 
             <p className="presentation-text animate-me">
-                {localize.introduction_text.replace('__AGE__', getAge("1999/04/04").toString())}
+                <Localize 
+                    translations={localize.introduction_text} 
+                    vars={{'__AGE__': `${getAge("1999/04/04")}`}} 
+                />
             </p>
 
             <div id="swipeIndication" className={`animate-me animation-goUp ${isSwypeToastOpen ? 'open' : 'close'}`}>
-                <p>{localize.swipe_indication}</p>
+                <p><Localize translations={localize.swipe_indication}/></p>
                 <Icon icon="arrow-right" className="with-pl" />
             </div>
         </div>

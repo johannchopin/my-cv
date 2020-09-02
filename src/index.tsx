@@ -21,6 +21,7 @@ import './assets/styles/style.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT COMPONENTS ZONE
+import AppProvider from '~contexts/App';
 import Navbar from './assets/uiComponents/Navbar/Navbar';
 import SimpleModal from './assets/uiComponents/simpleModal/simpleModal';
 import LoadingAnimation from './assets/uiComponents/LoadingAnimation/LoadingAnimation';
@@ -163,74 +164,6 @@ const App: React.FC = () => {
         }, 2300);
     };
 
-    const navbarRender = (): React.ReactNode => {
-        return (
-            <Navbar
-                goToPage={goToPage}
-                setLanguage={setLanguage}
-                language={language}
-            />
-        )
-    }
-
-    const introductionPageRender = (): React.ReactNode => {
-        return (
-            <IntroductionPage
-                language={language}
-            />
-        )
-    }
-
-    const timeLinePageRender = (): React.ReactNode => {
-        return (
-            <TimeLinePage
-                language={language}
-            />
-        )
-    }
-
-    const skillsPageRender = (): React.ReactNode => {
-        return (
-            <SkillsPage
-                language={language}
-                active={currentPage === 'skills'}
-            />
-        )
-    }
-
-    const projectsPageRender = (): React.ReactNode => {
-        return (
-            <ProjectsPage
-                language={language}
-            />
-        )
-    }
-
-    const hobbiesPageRender = (): React.ReactNode => {
-        return (
-            <HobbiesPage
-                language={language}
-            />
-        )
-    }
-
-    const personalExperiencesPageRender = (): React.ReactNode => {
-        return (
-            <PersonalExperiencesPage
-                language={language}
-            />
-        )
-    }
-
-    const contactPageRender = (): React.ReactNode => {
-        return (
-            <ContactPage
-                language={language}
-                showSimpleModal={showSimpleModal}
-            />
-        )
-    }
-
     const modalsRender = (): React.ReactNode => {
         return (
             <div id="modals">
@@ -273,29 +206,33 @@ const App: React.FC = () => {
 
     return (
         <Router history={history}>
-            {navbarRender()}
+            <AppProvider>
 
-            <div className="swiper-container">
-                <div className="swiper-wrapper">
-                    {introductionPageRender()}
-                    {timeLinePageRender()}
-                    {skillsPageRender()}
-                    {personalExperiencesPageRender()}
-                    {projectsPageRender()}
-                    {hobbiesPageRender()}
-                    {contactPageRender()}
+                <Navbar />
+
+                <div className="swiper-container">
+                    <div className="swiper-wrapper">
+                        <IntroductionPage />
+                        <TimeLinePage />
+                        <SkillsPage active={currentPage === 'skills'} />
+                        <PersonalExperiencesPage />
+                        <ProjectsPage />
+                        <HobbiesPage />
+                        <ContactPage showSimpleModal={showSimpleModal} />
+                    </div>
+
+                    <div className="swiper-pagination"></div>
+
+                    <div className="swiper-button-prev" id="swiper-button-prev"></div>
+                    <div className="swiper-button-next" id="swiper-button-next"></div>
+
+                    <div className="swiper-scrollbar"></div>
                 </div>
 
-                <div className="swiper-pagination"></div>
+                {modalsRender()}
+                <LoadingAnimation />
 
-                <div className="swiper-button-prev" id="swiper-button-prev"></div>
-                <div className="swiper-button-next" id="swiper-button-next"></div>
-
-                <div className="swiper-scrollbar"></div>
-            </div>
-
-            {modalsRender()}
-            <LoadingAnimation />
+            </AppProvider>
         </Router>
     )
 }
