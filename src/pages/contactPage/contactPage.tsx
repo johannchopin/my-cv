@@ -13,6 +13,7 @@ import ApiCmds from '../../api/apiCmds';
 // END IMPORT APICMDS ZONE
 
 // IMPORT COMPONENTS ZONE
+import { AppContext } from '~contexts/App'
 import Localize, { useLocalize } from '~Localize';
 import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
@@ -24,7 +25,6 @@ import Helper from '../../helper';
 // IMPORT INTERFACE ZONE
 import {
     SimpleModalParams,
-    Language,
     ISendMeEmailData,
     ISendMeEmailResponse
 } from '../../commonInterface';
@@ -32,7 +32,6 @@ import {
 
 
 interface ContactPageProps {
-    language: Language,
     showSimpleModal: (params: SimpleModalParams) => void,
 }
 
@@ -43,7 +42,10 @@ type FormState = {
 }
 
 const ContactPage: React.FC<ContactPageProps> = (props) => {
-    const {language, showSimpleModal} = props
+    const { showSimpleModal} = props
+
+    const { lang } = React.useContext(AppContext);
+
     const maxCharactersInMsg = 1024;
     const maxCharactersInSubject = 30;
     const [formState, setFormState] = React.useState<FormState>({
@@ -123,7 +125,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
 
     const getLinkToCV = (): string => {
         let cvName = '';
-        switch (language) {
+        switch (lang) {
             default:
                 cvName = 'myCV2019-fr';
                 break;

@@ -32,16 +32,8 @@ import Localize from '~Localize';
 import { useLocalize } from '~helpers/useLocalize';
 // END IMPORT IMAGES ZONE
 
-interface NavbarProps {
-    goToPage: (pageName: Page) => void,
-    setLanguage: (language: Language) => void,
-    language: Language;
-}
-
-const Navbar: React.FC<NavbarProps> = (props) => {
-    const {setLanguage, language} = props
-
-    const { setLang } = React.useContext(AppContext)
+const Navbar: React.FC = () => {
+    const { lang, setLang } = React.useContext(AppContext)
 
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
     const [SOReputation, setSOReputation] = React.useState<number>(0);
@@ -66,15 +58,15 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             <div id="languageSelection">
 
                 <FrFlagSvg
-                    className={language === 'fr' ? 'selected-language' : ''}
+                    className={lang === 'fr' ? 'selected-language' : ''}
                     onClick={() => setLang('fr')}
                 />
                 <DeFlagSvg
-                    className={language === 'de' ? 'selected-language' : ''}
+                    className={lang === 'de' ? 'selected-language' : ''}
                     onClick={() => setLang('de')}
                 />
                 <UsFlagSvg
-                    className={language === 'en' ? 'selected-language' : ''}
+                    className={lang === 'en' ? 'selected-language' : ''}
                     onClick={() => setLang('en')}
                 />
 

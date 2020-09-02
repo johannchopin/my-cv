@@ -36,13 +36,7 @@ import { Language } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
-export interface ProjectsPageProps {
-    language: Language,
-}
-
-const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
-    const { language } = props;
-
+const ProjectsPage: React.FC = () => {
     return (
         <div id="projects" className="swiper-slide">
             <h1 className="animate-me slide-title">
@@ -51,7 +45,6 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
 
             <div className="projects-ctn">
                 <ProjectContainer
-                    language={language}
                     link="https://github.com/johannchopin/gitmoji-browser-extension"
                     title="Gitmoji Browser Extension"
                     year={2020}
@@ -61,7 +54,6 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     technologiesUsed={['sveltejs', 'html', 'css']}
                 />
                 <ProjectContainer
-                    language={language}
                     link="https://caretaker-smarthome.eu/"
                     title="Caretaker-Smarthome"
                     year={2019}
@@ -71,7 +63,6 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
                 />
                 <ProjectContainer
-                    language={language}
                     link="https://isfates-adventskalender.eu/"
                     title="ISFATES-Adventskalender"
                     year={2019}
@@ -81,7 +72,6 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
                 />
                 <ProjectContainer
-                    language={language}
                     link="https://forum-jgr.com/"
                     title="Zukunftsforum-Website"
                     year={2019}
@@ -90,7 +80,6 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     technologiesUsed={['wordpress', 'php', 'html', 'css']}
                 />
                 <ProjectContainer
-                    language={language}
                     link="https://astropulse.johannchopin.fr/"
                     title="Astropulse-Experience"
                     year={2018}
@@ -100,7 +89,6 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     technologiesUsed={['php', 'html', 'css', 'javascript', 'mysql']}
                 />
                 <ProjectContainer
-                    language={language}
                     link="http://diva.dfhi-isfates.eu/"
                     title="DIVA-Website"
                     year={2017}
@@ -109,7 +97,6 @@ const ProjectsPage: React.FC<ProjectsPageProps> = (props) => {
                     technologiesUsed={['php', 'html', 'css', 'javascript', 'bootstrap']}
                 />
                 <ProjectContainer
-                    language={language}
                     link="https://test.johannchopin.fr/walkinlove/"
                     title="WalkInLove-Website"
                     year={2017}

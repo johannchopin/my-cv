@@ -22,7 +22,6 @@ import { useLocalize } from '~helpers/useLocalize';
 // END IMPORT INTERFACE ZONE
 
 interface ProjectContainerProps {
-    language: Language,
     link: string,
     title: string,
     year: number,
@@ -34,7 +33,6 @@ interface ProjectContainerProps {
 
 const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
     const {
-        language,
         link,
         title,
         year,

@@ -14,14 +14,7 @@ import { useLocalize } from '~helpers/useLocalize';
 import { Language } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
-
-interface TimeLinePageProps {
-    language: Language
-}
-
-const TimeLinePage: React.FC<TimeLinePageProps> = (props) => {
-    const { language } = props
-
+const TimeLinePage: React.FC = () => {
     return (
         <div id="background" className="swiper-slide">
             <h1 className="animate-me slide-title">

@@ -33,12 +33,11 @@ import { Language } from '../../commonInterface';
 
 
 interface SkillsPageProps {
-    language: Language,
     active: boolean
 }
 
 const SkillsPage: React.FC<SkillsPageProps> = (props) => {
-    const { language, active } = props;
+    const { active } = props;
 
     const initGauges = (): void => {
         const gaugeToAnimate = $('#skills .animated-gauge');

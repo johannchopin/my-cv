@@ -20,11 +20,7 @@ import Localize from '~Localize';
 // END IMPORT INTERFACE ZONE
 
 
-interface HobbiesPageProps {
-    language: Language
-}
-
-const HobbiesPage: React.FC<HobbiesPageProps> = () => {
+const HobbiesPage: React.FC = () => {
     return (
         <div id='hobbies' className="swiper-slide">
             <h1 className="animate-me slide-title">

@@ -166,68 +166,49 @@ const App: React.FC = () => {
 
     const navbarRender = (): React.ReactNode => {
         return (
-            <Navbar
-                goToPage={goToPage}
-                setLanguage={setLanguage}
-                language={language}
-            />
+            <Navbar />
         )
     }
 
     const introductionPageRender = (): React.ReactNode => {
         return (
-            <IntroductionPage
-                language={language}
-            />
+            <IntroductionPage />
         )
     }
 
     const timeLinePageRender = (): React.ReactNode => {
         return (
-            <TimeLinePage
-                language={language}
-            />
+            <TimeLinePage />
         )
     }
 
     const skillsPageRender = (): React.ReactNode => {
         return (
-            <SkillsPage
-                language={language}
-                active={currentPage === 'skills'}
-            />
+            <SkillsPage active={currentPage === 'skills'} />
         )
     }
 
     const projectsPageRender = (): React.ReactNode => {
         return (
-            <ProjectsPage
-                language={language}
-            />
+            <ProjectsPage />
         )
     }
 
     const hobbiesPageRender = (): React.ReactNode => {
         return (
-            <HobbiesPage
-                language={language}
-            />
+            <HobbiesPage />
         )
     }
 
     const personalExperiencesPageRender = (): React.ReactNode => {
         return (
-            <PersonalExperiencesPage
-                language={language}
-            />
+            <PersonalExperiencesPage />
         )
     }
 
     const contactPageRender = (): React.ReactNode => {
         return (
-            <ContactPage
-                language={language}
-                showSimpleModal={showSimpleModal}
+            <ContactPage showSimpleModal={showSimpleModal}
             />
         )
     }

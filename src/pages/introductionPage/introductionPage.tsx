@@ -25,13 +25,7 @@ import { Language } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
-interface IntroductionPageProps {
-    language: Language
-}
-
-const IntroductionPage: React.FC<IntroductionPageProps> = (props) => {
-    const { language } = props
-
+const IntroductionPage: React.FC = () => {
     const [isSwypeToastOpen, setIsSwypeToastOpen] = React.useState<boolean>(true);
 
     const getAge = (date: string): number => {
