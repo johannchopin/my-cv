@@ -164,55 +164,6 @@ const App: React.FC = () => {
         }, 2300);
     };
 
-    const navbarRender = (): React.ReactNode => {
-        return (
-            <Navbar />
-        )
-    }
-
-    const introductionPageRender = (): React.ReactNode => {
-        return (
-            <IntroductionPage />
-        )
-    }
-
-    const timeLinePageRender = (): React.ReactNode => {
-        return (
-            <TimeLinePage />
-        )
-    }
-
-    const skillsPageRender = (): React.ReactNode => {
-        return (
-            <SkillsPage active={currentPage === 'skills'} />
-        )
-    }
-
-    const projectsPageRender = (): React.ReactNode => {
-        return (
-            <ProjectsPage />
-        )
-    }
-
-    const hobbiesPageRender = (): React.ReactNode => {
-        return (
-            <HobbiesPage />
-        )
-    }
-
-    const personalExperiencesPageRender = (): React.ReactNode => {
-        return (
-            <PersonalExperiencesPage />
-        )
-    }
-
-    const contactPageRender = (): React.ReactNode => {
-        return (
-            <ContactPage showSimpleModal={showSimpleModal}
-            />
-        )
-    }
-
     const modalsRender = (): React.ReactNode => {
         return (
             <div id="modals">
@@ -257,17 +208,17 @@ const App: React.FC = () => {
         <Router history={history}>
             <AppProvider>
 
-                {navbarRender()}
+                <Navbar />
 
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
-                        {introductionPageRender()}
-                        {timeLinePageRender()}
-                        {skillsPageRender()}
-                        {personalExperiencesPageRender()}
-                        {projectsPageRender()}
-                        {hobbiesPageRender()}
-                        {contactPageRender()}
+                        <IntroductionPage />
+                        <TimeLinePage />
+                        <SkillsPage active={currentPage === 'skills'} />
+                        <PersonalExperiencesPage />
+                        <ProjectsPage />
+                        <HobbiesPage />
+                        <ContactPage showSimpleModal={showSimpleModal} />
                     </div>
 
                     <div className="swiper-pagination"></div>
