@@ -80,22 +80,6 @@
                 }
 
             }
-
-            ul {
-                padding-inline-start: .6em;
-
-                li {
-                    margin-top: .8em;
-                    line-height: 1.3em;
-
-                    &::before {
-                        content: "•";
-                        font-weight: 900;
-                        margin-right: .4em;
-                        color: $cv-gold;
-                    }
-                }
-            }
         }
 
         #hotcityInternship {

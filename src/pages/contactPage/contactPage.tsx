@@ -5,7 +5,7 @@ import './contactPage.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT LOCALIZE ZONE
-import LOCALIZE from './localize'
+import * as localize from './localize.json'
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT APICMDS ZONE
@@ -13,9 +13,10 @@ import ApiCmds from '../../api/apiCmds';
 // END IMPORT APICMDS ZONE
 
 // IMPORT COMPONENTS ZONE
+import { AppContext } from '~contexts/App'
+import Localize, { useLocalize } from '~Localize';
 import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
-
 
 // INIT HELPERS METHODS ZONE
 import Helper from '../../helper';
@@ -24,7 +25,6 @@ import Helper from '../../helper';
 // IMPORT INTERFACE ZONE
 import {
     SimpleModalParams,
-    Language,
     ISendMeEmailData,
     ISendMeEmailResponse
 } from '../../commonInterface';
@@ -32,7 +32,6 @@ import {
 
 
 interface ContactPageProps {
-    language: Language,
     showSimpleModal: (params: SimpleModalParams) => void,
 }
 
@@ -43,7 +42,10 @@ type FormState = {
 }
 
 const ContactPage: React.FC<ContactPageProps> = (props) => {
-    const {language, showSimpleModal} = props
+    const { showSimpleModal} = props
+
+    const { lang } = React.useContext(AppContext);
+
     const maxCharactersInMsg = 1024;
     const maxCharactersInSubject = 30;
     const [formState, setFormState] = React.useState<FormState>({
@@ -80,8 +82,6 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
     }
 
     const onSubmitBtnClick = (): void => {
-        const localize = LOCALIZE[language];
-
         if (areInputsValid()) {
             const mailData: ISendMeEmailData = {
                 from: formState.from,
@@ -93,7 +93,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
         } else {
             showSimpleModal({
                 type: 'danger',
-                message: localize.invalid_email_form,
+                message: useLocalize(localize.invalid_email_form)
 
             })
         }
@@ -103,7 +103,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
         if (result.response.hasEmailBeSend) {
             showSimpleModal({
                 type: 'success',
-                'message': LOCALIZE[language]['email_has_been_sent']
+                message: useLocalize(localize.email_has_been_sent)
             })
 
             resetInputs();
@@ -125,7 +125,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
 
     const getLinkToCV = (): string => {
         let cvName = '';
-        switch (language) {
+        switch (lang) {
             default:
                 cvName = 'myCV2019-fr';
                 break;
@@ -142,11 +142,11 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
         return `https://cv.johannchopin.fr/2019/assets/pdf/${cvName}.pdf`;
     }
 
-    const localize = LOCALIZE[language];
-
     return (
         <div id='contacts' className="swiper-slide">
-            <h1>{localize.title}</h1>
+            <h1>
+                <Localize translations={localize.title} />
+            </h1>
             <div className="form">
                 <input
                     type="text"
@@ -155,7 +155,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                     onChange={(event): void => {
                         setFormState({...formState, from: event.target.value})
                     }}
-                    placeholder={LOCALIZE[language].from}
+                    placeholder={useLocalize(localize.from)}
                 />
 
                 <input
@@ -165,14 +165,14 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                     onChange={(event): void => {
                         setFormState({...formState, subject: event.target.value})
                     }}
-                    placeholder={LOCALIZE[language].subject}
+                    placeholder={useLocalize(localize.subject)}
                 />
 
                 <textarea
                     className="form-control m-2 animate-me animation-goUp"
                     value={formState.message}
                     onChange={onMsgInputChange}
-                    placeholder={LOCALIZE[language].message}
+                    placeholder={useLocalize(localize.message)}
                     rows={10}
                 ></textarea>
 
@@ -182,7 +182,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
 
                 <button type="button" className="btn btn-gold animate-me animation-goUp" onClick={() => onSubmitBtnClick()}>
                     <Icon icon="paper-plane" className="with-pr" />
-                    {localize['send']}
+                    <Localize translations={localize.send} />
                 </button>
             </div>
 
@@ -193,7 +193,9 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                 </a>
 
                 <a href={getLinkToCV()} target="_blank" id="cv" className="animate-me animation-goUp">
-                    <p>{localize.download_cv}</p>
+                    <p>
+                        <Localize translations={localize.download_cv} />
+                    </p>
                 </a>
             </div>
         </div>

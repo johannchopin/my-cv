@@ -5,7 +5,7 @@ import './hobbiesPage.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT LOCALIZE ZONE
-import LOCALIZE from './localize'
+import * as localize from './localize.json'
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -16,21 +16,16 @@ import Icon from '../../assets/uiComponents/Icon/Icon';
 import {
     Language
 } from '../../commonInterface';
+import Localize from '~Localize';
 // END IMPORT INTERFACE ZONE
 
 
-interface HobbiesPageProps {
-    language: Language
-}
-
-const HobbiesPage: React.FC<HobbiesPageProps> = (props) => {
-    const { language } = props
-
-    const localize = LOCALIZE[language];
-
+const HobbiesPage: React.FC = () => {
     return (
         <div id='hobbies' className="swiper-slide">
-            <h1 className="animate-me slide-title">{localize.title}</h1>
+            <h1 className="animate-me slide-title">
+                <Localize translations={localize.title} />
+            </h1>
 
             <div id="hobbiesCtn">
 
@@ -40,17 +35,21 @@ const HobbiesPage: React.FC<HobbiesPageProps> = (props) => {
                         <div className="icon">
                             <Icon icon="terminal" />
                         </div>
-                        <h2>{localize.programming}</h2>
+                        <h2>
+                            <Localize translations={localize.programming} />
+                        </h2>
                         <p>
                             <Icon prefix="fab" icon="react" className="react-icon" />
-                            {localize.react_lover}
+                            <Localize translations={localize.react_lover} />
                         </p>
                     </div>
                     <div className="animate-me">
                         <div className="icon">
                             <Icon icon="fish" />
                         </div>
-                        <h2>{localize.dive}</h2>
+                        <h2>
+                            <Localize translations={localize.dive} />
+                        </h2>
                     </div>
 
                 </div>
@@ -63,7 +62,9 @@ const HobbiesPage: React.FC<HobbiesPageProps> = (props) => {
                         </div>
                         <p className="illustrator">Illustrator</p>
 
-                        <h2>{localize.make_icon}</h2>
+                        <h2>
+                            <Localize translations={localize.make_icon} />
+                        </h2>
 
                         <div className="icons">
                             <a href="https://johannchopin.fr/icon/caretaker/" target="_blank" className="clickable-effect">
@@ -91,13 +92,17 @@ const HobbiesPage: React.FC<HobbiesPageProps> = (props) => {
                         <div className="icon">
                             <Icon icon="music" />
                         </div>
-                        <h2>{localize.play_music}</h2>
+                        <h2>
+                            <Localize translations={localize.play_music} />
+                        </h2>
                     </div>
                     <div className="animate-me">
                         <div className="icon">
                             <Icon icon="snowboarding" />
                         </div>
-                        <h2>{localize.snowboard}</h2>
+                        <h2>
+                            <Localize translations={localize.snowboard} />
+                        </h2>
                     </div>
                 </div>
             </div>

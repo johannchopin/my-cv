@@ -5,7 +5,8 @@ import './skillsPage.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT LOCALIZE ZONE
-import LOCALIZE from './localize'
+import * as localize from './localize.json'
+import Localize from '~Localize';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT PAGEBASE ZONE
@@ -32,12 +33,11 @@ import { Language } from '../../commonInterface';
 
 
 interface SkillsPageProps {
-    language: Language,
     active: boolean
 }
 
 const SkillsPage: React.FC<SkillsPageProps> = (props) => {
-    const { language, active } = props;
+    const { active } = props;
 
     const initGauges = (): void => {
         const gaugeToAnimate = $('#skills .animated-gauge');
@@ -68,26 +68,34 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
         }
     }, [active])
 
-    const localize = LOCALIZE[language];
-
     return (
         <div id="skills" className="swiper-slide">
-            <h1 className="animate-me slide-title">{localize.title}</h1>
+            <h1 className="animate-me slide-title">
+                <Localize translations={localize.title} />
+            </h1>
 
             <div className="skills-ctn">
                 <div className="langues animate-me" id="langues">
-                    <h2>{localize.languages}</h2>
+                    <h2>
+                        <Localize translations={localize.languages} />
+                    </h2>
                     <div>
                         <img src={C2} />
-                        <p>{localize.french}</p>
+                        <p>
+                            <Localize translations={localize.french} />
+                        </p>
                     </div>
                     <div>
                         <img src={B2} />
-                        <p>{localize.german}</p>
+                        <p>
+                            <Localize translations={localize.german} />
+                        </p>
                     </div>
                     <div>
                         <img src={B2} />
-                        <p>{localize.english}</p>
+                        <p>
+                            <Localize translations={localize.english} />
+                        </p>
                     </div>
                 </div>
                 <div className="animate-me" id="softwareSkills">
