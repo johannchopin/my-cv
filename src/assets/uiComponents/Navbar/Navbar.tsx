@@ -13,10 +13,15 @@ import Icon from '../Icon/Icon';
 
 // IMPORT LOCALIZE ZONE
 import * as localize from './localize.json'
+import Localize from '~Localize';
+import { useLocalize, Translation } from '~helpers/useLocalize';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT INTERFACE ZONE
-import { Page, Language } from '../../../commonInterface';
+type Link = {
+    link: string
+    translations: Translation
+}
 // END IMPORT INTERFACE ZONE
 
 // IMPORT IMAGES ZONE
@@ -28,9 +33,38 @@ import DeFlagSvg from './imgs/de.svg';
 import UsFlagSvg from './imgs/us.svg';
 // @ts-ignore
 import GitlabIcon from '../../img/gitlabIcon.svg';
-import Localize from '~Localize';
-import { useLocalize } from '~helpers/useLocalize';
 // END IMPORT IMAGES ZONE
+
+const links: Link[] = [
+    {
+        link: '/presentation',
+        translations: localize.presentation
+    },
+    {
+        link: '/background',
+        translations: localize.background
+    },
+    {
+        link: '/skills',
+        translations: localize.skills
+    },
+    {
+        link: '/experiences',
+        translations: localize.personal_experiences
+    },
+    {
+        link: '/projects',
+        translations: localize.projects
+    },
+    {
+        link: '/hobbies',
+        translations: localize.hobbies
+    },
+    {
+        link: '/contacts',
+        translations: localize.contacts
+    }
+]
 
 const Navbar: React.FC = () => {
     const { lang, setLang } = React.useContext(AppContext)
@@ -58,16 +92,25 @@ const Navbar: React.FC = () => {
             <div id="languageSelection">
 
                 <FrFlagSvg
-                    className={lang === 'fr' ? 'selected-language' : ''}
-                    onClick={() => setLang('fr')}
+                    className={`clickable ${lang === 'fr' ? 'selected' : ''}`}
+                    onClick={() => {
+                        setLang('fr')
+                        setIsOpen(false)
+                    }}
                 />
                 <DeFlagSvg
-                    className={lang === 'de' ? 'selected-language' : ''}
-                    onClick={() => setLang('de')}
+                    className={`clickable ${lang === 'de' ? 'selected' : ''}`}
+                    onClick={() => {
+                        setLang('de')
+                        setIsOpen(false)
+                    }}
                 />
                 <UsFlagSvg
-                    className={lang === 'en' ? 'selected-language' : ''}
-                    onClick={() => setLang('en')}
+                    className={`clickable ${lang === 'en' ? 'selected' : ''}`}
+                    onClick={() => {
+                        setLang('en')
+                        setIsOpen(false)
+                    }}
                 />
 
             </div>
@@ -125,53 +168,34 @@ const Navbar: React.FC = () => {
         )
     }
 
+    const renderLinks = (): JSX.Element => {
+        const renderLinksList = () => {
+            return links.map(link => {
+                return (
+                    <li key={link.link}>
+                        <Link to={link.link}>
+                            <span onClick={() => { setIsOpen(false) }}>
+                                {useLocalize(link.translations)}
+                            </span>
+                        </Link>
+                    </li>
+                )
+            })
+        }
+
+        return <ul>{renderLinksList()}</ul>
+    }
+
     React.useEffect(() => {
         fetchStackoverflowReputation();
     }, [])
         
     return (
-        <nav id="navbar" onClick={() => { toggleNavbar() }} className={isOpen ? "open" : ""}>
-            <Icon icon="bars" className={isOpen ? "selected burger" : "burger"} />
+        <nav id="navbar" className={isOpen ? "open" : ""}>
+            <Icon icon="bars" onClick={() => { toggleNavbar() }} className={isOpen ? "selected burger" : "burger"} />
 
             <div className="container">
-                <h1>MENU</h1>
-                <ul>
-                    <li>
-                        <Link to="/presentation">
-                            <Localize translations={localize.presentation} /> 
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/background">
-                            <Localize translations={localize.background} /> 
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/skills">
-                            <Localize translations={localize.skills} /> 
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/experiences">
-                            <Localize translations={localize.personal_experiences} /> 
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/projects">
-                            <Localize translations={localize.projects} /> 
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/hobbies">
-                            <Localize translations={localize.hobbies} /> 
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/contacts">
-                            <Localize translations={localize.contacts} /> 
-                        </Link>
-                    </li>
-                </ul>
+                {renderLinks()}
 
                 {languageSelectionRender()}
                 {gitlabRepoRender()}
