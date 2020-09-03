@@ -24,7 +24,7 @@ const HobbiesPage: React.FC = () => {
     return (
         <div id='hobbies' className="swiper-slide">
             <h1 className="animate-me slide-title">
-                <Localize translations={localize.title} />
+                🎸 <Localize translations={localize.title} />
             </h1>
 
             <div id="hobbiesCtn">
