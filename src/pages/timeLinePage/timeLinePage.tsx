@@ -18,7 +18,7 @@ const TimeLinePage: React.FC = () => {
     return (
         <div id="background" className="swiper-slide">
             <h1 className="animate-me slide-title">
-                <Localize translations={localize.title}/>
+                🎓 <Localize translations={localize.title}/>
             </h1>
 
             <div id="timeline-content">
