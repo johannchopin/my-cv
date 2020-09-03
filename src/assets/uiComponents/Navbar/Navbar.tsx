@@ -92,21 +92,21 @@ const Navbar: React.FC = () => {
             <div id="languageSelection">
 
                 <FrFlagSvg
-                    className={lang === 'fr' ? 'selected-language' : ''}
+                    className={`clickable ${lang === 'fr' ? 'selected' : ''}`}
                     onClick={() => {
                         setLang('fr')
                         setIsOpen(false)
                     }}
                 />
                 <DeFlagSvg
-                    className={lang === 'de' ? 'selected-language' : ''}
+                    className={`clickable ${lang === 'de' ? 'selected' : ''}`}
                     onClick={() => {
                         setLang('de')
                         setIsOpen(false)
                     }}
                 />
                 <UsFlagSvg
-                    className={lang === 'en' ? 'selected-language' : ''}
+                    className={`clickable ${lang === 'en' ? 'selected' : ''}`}
                     onClick={() => {
                         setLang('en')
                         setIsOpen(false)
