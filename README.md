@@ -1,3 +1,7 @@
+<a href="https://gitmoji.carloscuesta.me">
+  <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+</a>
+
 # :page_facing_up: Welcome to my online CV repo
 
 #### > See it online [here](https://cv.johannchopin.fr/)
