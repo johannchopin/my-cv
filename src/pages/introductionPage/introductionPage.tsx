@@ -6,7 +6,7 @@ import './introductionPage.scss';
 
 // IMPORT LOCALIZE ZONE
 import * as localize from './localize.json'
-import Localize from '~Localize';
+import Localize, { useLocalize } from '~Localize';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT IMAGES ZONE
@@ -43,10 +43,12 @@ const IntroductionPage: React.FC = () => {
     return (
         <div id='presentation' className="swiper-slide not-scrollable" onClick={():void => { setIsSwypeToastOpen(false) }}>
             <header>
-                <h1 id="slide_0_h1" className="animate-me">Chopin Johann</h1>
+                <h1 id="slide_0_h1" className="animate-me">
+                    <Localize translations={localize.hey}/> ➕✖️
+                </h1>
 
                 <p id="slide_0_p" className="animate-me">
-                    - <Localize translations={localize.student} /> -
+                    - Web developer -
                 </p>
 
                 <div id="waveSvg" className="animate-me animation-topApparition">
@@ -58,12 +60,7 @@ const IntroductionPage: React.FC = () => {
                 <img id="slide_0_img" className="animate-me" src={myNiceFace} />
             </div>
 
-            <p className="presentation-text animate-me">
-                <Localize 
-                    translations={localize.introduction_text} 
-                    vars={{'__AGE__': `${getAge("1999/04/04")}`}} 
-                />
-            </p>
+            <p className="presentation-text animate-me" dangerouslySetInnerHTML={{ __html: useLocalize(localize.introduction) }}></p>
 
             <div id="swipeIndication" className={`animate-me animation-goUp ${isSwypeToastOpen ? 'open' : 'close'}`}>
                 <p><Localize translations={localize.swipe_indication}/></p>

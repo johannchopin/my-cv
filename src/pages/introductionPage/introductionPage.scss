@@ -61,6 +61,11 @@
         font-size: 1.4em;
         text-align: center;
 
+        a {
+            color: $cv-gold;
+            text-shadow: 1px 1px rgb(117, 117, 117);
+        }
+
         i {
             font-family: 'ubuntu';
             font-size: 1.6rem;
