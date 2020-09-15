@@ -44,7 +44,7 @@ const IntroductionPage: React.FC = () => {
         <div id='presentation' className="swiper-slide not-scrollable" onClick={():void => { setIsSwypeToastOpen(false) }}>
             <header>
                 <h1 id="slide_0_h1" className="animate-me">
-                    <Localize translations={localize.hey}/> ➕✖️
+                    <Localize translations={localize.hey}/> 👋
                 </h1>
 
                 <p id="slide_0_p" className="animate-me">
