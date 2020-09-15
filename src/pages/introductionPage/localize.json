@@ -1,17 +1,17 @@
 {
-    "introduction_text": {
-        "en": "\"As a __AGE__-year - old student at the Institut Supérieur Franco-Allemand de Techniques, d'Économies et de Sciences (ISFATES), I have been passionate about programming and the web for several years now. Ambitious and willing, I hope to fit the profile you're looking for.\"",
-        "fr": "\"Étudiant de __AGE__ ans à l'Institut Supérieur Franco-Allemand de Techniques, d’Économies et de Sciences(ISFATES), je me passionne depuis plusieurs annéees déjà pour la programmation et le web plus précisement. Ambitieux et volontaire, j'espère correspondre au profil que vous recherchez.\"",
-        "de": "\"Als __AGE__-jähriger Student am Deutsch-Französischen Hochschulinstitut für Technik und Wirtschaft (DFHI) interessiere ich mich nun seit einigen Jahren für Webprogrammierung und Internet. Ehrgeizig und zuverlässig, hoffe ich, dem Profil zu entsprechen, das Sie suchen.\""
+    "introduction": {
+        "en": "I'm a french 🇫🇷 enthusiast <b>Fullstack-developer</b> evolving in the JavaScript ecosystem. I like to <a href='https://stackoverflow.com/users/8583669/johannchopin' target='_blank'>help peoples</a>, contribute to <a href='/projects'>projects</a> and learn new stuffs concerning Web technologies.", 
+        "fr": "Je suis un <b>développeur Fullstack</b> français 🇫🇷 passionné évoluant dans l'écosystème JavaScript. J'aime <a href='https://stackoverflow.com/users/8583669/johannchopin' target='_blank'>aider les gens</a>, contribuer à <a href='/projets'>des projets</a> et apprendre de nouvelles choses concernant les technologies du Web.",
+        "de": "Ich bin ein französischer 🇫🇷 Enthusiast <b>Fullstack-Entwickler</b> der sich im JavaScript-Ökosystem entwickelt. Ich möchte <a href='https://stackoverflow.com/users/8583669/johannchopin' target='_blank'>Menschen helfen</a>, zu <a href='/projects'>projects</a> beitragen und neue Dinge über Web-Technologien lernen."
     },
     "swipe_indication": {
         "en": "Swipe to the right to browse my CV",
         "fr": "Balayez vers la droite pour parcourir mon CV",
         "de": "Swipen Sie nach rechts, um meinen Lebenslauf einzusehen"
     },
-    "student": {
-        "en": "Computer Science Student",
-        "fr": "Étudiant en Informatique",
-        "de": "Student der Informatik"
+    "hey": {
+        "en": "Hi there, I'm Johann",
+        "fr": "Salut, je suis Johann",
+        "de": "Hallo, ich bin Johann"
     }
 }
