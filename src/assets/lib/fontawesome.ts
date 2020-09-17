@@ -12,6 +12,7 @@ import {
     faGitlab,
     faFontAwesome,
     faLinkedin,
+    faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -42,7 +43,7 @@ import {
     faSnowboarding,
     faTerminal,
     faFileCode,
-    faCircleNotch,
+    faCircleNotch
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
