@@ -68,20 +68,20 @@ const HobbiesPage: React.FC = () => {
 
                         <div className="icons">
                             <a href="https://johannchopin.fr/icon/caretaker/" target="_blank" className="clickable-effect">
-                                <img src="https://johannchopin.fr/icon/caretaker/icons/v3.0.png" />
-                                <img src="https://johannchopin.fr/icon/caretaker/icons/v2.4white.png" />
+                                <img src="https://johannchopin.fr/icon/caretaker/icons/v3.0.png" alt="Caretaker icon" />
+                                <img src="https://johannchopin.fr/icon/caretaker/icons/v2.4white.png" alt="Caretaker icon" />
                             </a>
 
                             <a href="https://johannchopin.fr/icon/adventskalender/" target="_blank" className="clickable-effect">
-                                <img src="https://johannchopin.fr/icon/adventskalender/icons/v2.2.svg" />
+                                <img src="https://johannchopin.fr/icon/adventskalender/icons/v2.2.svg" alt="Adventskalender icon" />
                             </a>
 
                             <a href="https://johannchopin.fr/icon/forum_jgr/" target="_blank" className="clickable-effect">
-                                <img src="https://johannchopin.fr/icon/forum_jgr/icons/v1.2.png" />
+                                <img src="https://johannchopin.fr/icon/forum_jgr/icons/v1.2.png" alt="Forum JGR icon" />
                             </a>
 
                             <a href="https://johannchopin.fr/icon/isfates_sweet/" target="_blank" className="clickable-effect">
-                                <img src="https://johannchopin.fr/icon/isfates_sweet/icons/v5.0.svg" />
+                                <img src="https://johannchopin.fr/icon/isfates_sweet/icons/v5.0.svg" alt="ISFATES sweet icon" />
                             </a>
                         </div>
                     </div>
