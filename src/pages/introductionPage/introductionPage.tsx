@@ -57,7 +57,7 @@ const IntroductionPage: React.FC = () => {
             </header>
 
             <div className="my-face-ctn">
-                <img id="slide_0_img" className="animate-me" src={myNiceFace} />
+                <img id="slide_0_img" className="animate-me" src={myNiceFace} alt="Picture of me" />
             </div>
 
             <p className="presentation-text animate-me" dangerouslySetInnerHTML={{ __html: useLocalize(localize.introduction) }}></p>
