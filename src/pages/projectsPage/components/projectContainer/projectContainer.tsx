@@ -89,7 +89,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
             >
                 <div className="header">
                     <div className="img-ctn">
-                        <img src={image} />
+                        <img src={image} alt={`${title} project's logo`}/>
                     </div>
                     <div>
                         <h2>{title}</h2>

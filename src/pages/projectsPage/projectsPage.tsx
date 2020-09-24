@@ -54,7 +54,7 @@ const ProjectsPage: React.FC = () => {
                     technologiesUsed={['sveltejs', 'html', 'css', 'browser-extension']}
                 />
                 <ProjectContainer
-                    link="https://caretaker-smarthome.eu/"
+                    link="http://caretaker-smarthome.johannchopin.fr/"
                     title="Caretaker-Smarthome"
                     year={2019}
                     image={CaretakerIcon}
@@ -63,7 +63,7 @@ const ProjectsPage: React.FC = () => {
                     technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
                 />
                 <ProjectContainer
-                    link="https://isfates-adventskalender.eu/"
+                    link="https://adventskalender.johannchopin.fr/"
                     title="ISFATES-Adventskalender"
                     year={2019}
                     image={AdventskalendarIcon}

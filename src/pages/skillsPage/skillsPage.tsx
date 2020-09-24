@@ -80,19 +80,19 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         <Localize translations={localize.languages} />
                     </h2>
                     <div>
-                        <img src={C2} />
+                        <img src={C2} alt="Level C2 icon"/>
                         <p>
                             <Localize translations={localize.french} />
                         </p>
                     </div>
                     <div>
-                        <img src={B2} />
+                        <img src={B2} alt="Level B2 icon"/>
                         <p>
                             <Localize translations={localize.german} />
                         </p>
                     </div>
                     <div>
-                        <img src={B2} />
+                        <img src={B2} alt="Level B2 icon"/>
                         <p>
                             <Localize translations={localize.english} />
                         </p>
