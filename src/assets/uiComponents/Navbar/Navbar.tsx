@@ -161,12 +161,9 @@ const Navbar: React.FC = () => {
                         <Icon prefix="fab" icon="github" />
                     </a>
                     <a
-                        // TODO: Add link to linkedIn
+                        href="https://www.linkedin.com/in/johann-chopin-b0097b197/"
                         target="_blank"
                         className="clickable"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title={useLocalize(localize.feature_coming_soon)}
                     >
                         <Icon prefix="fab" icon="linkedin" />
                     </a>
