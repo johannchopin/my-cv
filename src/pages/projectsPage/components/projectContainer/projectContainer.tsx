@@ -58,6 +58,16 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
         return '';
     }
 
+    const renderGitRepoIcon = (): JSX.Element => {
+        const isGitHubRepo = link.startsWith('https://github.com/')
+
+        if (isGitHubRepo) {
+            return <Icon prefix="fab" icon="github" />
+        }
+
+        return <Icon prefix="fab" icon="gitlab" />
+    }
+
     const linkToGitlabRepoRender = (): React.ReactNode => {
         // TODO: Fix bug -> on props.language change the tooltip title is not updated with the correct translation
         if (Helper.isSet(linkToGitRepo)) {
@@ -65,12 +75,12 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
                 <a
                     href={linkToGitRepo}
                     target="_blank"
-                    className="gitlab-icon"
+                    className="git-repo-icon"
                     data-toggle="tooltip"
                     data-placement="left"
                     title={useLocalize(localize.check_repo)}
                 >
-                    <Icon prefix="fab" icon="gitlab" />
+                    {renderGitRepoIcon()}
                 </a>
             )
         }
