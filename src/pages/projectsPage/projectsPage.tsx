@@ -25,6 +25,8 @@ import DivaLogo from '../../assets/img/diva-logo.png';
 import ZukunftsforumLogo from '../../assets/img/zukunftsforum-icon.png';
 //@ts-ignore
 import GitmojiLogo from '../../assets/img/gitmoji.png';
+//@ts-ignore
+import RestapifyLogo from '../../assets/img/restapify-icon.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -44,6 +46,15 @@ const ProjectsPage: React.FC = () => {
             </h1>
 
             <div className="projects-ctn">
+                <ProjectContainer 
+                    link="http://restapify.vercel.app/"
+                    title="Restapify"
+                    year={2021}
+                    image={RestapifyLogo}
+                    summary={useLocalize(localize.restapify)}
+                    linkToGitRepo="https://github.com/johannchopin/restapify"
+                    technologiesUsed={['typescript', 'express', 'svelte']}
+                />
                 <ProjectContainer
                     link="https://github.com/johannchopin/gitmoji-browser-extension"
                     title="Gitmoji Browser Extension"
