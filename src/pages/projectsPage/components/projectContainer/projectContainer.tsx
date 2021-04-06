@@ -59,7 +59,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
     }
 
     const renderGitRepoIcon = (): JSX.Element => {
-        const isGitHubRepo = link.startsWith('https://github.com/')
+        const isGitHubRepo = linkToGitRepo.startsWith('https://github.com/')
 
         if (isGitHubRepo) {
             return <Icon prefix="fab" icon="github" />

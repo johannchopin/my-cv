@@ -26,7 +26,7 @@
     },
     "walkinlove": {
         "en": "Realization of a website with php as part of my studies.",
-        "fr": "Réalisation d'un site web avec php dans le cadre de mes études",
+        "fr": "Réalisation d'un site web avec php dans le cadre de mes études.",
         "de": "Realisierung einer Website mit php im Rahmen meines Studiums."
     },
     "zukunftsforum": {
@@ -38,5 +38,10 @@
         "en": "The Gitmoji extension to easily search and copy gitmojis 😜",
         "fr": "L'extension Gitmoji pour rechercher et copier facilement les gitmojis 😜",
         "de": "Die Gitmoji-Erweiterung zum einfachen Suchen und Kopieren von Gitmojis 😜"
+    },
+    "restapify": {
+        "en": "Quickly and easily deploy a mocked REST API by using an intuitive and developer friendly JSON file structure.",
+        "fr": "Déployez rapidement et facilement une API REST simulée à l'aide d'une structure de fichier JSON intuitive et agréable pour les développeurs.",
+        "de": "Schnelle und einfache Bereitstellung einer Mocked-REST-API durch Verwendung einer intuitiven und entwicklerfreundlichen JSON-Dateistruktur."
     }
 }
