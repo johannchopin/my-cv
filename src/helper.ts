@@ -106,4 +106,13 @@ export default class Helper {
     public static isSet(elmt: any): boolean {
         return !this.isUndefined(elmt) && !this.isNull(elmt);
     }
+
+    public static getUserReputation = (rep: number): string => {
+        if (rep >= 1_000_000) return `${(Math.round(rep / 100_000) / 10).toFixed(1)}m`
+        if (rep >= 100_000) return `${Math.round(rep / 1000)}k`
+        if (rep >= 10_000) return `${(Math.round(rep / 100) / 10).toFixed(1)}k`
+        if (rep >= 1000) return (rep / 1000).toFixed(3).replace('.', ',')
+      
+        return rep.toString()
+      }
 }

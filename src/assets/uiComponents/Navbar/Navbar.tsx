@@ -33,8 +33,10 @@ import DeFlagSvg from './imgs/de.svg';
 import UsFlagSvg from './imgs/us.svg';
 // @ts-ignore
 import GitlabIcon from '../../img/gitlabIcon.svg';
+import Helper from '~helper';
 // END IMPORT IMAGES ZONE
 
+const SO_ID = 8583669
 const links: Link[] = [
     {
         link: '/presentation',
@@ -70,17 +72,20 @@ const Navbar: React.FC = () => {
     const { lang, setLang } = React.useContext(AppContext)
 
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
-    const [SOReputation, setSOReputation] = React.useState<number>(0);
+    const [SOReputation, setSOReputation] = React.useState<string>('...');
 
     const fetchStackoverflowReputation = (): void => {
-        fetch('https://cors-anywhere.herokuapp.com/https://stackoverflow.com/users/flair/8583669.json')
-            .then(response => response.json())
-            .then(data => setStackoverflowReputation(data.reputation));
+        const url = `https://api.stackexchange.com/2.2/users/${SO_ID}?site=stackoverflow`
+        fetch(url)
+            .then(response => response.json()            )
+            .then(data => {
+                const reputation = data.items[0].reputation
+                setStackoverflowReputation(reputation)
+            })
     }
 
-    const setStackoverflowReputation = (reputation: string) => {
-        const reputationAsNumber = parseFloat(reputation.replace(',', '.'));
-        setSOReputation(Math.round(reputationAsNumber * 10) / 10);
+    const setStackoverflowReputation = (reputation: number) => {
+        setSOReputation(Helper.getUserReputation(reputation));
     }
 
     const toggleNavbar = (): void => {
@@ -144,14 +149,7 @@ const Navbar: React.FC = () => {
                         className="clickable d-flex flex-column align-items-center"
                     >
                         <Icon prefix="fab" icon="stack-overflow" />
-                        <span className="reputation">{SOReputation}k</span>
-                    </a>
-                    <a
-                        href="https://gitlab.com/johannchopin"
-                        target="_blank"
-                        className="clickable"
-                    >
-                        <Icon prefix="fab" icon="gitlab" />
+                        <span className="reputation">{SOReputation}</span>
                     </a>
                     <a
                         href="https://github.com/johannchopin"
@@ -159,6 +157,13 @@ const Navbar: React.FC = () => {
                         className="clickable"
                     >
                         <Icon prefix="fab" icon="github" />
+                    </a>
+                    <a
+                        href="https://gitlab.com/johannchopin"
+                        target="_blank"
+                        className="clickable"
+                    >
+                        <Icon prefix="fab" icon="gitlab" />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/johann-chopin-b0097b197/"
