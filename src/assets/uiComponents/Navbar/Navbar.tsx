@@ -172,6 +172,13 @@ const Navbar: React.FC = () => {
                     >
                         <Icon prefix="fab" icon="linkedin" />
                     </a>
+                    <a
+                        href="https://dev.to/johannchopin"
+                        target="_blank"
+                        className="clickable"
+                    >
+                        <Icon prefix="fab" icon="dev" />
+                    </a>
                 </div>
             </div>
         )

@@ -13,6 +13,7 @@ import {
     faFontAwesome,
     faLinkedin,
     faGithub,
+    faDev
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
