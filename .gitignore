@@ -5,4 +5,3 @@ build/*
 package-lock.json
 .firebase/*
 firebase-debug.log
-yarn.lock
