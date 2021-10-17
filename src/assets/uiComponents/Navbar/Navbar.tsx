@@ -208,7 +208,9 @@ const Navbar: React.FC = () => {
         
     return (
         <nav id="navbar" className={isOpen ? "open" : ""}>
-            <Icon icon="bars" onClick={() => { toggleNavbar() }} className={isOpen ? "selected burger" : "burger"} />
+            <div onClick={() => { toggleNavbar() }} className="burger">
+                <Icon icon="bars"  className={isOpen ? "selected" : ""} />
+            </div>
 
             <div className="container">
                 {renderLinks()}
