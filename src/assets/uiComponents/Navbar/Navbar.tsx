@@ -122,16 +122,16 @@ const Navbar: React.FC = () => {
         )
     }
 
-    const gitlabRepoRender = (): React.ReactNode => {
+    const repoLinkRender = (): React.ReactNode => {
         return (
             <a
-                href="https://gitlab.com/johannchopin/my-cv"
+                href="https://github.com/johannchopin/my-cv"
                 target="_blank"
-                id="gitlabRepo"
+                id="githubRepo"
                 className="clickable"
             >
-                <GitlabIcon />
                 <h2>
+                    <Icon prefix="fab" icon="github" className="pr-1" />
                     <Localize translations={localize.check_repo} />
                 </h2>
             </a>
@@ -216,7 +216,7 @@ const Navbar: React.FC = () => {
                 {renderLinks()}
 
                 {languageSelectionRender()}
-                {gitlabRepoRender()}
+                {repoLinkRender()}
                 {professionalLinksRender()}
             </div>
         </nav>
