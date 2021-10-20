@@ -43,5 +43,10 @@
         "en": "Quickly and easily deploy a mocked REST API by using an intuitive and developer friendly JSON file structure.",
         "fr": "Déployez rapidement et facilement une API REST simulée à l'aide d'une structure de fichier JSON intuitive et agréable pour les développeurs.",
         "de": "Schnelle und einfache Bereitstellung einer Mocked-REST-API durch Verwendung einer intuitiven und entwicklerfreundlichen JSON-Dateistruktur."
+    },
+    "ux-typing-experiment": {
+        "en": "The objective of this study is to determine the optimal way to display and to type alphanumeric sequences (such as identifiers, order numbers, etc.)",
+        "fr": "L'objectif de cette étude est de déterminer la manière optimale d'afficher et de taper les séquences alphanumériques (telles que les identifiants, les numéros de commande, etc.).",
+        "de": "Ziel dieser Studie ist es, die optimale Art und Weise der Anzeige und Eingabe von alphanumerischen Sequenzen (wie z. B. Kennungen, Bestellnummern usw.) zu ermitteln."
     }
 }

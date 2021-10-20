@@ -27,6 +27,8 @@ import ZukunftsforumLogo from '../../assets/img/zukunftsforum-icon.png';
 import GitmojiLogo from '../../assets/img/gitmoji.png';
 //@ts-ignore
 import RestapifyLogo from '../../assets/img/restapify-icon.png';
+//@ts-ignore
+import UxExperimentIcon from '../../assets/img/ux-experiment-icon.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -46,6 +48,15 @@ const ProjectsPage: React.FC = () => {
             </h1>
 
             <div className="projects-ctn">
+                <ProjectContainer 
+                    link="https://ux-typing-experiment-five.vercel.app/"
+                    title="ux-typing-experiment"
+                    year={2021}
+                    image={UxExperimentIcon}
+                    summary={useLocalize(localize['ux-typing-experiment'])}
+                    linkToGitRepo="https://github.com/Lyokolux/ux-typing-experiment"
+                    technologiesUsed={['sveltekit', 'firestore', 'typescript', 'highcharts.js']}
+                />
                 <ProjectContainer 
                     link="http://restapify.vercel.app/"
                     title="Restapify"
