@@ -22,7 +22,7 @@ import { useLocalize } from '~helpers/useLocalize';
 // END IMPORT INTERFACE ZONE
 
 interface ProjectContainerProps {
-    link: string,
+    link?: string,
     title: string,
     year: number,
     image: string,
@@ -88,15 +88,9 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
         return '';
     }
 
-
-    return (
-        <div
-            className="animate-me project-ctn"
-        >
-            <a
-                href={link}
-                target="_blank"
-            >
+    const renderProjectUI = (): JSX.Element => {
+        return (
+            <>
                 <div className="header">
                     <div className="img-ctn">
                         <img src={image} alt={`${title} project's logo`}/>
@@ -110,8 +104,20 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
                     <h4>{summary}</h4>
                     {technologiesUsedRender()}
                 </div>
-            </a>
+            </>
+        )
+    }
 
+
+    return (
+        <div
+            className="animate-me project-ctn"
+        >
+            {link 
+                ? <a href={link} target="_blank"> {renderProjectUI()}</a>
+                :renderProjectUI()
+            }
+            
             {linkToGitlabRepoRender()}
         </div>
     )

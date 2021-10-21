@@ -48,5 +48,10 @@
         "en": "The objective of this study is to determine the optimal way to display and to type alphanumeric sequences (such as identifiers, order numbers, etc.)",
         "fr": "L'objectif de cette étude est de déterminer la manière optimale d'afficher et de taper les séquences alphanumériques (telles que les identifiants, les numéros de commande, etc.).",
         "de": "Ziel dieser Studie ist es, die optimale Art und Weise der Anzeige und Eingabe von alphanumerischen Sequenzen (wie z. B. Kennungen, Bestellnummern usw.) zu ermitteln."
+    },
+    "dslv-niedersachsen": {
+        "en": "Creation of a frontend web app with backend and CRUD dashboard allowing the association of sports teachers of the German region of Niedersachsen to create sports events to facilitate the registration of members.",
+        "fr": "Création d'une application web frontend avec backend et un dashboard CRUD permettant à l'association des professeurs de sport de la région allemande de Niedersachsen de créer des événements sportifs pour faciliter l'inscription des membres.",
+        "de": "Erstellung einer Frontend-Web-Applikation mit Backend und CRUD Dashboard, die es dem Niedersächsischen Sportlehrerverband ermöglicht, Sportveranstaltungen zu erstellen, um die Anmeldung von Mitgliedern zu erleichtern."
     }
 }

@@ -29,6 +29,8 @@ import GitmojiLogo from '../../assets/img/gitmoji.png';
 import RestapifyLogo from '../../assets/img/restapify-icon.png';
 //@ts-ignore
 import UxExperimentIcon from '../../assets/img/ux-experiment-icon.png';
+//@ts-ignore
+import DSLVLogo from '../../assets/img/DSLV-logo.jpeg';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -56,6 +58,13 @@ const ProjectsPage: React.FC = () => {
                     summary={useLocalize(localize['ux-typing-experiment'])}
                     linkToGitRepo="https://github.com/Lyokolux/ux-typing-experiment"
                     technologiesUsed={['sveltekit', 'firestore', 'typescript', 'highcharts.js']}
+                />
+                <ProjectContainer 
+                    title="DSLV Niedersachsen's events dashboard"
+                    year={2021}
+                    image={DSLVLogo}
+                    summary={useLocalize(localize['dslv-niedersachsen'])}
+                    technologiesUsed={['react', 'express', 'typeorm', 'mongodb', 'nodemailer']}
                 />
                 <ProjectContainer 
                     link="http://restapify.vercel.app/"
