@@ -8,6 +8,14 @@ $CONTAINER_ID: "#hobbies";
         flex-wrap: wrap;
         justify-content: space-evenly;
 
+        .svelte-section {
+            svg {
+                padding-right: 5px;
+                width: 1.5em;
+                color: $cv-pink;
+            }
+        }
+
         .col {
             display: flex;
             flex-direction: column;
@@ -63,7 +71,7 @@ $CONTAINER_ID: "#hobbies";
                     font-size: 1.2em;
 
                     .react-icon {
-                        color: $cv-pink;
+                        color: $cv-gold;
                         font-size: 1.8em;
                         padding-right: .1em;
                     }

@@ -13,12 +13,12 @@ import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
-import {
-    Language
-} from '../../commonInterface';
 import Localize from '~Localize';
 // END IMPORT INTERFACE ZONE
 
+
+//@ts-ignore
+import SvelteIcon from '../../assets/img/svelte-icon.svg';
 
 const HobbiesPage: React.FC = () => {
     return (
@@ -38,10 +38,16 @@ const HobbiesPage: React.FC = () => {
                         <h2>
                             <Localize translations={localize.programming} />
                         </h2>
-                        <p>
-                            <Icon prefix="fab" icon="react" className="react-icon" />
-                            <Localize translations={localize.react_lover} />
-                        </p>
+                        <div className="mt-3">
+                            <p className="d-flex svelte-section m-0">
+                                <SvelteIcon />
+                                Svelte lover
+                            </p>
+                            <p>
+                                <Icon prefix="fab" icon="react" className="react-icon m-0" />
+                                React enthusiast
+                            </p>
+                        </div>
                     </div>
                     <div className="animate-me">
                         <div className="icon">
