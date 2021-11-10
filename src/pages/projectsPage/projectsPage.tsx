@@ -57,7 +57,7 @@ const ProjectsPage: React.FC = () => {
                     image={UxExperimentIcon}
                     summary={useLocalize(localize['ux-typing-experiment'])}
                     linkToGitRepo="https://github.com/Lyokolux/ux-typing-experiment"
-                    technologiesUsed={['sveltekit', 'firestore', 'typescript', 'highcharts.js']}
+                    technologiesUsed={['sveltekit', 'firestore', 'typescript', 'highcharts']}
                 />
                 <ProjectContainer 
                     title="DSLV Niedersachsen's events dashboard"
@@ -82,7 +82,7 @@ const ProjectsPage: React.FC = () => {
                     image={GitmojiLogo}
                     summary={useLocalize(localize.gitmoji_browser_extension)}
                     linkToGitRepo="https://github.com/johannchopin/gitmoji-browser-extension"
-                    technologiesUsed={['sveltejs', 'html', 'css', 'browser-extension']}
+                    technologiesUsed={['svelte', 'html', 'css', 'browser-extension']}
                 />
                 <ProjectContainer
                     link="http://caretaker-smarthome.johannchopin.fr/"
@@ -91,7 +91,7 @@ const ProjectsPage: React.FC = () => {
                     image={CaretakerIcon}
                     summary={useLocalize(localize.caretaker)}
                     linkToGitRepo="https://gitlab.com/caretaker-smarthome"
-                    technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
+                    technologiesUsed={['typescript', 'react', 'scss', 'php', 'python']}
                 />
                 <ProjectContainer
                     link="https://adventskalender.johannchopin.fr/"
@@ -100,7 +100,7 @@ const ProjectsPage: React.FC = () => {
                     image={AdventskalendarIcon}
                     summary={useLocalize(localize.adventskalender)}
                     linkToGitRepo="https://gitlab.com/isfates_adventskalender"
-                    technologiesUsed={['typescript', 'reactjs', 'scss', 'php', 'python']}
+                    technologiesUsed={['typescript', 'react', 'scss', 'php', 'python']}
                 />
                 <ProjectContainer
                     link="https://forum-jgr.com/"
