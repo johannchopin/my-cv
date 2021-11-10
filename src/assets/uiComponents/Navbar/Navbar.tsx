@@ -128,9 +128,9 @@ const Navbar: React.FC = () => {
                 href="https://github.com/johannchopin/my-cv"
                 target="_blank"
                 id="githubRepo"
-                className="clickable"
+                className="clickable btn btn-light"
             >
-                <h2>
+                <h2 className="m-0">
                     <Icon prefix="fab" icon="github" className="pr-1" />
                     <Localize translations={localize.check_repo} />
                 </h2>
