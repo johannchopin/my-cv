@@ -31,6 +31,8 @@ import RestapifyLogo from '../../assets/img/restapify-icon.png';
 import UxExperimentIcon from '../../assets/img/ux-experiment-icon.png';
 //@ts-ignore
 import DSLVLogo from '../../assets/img/DSLV-logo.jpeg';
+//@ts-ignore
+import CleanCssIcon from '../../assets/img/clean-css-icon.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -74,6 +76,15 @@ const ProjectsPage: React.FC = () => {
                     summary={useLocalize(localize.restapify)}
                     linkToGitRepo="https://github.com/johannchopin/restapify"
                     technologiesUsed={['typescript', 'express', 'svelte']}
+                />
+                <ProjectContainer 
+                    link="https://clean-css.github.io/"
+                    title="clean-css website"
+                    year={2021}
+                    image={CleanCssIcon}
+                    summary={useLocalize(localize['clean-css-website'])}
+                    linkToGitRepo="https://github.com/clean-css/clean-css.github.io"
+                    technologiesUsed={['svelte', 'clean-css', 'bootstrap', 'github pages']}
                 />
                 <ProjectContainer
                     link="https://github.com/johannchopin/gitmoji-browser-extension"

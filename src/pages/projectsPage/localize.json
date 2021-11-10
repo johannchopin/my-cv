@@ -53,5 +53,10 @@
         "en": "Creation of a frontend web app with backend and CRUD dashboard allowing the association of sports teachers of the German region of Niedersachsen to create sports events to facilitate the registration of members.",
         "fr": "Création d'une application web frontend avec backend et un dashboard CRUD permettant à l'association des professeurs de sport de la région allemande de Niedersachsen de créer des événements sportifs pour faciliter l'inscription des membres.",
         "de": "Erstellung einer Frontend-Web-Applikation mit Backend und CRUD Dashboard, die es dem Niedersächsischen Sportlehrerverband ermöglicht, Sportveranstaltungen zu erstellen, um die Anmeldung von Mitgliedern zu erleichtern."
+    },
+    "clean-css-website": {
+        "en": "Revamp of the website of the very popular open-source project clean-css.",
+        "fr": "Refonte du site web du très populaire projet open-source clean-css.",
+        "de": "Überarbeitung der Website des sehr beliebten Open-Source-Projekts clean-css."
     }
 }
