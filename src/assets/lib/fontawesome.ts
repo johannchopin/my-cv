@@ -44,7 +44,8 @@ import {
     faSnowboarding,
     faTerminal,
     faFileCode,
-    faCircleNotch
+    faCircleNotch,
+    faIcons
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -88,4 +89,5 @@ library.add(
     faFontAwesome,
     faCircleNotch,
     faLinkedin,
+    faIcons
 );

@@ -10,16 +10,16 @@
         "de": "Musik spielen (Gitarre, Klavier)"
     },
     "dive": {
-        "en": "Diving (CMAS1 level)",
-        "fr": "Plongée (niveau CMAS1)",
-        "de": "Tauchen (CMAS1 Level)"
+        "en": "Diving (AOVD level)",
+        "fr": "Plongée (niveau AOVD)",
+        "de": "Tauchen (AOVD Level)"
     },
     "programming": {
         "en": "Web programming (Typescript, Python, PHP)",
         "fr": "Programmation web (Typescript, Python, PHP)",
         "de": "Webprogrammierung (Typescript, Python, PHP)"
     },
-    "make_icon": {
+    "make_logos": {
         "en": "Icons creation",
         "fr": "Création d'icônes",
         "de": "Erstellung von Icons"
