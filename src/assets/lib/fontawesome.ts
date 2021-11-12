@@ -13,6 +13,7 @@ import {
     faFontAwesome,
     faLinkedin,
     faGithub,
+    faDev
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -43,7 +44,8 @@ import {
     faSnowboarding,
     faTerminal,
     faFileCode,
-    faCircleNotch
+    faCircleNotch,
+    faIcons
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -87,4 +89,5 @@ library.add(
     faFontAwesome,
     faCircleNotch,
     faLinkedin,
+    faIcons
 );

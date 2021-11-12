@@ -122,16 +122,16 @@ const Navbar: React.FC = () => {
         )
     }
 
-    const gitlabRepoRender = (): React.ReactNode => {
+    const repoLinkRender = (): React.ReactNode => {
         return (
             <a
-                href="https://gitlab.com/johannchopin/my-cv"
+                href="https://github.com/johannchopin/my-cv"
                 target="_blank"
-                id="gitlabRepo"
-                className="clickable"
+                id="githubRepo"
+                className="clickable btn btn-light"
             >
-                <GitlabIcon />
-                <h2>
+                <h2 className="m-0">
+                    <Icon prefix="fab" icon="github" className="pr-1" />
                     <Localize translations={localize.check_repo} />
                 </h2>
             </a>
@@ -172,6 +172,13 @@ const Navbar: React.FC = () => {
                     >
                         <Icon prefix="fab" icon="linkedin" />
                     </a>
+                    <a
+                        href="https://dev.to/johannchopin"
+                        target="_blank"
+                        className="clickable"
+                    >
+                        <Icon prefix="fab" icon="dev" />
+                    </a>
                 </div>
             </div>
         )
@@ -201,13 +208,15 @@ const Navbar: React.FC = () => {
         
     return (
         <nav id="navbar" className={isOpen ? "open" : ""}>
-            <Icon icon="bars" onClick={() => { toggleNavbar() }} className={isOpen ? "selected burger" : "burger"} />
+            <div onClick={() => { toggleNavbar() }} className="burger">
+                <Icon icon="bars"  className={isOpen ? "selected" : ""} />
+            </div>
 
             <div className="container">
                 {renderLinks()}
 
                 {languageSelectionRender()}
-                {gitlabRepoRender()}
+                {repoLinkRender()}
                 {professionalLinksRender()}
             </div>
         </nav>

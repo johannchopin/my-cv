@@ -8,17 +8,28 @@ import './hobbiesPage.scss';
 import * as localize from './localize.json'
 // END IMPORT LOCALIZE ZONE
 
+// IMPORT IMAGES ZONE
+//@ts-ignore
+import ForumJgrLogo from '../../assets/img/forum-jgr-logo.png';
+//@ts-ignore
+import DivaPullIcon from '../../assets/img/diva-pull-icon.png';
+//@ts-ignore
+import CaretakerLogo from '../../assets/img/caretaker-logo.png';
+//@ts-ignore
+import AdventskalenderLogo from '../../assets/img/adventskalender-logo.png';
+// END IMPORT IMAGES ZONE
+
 // IMPORT COMPONENTS ZONE
 import Icon from '../../assets/uiComponents/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
-import {
-    Language
-} from '../../commonInterface';
 import Localize from '~Localize';
 // END IMPORT INTERFACE ZONE
 
+
+//@ts-ignore
+import SvelteIcon from '../../assets/img/svelte-icon.svg';
 
 const HobbiesPage: React.FC = () => {
     return (
@@ -38,10 +49,16 @@ const HobbiesPage: React.FC = () => {
                         <h2>
                             <Localize translations={localize.programming} />
                         </h2>
-                        <p>
-                            <Icon prefix="fab" icon="react" className="react-icon" />
-                            <Localize translations={localize.react_lover} />
-                        </p>
+                        <div className="mt-3">
+                            <p className="d-flex svelte-section m-0">
+                                <SvelteIcon />
+                                Svelte lover
+                            </p>
+                            <p>
+                                <Icon prefix="fab" icon="react" className="react-icon m-0" />
+                                React enthusiast
+                            </p>
+                        </div>
                     </div>
                     <div className="animate-me">
                         <div className="icon">
@@ -58,31 +75,21 @@ const HobbiesPage: React.FC = () => {
 
                     <div id="makeIconCtn" className="animate-me">
                         <div className="icon">
-                            <Icon prefix="fab" icon="adobe" />
+                            <Icon icon="icons" />
                         </div>
-                        <p className="illustrator">Illustrator</p>
 
                         <h2>
-                            <Localize translations={localize.make_icon} />
+                            <Localize translations={localize.make_logos} />
                         </h2>
 
                         <div className="icons">
-                            <a href="https://johannchopin.fr/icon/caretaker/" target="_blank" className="clickable-effect">
-                                <img src="https://johannchopin.fr/icon/caretaker/icons/v3.0.png" alt="Caretaker icon" />
-                                <img src="https://johannchopin.fr/icon/caretaker/icons/v2.4white.png" alt="Caretaker icon" />
-                            </a>
+                            <img src={CaretakerLogo} alt="Caretaker icon" />
 
-                            <a href="https://johannchopin.fr/icon/adventskalender/" target="_blank" className="clickable-effect">
-                                <img src="https://johannchopin.fr/icon/adventskalender/icons/v2.2.svg" alt="Adventskalender icon" />
-                            </a>
+                            <img src={AdventskalenderLogo} alt="Adventskalender icon" />
 
-                            <a href="https://johannchopin.fr/icon/forum_jgr/" target="_blank" className="clickable-effect">
-                                <img src="https://johannchopin.fr/icon/forum_jgr/icons/v1.2.png" alt="Forum JGR icon" />
-                            </a>
+                            <img src={ForumJgrLogo} alt="Forum JGR icon" />
 
-                            <a href="https://johannchopin.fr/icon/isfates_sweet/" target="_blank" className="clickable-effect">
-                                <img src="https://johannchopin.fr/icon/isfates_sweet/icons/v5.0.svg" alt="ISFATES sweet icon" />
-                            </a>
+                            <img src={DivaPullIcon} alt="ISFATES sweet icon" />
                         </div>
                     </div>
                 </div>
