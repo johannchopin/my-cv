@@ -28,23 +28,12 @@ import { Language } from '../../commonInterface';
 const IntroductionPage: React.FC = () => {
     const [isSwypeToastOpen, setIsSwypeToastOpen] = React.useState<boolean>(true);
 
-    const getAge = (date: string): number => {
-        const today = new Date();
-        const birthDate = new Date(date);
-        let age = today.getFullYear() - birthDate.getFullYear();
-        const m = today.getMonth() - birthDate.getMonth();
-        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-            age--;
-        }
-
-        return age;
-    }
-
     return (
         <div id='presentation' className="swiper-slide not-scrollable" onClick={():void => { setIsSwypeToastOpen(false) }}>
             <header>
                 <h1 id="slide_0_h1" className="animate-me">
-                    <Localize translations={localize.hey}/> 👋
+                    <Localize translations={localize.hey}/> 
+                    <span className="ml-2 waving-hand">👋</span>
                 </h1>
 
                 <p id="slide_0_p" className="animate-me">
