@@ -20,9 +20,9 @@
         "de": "Webprogrammierung (Typescript, Python, PHP)"
     },
     "make_logos": {
-        "en": "Icons creation",
-        "fr": "Création d'icônes",
-        "de": "Erstellung von Icons"
+        "en": "Icons creation (svgs)",
+        "fr": "Création d'icônes (svgs)",
+        "de": "Erstellung von Icons (svgs)"
     },
     "snowboard": {
         "en": "Snowboard",
