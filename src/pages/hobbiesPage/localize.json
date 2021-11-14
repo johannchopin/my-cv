@@ -10,9 +10,9 @@
         "de": "Musik spielen (Gitarre, Klavier)"
     },
     "dive": {
-        "en": "Diving (AOVD level)",
-        "fr": "Plongée (niveau AOVD)",
-        "de": "Tauchen (AOVD Level)"
+        "en": "Diving (AOWD level)",
+        "fr": "Plongée (niveau AOWD)",
+        "de": "Tauchen (AOWD Level)"
     },
     "programming": {
         "en": "Web programming (Typescript, Python, PHP)",
