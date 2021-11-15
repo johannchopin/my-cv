@@ -5,3 +5,5 @@ build/*
 package-lock.json
 .firebase/*
 firebase-debug.log
+
+.DS_Store
