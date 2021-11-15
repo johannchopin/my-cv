@@ -96,7 +96,6 @@ const ProjectsPage: React.FC = () => {
                     technologiesUsed={['svelte', 'html', 'css', 'browser-extension']}
                 />
                 <ProjectContainer
-                    link="http://caretaker-smarthome.johannchopin.fr/"
                     title="Caretaker-Smarthome"
                     year={2019}
                     image={CaretakerIcon}
@@ -105,7 +104,6 @@ const ProjectsPage: React.FC = () => {
                     technologiesUsed={['typescript', 'react', 'scss', 'php', 'python']}
                 />
                 <ProjectContainer
-                    link="https://adventskalender.johannchopin.fr/"
                     title="ISFATES-Adventskalender"
                     year={2019}
                     image={AdventskalendarIcon}
@@ -122,7 +120,6 @@ const ProjectsPage: React.FC = () => {
                     technologiesUsed={['wordpress', 'php', 'html', 'css']}
                 />
                 <ProjectContainer
-                    link="https://astropulse.johannchopin.fr/"
                     title="Astropulse-Experience"
                     year={2018}
                     image={AstropulseIcon}
@@ -139,7 +136,6 @@ const ProjectsPage: React.FC = () => {
                     technologiesUsed={['php', 'html', 'css', 'javascript', 'bootstrap']}
                 />
                 <ProjectContainer
-                    link="https://test.johannchopin.fr/walkinlove/"
                     title="WalkInLove-Website"
                     year={2017}
                     image={WalkinloveLogo}

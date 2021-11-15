@@ -16,10 +16,6 @@ const PageBase = new _PageBase();
 
 // IMPORT IMAGES ZONE
 //@ts-ignore
-import C2 from './assets/img/c2.png';
-//@ts-ignore
-import B2 from './assets/img/b2.png';
-//@ts-ignore
 import TypescriptIcon from '../../assets/img/typescript-icon.svg';
 //@ts-ignore
 import SvelteIcon from '../../assets/img/svelte-icon.svg';
@@ -27,6 +23,7 @@ import SvelteIcon from '../../assets/img/svelte-icon.svg';
 
 // IMPORT COMPONENTS ZONE
 import Icon from '../../assets/uiComponents/Icon/Icon';
+import LanguageLevel from '../../assets/uiComponents/LanguageLevel/LanguageLevel';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -73,90 +70,90 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
             </h1>
 
             <div className="skills-ctn">
-            <div className="animate-me" id="softwareSkills">
-                    <h2>SOFTWARE</h2>
-                    <h3 id="typescriptSkills">
-                        <TypescriptIcon />
-                        TypeScript :
-                    </h3>
-                    <div className="animated-gauge">
-                        <div className="jauge-ts"></div>
-                    </div>
-                    <h3>
-                        <Icon prefix="fab" icon="react" />
-                        React :
-                    </h3>
-                    <div className="animated-gauge">
-                        <div className="jauge-react"></div>
-                    </div>
-                    <h3 id="svelteSkills">
-                        <SvelteIcon />
-                        Svelte :
-                    </h3>
-                    <div className="animated-gauge">
-                        <div className="jauge-svelte"></div>
-                    </div>
-                    <h3>
-                        <Icon prefix="fab" icon="angular" />
-                        Angular :
-                    </h3>
-                    <div className="animated-gauge">
-                        <div className="jauge-angular"></div>
-                    </div>
-                    <h3>
-                        <Icon icon="file-code" />
-                        HTML5+CSS3 :
-                    </h3>
-                    <div className="animated-gauge">
-                        <div className="jauge-html-css"></div>
-                    </div>
-                    <h3>
-                        <Icon prefix="fab" icon="php" />
-                        PHP :
-                    </h3>
-                    <div className="animated-gauge">
-                        <div className="jauge-php"></div>
-                    </div>
-                    <h3>
-                        <Icon prefix="fab" icon="python" />
-                        Python :
-                    </h3>
-                    <div className="animated-gauge">
-                        <div className="jauge-python"></div>
-                    </div>
-                    <h3>
-                        <Icon prefix="fab" icon="git-alt" />
-                        Git :
-                    </h3>
-                    <div className="animated-gauge">
-                        <div className="jauge-git"></div>
-                    </div>
-                    <h3>
-                        <Icon icon="laptop" />
-                        Word, Excel, Powerpoint :
-                    </h3>
-                    <div className="animated-gauge">
-                        <div className="jauge0"></div>
-                    </div>
+                <div className="animate-me" id="softwareSkills">
+                        <h2>SOFTWARE</h2>
+                        <h3 id="typescriptSkills">
+                            <TypescriptIcon />
+                            TypeScript :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-ts"></div>
+                        </div>
+                        <h3>
+                            <Icon prefix="fab" icon="react" />
+                            React :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-react"></div>
+                        </div>
+                        <h3 id="svelteSkills">
+                            <SvelteIcon />
+                            Svelte :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-svelte"></div>
+                        </div>
+                        <h3>
+                            <Icon prefix="fab" icon="angular" />
+                            Angular :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-angular"></div>
+                        </div>
+                        <h3>
+                            <Icon icon="file-code" />
+                            HTML5+CSS3 :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-html-css"></div>
+                        </div>
+                        <h3>
+                            <Icon prefix="fab" icon="php" />
+                            PHP :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-php"></div>
+                        </div>
+                        <h3>
+                            <Icon prefix="fab" icon="python" />
+                            Python :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-python"></div>
+                        </div>
+                        <h3>
+                            <Icon prefix="fab" icon="git-alt" />
+                            Git :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-git"></div>
+                        </div>
+                        <h3>
+                            <Icon icon="laptop" />
+                            Word, Excel, Powerpoint :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge0"></div>
+                        </div>
                 </div>
-                <div className="langues animate-me" id="langues">
+                <div className="langues animate-me mt-4" id="langues">
                     <h2>
                         <Localize translations={localize.languages} />
                     </h2>
-                    <div>
-                        <img src={C2} alt="Level C2 icon"/>
+                    <div className="animate-me">
+                        <LanguageLevel level='NATIVE' />
                         <p>
                             <Localize translations={localize.french} />
                         </p>
                     </div>
-                    <div>
-                        <img src={B2} alt="Level B2 icon"/>
+                    <div className="animate-me">
+                        <LanguageLevel level='B2' />
                         <p>
                             <Localize translations={localize.german} />
                         </p>
                     </div>
-                    <div>
-                        <img src={B2} alt="Level B2 icon"/>
+                    <div className="animate-me">
+                        <LanguageLevel level='B2' />
                         <p>
                             <Localize translations={localize.english} />
                         </p>

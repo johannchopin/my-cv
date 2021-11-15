@@ -85,7 +85,7 @@ $CONTAINER_ID: "#hobbies";
                         align-items: center;
                         
                         img {
-                            margin-top: 2em;
+                            margin-top: 1em;
                             width: 60%;
                         }
                     }
@@ -118,6 +118,10 @@ $CONTAINER_ID: "#hobbies";
                 h2 {
                     font-size: 1.2em;
                 }
+            }
+
+            .icons img {
+                width: 90% !important;
             }
         }
     }
