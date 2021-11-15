@@ -16,6 +16,10 @@ import DivaPullIcon from '../../assets/img/diva-pull-icon.png';
 //@ts-ignore
 import CaretakerLogo from '../../assets/img/caretaker-logo.png';
 //@ts-ignore
+import Wei2018Logo from '../../assets/img/wei-2018-logo.png';
+//@ts-ignore
+import Wei2021Logo from '../../assets/img/wei-2021-logo.png';
+//@ts-ignore
 import AdventskalenderLogo from '../../assets/img/adventskalender-logo.png';
 // END IMPORT IMAGES ZONE
 
@@ -83,12 +87,11 @@ const HobbiesPage: React.FC = () => {
                         </h2>
 
                         <div className="icons">
+                            <img src={Wei2021Logo} alt="Caretaker icon" />
+                            <img src={Wei2018Logo} alt="Caretaker icon" />
                             <img src={CaretakerLogo} alt="Caretaker icon" />
-
                             <img src={AdventskalenderLogo} alt="Adventskalender icon" />
-
                             <img src={ForumJgrLogo} alt="Forum JGR icon" />
-
                             <img src={DivaPullIcon} alt="ISFATES sweet icon" />
                         </div>
                     </div>
