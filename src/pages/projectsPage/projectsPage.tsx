@@ -84,7 +84,7 @@ const ProjectsPage: React.FC = () => {
                     image={CleanCssIcon}
                     summary={useLocalize(localize['clean-css-website'])}
                     linkToGitRepo="https://github.com/clean-css/clean-css.github.io"
-                    technologiesUsed={['svelte', 'clean-css', 'bootstrap', 'github pages']}
+                    technologiesUsed={['svelte', 'bootstrap', 'github pages']}
                 />
                 <ProjectContainer
                     link="https://github.com/johannchopin/gitmoji-browser-extension"
