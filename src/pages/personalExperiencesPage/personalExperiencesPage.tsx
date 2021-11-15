@@ -29,10 +29,13 @@ const PersonalExperiencesPage: React.FC = () => {
             <div id="experiencesCtn">
 
                 <div className="animate-me">
+                    <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_anynines) }}></p>
+                </div>
+                
+                <div className="animate-me">
                     <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_eurokey.introduction) }}></p>
                     <br />
                     <p><Localize translations={localize.work_eurokey.complement} /></p>
-                    <br />
                 </div>
 
                 <div id="hotcityInternship" className="animate-me">
