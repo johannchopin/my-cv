@@ -16,10 +16,6 @@ const PageBase = new _PageBase();
 
 // IMPORT IMAGES ZONE
 //@ts-ignore
-import C2 from './assets/img/c2.png';
-//@ts-ignore
-import B2 from './assets/img/b2.png';
-//@ts-ignore
 import TypescriptIcon from '../../assets/img/typescript-icon.svg';
 //@ts-ignore
 import SvelteIcon from '../../assets/img/svelte-icon.svg';
@@ -27,6 +23,7 @@ import SvelteIcon from '../../assets/img/svelte-icon.svg';
 
 // IMPORT COMPONENTS ZONE
 import Icon from '../../assets/uiComponents/Icon/Icon';
+import LanguageLevel from '../../assets/uiComponents/LanguageLevel/LanguageLevel';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -143,20 +140,20 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                     <h2>
                         <Localize translations={localize.languages} />
                     </h2>
-                    <div>
-                        <img src={C2} alt="Level C2 icon"/>
+                    <div className="animate-me">
+                        <LanguageLevel level='NATIVE' />
                         <p>
                             <Localize translations={localize.french} />
                         </p>
                     </div>
-                    <div>
-                        <img src={B2} alt="Level B2 icon"/>
+                    <div className="animate-me">
+                        <LanguageLevel level='B2' />
                         <p>
                             <Localize translations={localize.german} />
                         </p>
                     </div>
-                    <div>
-                        <img src={B2} alt="Level B2 icon"/>
+                    <div className="animate-me">
+                        <LanguageLevel level='B2' />
                         <p>
                             <Localize translations={localize.english} />
                         </p>

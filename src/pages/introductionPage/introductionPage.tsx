@@ -29,7 +29,7 @@ const IntroductionPage: React.FC = () => {
     const [isSwypeToastOpen, setIsSwypeToastOpen] = React.useState<boolean>(true);
 
     return (
-        <div id='presentation' className="swiper-slide not-scrollable" onClick={():void => { setIsSwypeToastOpen(false) }}>
+        <div id='presentation' className="swiper-slide not-scrollable" onClick={(): void => { setIsSwypeToastOpen(false) }}>
             <header>
                 <h1 id="slide_0_h1" className="animate-me">
                     <Localize translations={localize.hey}/> 
