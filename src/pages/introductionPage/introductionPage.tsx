@@ -51,7 +51,10 @@ const IntroductionPage: React.FC = () => {
 
             <p className="presentation-text animate-me" dangerouslySetInnerHTML={{ __html: useLocalize(localize.introduction) }}></p>
 
-            <div id="swipeIndication" className={`animate-me animation-goUp ${isSwypeToastOpen ? 'open' : 'close'}`}>
+            <div 
+                id="swipeIndication"
+                className={`animate-me animation-goUp ${isSwypeToastOpen ? 'open' : 'close'}`}
+            >
                 <p><Localize translations={localize.swipe_indication}/></p>
                 <Icon icon="arrow-right" className="with-pl" />
             </div>
