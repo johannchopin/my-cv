@@ -18,6 +18,7 @@ import Icon from '../../components/Icon/Icon';
 import {
     SimpleModalParams,
 } from '../../commonInterface';
+import SocialLinks from '~components/SocialLinks/SocialLinks';
 // END IMPORT INTERFACE ZONE
 
 interface ContactPageProps {
@@ -64,6 +65,8 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                         <Localize translations={localize.download_cv} />
                     </p>
                 </a>
+
+                <SocialLinks />
             </div>
         </div>
     )
