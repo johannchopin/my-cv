@@ -66,7 +66,9 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                     </p>
                 </a>
 
-                <SocialLinks />
+                <div className="animate-me animation-goUp mt-4">
+                    <SocialLinks />
+                </div>
             </div>
         </div>
     )
