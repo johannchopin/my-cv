@@ -86,27 +86,10 @@
             }
         }
 
-        #professionalLinks {
+        .social-links {
             position: absolute;
             top: .3em;
             right: 1em;
-
-            a {
-                font-size: 1.5em;
-                margin: 0 .2em;
-                color: #fff;
-
-                &#stackoverflow {
-                    .reputation {
-                        font-size: .5em;
-                        color: $cv-gold;
-                    }
-                }
-            }
-
-            .tooltip-inner {
-                background-color: #00cc00;
-            }
         }
 
         #languageSelection {

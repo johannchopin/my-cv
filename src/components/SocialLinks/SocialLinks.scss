@@ -1,0 +1,16 @@
+@import "../../styles/toolsBundler.scss";
+
+.social-links {
+  a {
+      font-size: 1.5em;
+      margin: 0 .2em;
+      color: #fff;
+
+      &#stackoverflow {
+          .reputation {
+              font-size: .5em;
+              color: $cv-gold;
+          }
+      }
+  }
+}

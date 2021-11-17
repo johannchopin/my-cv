@@ -1,0 +1,7 @@
+{
+  "top_answerers": {
+      "en": "Top __PERCENTAGE__% Stack Overflow answerers",
+      "fr": "Top __PERCENTAGE__% des répondants sur Stack Overflow",
+      "de": "Top __PERCENTAGE__% Stack Overflow Beantworter"
+  }
+}

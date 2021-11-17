@@ -11,13 +11,14 @@ import * as localize from './localize.json'
 // IMPORT COMPONENTS ZONE
 import { AppContext } from '~contexts/App'
 import Localize from '~Localize';
-import Icon from '../../assets/uiComponents/Icon/Icon';
+import Icon from '../../components/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
 import {
     SimpleModalParams,
 } from '../../commonInterface';
+import SocialLinks from '~components/SocialLinks/SocialLinks';
 // END IMPORT INTERFACE ZONE
 
 interface ContactPageProps {
@@ -64,6 +65,8 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                         <Localize translations={localize.download_cv} />
                     </p>
                 </a>
+
+                <SocialLinks />
             </div>
         </div>
     )

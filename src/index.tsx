@@ -17,14 +17,14 @@ import './assets/lib/swiper/swiper.min.css';
 // IMPORT SWIPER LIBRARY ZONE
 
 // IMPORT STYLES ZONE
-import './assets/styles/style.scss';
+import './styles/style.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT COMPONENTS ZONE
 import AppProvider from '~contexts/App';
-import Navbar from './assets/uiComponents/Navbar/Navbar';
-import SimpleModal from './assets/uiComponents/simpleModal/simpleModal';
-import LoadingAnimation from './assets/uiComponents/LoadingAnimation/LoadingAnimation';
+import Navbar from './components/Navbar/Navbar';
+import SimpleModal from './components/simpleModal/simpleModal';
+import LoadingAnimation from './components/LoadingAnimation/LoadingAnimation';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT PAGEBASE ZONE

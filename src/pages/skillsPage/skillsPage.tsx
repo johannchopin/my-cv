@@ -22,8 +22,9 @@ import SvelteIcon from '../../assets/img/svelte-icon.svg';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import Icon from '../../assets/uiComponents/Icon/Icon';
-import LanguageLevel from '../../assets/uiComponents/LanguageLevel/LanguageLevel';
+import Icon from '../../components/Icon/Icon';
+import LanguageLevel from '../../components/LanguageLevel/LanguageLevel';
+import TopSoAnswerer from '~components/TopSoAnswerer/TopSoAnswerer';
 // END IMPORT COMPONENTS ZONE
 
 
@@ -79,6 +80,8 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         <div className="animated-gauge">
                             <div className="jauge-ts"></div>
                         </div>
+                        <TopSoAnswerer percentage={10} />
+
                         <h3>
                             <Icon prefix="fab" icon="react" />
                             React :
@@ -86,6 +89,8 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         <div className="animated-gauge">
                             <div className="jauge-react"></div>
                         </div>
+                        <TopSoAnswerer percentage={10} />
+
                         <h3 id="svelteSkills">
                             <SvelteIcon />
                             Svelte :
@@ -93,6 +98,8 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         <div className="animated-gauge">
                             <div className="jauge-svelte"></div>
                         </div>
+                        <TopSoAnswerer percentage={5} />
+
                         <h3>
                             <Icon prefix="fab" icon="angular" />
                             Angular :
@@ -107,6 +114,8 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         <div className="animated-gauge">
                             <div className="jauge-html-css"></div>
                         </div>
+                        <TopSoAnswerer percentage={5} />
+
                         <h3>
                             <Icon prefix="fab" icon="php" />
                             PHP :
@@ -114,6 +123,8 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         <div className="animated-gauge">
                             <div className="jauge-php"></div>
                         </div>
+                        <TopSoAnswerer percentage={20} />
+
                         <h3>
                             <Icon prefix="fab" icon="python" />
                             Python :

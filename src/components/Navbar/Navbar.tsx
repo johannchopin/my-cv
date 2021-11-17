@@ -9,6 +9,7 @@ import { AppContext } from '~contexts/App';
 
 // IMPORT COMPONENTS ZONE
 import Icon from '../Icon/Icon';
+import SocialLinks from '~components/SocialLinks/SocialLinks';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT LOCALIZE ZONE
@@ -31,12 +32,8 @@ import FrFlagSvg from './imgs/fr.svg';
 import DeFlagSvg from './imgs/de.svg';
 // @ts-ignore
 import UsFlagSvg from './imgs/us.svg';
-// @ts-ignore
-import GitlabIcon from '../../img/gitlabIcon.svg';
-import Helper from '~helper';
 // END IMPORT IMAGES ZONE
 
-const SO_ID = 8583669
 const links: Link[] = [
     {
         link: '/presentation',
@@ -72,21 +69,6 @@ const Navbar: React.FC = () => {
     const { lang, setLang } = React.useContext(AppContext)
 
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
-    const [SOReputation, setSOReputation] = React.useState<string>('...');
-
-    const fetchStackoverflowReputation = (): void => {
-        const url = `https://api.stackexchange.com/2.2/users/${SO_ID}?site=stackoverflow`
-        fetch(url)
-            .then(response => response.json()            )
-            .then(data => {
-                const reputation = data.items[0].reputation
-                setStackoverflowReputation(reputation)
-            })
-    }
-
-    const setStackoverflowReputation = (reputation: number) => {
-        setSOReputation(Helper.getUserReputation(reputation));
-    }
 
     const toggleNavbar = (): void => {
         setIsOpen(!isOpen)
@@ -138,52 +120,6 @@ const Navbar: React.FC = () => {
         )
     }
 
-    const professionalLinksRender = (): React.ReactNode => {
-        return (
-            <div id="professionalLinks">
-                <div className="row">
-                    <a
-                        id="stackoverflow"
-                        href="https://stackoverflow.com/users/8583669/johannchopin"
-                        target="_blank"
-                        className="clickable d-flex flex-column align-items-center"
-                    >
-                        <Icon prefix="fab" icon="stack-overflow" />
-                        <span className="reputation">{SOReputation}</span>
-                    </a>
-                    <a
-                        href="https://github.com/johannchopin"
-                        target="_blank"
-                        className="clickable"
-                    >
-                        <Icon prefix="fab" icon="github" />
-                    </a>
-                    <a
-                        href="https://gitlab.com/johannchopin"
-                        target="_blank"
-                        className="clickable"
-                    >
-                        <Icon prefix="fab" icon="gitlab" />
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/johann-chopin-b0097b197/"
-                        target="_blank"
-                        className="clickable"
-                    >
-                        <Icon prefix="fab" icon="linkedin" />
-                    </a>
-                    <a
-                        href="https://dev.to/johannchopin"
-                        target="_blank"
-                        className="clickable"
-                    >
-                        <Icon prefix="fab" icon="dev" />
-                    </a>
-                </div>
-            </div>
-        )
-    }
-
     const renderLinks = (): JSX.Element => {
         const renderLinksList = () => {
             return links.map(link => {
@@ -202,14 +138,10 @@ const Navbar: React.FC = () => {
         return <ul>{renderLinksList()}</ul>
     }
 
-    React.useEffect(() => {
-        fetchStackoverflowReputation();
-    }, [])
-        
     return (
         <nav id="navbar" className={isOpen ? "open" : ""}>
             <div onClick={() => { toggleNavbar() }} className="burger">
-                <Icon icon="bars"  className={isOpen ? "selected" : ""} />
+                <Icon icon="bars" className={isOpen ? "selected" : ""} />
             </div>
 
             <div className="container">
@@ -217,7 +149,7 @@ const Navbar: React.FC = () => {
 
                 {languageSelectionRender()}
                 {repoLinkRender()}
-                {professionalLinksRender()}
+                <SocialLinks />
             </div>
         </nav>
     )
