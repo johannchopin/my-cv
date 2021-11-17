@@ -109,7 +109,7 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         </div>
                         <h3>
                             <Icon icon="file-code" />
-                            HTML5+CSS3 :
+                            HTML + CSS + JS :
                         </h3>
                         <div className="animated-gauge">
                             <div className="jauge-html-css"></div>

@@ -38,5 +38,15 @@
         "en": "Second year of study at HTW in Saarbrücken, Germany",
         "fr": "Deuxième année d'études à la HTW à Sarrebruck en Allemagne",
         "de": "Zweites Studienjahr an der HTW in Saarbrücken, Deutschland"
+    },
+    "licence": {
+        "en": "Obtaining the Bachelor's degree \"<i>Computer Science and Web Engineering</i>\" from ISFATES",
+        "fr": "Obtention de la license \"<i>Informatique et ingénierie du Web</i>\" de l'ISFATES",
+        "de": "Abschluss des Bachelor-Studiengangs \"<i>Informatik und Web-Engineering</i>\" von ISFATES"
+    },
+    "master": {
+        "en": "Master of Computer Science at ISFATES in HMI (Human-Machine interaction) orientation",
+        "fr": "Master d'Informatique à l'ISFATES en orientation IHM (Interaction Humain-Machine)",
+        "de": "Master in Informatik an der ISFATES in der Fachrichtung HMI (Human-Machine Interaction)"
     }
 }
