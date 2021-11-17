@@ -3,12 +3,12 @@
 
 @font-face {
     font-family: "ubuntu";
-    src: url("../font/Ubuntu-Bold.ttf");
+    src: url("../assets/font/Ubuntu-Bold.ttf");
 }
 
 @font-face {
     font-family: "another";
-    src: url("../font/Another_day_in_Paradise.ttf");
+    src: url("../assets/font/Another_day_in_Paradise.ttf");
 }
 
 html {
@@ -214,15 +214,15 @@ body {
     }
 
     .flag-icon-de {
-        background-image: url(../img/de.svg);
+        background-image: url(../assets/img/de.svg);
     }
 
     .flag-icon-fr {
-        background-image: url(../img/fr.svg);
+        background-image: url(../assets/img/fr.svg);
     }
 
     .flag-icon-us {
-        background-image: url(../img/us.svg);
+        background-image: url(../assets/img/us.svg);
     }
 
     .page {}

@@ -24,7 +24,7 @@ import AdventskalenderLogo from '../../assets/img/adventskalender-logo.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import Icon from '../../assets/uiComponents/Icon/Icon';
+import Icon from '../../components/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE

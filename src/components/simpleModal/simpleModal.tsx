@@ -5,7 +5,7 @@ import './simpleModal.scss';
 // END IMPORT STYLES ZONE
 
 // IMPORT INTERFACE ZONE
-import { SimpleModalParams } from '../../../commonInterface';
+import { SimpleModalParams } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 // INTERFACE ZONE

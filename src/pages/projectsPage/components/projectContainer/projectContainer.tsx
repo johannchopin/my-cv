@@ -9,7 +9,7 @@ import * as localize from './localize.json';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT COMPONENTS ZONE
-import Icon from '../../../../assets/uiComponents/Icon/Icon';
+import Icon from '../../../../components/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // INIT HELPERS METHODS ZONE

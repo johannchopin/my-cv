@@ -22,8 +22,8 @@ import SvelteIcon from '../../assets/img/svelte-icon.svg';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import Icon from '../../assets/uiComponents/Icon/Icon';
-import LanguageLevel from '../../assets/uiComponents/LanguageLevel/LanguageLevel';
+import Icon from '../../components/Icon/Icon';
+import LanguageLevel from '../../components/LanguageLevel/LanguageLevel';
 // END IMPORT COMPONENTS ZONE
 
 

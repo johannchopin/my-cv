@@ -17,7 +17,7 @@ import WaveSvg from '../../assets/img/wave-design.svg';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
-import Icon from '../../assets/uiComponents/Icon/Icon';
+import Icon from '../../components/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE

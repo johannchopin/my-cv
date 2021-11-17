@@ -11,7 +11,7 @@ import * as localize from './localize.json'
 // IMPORT COMPONENTS ZONE
 import { AppContext } from '~contexts/App'
 import Localize from '~Localize';
-import Icon from '../../assets/uiComponents/Icon/Icon';
+import Icon from '../../components/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
