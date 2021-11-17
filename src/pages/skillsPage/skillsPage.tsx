@@ -136,7 +136,7 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                             <div className="jauge0"></div>
                         </div>
                 </div>
-                <div className="langues animate-me mt-4" id="langues">
+                <div className="langues animate-me" id="langues">
                     <h2>
                         <Localize translations={localize.languages} />
                     </h2>
