@@ -24,6 +24,16 @@ const TimeLinePage: React.FC = () => {
             <div id="timeline-content">
                 <ul className="timeline">
                     <li className="event animate-me animation-goUp">
+                        <p className="event-date">2020 - 2022</p>
+
+                        <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.master) }}></h2>
+                    </li>
+                    <li className="event animate-me animation-goUp">
+                        <p className="event-date">2020</p>
+
+                        <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.licence) }}></h2>
+                    </li>
+                    <li className="event animate-me animation-goUp">
                         <p className="event-date">2018-2019</p>
 
                         <h2>
