@@ -1,0 +1,11 @@
+@import "../../styles/toolsBundler.scss";
+
+.top-so-answerer {
+  color: $cv-gold!important;
+  font-size: .8em;
+  transition: margin-left .2s;
+
+  &:hover {
+    margin-left: .4em;
+  }
+}

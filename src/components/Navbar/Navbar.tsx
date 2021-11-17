@@ -141,7 +141,7 @@ const Navbar: React.FC = () => {
     return (
         <nav id="navbar" className={isOpen ? "open" : ""}>
             <div onClick={() => { toggleNavbar() }} className="burger">
-                <Icon icon="bars"  className={isOpen ? "selected" : ""} />
+                <Icon icon="bars" className={isOpen ? "selected" : ""} />
             </div>
 
             <div className="container">
