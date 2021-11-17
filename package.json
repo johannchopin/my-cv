@@ -11,10 +11,10 @@
   "author": "Chopin Johann",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-react": "^7.12.1",
     "@fortawesome/fontawesome-svg-core": "1.2.30",
     "@fortawesome/free-brands-svg-icons": "5.14.0",
     "@fortawesome/free-solid-svg-icons": "5.14.0",
-    "@babel/preset-react": "^7.12.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@svgr/parcel-plugin-svgr": "^4.3.3",
     "@types/bootstrap": "^4.5.1",
