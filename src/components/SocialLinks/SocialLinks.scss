@@ -6,6 +6,10 @@
       margin: 0 .2em;
       color: #fff;
 
+      &:hover {
+          color: $cv-gold;
+      }
+
       &#stackoverflow {
           .reputation {
               font-size: .5em;
