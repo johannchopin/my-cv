@@ -10,10 +10,7 @@ import Localize from '~Localize';
 import { useLocalize } from '~helpers/useLocalize';
 // END IMPORT LOCALIZE ZONE
 
-// IMPORT INTERFACE ZONE
-import { Language } from '../../commonInterface';
-// END IMPORT INTERFACE ZONE
-
+// C O M P O N E N T
 const TimeLinePage: React.FC = () => {
     return (
         <div id="background" className="swiper-slide">

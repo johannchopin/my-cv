@@ -14,8 +14,12 @@
 
     .social-links {
         a {
-            color: black !important;
+            &:not(:hover) {
+                color: black !important;
+
+            }
             font-size: 1em;
+            margin: 0 .4em;
 
             .reputation {
                 display: none;
