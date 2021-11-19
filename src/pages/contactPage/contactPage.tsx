@@ -33,19 +33,15 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
         let cvName = '';
         switch (lang) {
             default:
-                cvName = 'myCV2019-fr';
+                cvName = 'cv-en';
                 break;
 
             case 'fr':
-                cvName = 'myCV2019-fr';
-                break;
-
-            case 'de':
-                cvName = 'myCV2019-de';
+                cvName = 'cv';
                 break;
         }
 
-        return `https://cv.johannchopin.fr/2019/assets/pdf/${cvName}.pdf`;
+        return `https://github.com/johannchopin/my-cv/raw/main/static/${cvName}.pdf`;
     }
 
     return (
@@ -60,7 +56,7 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
                     <p>johannchopin@pm.me</p>
                 </a>
 
-                <a href={getLinkToCV()} target="_blank" id="cv" className="animate-me animation-goUp">
+                <a href={getLinkToCV()} id="cv" className="animate-me animation-goUp">
                     <p>
                         <Localize translations={localize.download_cv} />
                     </p>
