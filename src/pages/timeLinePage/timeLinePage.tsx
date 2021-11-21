@@ -22,21 +22,19 @@ const TimeLinePage: React.FC = () => {
                 <ul className="timeline">
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2020 - 2022</p>
-
                         <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.master) }}></h2>
                     </li>
+
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2020</p>
-
                         <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.licence) }}></h2>
                     </li>
+
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2018-2019</p>
-
-                        <h2>
-                            <Localize translations={localize.htw_start} />
-                        </h2>
+                        <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.htw_start) }}></h2>
                     </li>
+
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2017-2018</p>
 
@@ -46,6 +44,7 @@ const TimeLinePage: React.FC = () => {
                         <h2><Localize translations={localize.bac} /></h2>
                         <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.bac_description)}}></p>
                     </li>
+
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2014-2015</p>
 

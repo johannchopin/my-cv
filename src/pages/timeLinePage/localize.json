@@ -35,9 +35,9 @@
         "de": "Deutsch-Französisches Hochschulinstitut für Technik und Wirtschaft"
     },
     "htw_start": {
-        "en": "Second year of study at HTW in Saarbrücken, Germany",
-        "fr": "Deuxième année d'études à la HTW à Sarrebruck en Allemagne",
-        "de": "Zweites Studienjahr an der HTW in Saarbrücken, Deutschland"
+        "en": "Second year of study at <a href=\"https://www.htwsaar.de/\" target=\"_blank\">HTW</a>, the University of Applied Sciences in Saarbrücken, Germany",
+        "fr": "Deuxième année d'études à la <a href=\"https://www.htwsaar.de/\" target=\"_blank\">HTW</a>, l'université des sciences appliquées à Sarrebruck en Allemagne",
+        "de": "Zweites Studienjahr an der <a href=\"https://www.htwsaar.de/\" target=\"_blank\">HTW</a> in Saarbrücken, Deutschland"
     },
     "licence": {
         "en": "Obtaining the Bachelor's degree \"<i>Computer Science and Web Engineering</i>\" from ISFATES",
