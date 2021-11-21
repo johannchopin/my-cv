@@ -42,7 +42,7 @@ const PersonalExperiencesPage: React.FC = () => {
                     <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.internship_hotcity) }}></p>
                     <br />
                     <a id="hotcityLetter" href="https://github.com/johannchopin/my-cv/raw/main/static/hotcity-recommendation-letter.pdf" target="_blank">
-                        <Icon icon="file-alt" />
+                        <Icon icon="file-download" />
                         <p><Localize translations={localize.letter_of_recommendation} /></p>
                     </a>
                 </div>
