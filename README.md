@@ -4,7 +4,7 @@
 
 # :page_facing_up: Welcome to my online CV repo
 
-#### > See it online at https://cv-johannchopin.web.app/hobbies
+#### > See it online at https://cv-johannchopin.web.app/
 
 
 ----
