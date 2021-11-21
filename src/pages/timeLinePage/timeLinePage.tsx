@@ -48,7 +48,7 @@ const TimeLinePage: React.FC = () => {
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2014-2015</p>
 
-                        <h2><Localize translations={localize.brevet} /></h2>
+                        <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.brevet) }}></h2>
                         <h2><Localize translations={localize.c1_certificate} /></h2>
                     </li>
                 </ul>

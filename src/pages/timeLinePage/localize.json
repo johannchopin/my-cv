@@ -5,9 +5,9 @@
         "de": "Ausbildung"
     },
     "brevet": {
-        "en": "Obtaining the certificate of the Middle School, mention 'Very good'",
-        "fr": "Obtention du brevet des collèges, mention 'Très bien'",
-        "de": "Mittlere Reife mit Prädikat 'Sehr gut'"
+        "en": "Obtaining the certificate of the Middle School, mention '<i>Very good</i>'",
+        "fr": "Obtention du brevet des collèges, mention '<i>Très bien</i>'",
+        "de": "Mittlere Reife mit Prädikat '<i>Sehr gut</i>'"
     },
     "c1_certificate": {
         "en": "B1 certification in German, KMK",
@@ -25,9 +25,9 @@
         "de": "(Option Europäische Sektion Physik und Chemie in Deutsch sowie Sprachen und Kulturen der Antike: Latein) mit Prädikat '<i>Gut</i>'"
     },
     "start_isfates": {
-        "en": "Start of my studies in computer science at <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
-        "fr": "Début de mes études en informatique à l'<a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a>",
-        "de": "Beginn des Informatikstudiums beim <a href=\"https://www.dfhi-isfates.eu/de/\" target=\"_blank\">DFHI</a>"
+        "en": "Start of my French-German bi-national studies in computer science at <a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a> in Metz, France",
+        "fr": "Début de mes études binationales franco-allemandes en informatique à l'<a href=\"https://www.dfhi-isfates.eu/fr/\" target=\"_blank\">ISFATES</a> à Metz, France",
+        "de": "Beginn meiner deutsch-französischen bi-nationalen Informatikstudiums beim <a href=\"https://www.dfhi-isfates.eu/de/\" target=\"_blank\">DFHI</a> in Metz, Frankreich"
     },
     "start_isfates_description": {
         "en": "Institut Supérieur Franco-Allemand de Techniques, d'Economie et de Sciences",
@@ -36,7 +36,7 @@
     },
     "htw_start": {
         "en": "Second year of study at <a href=\"https://www.htwsaar.de/\" target=\"_blank\">HTW</a>, the University of Applied Sciences in Saarbrücken, Germany",
-        "fr": "Deuxième année d'études à la <a href=\"https://www.htwsaar.de/\" target=\"_blank\">HTW</a>, l'université des sciences appliquées à Sarrebruck en Allemagne",
+        "fr": "Deuxième année d'études à la <a href=\"https://www.htwsaar.de/\" target=\"_blank\">HTW</a>, l'université des sciences appliquées à Sarrebruck, Allemagne",
         "de": "Zweites Studienjahr an der <a href=\"https://www.htwsaar.de/\" target=\"_blank\">HTW</a> in Saarbrücken, Deutschland"
     },
     "licence": {
