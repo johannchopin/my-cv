@@ -4,7 +4,7 @@ export interface SimpleModalParams {
 }
 
 // TYPES ZONE
-export type Page = 'presentation' | 'background' | 'skills' | 'hobbies' | 'experiences' | 'projects' | 'contacts';
+export type Page = 'presentation' | 'education' | 'skills' | 'hobbies' | 'experiences' | 'projects' | 'contacts';
 export type Language = 'en' | 'fr' | 'de';
 export type TSimpleModalType = 'success' | 'warning' | 'danger';
 // END TYPES ZONE

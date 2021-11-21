@@ -13,7 +13,7 @@ import { useLocalize } from '~helpers/useLocalize';
 // C O M P O N E N T
 const TimeLinePage: React.FC = () => {
     return (
-        <div id="background" className="swiper-slide">
+        <div id="education" className="swiper-slide">
             <h1 className="animate-me slide-title">
                 🎓 <Localize translations={localize.title}/>
             </h1>
