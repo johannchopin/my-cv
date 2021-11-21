@@ -22,7 +22,7 @@ jobs:
         run: |
           yarn global add firebase-tools
           yarn install
-          yarn prod
+          yarn build
           firebase deploy --token ${FIREBASE_TOKEN} -P "my-project-1535834851092"
         
         env:

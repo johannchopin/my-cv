@@ -4,7 +4,7 @@
         "fr": "Présentation",
         "de": "Vorstellung"
     },
-    "background": {
+    "education": {
         "en": "Education",
         "fr": "Formation",
         "de": "Ausbildung"
@@ -17,7 +17,7 @@
     "personal_experiences": {
         "en": "Personal experiences",
         "fr": "Expériences personnelles",
-        "de": "Erfahrungen"
+        "de": "Persönliche Erfahrungen"
     },
     "projects": {
         "en": "Projects",

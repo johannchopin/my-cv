@@ -40,8 +40,8 @@ const links: Link[] = [
         translations: localize.presentation
     },
     {
-        link: '/background',
-        translations: localize.background
+        link: '/education',
+        translations: localize.education
     },
     {
         link: '/skills',

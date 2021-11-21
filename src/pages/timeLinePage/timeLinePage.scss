@@ -1,6 +1,6 @@
 @import "../../styles/variables.scss";
 
-#background {
+#education {
     p {
         font-weight: 300;
     }
@@ -111,7 +111,7 @@
 
 
 @media (min-width: $BIG_SCREEN_MIN_SIZE) {
-    #background {
+    #education {
         .timeline {
             max-width: 70%;
         }

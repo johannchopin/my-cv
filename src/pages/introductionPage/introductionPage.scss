@@ -119,6 +119,7 @@
         background-color: $cv-gold;
         border-radius: .4em;
         padding: .2em .4em;
+        max-width: 80vw;
 
         &.close {
             animation: goDown .5s forwards !important;
@@ -153,8 +154,8 @@
             }
 
             h1 {
-                font-size: 2em;
-                margin-left: -.5em;
+                font-size: 1.7em;
+                margin-left: -1em;
             }
         }
 

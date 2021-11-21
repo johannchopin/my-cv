@@ -30,9 +30,9 @@
     "de": "Nachricht..."
   },
   "download_cv": {
-    "en": "- download the paper version -",
-    "fr": "- télécharger la version papier -",
-    "de": "- Papierversion herunterladen -"
+    "en": "download the PDF version",
+    "fr": "télécharger la version PDF",
+    "de": "PDF-version herunterladen"
   },
   "invalid_email_form": {
       "en": "Please enter a valid email, subject and message !",

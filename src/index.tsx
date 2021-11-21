@@ -61,7 +61,7 @@ interface State {
 
 const pages: Page[] = [
     'presentation',
-    'background',
+    'education',
     'skills',
     'experiences',
     'projects',

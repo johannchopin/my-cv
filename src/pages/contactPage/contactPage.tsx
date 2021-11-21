@@ -46,23 +46,24 @@ const ContactPage: React.FC<ContactPageProps> = (props) => {
 
     return (
         <div id='contacts' className="swiper-slide">
-            <h1>
+            <h1 className="animate-me">
                 <Localize translations={localize.title} />
             </h1>
 
             <div id="contactCtn">
-                <a href="mailto:johannchopin@pm.me" target="_blank" className="animate-me animation-goUp">
+                <a id="mail" href="mailto:johannchopin@pm.me" target="_blank" className="animate-me animation-goUp">
                     <Icon icon="envelope" />
                     <p>johannchopin@pm.me</p>
                 </a>
 
                 <a href={getLinkToCV()} id="cv" className="animate-me animation-goUp">
                     <p>
+                        <Icon icon="file-download" className="mr-1" />
                         <Localize translations={localize.download_cv} />
                     </p>
                 </a>
 
-                <div className="animate-me animation-goUp mt-4">
+                <div id="socialLinks" className="animate-me animation-goUp mt-4">
                     <SocialLinks />
                 </div>
             </div>

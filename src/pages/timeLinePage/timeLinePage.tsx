@@ -13,7 +13,7 @@ import { useLocalize } from '~helpers/useLocalize';
 // C O M P O N E N T
 const TimeLinePage: React.FC = () => {
     return (
-        <div id="background" className="swiper-slide">
+        <div id="education" className="swiper-slide">
             <h1 className="animate-me slide-title">
                 🎓 <Localize translations={localize.title}/>
             </h1>
@@ -22,21 +22,19 @@ const TimeLinePage: React.FC = () => {
                 <ul className="timeline">
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2020 - 2022</p>
-
                         <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.master) }}></h2>
                     </li>
+
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2020</p>
-
                         <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.licence) }}></h2>
                     </li>
+
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2018-2019</p>
-
-                        <h2>
-                            <Localize translations={localize.htw_start} />
-                        </h2>
+                        <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.htw_start) }}></h2>
                     </li>
+
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2017-2018</p>
 
@@ -46,10 +44,11 @@ const TimeLinePage: React.FC = () => {
                         <h2><Localize translations={localize.bac} /></h2>
                         <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.bac_description)}}></p>
                     </li>
+
                     <li className="event animate-me animation-goUp">
                         <p className="event-date">2014-2015</p>
 
-                        <h2><Localize translations={localize.brevet} /></h2>
+                        <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.brevet) }}></h2>
                         <h2><Localize translations={localize.c1_certificate} /></h2>
                     </li>
                 </ul>

@@ -46,7 +46,8 @@ import {
     faFileCode,
     faCircleNotch,
     faIcons,
-    faExternalLinkAlt
+    faExternalLinkAlt,
+    faFileDownload
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -91,5 +92,6 @@ library.add(
     faCircleNotch,
     faLinkedin,
     faIcons,
-    faExternalLinkAlt
+    faExternalLinkAlt,
+    faFileDownload
 );
