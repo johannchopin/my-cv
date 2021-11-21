@@ -73,6 +73,16 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
             <div className="skills-ctn">
                 <div className="animate-me" id="softwareSkills">
                         <h2>SOFTWARE</h2>
+
+                        <h3>
+                            <Icon icon="file-code" />
+                            HTML + CSS + JS :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-html-css"></div>
+                        </div>
+                        <TopSoAnswerer percentage={5} />
+
                         <h3 id="typescriptSkills">
                             <TypescriptIcon />
                             TypeScript :
@@ -101,22 +111,6 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         <TopSoAnswerer percentage={5} />
 
                         <h3>
-                            <Icon prefix="fab" icon="angular" />
-                            Angular :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge-angular"></div>
-                        </div>
-                        <h3>
-                            <Icon icon="file-code" />
-                            HTML + CSS + JS :
-                        </h3>
-                        <div className="animated-gauge">
-                            <div className="jauge-html-css"></div>
-                        </div>
-                        <TopSoAnswerer percentage={5} />
-
-                        <h3>
                             <Icon prefix="fab" icon="php" />
                             PHP :
                         </h3>
@@ -126,12 +120,21 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         <TopSoAnswerer percentage={20} />
 
                         <h3>
+                            <Icon prefix="fab" icon="angular" />
+                            Angular :
+                        </h3>
+                        <div className="animated-gauge">
+                            <div className="jauge-angular"></div>
+                        </div>
+
+                        <h3>
                             <Icon prefix="fab" icon="python" />
                             Python :
                         </h3>
                         <div className="animated-gauge">
                             <div className="jauge-python"></div>
                         </div>
+
                         <h3>
                             <Icon prefix="fab" icon="git-alt" />
                             Git :
@@ -139,6 +142,7 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         <div className="animated-gauge">
                             <div className="jauge-git"></div>
                         </div>
+
                         <h3>
                             <Icon icon="laptop" />
                             Word, Excel, Powerpoint :
@@ -158,15 +162,15 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         </p>
                     </div>
                     <div className="animate-me">
-                        <LanguageLevel level='B2' />
+                        <LanguageLevel level='B2-C1' />
                         <p>
-                            <Localize translations={localize.german} />
+                            <Localize translations={localize.english} />
                         </p>
                     </div>
                     <div className="animate-me">
                         <LanguageLevel level='B2' />
                         <p>
-                            <Localize translations={localize.english} />
+                            <Localize translations={localize.german} />
                         </p>
                     </div>
                 </div>
