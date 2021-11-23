@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { Language } from '../commonInterface';
 
@@ -7,12 +8,26 @@ interface AppContextParam {
   setLang: (lang: Language) => void
 }
 
+const LANGUAGES: Language[] = ['en', 'fr', 'de']
+
 export const AppContext = React.createContext({} as AppContextParam);
 
 const AppProvider: React.FC = (props) => {
   const { children } = props
 
-  const [langState, setLangState] = React.useState<Language>('en');
+  const { search } = useLocation()
+  const query = new URLSearchParams(search)
+  const langInQuery = query.get('lang') as Language
+
+  const getDefaultLang = (): Language => {
+    const isLangValid = LANGUAGES.includes(langInQuery as Language)
+
+    if (isLangValid) return langInQuery
+    return 'en'
+  }
+  
+
+  const [langState, setLangState] = React.useState<Language>(getDefaultLang());
 
   const appContextProviderValue = {
     lang: langState,
