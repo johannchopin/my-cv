@@ -33,6 +33,8 @@ import UxExperimentIcon from '../../assets/img/ux-experiment-icon.png';
 import DSLVLogo from '../../assets/img/DSLV-logo.jpeg';
 //@ts-ignore
 import CleanCssIcon from '../../assets/img/clean-css-icon.png';
+//@ts-ignore
+import UnivLorraineLogo from '../../assets/img/univ-lorraine-logo.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -52,6 +54,13 @@ const ProjectsPage: React.FC = () => {
             </h1>
 
             <div className="projects-ctn">
+                <ProjectContainer 
+                    title="Université de lorraine - eDPINFO"
+                    year={2021}
+                    image={UnivLorraineLogo}
+                    summary={useLocalize(localize.edpinfo)}
+                    technologiesUsed={['angular', 'typeorm', 'jira', 'OAuth']}
+                />
                 <ProjectContainer 
                     link="https://ux-typing-experiment-five.vercel.app/"
                     title="ux-typing-experiment"
