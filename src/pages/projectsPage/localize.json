@@ -58,5 +58,10 @@
         "en": "Revamp of the website of the very popular open-source project clean-css.",
         "fr": "Refonte du site web du très populaire projet open-source clean-css.",
         "de": "Überarbeitung der Website des sehr beliebten Open-Source-Projekts clean-css."
+    },
+    "edpinfo": {
+        "en": "Scrum master of a 6 months IT project for the University of Lorraine in which a team of 10 developers had to create a tool to manage schooling. This required the creation of a web application and an OAuth authentication service.",
+        "fr": "Scrum master d'un projet informatique de 6 mois pour l'Université de Lorraine dans lequel une équipe de 10 développeurs devait créer un outil de gestion de la scolarité. Cela a nécessité la création d'une application web et d'un service d'authentification OAuth.",
+        "de": "Scrum Master eines sechsmonatigen IT-Projekts für die Universität Lothringen, in dem ein Team von zehn Entwicklern ein Tool zur Verwaltung des Schulwesens erstellen sollte. Dies erforderte die Erstellung einer Webanwendung sowie eines OAuth-Authentifizierungsdienstes."
     }
 }
