@@ -99,7 +99,7 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
                         <div className="animated-gauge">
                             <div className="jauge-react"></div>
                         </div>
-                        <TopSoAnswerer percentage={10} />
+                        <TopSoAnswerer percentage={5} />
 
                         <h3 id="svelteSkills">
                             <SvelteIcon />
