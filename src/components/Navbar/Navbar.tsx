@@ -8,6 +8,7 @@ import './Navbar.scss';
 import { AppContext } from '~contexts/App';
 
 // IMPORT COMPONENTS ZONE
+import { LANGUAGES } from '~const';
 import Icon from '../Icon/Icon';
 import SocialLinks from '~components/SocialLinks/SocialLinks';
 // END IMPORT COMPONENTS ZONE
@@ -16,9 +17,11 @@ import SocialLinks from '~components/SocialLinks/SocialLinks';
 import * as localize from './localize.json'
 import Localize from '~Localize';
 import { useLocalize, Translation } from '~helpers/useLocalize';
+import * as commonLocalize from '~commonLocalize.json';
 // END IMPORT LOCALIZE ZONE
 
 // IMPORT INTERFACE ZONE
+import { Language } from '~commonInterface';
 type Link = {
     link: string
     translations: Translation
@@ -34,6 +37,11 @@ import DeFlagSvg from './imgs/de.svg';
 import UsFlagSvg from './imgs/us.svg';
 // END IMPORT IMAGES ZONE
 
+const langIcons: {[key in Language]: React.ReactElement} = {
+    en: <UsFlagSvg />,
+    fr: <FrFlagSvg />,
+    de: <DeFlagSvg />
+}
 const links: Link[] = [
     {
         link: '/presentation',
@@ -75,31 +83,27 @@ const Navbar: React.FC = () => {
     }
 
     const languageSelectionRender = (): React.ReactNode => {
+        const langsLocalize = {
+            'en': useLocalize(commonLocalize.english),
+            'fr': useLocalize(commonLocalize.french),
+            'de': useLocalize(commonLocalize.german),
+        }
+    
         return (
             <div id="languageSelection">
-
-                <FrFlagSvg
-                    className={`clickable ${lang === 'fr' ? 'selected' : ''}`}
-                    onClick={() => {
-                        setLang('fr')
-                        setIsOpen(false)
-                    }}
-                />
-                <DeFlagSvg
-                    className={`clickable ${lang === 'de' ? 'selected' : ''}`}
-                    onClick={() => {
-                        setLang('de')
-                        setIsOpen(false)
-                    }}
-                />
-                <UsFlagSvg
-                    className={`clickable ${lang === 'en' ? 'selected' : ''}`}
-                    onClick={() => {
-                        setLang('en')
-                        setIsOpen(false)
-                    }}
-                />
-
+                {LANGUAGES.map(langSelection => (
+                    <button
+                        key={`btn-lang-${langSelection}`}
+                        className={`clickable ${langSelection === lang ? 'selected' : ''}`}
+                        onClick={() => { setLang(langSelection) }}
+                        aria-label={useLocalize(
+                            localize.translate_to,
+                            {'__LANG__': langsLocalize[langSelection]}
+                        )}
+                    >
+                        {langIcons[langSelection]}
+                    </button>
+                ))}
             </div>
         )
     }
@@ -137,6 +141,10 @@ const Navbar: React.FC = () => {
 
         return <ul>{renderLinksList()}</ul>
     }
+
+    React.useEffect(() => {
+        setIsOpen(false)
+    }, [lang])
 
     return (
         <nav id="navbar" className={isOpen ? "open" : ""}>

@@ -48,5 +48,10 @@
         "en": "Close the navbar",
         "fr": "Fermer la barre de navigation",
         "de": "Schließen der Navigationsleiste"
+    },
+    "translate_to": {
+        "en": "Read the website in __LANG__",
+        "fr": "Lire le site en __LANG__",
+        "de": "Lesen Sie die Website in __LANG__"
     }
 }

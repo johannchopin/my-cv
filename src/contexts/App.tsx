@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 
+import { LANGUAGES } from '~const';
+
 import { Language } from '../commonInterface';
 
 interface AppContextParam {
@@ -8,10 +10,9 @@ interface AppContextParam {
   setLang: (lang: Language) => void
 }
 
-const LANGUAGES: Language[] = ['en', 'fr', 'de']
-
 export const AppContext = React.createContext({} as AppContextParam);
 
+// C O M P O N E N T
 const AppProvider: React.FC = (props) => {
   const { children } = props
 
