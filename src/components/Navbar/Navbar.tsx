@@ -115,12 +115,10 @@ const Navbar: React.FC = () => {
                 href="https://github.com/johannchopin/my-cv"
                 target="_blank"
                 id="githubRepo"
-                className="clickable btn btn-light mt-5"
+                className="clickable btn btn-light mt-5 text-black"
             >
-                <h2 className="m-0">
-                    <Icon prefix="fab" icon="github" className="pr-1" />
-                    <Localize translations={localize.check_repo} />
-                </h2>
+                <Icon prefix="fab" icon="github" className="pr-1" />
+                <Localize translations={localize.check_repo} />
             </a>
         )
     }
@@ -130,10 +128,8 @@ const Navbar: React.FC = () => {
             return links.map(link => {
                 return (
                     <li key={link.link}>
-                        <Link to={link.link}>
-                            <span onClick={() => { setIsOpen(false) }}>
-                                {useLocalize(link.translations)}
-                            </span>
+                        <Link to={link.link} onClick={() => { setIsOpen(false) }}>
+                            {useLocalize(link.translations)}
                         </Link>
                     </li>
                 )
