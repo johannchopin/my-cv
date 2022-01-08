@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import FocusTrap from 'focus-trap-react';
 
 // IMPORT STYLES ZONE
 import './Navbar.scss';
@@ -144,23 +145,24 @@ const Navbar: React.FC = () => {
     }, [lang])
 
     return (
-        <nav id="navbar" className={isOpen ? "open" : ""}>
-            <button 
-                onClick={() => { toggleNavbar() }} className="burger text-white"
-                aria-expanded={isOpen}
-                aria-label={isOpen ? useLocalize(localize.close_navbar) : useLocalize(localize.open_navbar)}
-            >
-                <Icon icon="bars" className={isOpen ? "selected" : ""} />
-            </button>
+        <FocusTrap active={isOpen}>
+            <nav id="navbar" className={isOpen ? "open" : ""}>
+                <button 
+                    onClick={() => { toggleNavbar() }} className="burger text-white"
+                    aria-expanded={isOpen}
+                    aria-label={isOpen ? useLocalize(localize.close_navbar) : useLocalize(localize.open_navbar)}
+                >
+                    <Icon icon="bars" className={isOpen ? "selected" : ""} />
+                </button>
 
-            <div className="container">
-                {renderLinks()}
-
-                {languageSelectionRender()}
-                {repoLinkRender()}
-                <SocialLinks />
-            </div>
-        </nav>
+                <div className="container">
+                    {renderLinks()}
+                    {languageSelectionRender()}
+                    {repoLinkRender()}
+                    <SocialLinks />
+                </div>
+            </nav>
+        </FocusTrap>
     )
 }
 
