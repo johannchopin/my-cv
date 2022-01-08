@@ -26,6 +26,11 @@ a:hover {
     color: inherit;
 }
 
+button {
+    background: none;
+    border: none;
+}
+
 .animate-me {
     opacity: 0;
 }
@@ -35,15 +40,15 @@ a:hover {
     background: #FBBC05;
 }
 
+.text-black {
+    color: #000;
+}
+
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
     overflow: hidden;
-
-    button:focus {
-        outline: 0;
-    }
 
     .clickable,
     .clickable-effect {
