@@ -38,5 +38,15 @@
         "en": "View source code",
         "fr": "Voir le code source",
         "de": "Sehen Sie den Quellcode"
+    },
+    "open_navbar": {
+        "en": "Open the navbar",
+        "fr": "Ouvrir la barre de navigation",
+        "de": "Öffnen der Navigationsleiste"
+    },
+    "close_navbar": {
+        "en": "Close the navbar",
+        "fr": "Fermer la barre de navigation",
+        "de": "Schließen der Navigationsleiste"
     }
 }

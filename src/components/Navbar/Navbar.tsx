@@ -140,9 +140,13 @@ const Navbar: React.FC = () => {
 
     return (
         <nav id="navbar" className={isOpen ? "open" : ""}>
-            <div onClick={() => { toggleNavbar() }} className="burger">
+            <button 
+                onClick={() => { toggleNavbar() }} className="burger text-white"
+                aria-expanded={isOpen}
+                aria-label={isOpen ? useLocalize(localize.close_navbar) : useLocalize(localize.open_navbar)}
+            >
                 <Icon icon="bars" className={isOpen ? "selected" : ""} />
-            </div>
+            </button>
 
             <div className="container">
                 {renderLinks()}
