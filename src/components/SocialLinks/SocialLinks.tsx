@@ -13,6 +13,11 @@ export interface SocialLinksProps {
 }
 // END INTERFACE ZONE
 
+// IMPORT LOCALIZE ZONE
+import * as localize from './localize.json'
+import { useLocalize } from '~helpers/useLocalize';
+// END IMPORT LOCALIZE ZONE
+
 const SO_ID = 8583669
 
 const SocialLinks: React.FC<SocialLinksProps> = (props) => {
@@ -46,6 +51,7 @@ const SocialLinks: React.FC<SocialLinksProps> = (props) => {
                 href="https://stackoverflow.com/users/8583669/johannchopin"
                 target="_blank"
                 className="clickable d-flex flex-column align-items-center"
+                aria-label={useLocalize(localize.visit_page, { __PAGE__: 'stackoverflow'})}
             >
                 <Icon prefix="fab" icon="stack-overflow" />
                 <span className="reputation">{SOReputation}</span>
@@ -54,6 +60,7 @@ const SocialLinks: React.FC<SocialLinksProps> = (props) => {
                 href="https://github.com/johannchopin"
                 target="_blank"
                 className="clickable"
+                aria-label={useLocalize(localize.visit_page, { __PAGE__: 'github'})}
             >
                 <Icon prefix="fab" icon="github" />
             </a>
@@ -61,6 +68,7 @@ const SocialLinks: React.FC<SocialLinksProps> = (props) => {
                 href="https://gitlab.com/johannchopin"
                 target="_blank"
                 className="clickable"
+                aria-label={useLocalize(localize.visit_page, { __PAGE__: 'gitlab'})}
             >
                 <Icon prefix="fab" icon="gitlab" />
             </a>
@@ -68,6 +76,7 @@ const SocialLinks: React.FC<SocialLinksProps> = (props) => {
                 href="https://www.linkedin.com/in/johann-chopin-b0097b197/"
                 target="_blank"
                 className="clickable"
+                aria-label={useLocalize(localize.visit_page, { __PAGE__: 'linkedin'})}
             >
                 <Icon prefix="fab" icon="linkedin" />
             </a>
@@ -75,6 +84,7 @@ const SocialLinks: React.FC<SocialLinksProps> = (props) => {
                 href="https://dev.to/johannchopin"
                 target="_blank"
                 className="clickable"
+                aria-label={useLocalize(localize.visit_page, { __PAGE__: 'dev.to'})}
             >
                 <Icon prefix="fab" icon="dev" />
             </a>
