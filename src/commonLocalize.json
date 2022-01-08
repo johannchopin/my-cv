@@ -1,0 +1,17 @@
+{
+  "french": {
+      "en": "French",
+      "fr": "Français",
+      "de": "Französisch"
+  },
+  "english": {
+    "en": "English",
+    "fr": "Anglais",
+    "de": "Englisch"
+  },
+  "german": {
+    "en": "German",
+    "fr": "Allemand",
+    "de": "Deutsch"
+  }
+}
