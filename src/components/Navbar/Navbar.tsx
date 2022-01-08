@@ -100,6 +100,7 @@ const Navbar: React.FC = () => {
                             localize.translate_to,
                             {'__LANG__': langsLocalize[langSelection]}
                         )}
+                        disabled={langSelection === lang}
                     >
                         {langIcons[langSelection]}
                     </button>
