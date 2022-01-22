@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Emoji from 'a11y-react-emoji';
 
 // IMPORT STYLES ZONE
 import './skillsPage.scss';
@@ -67,7 +68,8 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
     return (
         <div id="skills" className="swiper-slide">
             <h1 className="animate-me slide-title">
-                🛠️ <Localize translations={localize.title} />
+                <Emoji symbol='🛠️' className='mr-2'/>
+                <Localize translations={localize.title} />
             </h1>
 
             <div className="skills-ctn">

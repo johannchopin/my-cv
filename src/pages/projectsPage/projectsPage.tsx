@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Emoji from 'a11y-react-emoji';
 
 // IMPORT STYLES ZONE
 import './projectsPage.scss';
@@ -46,11 +47,13 @@ import { Language } from '../../commonInterface';
 // END IMPORT INTERFACE ZONE
 
 
+// C O M P O N E N T
 const ProjectsPage: React.FC = () => {
     return (
         <div id="projects" className="swiper-slide">
             <h1 className="animate-me slide-title">
-                🚀 <Localize translations={localize.title} />
+                <Emoji symbol='🚀' className='mr-2'/>
+                <Localize translations={localize.title} />
             </h1>
 
             <div className="projects-ctn">
