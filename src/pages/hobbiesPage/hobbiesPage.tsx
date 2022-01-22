@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Emoji from 'a11y-react-emoji';
 
 // IMPORT STYLES ZONE
 import './hobbiesPage.scss';
@@ -35,11 +36,13 @@ import Localize from '~Localize';
 //@ts-ignore
 import SvelteIcon from '../../assets/img/svelte-icon.svg';
 
+// C O M P O N E N T
 const HobbiesPage: React.FC = () => {
     return (
         <div id='hobbies' className="swiper-slide">
             <h1 className="animate-me slide-title">
-                🎸 <Localize translations={localize.title} />
+                <Emoji symbol='🎸' className='mr-2'/>
+                <Localize translations={localize.title} />
             </h1>
 
             <div id="hobbiesCtn">
