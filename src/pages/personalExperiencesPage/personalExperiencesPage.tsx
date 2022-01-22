@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Emoji from 'a11y-react-emoji';
 
 // IMPORT STYLES ZONE
 import './personalExperiencesPage.scss';
@@ -14,16 +15,17 @@ import Icon from '../../components/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
 // IMPORT INTERFACE ZONE
-import { Language } from '../../commonInterface';
 import Localize from '~Localize';
 // END IMPORT INTERFACE ZONE
 
 
+// C O M P O N E N T
 const PersonalExperiencesPage: React.FC = () => {
     return (
         <div id="experiences" className="swiper-slide">
             <h1 className="animate-me slide-title">
-                🗂️ <Localize translations={localize.title} />
+                <Emoji symbol='🗂️' className='mr-2'/>
+                <Localize translations={localize.title} />
             </h1>
 
             <div id="experiencesCtn">

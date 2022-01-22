@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Emoji from 'a11y-react-emoji';
 
 // IMPORT STYLES ZONE
 import './introductionPage.scss';
@@ -20,10 +21,6 @@ import WaveSvg from '../../assets/img/wave-design.svg';
 import Icon from '../../components/Icon/Icon';
 // END IMPORT COMPONENTS ZONE
 
-// IMPORT INTERFACE ZONE
-import { Language } from '../../commonInterface';
-// END IMPORT INTERFACE ZONE
-
 
 const IntroductionPage: React.FC = () => {
     const [isSwypeToastOpen, setIsSwypeToastOpen] = React.useState<boolean>(true);
@@ -33,7 +30,7 @@ const IntroductionPage: React.FC = () => {
             <header>
                 <h1 id="slide_0_h1" className="animate-me">
                     <Localize translations={localize.hey}/> 
-                    <span className="ml-2 waving-hand">👋</span>
+                    <Emoji symbol='👋' className='ml-2 waving-hand'/>
                 </h1>
 
                 <p id="slide_0_p" className="animate-me">
