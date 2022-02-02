@@ -62,7 +62,7 @@ const ProjectsPage: React.FC = () => {
                     year={2021}
                     image={UnivLorraineLogo}
                     summary={useLocalize(localize.edpinfo)}
-                    technologiesUsed={['angular', 'typeorm', 'jira', 'OAuth']}
+                    technologiesUsed={['angular', 'nestjs', 'jira', 'OAuth']}
                 />
                 <ProjectContainer 
                     link="https://ux-typing-experiment-five.vercel.app/"
