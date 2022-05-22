@@ -36,6 +36,8 @@ import DSLVLogo from '../../assets/img/DSLV-logo.jpeg';
 import CleanCssIcon from '../../assets/img/clean-css-icon.png';
 //@ts-ignore
 import UnivLorraineLogo from '../../assets/img/univ-lorraine-logo.png';
+//@ts-ignore
+import SOReadmeProfileLogo from '../../assets/img/stackoverflow-readme-profile-logo.png';
 // END IMPORT IMAGES ZONE
 
 // IMPORT COMPONENTS ZONE
@@ -52,19 +54,28 @@ const ProjectsPage: React.FC = () => {
     return (
         <div id="projects" className="swiper-slide">
             <h1 className="animate-me slide-title">
-                <Emoji symbol='🚀' className='mr-2'/>
+                <Emoji symbol='🚀' className='mr-2' />
                 <Localize translations={localize.title} />
             </h1>
 
             <div className="projects-ctn">
-                <ProjectContainer 
+                <ProjectContainer
+                    link="https://johannchopin.github.io/stackoverflow-readme-profile/"
+                    title="stackoverflow-readme-profile"
+                    year={2022}
+                    image={SOReadmeProfileLogo}
+                    summary={useLocalize(localize['stackoverflow-readme-profile'])}
+                    linkToGitRepo="https://github.com/johannchopin/stackoverflow-readme-profile"
+                    technologiesUsed={['nodejs', 'handlebars', 'svg', 'docker']}
+                />
+                <ProjectContainer
                     title="Université de lorraine - eDPINFO"
                     year={2021}
                     image={UnivLorraineLogo}
                     summary={useLocalize(localize.edpinfo)}
                     technologiesUsed={['angular', 'nestjs', 'jira', 'OAuth']}
                 />
-                <ProjectContainer 
+                <ProjectContainer
                     link="https://ux-typing-experiment-five.vercel.app/"
                     title="ux-typing-experiment"
                     year={2021}
@@ -73,14 +84,14 @@ const ProjectsPage: React.FC = () => {
                     linkToGitRepo="https://github.com/Lyokolux/ux-typing-experiment"
                     technologiesUsed={['sveltekit', 'firestore', 'typescript', 'highcharts']}
                 />
-                <ProjectContainer 
+                <ProjectContainer
                     title="DSLV Niedersachsen's events dashboard"
                     year={2021}
                     image={DSLVLogo}
                     summary={useLocalize(localize['dslv-niedersachsen'])}
                     technologiesUsed={['react', 'express', 'typeorm', 'mongodb', 'nodemailer']}
                 />
-                <ProjectContainer 
+                <ProjectContainer
                     link="http://restapify.vercel.app/"
                     title="Restapify"
                     year={2021}
@@ -89,7 +100,7 @@ const ProjectsPage: React.FC = () => {
                     linkToGitRepo="https://github.com/johannchopin/restapify"
                     technologiesUsed={['typescript', 'express', 'svelte']}
                 />
-                <ProjectContainer 
+                <ProjectContainer
                     link="https://clean-css.github.io/"
                     title="clean-css website"
                     year={2021}
