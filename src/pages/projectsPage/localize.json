@@ -63,5 +63,10 @@
         "en": "Scrum master of a 6 months IT project for the University of Lorraine in which a team of 10 developers had to create a tool to manage schooling. This required the creation of a web application and an OAuth authentication service.",
         "fr": "Scrum master d'un projet informatique de 6 mois pour l'Université de Lorraine dans lequel une équipe de 10 développeurs devait créer un outil de gestion de la scolarité. Cela a nécessité la création d'une application web et d'un service d'authentification OAuth.",
         "de": "Scrum Master eines sechsmonatigen IT-Projekts für die Universität Lothringen, in dem ein Team von zehn Entwicklern ein Tool zur Verwaltung des Schulwesens erstellen sollte. Dies erforderte die Erstellung einer Webanwendung sowie eines OAuth-Authentifizierungsdienstes."
+    },
+    "stackoverflow-readme-profile": {
+        "en": "Easily share your Stackoverflow's profile on your README just by calling an url endpoint.",
+        "fr": "Partagez facilement votre profil Stackoverflow dans votre fichier README en appelant simplement une url.",
+        "de": "Teilen Sie Ihr Stackoverflow-Profil auf Ihrer README, indem Sie einfach einen URL-Endpunkt aufrufen."
     }
 }
