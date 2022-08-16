@@ -1,3 +1,5 @@
-import jquery from "jquery";
+/* eslint-disable */
+import jquery from 'jquery'
 
-export default (window.$ = window.jQuery = jquery);
+// @ts-ignore
+export default (window.$ = window.jQuery = jquery)

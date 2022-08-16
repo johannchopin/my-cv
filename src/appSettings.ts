@@ -1,5 +1,5 @@
 // IMPORT APP SETTINGS ZONE
-import * as SETTINGS from '../app-settings.json';
+import * as SETTINGS from '../app-settings.json'
 // END IMPORT APP SETTINGS ZONE
 
 // INTERFACE ZONE
@@ -15,5 +15,5 @@ export interface IAppSettings {
 // END INTERFACE ZONE
 
 export default class AppSettings {
-    public static settings: IAppSettings = SETTINGS;
+  public static settings: IAppSettings = SETTINGS
 }

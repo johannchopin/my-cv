@@ -1,48 +1,46 @@
 export default class _PageBase {
+  public initPage(pageId: string): void {
+    this.animateAll(pageId)
+  }
 
-    public initPage(pageId: string): void {
-        this.animateAll(pageId);
-    }
+  public clearPage(pageId: string): void {
+    this.initAllDefaultAnimation(pageId)
+  }
 
-    public clearPage(pageId: string): void {
-        this.initAllDefaultAnimation(pageId);
-    }
+  protected animateAll(pageId: string): void {
+    let animationDelay = 0
+    const elmtsToAnimate = $(`#${pageId} .animate-me`)
 
-    protected animateAll(pageId: string): void {
-        let animationDelay = 0;
-        const elmtsToAnimate = $(`#${pageId} .animate-me`);
+    elmtsToAnimate.each(function () {
+      let animationName = 'rotation'
+      const elmtClass = $(this).attr('class')
 
-        elmtsToAnimate.each(function () {
-            let animationName = 'rotation';
-            const elmtClass = $(this).attr('class');
+      if (elmtClass !== undefined) {
+        if (elmtClass.includes('animation-')) {
+          const animationClassWithEndClass = elmtClass.substring(elmtClass.indexOf('animation-'), elmtClass.length)
+          const animationClass = (animationClassWithEndClass.split(' '))[0]
+          const className = animationClass.replace('animation-', '')
 
-            if (elmtClass !== undefined) {
-                if (elmtClass.includes("animation-")) {
-                    const animationClassWithEndClass = elmtClass.substring(elmtClass.indexOf("animation-"), elmtClass.length);
-                    const animationClass = (animationClassWithEndClass.split(' '))[0];
-                    const className = animationClass.replace("animation-", '');
+          animationName = className
+        }
+      }
 
-                    animationName = className;
-                }
-            }
+      $(this).css({
+        animation: animationName + ' 1s forwards',
+        animationDelay: animationDelay + 's'
+      })
 
+      animationDelay += 0.2
+    })
+  }
 
-            $(this).css({
-                animation: animationName + ' 1s forwards',
-                animationDelay: animationDelay + 's',
-            });
+  protected initAllDefaultAnimation(pageId: string): void {
+    const elmtsToAnimate = $(`#${pageId} .animate-me`)
 
-            animationDelay += 0.2;
-        })
-    };
-
-    protected initAllDefaultAnimation(pageId: string): void {
-        const elmtsToAnimate = $(`#${pageId} .animate-me`);
-
-        elmtsToAnimate.each(function () {
-            $(this).css({
-                animation: 'none',
-            });
-        })
-    };
+    elmtsToAnimate.each(function () {
+      $(this).css({
+        animation: 'none'
+      })
+    })
+  }
 }
