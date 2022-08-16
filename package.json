@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "parcel ./src/index.html --out-dir ./build/dev --open",
     "devLocal": "parcel watch ./src/index.html --out-dir ./build/devLocal --public-url ./",
-    "build": "yarn parcel build ./src/index.html --out-dir ./build/prod --public-url ./"
+    "build": "yarn parcel build ./src/index.html --out-dir ./build/prod --public-url ./",
+    "lint": "eslint . --ext .js,.ts,.tsx"
   },
   "author": "Chopin Johann",
   "license": "ISC",
@@ -36,7 +37,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.1",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
     "cssnano": "^4.1.10",
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "jquery": "^3.5.1",
     "parcel-bundler": "^1.12.4",
     "prop-types": "^15.8.1",
