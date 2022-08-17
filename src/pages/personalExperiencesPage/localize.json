@@ -10,9 +10,9 @@
         "de": "Sprachen"
     },
     "work_anynines": {
-        "en": "Frontend developer at <a href='https://www.anynines.com/' target='_blank'>Anynines</a> since March 2020. My role was to help the team develop a WYSIWYG mobile application creation tool, collaborate on the creation of a design system as well as do mobile development. <br><br> During this period I was able to learn to work with many technologies and methods such as react, ionic, GraphQl, agile method, jira, TDD, etc...",
-        "fr": "Développeur Frontend chez <a href='https://www.anynines.com/' target='_blank'>Anynines</a> depuis mars 2020. Mon rôle était d'aider l'équipe à développer un outil de création d'applications mobiles WYSIWYG, de collaborer à la création d'un design système ainsi que de faire du développement mobile. <br><br> Durant cette période, j'ai pu apprendre à travailler avec de nombreuses technologies et méthodes telles que react, ionic, GraphQl, la méthode agile, jira, TDD, etc....",
-        "de": "Frontend-Entwickler bei <a href='https://www.anynines.com/' target='_blank'>Anynines</a> seit März 2020. Meine Aufgabe war es, das Team bei der Entwicklung eines WYSIWYG-Tools zur Erstellung von mobilen Anwendungen zu unterstützen, an der Erstellung eines Designsystems mitzuarbeiten sowie mobile Entwicklung zu betreiben. <br><br>Während dieser Zeit konnte ich lernen, mit vielen Technologien und Methoden zu arbeiten, wie z.B. React, Ionic, GraphQl, agile Methoden, Jira, TDD, etc."
+        "en": "Frontend developer at <a href='https://www.anynines.com/' target='_blank'>Anynines</a> for 2 years. My role was to help the team develop a WYSIWYG mobile application creation tool, collaborate on the creation of a design system as well as do mobile development. <br><br> During this period I was able to learn to work with many technologies and methods such as react, ionic, GraphQl, agile method, jira, TDD, etc...",
+        "fr": "Développeur Frontend à temps partiel chez <a href='https://www.anynines.com/' target='_blank'>Anynines</a> pendant 2 ans. Mon rôle était d'aider l'équipe à développer un outil de création d'applications mobiles WYSIWYG, de collaborer à la création d'un design système ainsi que de faire du développement mobile. <br><br> Durant cette période, j'ai pu apprendre à travailler avec de nombreuses technologies et méthodes telles que react, ionic, GraphQl, la méthode agile, jira, TDD, etc....",
+        "de": "Teilzeit Frontend-Entwickler bei <a href='https://www.anynines.com/' target='_blank'>Anynines</a> während 2 Jahren. Meine Aufgabe war es, das Team bei der Entwicklung eines WYSIWYG-Tools zur Erstellung von mobilen Anwendungen zu unterstützen, an der Erstellung eines Designsystems mitzuarbeiten sowie mobile Entwicklung zu betreiben. <br><br>Während dieser Zeit konnte ich lernen, mit vielen Technologien und Methoden zu arbeiten, wie z.B. React, Ionic, GraphQl, agile Methoden, Jira, TDD, etc."
     },
     "work_eurokey": {
         "introduction": {
@@ -23,7 +23,7 @@
         "complement": {
             "en": "My task was to continue the development of an application for the developers of the company allowing them to more easily manage the creation of commercialized applications",
             "fr": "Ma tâche consistait à continuer le développement d'une application destinée aux développeurs de l'entreprise leur permettant de gérer plus aisément la création des applications commercialisées",
-            "de": "Meine Aufgabe war es, die Erstellung einer App für die Entwickler des Unternehmens fortzusetzen, die es ihnen ermöglicht, die Erstellung kommerzialisierter Apps einfacher zu verwalten"     
+            "de": "Meine Aufgabe war es, die Erstellung einer App für die Entwickler des Unternehmens fortzusetzen, die es ihnen ermöglicht, die Erstellung kommerzialisierter Apps einfacher zu verwalten"
         }
     },
     "internship_hotcity": {
@@ -31,7 +31,7 @@
         "fr": "Stage au sein de l'entreprise de développement mobile <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> au Luxembourg (1 mois en 2018) où j'ai designé des interfaces d'applications mobiles en plus de faire de <i>l'intégration web</i> et du développement PHP",
         "de": "Praktikum in der Firma <a href=\"https://www.hotcity.lu/fr/\">Hotcity S.A</a> in Luxemburg (1 Monat im 2018), in welchem ich zusätzlich zur <i>Web-Integration</i> und PHP-Entwicklung beigetragen habe Empfehlungsschreiben"
     },
-     "letter_of_recommendation": {
+    "letter_of_recommendation": {
         "en": "Letter of recommendation",
         "fr": "Lettre de recommandation",
         "de": "Empfehlungsschreiben"
