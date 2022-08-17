@@ -3,5 +3,10 @@
         "en": "View source code",
         "fr": "Voir le code source",
         "de": "Sehen Sie den Quellcode"
+    },
+    "goto_website": {
+        "en": "View website",
+        "fr": "Visiter le site web",
+        "de": "Website ansehen"
     }
 }
