@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
+import * as React from 'react'
+import { useLocation, useHistory } from 'react-router-dom'
 
-import { LANGUAGES } from '~const';
+import { LANGUAGES } from '~const'
 
-import { Language } from '../commonInterface';
+import { Language } from '../commonInterface'
 
 interface AppContextParam {
   lang: Language
   setLang: (lang: Language) => void
 }
 
-export const AppContext = React.createContext({} as AppContextParam);
+export const AppContext = React.createContext({} as AppContextParam)
 
 // C O M P O N E N T
 const AppProvider: React.FC = (props) => {
@@ -27,9 +27,8 @@ const AppProvider: React.FC = (props) => {
     if (isLangValid) return langInQuery
     return 'en'
   }
-  
 
-  const [langState, setLangState] = React.useState<Language>(getDefaultLang());
+  const [langState, setLangState] = React.useState<Language>(getDefaultLang())
 
   const setLang = (lang: Language): void => {
     query.set('lang', lang)
@@ -48,7 +47,7 @@ const AppProvider: React.FC = (props) => {
     <AppContext.Provider value={appContextProviderValue}>
       {children}
     </AppContext.Provider>
-  );
+  )
 }
 
-export default AppProvider;
+export default AppProvider

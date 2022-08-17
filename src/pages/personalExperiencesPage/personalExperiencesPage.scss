@@ -82,12 +82,8 @@
             }
         }
 
-        #hotcityInternship {
-            #hotcityLetter {
-                display: flex;
-                align-items: center;
-                font-size: .9em;
-            }
+        .recommendation {
+            font-size: .9em;
         }
     }
 }
@@ -102,6 +98,10 @@
             div {
                 max-width: 80%;
                 font-size: 1.3em;
+            }
+
+            .recommendation {
+                font-size: .7em;
             }
         }
     }

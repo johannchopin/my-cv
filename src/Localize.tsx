@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { useLocalize as importedUseLocalize, Translation, TranslationVars } from '~helpers/useLocalize';
+import { useLocalize as importedUseLocalize, Translation, TranslationVars } from '~helpers/useLocalize'
 
 export const useLocalize = importedUseLocalize
 
@@ -11,7 +11,7 @@ export interface LocalizeProps {
 }
 
 const Localize: React.FC<LocalizeProps> = (props) => {
-  const { translations, vars } = props;
+  const { translations, vars } = props
 
   return (
     <>
@@ -20,4 +20,4 @@ const Localize: React.FC<LocalizeProps> = (props) => {
   )
 }
 
-export default Localize;
+export default Localize

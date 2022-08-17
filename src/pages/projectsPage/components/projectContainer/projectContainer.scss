@@ -75,14 +75,16 @@
         }
     }
 
-    .git-repo-icon {
+    .links {
         position: absolute;
         top: .2em;
         right: .5em;
-        font-size: 2em;
-        color: $cv-gold;
-    }
+        font-size: 1.5em;
 
+        a:not(:hover) {
+            color: $cv-gold;
+        }
+    }
 }
 
 
@@ -91,6 +93,7 @@
     .project-ctn {
         width: 95%;
         padding: .8em;
+        padding-bottom: .3em;
 
         .header {
 
@@ -107,7 +110,8 @@
             }
         }
 
-        .git-repo-icon {
+        .links {
+            position: inherit;
             top: auto;
             bottom: .2em;
         }
