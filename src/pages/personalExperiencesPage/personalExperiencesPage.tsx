@@ -20,6 +20,14 @@ import Localize from '~Localize'
 
 // C O M P O N E N T
 const PersonalExperiencesPage: React.FC = () => {
+  const renderRecommendation = (link: string): JSX.Element => {
+    return (
+      <a className='d-flex align-items-center recommendation' href={link} target="_blank">
+        <Icon icon="file-download" />
+        <p><Localize translations={localize.letter_of_recommendation} /></p>
+      </a>
+    )
+  }
   return (
     <div id="experiences" className="swiper-slide">
       <h1 className="animate-me slide-title">
@@ -31,6 +39,8 @@ const PersonalExperiencesPage: React.FC = () => {
 
         <div className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_anynines) }}></p>
+          <br />
+          {renderRecommendation('https://github.com/johannchopin/my-cv/raw/main/static/recommendation-by-anynines-de.pdf')}
         </div>
 
         <div className="animate-me">
@@ -42,10 +52,7 @@ const PersonalExperiencesPage: React.FC = () => {
         <div id="hotcityInternship" className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.internship_hotcity) }}></p>
           <br />
-          <a id="hotcityLetter" href="https://github.com/johannchopin/my-cv/raw/main/static/hotcity-recommendation-letter.pdf" target="_blank">
-            <Icon icon="file-download" />
-            <p><Localize translations={localize.letter_of_recommendation} /></p>
-          </a>
+          {renderRecommendation('https://github.com/johannchopin/my-cv/raw/main/static/hotcity-recommendation-letter.pdf')}
         </div>
 
         <div className="animate-me">
