@@ -64,20 +64,20 @@ const SocialLinks: React.FC<SocialLinksProps> = (props) => {
           <Icon prefix="fab" icon="github" />
         </a>
         <a
-          href="https://gitlab.com/johannchopin"
-          target="_blank"
-          className="clickable"
-          aria-label={useLocalize(localize.visit_page, { __PAGE__: 'gitlab' })}
-        >
-          <Icon prefix="fab" icon="gitlab" />
-        </a>
-        <a
           href="https://www.linkedin.com/in/johann-chopin-b0097b197/"
           target="_blank"
           className="clickable"
           aria-label={useLocalize(localize.visit_page, { __PAGE__: 'linkedin' })}
         >
           <Icon prefix="fab" icon="linkedin" />
+        </a>
+        <a
+          href="https://gitlab.com/johannchopin"
+          target="_blank"
+          className="clickable"
+          aria-label={useLocalize(localize.visit_page, { __PAGE__: 'gitlab' })}
+        >
+          <Icon prefix="fab" icon="gitlab" />
         </a>
         <a
           href="https://dev.to/johannchopin"
