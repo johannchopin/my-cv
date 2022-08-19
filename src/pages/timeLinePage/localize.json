@@ -48,5 +48,10 @@
         "en": "Master of Computer Science at ISFATES in HMI (Human-Machine interaction) orientation",
         "fr": "Master d'Informatique à l'ISFATES en orientation IHM (Interaction Humain-Machine)",
         "de": "Master in Informatik an der ISFATES in der Fachrichtung HMI (Human-Machine Interaction)"
+    },
+    "master_description": {
+        "en": "Specialization in User Experience Development and Interface Accessibility",
+        "fr": "Spécialisation dans le développement de l'expérience utilisateur et l'accessibilité des interfaces.",
+        "de": "Spezialisierung auf User Experience Development und Interface Accessibility"
     }
 }
