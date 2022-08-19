@@ -35,57 +35,63 @@ const PersonalExperiencesPage: React.FC = () => {
         <Localize translations={localize.title} />
       </h1>
 
-      <div id="experiencesCtn">
+      <ul id="experiencesCtn">
 
-        <div className="animate-me">
+        <li className="animate-me">
+          <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_dryad.introduction) }}></p>
+          <br />
+          <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_dryad.complement) }}></p>
+        </li>
+
+        <li className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_anynines) }}></p>
           <br />
           {renderRecommendation('https://github.com/johannchopin/my-cv/raw/main/static/recommendation-by-anynines-de.pdf')}
-        </div>
+        </li>
 
-        <div className="animate-me">
+        <li className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_eurokey.introduction) }}></p>
           <br />
           <p><Localize translations={localize.work_eurokey.complement} /></p>
-        </div>
+        </li>
 
-        <div id="hotcityInternship" className="animate-me">
+        <li id="hotcityInternship" className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.internship_hotcity) }}></p>
           <br />
           {renderRecommendation('https://github.com/johannchopin/my-cv/raw/main/static/hotcity-recommendation-letter.pdf')}
-        </div>
+        </li>
 
-        <div className="animate-me">
+        <li className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.hackaton_lux) }}></p>
           <br />
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.battledev) }}></p>
-        </div>
+        </li>
 
-        <div className="animate-me">
+        <li className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.diva) }}></p>
-        </div>
+        </li>
 
-        <div className="animate-me">
+        <li className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.cnrs) }}></p>
           <br />
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.tpe) }}></p>
-        </div>
+        </li>
 
-        <div className="animate-me">
+        <li className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.ecpm) }}></p>
           <br />
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.pirmasens) }}></p>
-        </div>
+        </li>
 
-        <div className="animate-me">
+        <li className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.pirmasens) }}></p>
           <br />
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.summer_camp) }}></p>
           <br />
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.concert) }}></p>
-        </div>
+        </li>
 
-      </div>
+      </ul>
     </div>
   )
 }

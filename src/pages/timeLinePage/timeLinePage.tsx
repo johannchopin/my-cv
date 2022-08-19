@@ -25,6 +25,7 @@ const TimeLinePage: React.FC = () => {
           <li className="event animate-me animation-goUp">
             <p className="event-date">2020 - 2022</p>
             <h2 dangerouslySetInnerHTML={{ __html: useLocalize(localize.master) }}></h2>
+            <p><Localize translations={localize.master_description} /></p>
           </li>
 
           <li className="event animate-me animation-goUp">

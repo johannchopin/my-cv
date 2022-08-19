@@ -4,10 +4,17 @@
         "fr": "Expériences",
         "de": "Erfahrungen"
     },
-    "languages": {
-        "en": "Languages",
-        "fr": "Langues",
-        "de": "Sprachen"
+    "work_dryad": {
+        "introduction": {
+            "en": "Master thesis for 6 months in the startup <a href='https://dryad.net' target='_blank'>Dryad</a>. My role was to analyze their client application and improve the user experience through ergonomic criteria and user testing.",
+            "fr": "Mémoire de Master pendant 6 mois dans la startup <a href='https://dryad.net' target='_blank'>Dryad</a>. Mon rôle était d'analyser leur application client et d'améliorer l'expérience utilisateur grâce à des critères ergonomiques et des tests utilisateurs.",
+            "de": "Masterarbeit für 6 Monate bei dem Startup <a href='https://dryad.net' target='_blank'>Dryad</a>. Meine Aufgabe war es, die Kundenanwendung zu analysieren und die Benutzerfreundlichkeit durch ergonomische Kriterien und Benutzertests zu verbessern."
+        },
+        "complement": {
+            "en": "I also had to redevelop the interactive map systems so that they could display thousands of sensors in an optimized and intuitive way. I was able to improve my knowledge in <i>Angular</i>, <i>UX development</i>, <i>Accessibility</i>, <i>googleMaps API</i>, <i>keycloak</i>, <i>figma</i> and <i>docker</i>",
+            "fr": "J'ai également dû redévelopper les systèmes de cartes interactives afin qu'ils puissent afficher des milliers de capteurs de manière optimisée et intuitive. J'ai pu améliorer mes connaissances en <i>Angular</i>, <i>UX development</i>, <i>Accessibility</i>, <i>googleMaps API</i>, <i>keycloak</i>, <i>figma</i> et <i>docker</i>",
+            "de": "Außerdem musste ich die interaktiven Kartensysteme neu entwickeln, damit sie Tausende von Sensoren auf optimierte und intuitive Weise anzeigen können. Ich konnte meine Kenntnisse in Bereichen <i>Angular</i>, <i>UX development</i>, <i>Accessibility</i>, <i>googleMaps API</i>, <i>keycloak</i>, <i>figma</i> und <i>docker</i> verbessern "
+        }
     },
     "work_anynines": {
         "en": "Frontend developer at <a href='https://www.anynines.com/' target='_blank'>Anynines</a> for 2 years. My role was to help the team develop a WYSIWYG mobile application creation tool, collaborate on the creation of a design system as well as do mobile development. <br><br> During this period I was able to learn to work with many technologies and methods such as react, ionic, GraphQl, agile method, jira, TDD, etc...",
