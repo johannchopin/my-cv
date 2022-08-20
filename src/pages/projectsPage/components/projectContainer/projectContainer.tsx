@@ -41,7 +41,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
     technologiesUsed
   } = props
 
-  const technologiesUsedRender = (): React.ReactNode => {
+  const renderTechnologiesUsed = (): React.ReactNode => {
     if (technologiesUsed !== undefined) {
       return (
         <ul className="techno">
@@ -117,7 +117,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
         </div>
         <div className="body">
           <h4>{summary}</h4>
-          {technologiesUsedRender()}
+          {renderTechnologiesUsed()}
         </div>
       </>
     )

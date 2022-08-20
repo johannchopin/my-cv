@@ -28,6 +28,7 @@
             border-radius: .4em;
             margin: 0 1em;
             margin-bottom: 1.5em;
+            line-height: 1.3em;
 
             a,
             i {
@@ -46,7 +47,7 @@
                 border-radius: .2em;
 
                 .fa-icon {
-                    color: $cv-gold !important;
+                    color: $cv-gold  !important;
                 }
             }
 
@@ -97,7 +98,7 @@
 
             li {
                 max-width: 80%;
-                font-size: 1.3em;
+                font-size: 1.1em;
             }
 
             .recommendation {
