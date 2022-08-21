@@ -152,7 +152,6 @@ const ProjectsPage: React.FC = () => {
           technologiesUsed={['php', 'html', 'css', 'javascript', 'mysql']}
         />
         <ProjectContainer
-          link="http://diva.dfhi-isfates.eu/"
           title="DIVA-Website"
           year={2017}
           image={DivaLogo}
