@@ -62,7 +62,13 @@ const ProjectsPage: React.FC = () => {
           summary={useLocalize(localize['stackoverflow-readme-profile'])}
           linkToGitRepo="https://github.com/johannchopin/stackoverflow-readme-profile"
           technologiesUsed={['nodejs', 'handlebars', 'svg', 'docker']}
-        />
+        >
+          <img
+            src="https://stackoverflow-readme-profile.johannchopin.fr/profile/8583669?theme=dark"
+            alt="StackOverflow profile"
+            width="300px"
+          />
+        </ProjectContainer>
         <ProjectContainer
           title="Université de lorraine - eDPINFO"
           year={2021}

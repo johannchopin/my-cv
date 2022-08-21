@@ -38,7 +38,8 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
     image,
     summary,
     linkToGitRepo,
-    technologiesUsed
+    technologiesUsed,
+    children
   } = props
 
   const renderTechnologiesUsed = (): React.ReactNode => {
@@ -117,6 +118,7 @@ const ProjectContainer: React.FC<ProjectContainerProps> = (props) => {
         </div>
         <div className="body">
           <h4>{summary}</h4>
+          {children}
           {renderTechnologiesUsed()}
         </div>
       </>
