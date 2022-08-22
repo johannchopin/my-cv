@@ -21,7 +21,7 @@ const TopSoAnswerer: React.FC<TopSoAnswererProps> = (props) => {
   const { percentage } = props
 
   return (
-    <a href="https://stackoverflow.com/story/johannchopin" target="_blank" className="top-so-answerer mt-1">
+    <a href="https://stackoverflow.com/users/8583669/johannchopin?tab=tags&sort=votes" target="_blank" className="top-so-answerer mt-1">
       <Icon icon="external-link-alt" className="pr-1" />
       <Localize translations={localize.top_answerers} vars={{ __PERCENTAGE__: percentage }} />
     </a>
