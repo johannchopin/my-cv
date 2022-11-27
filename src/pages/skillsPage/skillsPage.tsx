@@ -77,7 +77,7 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
           <div className="animated-gauge">
             <div className="jauge-html-css"></div>
           </div>
-          <TopSoAnswerer percentage={5} />
+          <TopSoAnswerer tag='javascript' percentage={5} />
 
           <h3 id="typescriptSkills">
             <TypescriptIcon />
@@ -86,7 +86,7 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
           <div className="animated-gauge">
             <div className="jauge-ts"></div>
           </div>
-          <TopSoAnswerer percentage={10} />
+          <TopSoAnswerer tag='typescript' percentage={10} />
 
           <h3>
             <Icon prefix="fab" icon="react" />
@@ -95,7 +95,7 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
           <div className="animated-gauge">
             <div className="jauge-react"></div>
           </div>
-          <TopSoAnswerer percentage={5} />
+          <TopSoAnswerer tag='reactjs' percentage={5} />
 
           <h3 id="svelteSkills">
             <SvelteIcon />
@@ -104,7 +104,7 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
           <div className="animated-gauge">
             <div className="jauge-svelte"></div>
           </div>
-          <TopSoAnswerer percentage={5} />
+          <TopSoAnswerer tag='svelte' percentage={3} />
 
           <h3>
             <Icon prefix="fab" icon="php" />
@@ -113,7 +113,7 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
           <div className="animated-gauge">
             <div className="jauge-php"></div>
           </div>
-          <TopSoAnswerer percentage={20} />
+          <TopSoAnswerer tag='php' percentage={20} />
 
           <h3>
             <Icon prefix="fab" icon="angular" />
