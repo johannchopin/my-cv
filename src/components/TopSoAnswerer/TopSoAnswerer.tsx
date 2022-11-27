@@ -8,6 +8,7 @@ import './TopSoAnswerer.scss'
 
 // INTERFACE ZONE
 export interface TopSoAnswererProps {
+  tag: string
   percentage: number
 }
 // END INTERFACE ZONE
@@ -18,10 +19,12 @@ import Localize from '~Localize'
 // END IMPORT LOCALIZE ZONE
 
 const TopSoAnswerer: React.FC<TopSoAnswererProps> = (props) => {
-  const { percentage } = props
+  const { tag, percentage } = props
+
+  const linkToProfile = `https://stackoverflow-readme-profile.vercel.app/tags-league/${tag}/users/8583669`
 
   return (
-    <a href="https://stackoverflow.com/users/8583669/johannchopin?tab=tags&sort=votes" target="_blank" className="top-so-answerer mt-1">
+    <a href={linkToProfile} target="_blank" className="top-so-answerer mt-1">
       <Icon icon="external-link-alt" className="pr-1" />
       <Localize translations={localize.top_answerers} vars={{ __PERCENTAGE__: percentage }} />
     </a>
