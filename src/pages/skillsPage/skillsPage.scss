@@ -62,7 +62,7 @@
         h3 {
             color: white;
             font-size: 1.8em;
-            margin-top: 2em;
+            margin-top: 1.5em;
             margin-bottom: 0;
 
 
@@ -73,7 +73,8 @@
 
         }
 
-        #typescriptSkills, #svelteSkills {
+        #typescriptSkills,
+        #svelteSkills {
             display: flex;
 
             svg {
@@ -84,60 +85,7 @@
                 height: 1em;
             }
         }
-
-        .animated-gauge {
-            width: 0%; // INITIALIZE WIDTH ON 0 FOR THE ANIMATION
-            position: relative;
-            height: .5em;
-            background-color: white;
-            border-radius: 20px;
-            margin-top: .1em;
-
-            &>div {
-                position: relative;
-                height: 100%;
-                background-color: rgb(251, 188, 5);
-                border-radius: 20px 0 0 20px;
-            }
-        }
-
-        .jauge0 {
-            width: 80%;
-        }
-
-        .jauge-html-css {
-            width: 90%;
-        }
-
-        .jauge-php {
-            width: 78%;
-        }
-
-        .jauge-python {
-            width: 60%;
-        }
-
-        .jauge-ts {
-            width: 80%;
-        }
-
-        .jauge-git {
-            width: 75%;
-        }
-
-        .jauge-react {
-            width: 80%;
-        }
-
-        .jauge-svelte {
-            width: 70%;
-        }
-
-        .jauge-angular {
-            width: 50%;
-        }
     }
-
 }
 
 @keyframes gaugeAnimation {
@@ -167,7 +115,7 @@
             width: 100%;
 
             div {
-               margin: 10px 0 10px 10px;
+                margin: 10px 0 10px 10px;
             }
         }
 

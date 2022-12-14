@@ -27,38 +27,7 @@ interface SkillsPageProps {
     active: boolean
 }
 
-const SkillsPage: React.FC<SkillsPageProps> = (props) => {
-  const { active } = props
-
-  const initGauges = (): void => {
-    const gaugeToAnimate = $('#skills .animated-gauge')
-
-    gaugeToAnimate.each(function () {
-      $(this).css({
-        animation: 'none'
-      })
-    })
-  }
-
-  const animateGauges = (): void => {
-    const gaugeToAnimate = $('#skills .animated-gauge')
-
-    gaugeToAnimate.each(function () {
-      $(this).css({
-        animation: 'gaugeAnimation 2s forwards',
-        animationDelay: '0.6s'
-      })
-    })
-  }
-
-  React.useEffect(() => {
-    if (active) {
-      animateGauges()
-    } else {
-      initGauges()
-    }
-  }, [active])
-
+const SkillsPage: React.FC<SkillsPageProps> = () => {
   return (
     <div id="skills" className="swiper-slide">
       <h1 className="animate-me slide-title">
@@ -72,80 +41,48 @@ const SkillsPage: React.FC<SkillsPageProps> = (props) => {
 
           <h3>
             <Icon icon="file-code" />
-                            HTML + CSS + JS :
+            HTML + CSS + JS
           </h3>
-          <div className="animated-gauge">
-            <div className="jauge-html-css"></div>
-          </div>
-          <TopSoAnswerer tag='javascript' percentage={5} />
+          <TopSoAnswerer tag='html' />
+          <TopSoAnswerer tag='css' />
+          <TopSoAnswerer tag='javascript' />
 
           <h3 id="typescriptSkills">
-            <TypescriptIcon />
-                            TypeScript :
+            <TypescriptIcon /> TypeScript
           </h3>
-          <div className="animated-gauge">
-            <div className="jauge-ts"></div>
-          </div>
-          <TopSoAnswerer tag='typescript' percentage={10} />
+          <TopSoAnswerer tag='typescript' />
 
           <h3>
-            <Icon prefix="fab" icon="react" />
-                            React :
+            <Icon prefix="fab" icon="react" /> React
           </h3>
-          <div className="animated-gauge">
-            <div className="jauge-react"></div>
-          </div>
-          <TopSoAnswerer tag='reactjs' percentage={5} />
+          <TopSoAnswerer tag='reactjs' />
 
           <h3 id="svelteSkills">
-            <SvelteIcon />
-                            Svelte :
+            <SvelteIcon /> Svelte
           </h3>
-          <div className="animated-gauge">
-            <div className="jauge-svelte"></div>
-          </div>
-          <TopSoAnswerer tag='svelte' percentage={3} />
+          <TopSoAnswerer tag='svelte' />
 
           <h3>
-            <Icon prefix="fab" icon="php" />
-                            PHP :
+            <Icon prefix="fab" icon="php" /> PHP
           </h3>
-          <div className="animated-gauge">
-            <div className="jauge-php"></div>
-          </div>
-          <TopSoAnswerer tag='php' percentage={20} />
+          <TopSoAnswerer tag='php' />
 
           <h3>
-            <Icon prefix="fab" icon="angular" />
-                            Angular :
+            <Icon prefix="fab" icon="angular" /> Angular
           </h3>
-          <div className="animated-gauge">
-            <div className="jauge-angular"></div>
-          </div>
 
           <h3>
-            <Icon prefix="fab" icon="python" />
-                            Python :
+            <Icon prefix="fab" icon="python" /> Python
           </h3>
-          <div className="animated-gauge">
-            <div className="jauge-python"></div>
-          </div>
 
           <h3>
-            <Icon prefix="fab" icon="git-alt" />
-                            Git :
+            <Icon prefix="fab" icon="git-alt" /> Git
           </h3>
-          <div className="animated-gauge">
-            <div className="jauge-git"></div>
-          </div>
 
           <h3>
             <Icon icon="laptop" />
-                            Word, Excel, Powerpoint :
+            Word, Excel, Powerpoint
           </h3>
-          <div className="animated-gauge">
-            <div className="jauge0"></div>
-          </div>
         </div>
         <div className="langues animate-me" id="langues">
           <h2>
