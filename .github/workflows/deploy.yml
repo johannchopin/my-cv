@@ -18,12 +18,13 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Deploy
+      - name: Build
         run: |
-          yarn global add firebase-tools
           yarn install
           yarn build
-          firebase deploy --token ${FIREBASE_TOKEN} -P "my-project-1535834851092"
-        
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          projectId: my-project-1535834851092
+          channelId: live
