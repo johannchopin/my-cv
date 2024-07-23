@@ -4,6 +4,11 @@
         "fr": "Expériences",
         "de": "Erfahrungen"
     },
+    "work_buyco": {
+        "en": "Frontend developer since November 2022 for the logistics and shipping IT platform solution <a href='https://buyco.co/' target='_blank'>Buyco</a>. <br/><br/> I'm part of the team responsible for developing new features and I'm in charge of the Community of Practice for the frontend stack.",
+        "fr": "Développeur Frontend depuis novembre 2022 pour la solution de plateforme informatique de logistique et de transports maritimes <a href='https://buyco.co/' target='_blank'>Buyco</a>. <br/><br/> Je fais partie de l'équipe responsable du développement de nouvelles fonctionnalités et je suis en charge de la Community of Practice pour la stack frontend.",
+        "de": "Frontend-Entwickler seit November 2022 für die IT-Plattformlösung für Logistik und Schifffahrt <a href='https://buyco.co/' target='_blank'>Buyco</a>. <br/><br/> Ich bin Teil des Teams, das für die Entwicklung neuer Features zuständig ist, und betreue die Community of Practice für den Frontend-Stack."
+    },
     "work_dryad": {
         "introduction": {
             "en": "Master thesis for 6 months in the startup <a href='https://dryad.net' target='_blank'>Dryad</a>. My role was to analyze their client application and improve the user experience through ergonomic criteria and user testing.",
