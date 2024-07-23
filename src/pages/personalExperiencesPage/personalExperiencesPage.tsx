@@ -38,6 +38,10 @@ const PersonalExperiencesPage: React.FC = () => {
       <ul id="experiencesCtn">
 
         <li className="animate-me">
+          <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_buyco) }}></p>
+        </li>
+
+        <li className="animate-me">
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_dryad.introduction) }}></p>
           <br />
           <p dangerouslySetInnerHTML={{ __html: useLocalize(localize.work_dryad.complement) }}></p>
